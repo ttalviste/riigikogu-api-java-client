@@ -42,7 +42,7 @@ npm install -g autorest
 
 ``` bash
 
-autorest --java --verbose
+autorest --verbose
 
 ```
 
@@ -55,6 +55,7 @@ AutoRest reads the README.md file and looks for the *yaml* part and uses it as t
 # it's the same options as command line options, just drop the double-dash!
 input-file: ./input/riigikogu-api-spec.json
 namespace: org.riigikogu.api
-output-folder: ./result/autorest
-
+clear-output-folder: true
+java:
+- output-folder: ./result/autorest
 ```
