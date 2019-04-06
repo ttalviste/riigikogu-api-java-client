@@ -22,49 +22,49 @@ import java.io.IOException;
 import java.util.List;
 import okhttp3.ResponseBody;
 import org.joda.time.LocalDate;
-import org.riigikogu.api.models.Agenda;
-import org.riigikogu.api.models.AgendaStenoUrl;
-import org.riigikogu.api.models.Classifier;
-import org.riigikogu.api.models.ClassifierValueDetails;
-import org.riigikogu.api.models.CollectiveAddress;
-import org.riigikogu.api.models.CommitteeSitting;
-import org.riigikogu.api.models.Contacts;
-import org.riigikogu.api.models.Document;
-import org.riigikogu.api.models.DocumentTree;
-import org.riigikogu.api.models.DocumentTypes;
-import org.riigikogu.api.models.DraftInitiators;
-import org.riigikogu.api.models.DraftVolume;
-import org.riigikogu.api.models.ErjkProtocol;
-import org.riigikogu.api.models.EventCalendar;
-import org.riigikogu.api.models.Events;
-import org.riigikogu.api.models.FactionSpeech;
-import org.riigikogu.api.models.FileMetadata;
-import org.riigikogu.api.models.Hallplan;
-import org.riigikogu.api.models.LastStenoSpeech;
-import org.riigikogu.api.models.MemberParticipation;
-import org.riigikogu.api.models.Membership;
-import org.riigikogu.api.models.PagedResourcesOfDocument;
-import org.riigikogu.api.models.PagedResourcesOfDraftVolumes;
-import org.riigikogu.api.models.PagedResourcesOfEuropeanUnionDocument;
-import org.riigikogu.api.models.PagedResourcesOfInterpellations;
-import org.riigikogu.api.models.PagedResourcesOfOtherQuestions;
-import org.riigikogu.api.models.PagedResourcesOfPlenaryMemberSitting;
-import org.riigikogu.api.models.PagedResourcesOfVolumes;
-import org.riigikogu.api.models.PagedResourcesOfWrittenQuestions;
-import org.riigikogu.api.models.PlenaryMember;
-import org.riigikogu.api.models.PlenaryMemberDetails;
-import org.riigikogu.api.models.PlenaryMemberVoting;
-import org.riigikogu.api.models.PlenarySittingVoting;
-import org.riigikogu.api.models.PlenaryVotingDetails;
-import org.riigikogu.api.models.Session;
-import org.riigikogu.api.models.StenoSpeeches;
-import org.riigikogu.api.models.StenoSpeechesCount;
-import org.riigikogu.api.models.UnitAgenda;
-import org.riigikogu.api.models.UserDetails;
-import org.riigikogu.api.models.UserGroup;
-import org.riigikogu.api.models.Volume;
-import org.riigikogu.api.models.VolumeTypes;
-import org.riigikogu.api.models.VotingCalendar;
+import org.riigikogu.api.models._ksusePEvakord;
+import org.riigikogu.api.models.DokumenditP;
+import org.riigikogu.api.models.Dokument;
+import org.riigikogu.api.models.EelnUAlgataja;
+import org.riigikogu.api.models.EelnUToimikBaas;
+import org.riigikogu.api.models.Fail;
+import org.riigikogu.api.models.FunktsiooniGrupp;
+import org.riigikogu.api.models.HLetuspEv;
+import org.riigikogu.api.models.IstungjRk;
+import org.riigikogu.api.models.KasutajaDetailidKontaktid;
+import org.riigikogu.api.models.Kasutajagrupp;
+import org.riigikogu.api.models.KasutajagruppKontaktid;
+import org.riigikogu.api.models.Klassifikaator;
+import org.riigikogu.api.models.KlassifikaatoriVRtusDetailid;
+import org.riigikogu.api.models.KollektiivnePRdumineDokument;
+import org.riigikogu.api.models.KomisjoniIstung;
+import org.riigikogu.api.models.Koosseis;
+import org.riigikogu.api.models.PagedResourcesDokument;
+import org.riigikogu.api.models.PagedResourcesDokumentMuuKSimus;
+import org.riigikogu.api.models.PagedResourcesEelnUOtsing;
+import org.riigikogu.api.models.PagedResourcesELToimikOtsing;
+import org.riigikogu.api.models.PagedResourcesRiigikoguLiikmeHLetus;
+import org.riigikogu.api.models.PagedResourcesToimikArupRimine;
+import org.riigikogu.api.models.PagedResourcesToimikKirjalikKSimus;
+import org.riigikogu.api.models.PagedResourcesToimikOtsing;
+import org.riigikogu.api.models.PEvakord;
+import org.riigikogu.api.models.PEvasNdmused;
+import org.riigikogu.api.models.PEvSNdmused;
+import org.riigikogu.api.models.RiigikoguLiige;
+import org.riigikogu.api.models.RiigikoguLiigeHLetused;
+import org.riigikogu.api.models.RiigikoguLiigeOsavTt;
+import org.riigikogu.api.models.RiigikoguLiigeSNavTud;
+import org.riigikogu.api.models.RiigikoguLiikmeDetailid;
+import org.riigikogu.api.models.SaaliplaaniKoht;
+import org.riigikogu.api.models.StenoPEvakorrapunkt;
+import org.riigikogu.api.models.StenoSNavTtudeArv;
+import org.riigikogu.api.models.StenoSNavTud;
+import org.riigikogu.api.models.StenoViimaneSNavTt;
+import org.riigikogu.api.models.TIskoguHLetusDetailid;
+import org.riigikogu.api.models.TIskoguIstungHLetus;
+import org.riigikogu.api.models.Toimik;
+import org.riigikogu.api.models.ToimikERJK;
+import org.riigikogu.api.models.ToimikuTP;
 import retrofit2.http.GET;
 import retrofit2.http.Headers;
 import retrofit2.http.Path;
@@ -175,7 +175,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
 
         @Headers({ "Content-Type: application/json; charset=utf-8", "x-ms-logging-context: org.riigikogu.api.EMSAPIdokumentatsioon findDocumentsUsingGET" })
         @GET("api/documents")
-        Observable<Response<ResponseBody>> findDocumentsUsingGET(@Query("authorReference") String authorReference, @Query("createdEnd") LocalDate createdEnd, @Query("createdStart") LocalDate createdStart, @Query("directionCode") String directionCode, @Query("documentType") String documentType, @Query("functionUuid") String functionUuid, @Query("letterAuthor") String letterAuthor, @Query("membership") Integer membership, @Query("offset") Long offset, @Query("page") Integer page, @Query("pageNumber") Integer pageNumber, @Query("pageSize") Integer pageSize, @Query("paged") Boolean paged, @Query("reference") String reference, @Query("seriesUuid") String seriesUuid, @Query("size") Integer size, @Query("sort") String sort, @Query("sort.sorted") Boolean sortsorted, @Query("sort.unsorted") Boolean sortunsorted, @Query("subseriesUuid") String subseriesUuid, @Query("title") String title, @Query("unpaged") Boolean unpaged);
+        Observable<Response<ResponseBody>> findDocumentsUsingGET(@Query("authorReference") String authorReference, @Query("createdEnd") LocalDate createdEnd, @Query("createdStart") LocalDate createdStart, @Query("directionCode") String directionCode, @Query("documentType") String documentType, @Query("functionGroupUuid") String functionGroupUuid, @Query("functionUuid") String functionUuid, @Query("letterAuthor") String letterAuthor, @Query("membership") Integer membership, @Query("offset") Long offset, @Query("page") Integer page, @Query("pageNumber") Integer pageNumber, @Query("pageSize") Integer pageSize, @Query("paged") Boolean paged, @Query("reference") String reference, @Query("seriesUuid") String seriesUuid, @Query("size") Integer size, @Query("sort") String sort, @Query("sort.sorted") Boolean sortsorted, @Query("sort.unsorted") Boolean sortunsorted, @Query("subseriesUuid") String subseriesUuid, @Query("title") String title, @Query("unpaged") Boolean unpaged);
 
         @Headers({ "Content-Type: application/json; charset=utf-8", "x-ms-logging-context: org.riigikogu.api.EMSAPIdokumentatsioon findCollectiveAddressesUsingGET" })
         @GET("api/documents/collective-addresses")
@@ -398,9 +398,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Agenda object if successful.
+     * @return the PEvakord object if successful.
      */
-    public Agenda getPlenaryAgendaUsingGET() {
+    public PEvakord getPlenaryAgendaUsingGET() {
         return getPlenaryAgendaUsingGETWithServiceResponseAsync().toBlocking().single().body();
     }
 
@@ -412,7 +412,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<Agenda> getPlenaryAgendaUsingGETAsync(final ServiceCallback<Agenda> serviceCallback) {
+    public ServiceFuture<PEvakord> getPlenaryAgendaUsingGETAsync(final ServiceCallback<PEvakord> serviceCallback) {
         return ServiceFuture.fromResponse(getPlenaryAgendaUsingGETWithServiceResponseAsync(), serviceCallback);
     }
 
@@ -421,12 +421,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * Päevakorda saab küsida ühe nädala või suvalise ajavahemiku kohta, täites vastavalt 'date' või 'startDate/endDate' parameetrid.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the Agenda object
+     * @return the observable to the PEvakord object
      */
-    public Observable<Agenda> getPlenaryAgendaUsingGETAsync() {
-        return getPlenaryAgendaUsingGETWithServiceResponseAsync().map(new Func1<ServiceResponse<Agenda>, Agenda>() {
+    public Observable<PEvakord> getPlenaryAgendaUsingGETAsync() {
+        return getPlenaryAgendaUsingGETWithServiceResponseAsync().map(new Func1<ServiceResponse<PEvakord>, PEvakord>() {
             @Override
-            public Agenda call(ServiceResponse<Agenda> response) {
+            public PEvakord call(ServiceResponse<PEvakord> response) {
                 return response.body();
             }
         });
@@ -437,20 +437,20 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * Päevakorda saab küsida ühe nädala või suvalise ajavahemiku kohta, täites vastavalt 'date' või 'startDate/endDate' parameetrid.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the Agenda object
+     * @return the observable to the PEvakord object
      */
-    public Observable<ServiceResponse<Agenda>> getPlenaryAgendaUsingGETWithServiceResponseAsync() {
+    public Observable<ServiceResponse<PEvakord>> getPlenaryAgendaUsingGETWithServiceResponseAsync() {
         final LocalDate dateParameter = null;
         final LocalDate endDate = null;
         final String lang = null;
         final Boolean querySteno = null;
         final LocalDate startDate = null;
         return service.getPlenaryAgendaUsingGET(dateParameter, endDate, lang, querySteno, startDate)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<Agenda>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<PEvakord>>>() {
                 @Override
-                public Observable<ServiceResponse<Agenda>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<PEvakord>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<Agenda> clientResponse = getPlenaryAgendaUsingGETDelegate(response);
+                        ServiceResponse<PEvakord> clientResponse = getPlenaryAgendaUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -471,9 +471,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Agenda object if successful.
+     * @return the PEvakord object if successful.
      */
-    public Agenda getPlenaryAgendaUsingGET(LocalDate dateParameter, LocalDate endDate, String lang, Boolean querySteno, LocalDate startDate) {
+    public PEvakord getPlenaryAgendaUsingGET(LocalDate dateParameter, LocalDate endDate, String lang, Boolean querySteno, LocalDate startDate) {
         return getPlenaryAgendaUsingGETWithServiceResponseAsync(dateParameter, endDate, lang, querySteno, startDate).toBlocking().single().body();
     }
 
@@ -490,7 +490,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<Agenda> getPlenaryAgendaUsingGETAsync(LocalDate dateParameter, LocalDate endDate, String lang, Boolean querySteno, LocalDate startDate, final ServiceCallback<Agenda> serviceCallback) {
+    public ServiceFuture<PEvakord> getPlenaryAgendaUsingGETAsync(LocalDate dateParameter, LocalDate endDate, String lang, Boolean querySteno, LocalDate startDate, final ServiceCallback<PEvakord> serviceCallback) {
         return ServiceFuture.fromResponse(getPlenaryAgendaUsingGETWithServiceResponseAsync(dateParameter, endDate, lang, querySteno, startDate), serviceCallback);
     }
 
@@ -504,12 +504,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param querySteno Küsi Stenoteksti teenusest päevakorra lingid? (true/false)
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the Agenda object
+     * @return the observable to the PEvakord object
      */
-    public Observable<Agenda> getPlenaryAgendaUsingGETAsync(LocalDate dateParameter, LocalDate endDate, String lang, Boolean querySteno, LocalDate startDate) {
-        return getPlenaryAgendaUsingGETWithServiceResponseAsync(dateParameter, endDate, lang, querySteno, startDate).map(new Func1<ServiceResponse<Agenda>, Agenda>() {
+    public Observable<PEvakord> getPlenaryAgendaUsingGETAsync(LocalDate dateParameter, LocalDate endDate, String lang, Boolean querySteno, LocalDate startDate) {
+        return getPlenaryAgendaUsingGETWithServiceResponseAsync(dateParameter, endDate, lang, querySteno, startDate).map(new Func1<ServiceResponse<PEvakord>, PEvakord>() {
             @Override
-            public Agenda call(ServiceResponse<Agenda> response) {
+            public PEvakord call(ServiceResponse<PEvakord> response) {
                 return response.body();
             }
         });
@@ -525,15 +525,15 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param querySteno Küsi Stenoteksti teenusest päevakorra lingid? (true/false)
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the Agenda object
+     * @return the observable to the PEvakord object
      */
-    public Observable<ServiceResponse<Agenda>> getPlenaryAgendaUsingGETWithServiceResponseAsync(LocalDate dateParameter, LocalDate endDate, String lang, Boolean querySteno, LocalDate startDate) {
+    public Observable<ServiceResponse<PEvakord>> getPlenaryAgendaUsingGETWithServiceResponseAsync(LocalDate dateParameter, LocalDate endDate, String lang, Boolean querySteno, LocalDate startDate) {
         return service.getPlenaryAgendaUsingGET(dateParameter, endDate, lang, querySteno, startDate)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<Agenda>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<PEvakord>>>() {
                 @Override
-                public Observable<ServiceResponse<Agenda>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<PEvakord>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<Agenda> clientResponse = getPlenaryAgendaUsingGETDelegate(response);
+                        ServiceResponse<PEvakord> clientResponse = getPlenaryAgendaUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -542,9 +542,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             });
     }
 
-    private ServiceResponse<Agenda> getPlenaryAgendaUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException {
-        return this.restClient().responseBuilderFactory().<Agenda, RestException>newInstance(this.serializerAdapter())
-                .register(200, new TypeToken<Agenda>() { }.getType())
+    private ServiceResponse<PEvakord> getPlenaryAgendaUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException {
+        return this.restClient().responseBuilderFactory().<PEvakord, RestException>newInstance(this.serializerAdapter())
+                .register(200, new TypeToken<PEvakord>() { }.getType())
                 .build(response);
     }
 
@@ -556,9 +556,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the UnitAgenda object if successful.
+     * @return the _ksusePEvakord object if successful.
      */
-    public UnitAgenda getUnitAgendaUsingGET(String uuid) {
+    public _ksusePEvakord getUnitAgendaUsingGET(String uuid) {
         return getUnitAgendaUsingGETWithServiceResponseAsync(uuid).toBlocking().single().body();
     }
 
@@ -571,7 +571,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<UnitAgenda> getUnitAgendaUsingGETAsync(String uuid, final ServiceCallback<UnitAgenda> serviceCallback) {
+    public ServiceFuture<_ksusePEvakord> getUnitAgendaUsingGETAsync(String uuid, final ServiceCallback<_ksusePEvakord> serviceCallback) {
         return ServiceFuture.fromResponse(getUnitAgendaUsingGETWithServiceResponseAsync(uuid), serviceCallback);
     }
 
@@ -581,12 +581,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      *
      * @param uuid Kasutajagrupi UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the UnitAgenda object
+     * @return the observable to the _ksusePEvakord object
      */
-    public Observable<UnitAgenda> getUnitAgendaUsingGETAsync(String uuid) {
-        return getUnitAgendaUsingGETWithServiceResponseAsync(uuid).map(new Func1<ServiceResponse<UnitAgenda>, UnitAgenda>() {
+    public Observable<_ksusePEvakord> getUnitAgendaUsingGETAsync(String uuid) {
+        return getUnitAgendaUsingGETWithServiceResponseAsync(uuid).map(new Func1<ServiceResponse<_ksusePEvakord>, _ksusePEvakord>() {
             @Override
-            public UnitAgenda call(ServiceResponse<UnitAgenda> response) {
+            public _ksusePEvakord call(ServiceResponse<_ksusePEvakord> response) {
                 return response.body();
             }
         });
@@ -598,9 +598,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      *
      * @param uuid Kasutajagrupi UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the UnitAgenda object
+     * @return the observable to the _ksusePEvakord object
      */
-    public Observable<ServiceResponse<UnitAgenda>> getUnitAgendaUsingGETWithServiceResponseAsync(String uuid) {
+    public Observable<ServiceResponse<_ksusePEvakord>> getUnitAgendaUsingGETWithServiceResponseAsync(String uuid) {
         if (uuid == null) {
             throw new IllegalArgumentException("Parameter uuid is required and cannot be null.");
         }
@@ -609,11 +609,11 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
         final String lang = null;
         final LocalDate startDate = null;
         return service.getUnitAgendaUsingGET(uuid, dateParameter, endDate, lang, startDate)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<UnitAgenda>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<_ksusePEvakord>>>() {
                 @Override
-                public Observable<ServiceResponse<UnitAgenda>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<_ksusePEvakord>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<UnitAgenda> clientResponse = getUnitAgendaUsingGETDelegate(response);
+                        ServiceResponse<_ksusePEvakord> clientResponse = getUnitAgendaUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -634,9 +634,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the UnitAgenda object if successful.
+     * @return the _ksusePEvakord object if successful.
      */
-    public UnitAgenda getUnitAgendaUsingGET(String uuid, LocalDate dateParameter, LocalDate endDate, String lang, LocalDate startDate) {
+    public _ksusePEvakord getUnitAgendaUsingGET(String uuid, LocalDate dateParameter, LocalDate endDate, String lang, LocalDate startDate) {
         return getUnitAgendaUsingGETWithServiceResponseAsync(uuid, dateParameter, endDate, lang, startDate).toBlocking().single().body();
     }
 
@@ -653,7 +653,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<UnitAgenda> getUnitAgendaUsingGETAsync(String uuid, LocalDate dateParameter, LocalDate endDate, String lang, LocalDate startDate, final ServiceCallback<UnitAgenda> serviceCallback) {
+    public ServiceFuture<_ksusePEvakord> getUnitAgendaUsingGETAsync(String uuid, LocalDate dateParameter, LocalDate endDate, String lang, LocalDate startDate, final ServiceCallback<_ksusePEvakord> serviceCallback) {
         return ServiceFuture.fromResponse(getUnitAgendaUsingGETWithServiceResponseAsync(uuid, dateParameter, endDate, lang, startDate), serviceCallback);
     }
 
@@ -667,12 +667,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the UnitAgenda object
+     * @return the observable to the _ksusePEvakord object
      */
-    public Observable<UnitAgenda> getUnitAgendaUsingGETAsync(String uuid, LocalDate dateParameter, LocalDate endDate, String lang, LocalDate startDate) {
-        return getUnitAgendaUsingGETWithServiceResponseAsync(uuid, dateParameter, endDate, lang, startDate).map(new Func1<ServiceResponse<UnitAgenda>, UnitAgenda>() {
+    public Observable<_ksusePEvakord> getUnitAgendaUsingGETAsync(String uuid, LocalDate dateParameter, LocalDate endDate, String lang, LocalDate startDate) {
+        return getUnitAgendaUsingGETWithServiceResponseAsync(uuid, dateParameter, endDate, lang, startDate).map(new Func1<ServiceResponse<_ksusePEvakord>, _ksusePEvakord>() {
             @Override
-            public UnitAgenda call(ServiceResponse<UnitAgenda> response) {
+            public _ksusePEvakord call(ServiceResponse<_ksusePEvakord> response) {
                 return response.body();
             }
         });
@@ -688,18 +688,18 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the UnitAgenda object
+     * @return the observable to the _ksusePEvakord object
      */
-    public Observable<ServiceResponse<UnitAgenda>> getUnitAgendaUsingGETWithServiceResponseAsync(String uuid, LocalDate dateParameter, LocalDate endDate, String lang, LocalDate startDate) {
+    public Observable<ServiceResponse<_ksusePEvakord>> getUnitAgendaUsingGETWithServiceResponseAsync(String uuid, LocalDate dateParameter, LocalDate endDate, String lang, LocalDate startDate) {
         if (uuid == null) {
             throw new IllegalArgumentException("Parameter uuid is required and cannot be null.");
         }
         return service.getUnitAgendaUsingGET(uuid, dateParameter, endDate, lang, startDate)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<UnitAgenda>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<_ksusePEvakord>>>() {
                 @Override
-                public Observable<ServiceResponse<UnitAgenda>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<_ksusePEvakord>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<UnitAgenda> clientResponse = getUnitAgendaUsingGETDelegate(response);
+                        ServiceResponse<_ksusePEvakord> clientResponse = getUnitAgendaUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -708,9 +708,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             });
     }
 
-    private ServiceResponse<UnitAgenda> getUnitAgendaUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException, IllegalArgumentException {
-        return this.restClient().responseBuilderFactory().<UnitAgenda, RestException>newInstance(this.serializerAdapter())
-                .register(200, new TypeToken<UnitAgenda>() { }.getType())
+    private ServiceResponse<_ksusePEvakord> getUnitAgendaUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException, IllegalArgumentException {
+        return this.restClient().responseBuilderFactory().<_ksusePEvakord, RestException>newInstance(this.serializerAdapter())
+                .register(200, new TypeToken<_ksusePEvakord>() { }.getType())
                 .build(response);
     }
 
@@ -720,9 +720,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;Classifier&gt; object if successful.
+     * @return the List&lt;Klassifikaator&gt; object if successful.
      */
-    public List<Classifier> getClassifiersUsingGET() {
+    public List<Klassifikaator> getClassifiersUsingGET() {
         return getClassifiersUsingGETWithServiceResponseAsync().toBlocking().single().body();
     }
 
@@ -733,7 +733,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<List<Classifier>> getClassifiersUsingGETAsync(final ServiceCallback<List<Classifier>> serviceCallback) {
+    public ServiceFuture<List<Klassifikaator>> getClassifiersUsingGETAsync(final ServiceCallback<List<Klassifikaator>> serviceCallback) {
         return ServiceFuture.fromResponse(getClassifiersUsingGETWithServiceResponseAsync(), serviceCallback);
     }
 
@@ -741,12 +741,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * Klassifikaatorid.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;Classifier&gt; object
+     * @return the observable to the List&lt;Klassifikaator&gt; object
      */
-    public Observable<List<Classifier>> getClassifiersUsingGETAsync() {
-        return getClassifiersUsingGETWithServiceResponseAsync().map(new Func1<ServiceResponse<List<Classifier>>, List<Classifier>>() {
+    public Observable<List<Klassifikaator>> getClassifiersUsingGETAsync() {
+        return getClassifiersUsingGETWithServiceResponseAsync().map(new Func1<ServiceResponse<List<Klassifikaator>>, List<Klassifikaator>>() {
             @Override
-            public List<Classifier> call(ServiceResponse<List<Classifier>> response) {
+            public List<Klassifikaator> call(ServiceResponse<List<Klassifikaator>> response) {
                 return response.body();
             }
         });
@@ -756,15 +756,15 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * Klassifikaatorid.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;Classifier&gt; object
+     * @return the observable to the List&lt;Klassifikaator&gt; object
      */
-    public Observable<ServiceResponse<List<Classifier>>> getClassifiersUsingGETWithServiceResponseAsync() {
+    public Observable<ServiceResponse<List<Klassifikaator>>> getClassifiersUsingGETWithServiceResponseAsync() {
         return service.getClassifiersUsingGET()
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<Classifier>>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<Klassifikaator>>>>() {
                 @Override
-                public Observable<ServiceResponse<List<Classifier>>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<List<Klassifikaator>>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<List<Classifier>> clientResponse = getClassifiersUsingGETDelegate(response);
+                        ServiceResponse<List<Klassifikaator>> clientResponse = getClassifiersUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -773,9 +773,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             });
     }
 
-    private ServiceResponse<List<Classifier>> getClassifiersUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException {
-        return this.restClient().responseBuilderFactory().<List<Classifier>, RestException>newInstance(this.serializerAdapter())
-                .register(200, new TypeToken<List<Classifier>>() { }.getType())
+    private ServiceResponse<List<Klassifikaator>> getClassifiersUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException {
+        return this.restClient().responseBuilderFactory().<List<Klassifikaator>, RestException>newInstance(this.serializerAdapter())
+                .register(200, new TypeToken<List<Klassifikaator>>() { }.getType())
                 .build(response);
     }
 
@@ -787,9 +787,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the ClassifierValueDetails object if successful.
+     * @return the KlassifikaatoriVRtusDetailid object if successful.
      */
-    public ClassifierValueDetails getClassifierValueUsingGET(String classifierCode, String valueCode) {
+    public KlassifikaatoriVRtusDetailid getClassifierValueUsingGET(String classifierCode, String valueCode) {
         return getClassifierValueUsingGETWithServiceResponseAsync(classifierCode, valueCode).toBlocking().single().body();
     }
 
@@ -802,7 +802,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<ClassifierValueDetails> getClassifierValueUsingGETAsync(String classifierCode, String valueCode, final ServiceCallback<ClassifierValueDetails> serviceCallback) {
+    public ServiceFuture<KlassifikaatoriVRtusDetailid> getClassifierValueUsingGETAsync(String classifierCode, String valueCode, final ServiceCallback<KlassifikaatoriVRtusDetailid> serviceCallback) {
         return ServiceFuture.fromResponse(getClassifierValueUsingGETWithServiceResponseAsync(classifierCode, valueCode), serviceCallback);
     }
 
@@ -812,12 +812,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param classifierCode Klassifikaatori kood
      * @param valueCode Väärtuse kood
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the ClassifierValueDetails object
+     * @return the observable to the KlassifikaatoriVRtusDetailid object
      */
-    public Observable<ClassifierValueDetails> getClassifierValueUsingGETAsync(String classifierCode, String valueCode) {
-        return getClassifierValueUsingGETWithServiceResponseAsync(classifierCode, valueCode).map(new Func1<ServiceResponse<ClassifierValueDetails>, ClassifierValueDetails>() {
+    public Observable<KlassifikaatoriVRtusDetailid> getClassifierValueUsingGETAsync(String classifierCode, String valueCode) {
+        return getClassifierValueUsingGETWithServiceResponseAsync(classifierCode, valueCode).map(new Func1<ServiceResponse<KlassifikaatoriVRtusDetailid>, KlassifikaatoriVRtusDetailid>() {
             @Override
-            public ClassifierValueDetails call(ServiceResponse<ClassifierValueDetails> response) {
+            public KlassifikaatoriVRtusDetailid call(ServiceResponse<KlassifikaatoriVRtusDetailid> response) {
                 return response.body();
             }
         });
@@ -829,9 +829,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param classifierCode Klassifikaatori kood
      * @param valueCode Väärtuse kood
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the ClassifierValueDetails object
+     * @return the observable to the KlassifikaatoriVRtusDetailid object
      */
-    public Observable<ServiceResponse<ClassifierValueDetails>> getClassifierValueUsingGETWithServiceResponseAsync(String classifierCode, String valueCode) {
+    public Observable<ServiceResponse<KlassifikaatoriVRtusDetailid>> getClassifierValueUsingGETWithServiceResponseAsync(String classifierCode, String valueCode) {
         if (classifierCode == null) {
             throw new IllegalArgumentException("Parameter classifierCode is required and cannot be null.");
         }
@@ -840,11 +840,11 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
         }
         final String lang = null;
         return service.getClassifierValueUsingGET(classifierCode, valueCode, lang)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<ClassifierValueDetails>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<KlassifikaatoriVRtusDetailid>>>() {
                 @Override
-                public Observable<ServiceResponse<ClassifierValueDetails>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<KlassifikaatoriVRtusDetailid>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<ClassifierValueDetails> clientResponse = getClassifierValueUsingGETDelegate(response);
+                        ServiceResponse<KlassifikaatoriVRtusDetailid> clientResponse = getClassifierValueUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -862,9 +862,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the ClassifierValueDetails object if successful.
+     * @return the KlassifikaatoriVRtusDetailid object if successful.
      */
-    public ClassifierValueDetails getClassifierValueUsingGET(String classifierCode, String valueCode, String lang) {
+    public KlassifikaatoriVRtusDetailid getClassifierValueUsingGET(String classifierCode, String valueCode, String lang) {
         return getClassifierValueUsingGETWithServiceResponseAsync(classifierCode, valueCode, lang).toBlocking().single().body();
     }
 
@@ -878,7 +878,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<ClassifierValueDetails> getClassifierValueUsingGETAsync(String classifierCode, String valueCode, String lang, final ServiceCallback<ClassifierValueDetails> serviceCallback) {
+    public ServiceFuture<KlassifikaatoriVRtusDetailid> getClassifierValueUsingGETAsync(String classifierCode, String valueCode, String lang, final ServiceCallback<KlassifikaatoriVRtusDetailid> serviceCallback) {
         return ServiceFuture.fromResponse(getClassifierValueUsingGETWithServiceResponseAsync(classifierCode, valueCode, lang), serviceCallback);
     }
 
@@ -889,12 +889,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param valueCode Väärtuse kood
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the ClassifierValueDetails object
+     * @return the observable to the KlassifikaatoriVRtusDetailid object
      */
-    public Observable<ClassifierValueDetails> getClassifierValueUsingGETAsync(String classifierCode, String valueCode, String lang) {
-        return getClassifierValueUsingGETWithServiceResponseAsync(classifierCode, valueCode, lang).map(new Func1<ServiceResponse<ClassifierValueDetails>, ClassifierValueDetails>() {
+    public Observable<KlassifikaatoriVRtusDetailid> getClassifierValueUsingGETAsync(String classifierCode, String valueCode, String lang) {
+        return getClassifierValueUsingGETWithServiceResponseAsync(classifierCode, valueCode, lang).map(new Func1<ServiceResponse<KlassifikaatoriVRtusDetailid>, KlassifikaatoriVRtusDetailid>() {
             @Override
-            public ClassifierValueDetails call(ServiceResponse<ClassifierValueDetails> response) {
+            public KlassifikaatoriVRtusDetailid call(ServiceResponse<KlassifikaatoriVRtusDetailid> response) {
                 return response.body();
             }
         });
@@ -907,9 +907,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param valueCode Väärtuse kood
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the ClassifierValueDetails object
+     * @return the observable to the KlassifikaatoriVRtusDetailid object
      */
-    public Observable<ServiceResponse<ClassifierValueDetails>> getClassifierValueUsingGETWithServiceResponseAsync(String classifierCode, String valueCode, String lang) {
+    public Observable<ServiceResponse<KlassifikaatoriVRtusDetailid>> getClassifierValueUsingGETWithServiceResponseAsync(String classifierCode, String valueCode, String lang) {
         if (classifierCode == null) {
             throw new IllegalArgumentException("Parameter classifierCode is required and cannot be null.");
         }
@@ -917,11 +917,11 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             throw new IllegalArgumentException("Parameter valueCode is required and cannot be null.");
         }
         return service.getClassifierValueUsingGET(classifierCode, valueCode, lang)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<ClassifierValueDetails>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<KlassifikaatoriVRtusDetailid>>>() {
                 @Override
-                public Observable<ServiceResponse<ClassifierValueDetails>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<KlassifikaatoriVRtusDetailid>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<ClassifierValueDetails> clientResponse = getClassifierValueUsingGETDelegate(response);
+                        ServiceResponse<KlassifikaatoriVRtusDetailid> clientResponse = getClassifierValueUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -930,9 +930,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             });
     }
 
-    private ServiceResponse<ClassifierValueDetails> getClassifierValueUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException, IllegalArgumentException {
-        return this.restClient().responseBuilderFactory().<ClassifierValueDetails, RestException>newInstance(this.serializerAdapter())
-                .register(200, new TypeToken<ClassifierValueDetails>() { }.getType())
+    private ServiceResponse<KlassifikaatoriVRtusDetailid> getClassifierValueUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException, IllegalArgumentException {
+        return this.restClient().responseBuilderFactory().<KlassifikaatoriVRtusDetailid, RestException>newInstance(this.serializerAdapter())
+                .register(200, new TypeToken<KlassifikaatoriVRtusDetailid>() { }.getType())
                 .build(response);
     }
 
@@ -943,9 +943,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;ClassifierValueDetails&gt; object if successful.
+     * @return the List&lt;KlassifikaatoriVRtusDetailid&gt; object if successful.
      */
-    public List<ClassifierValueDetails> getClassifierValuesUsingGET(String code) {
+    public List<KlassifikaatoriVRtusDetailid> getClassifierValuesUsingGET(String code) {
         return getClassifierValuesUsingGETWithServiceResponseAsync(code).toBlocking().single().body();
     }
 
@@ -957,7 +957,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<List<ClassifierValueDetails>> getClassifierValuesUsingGETAsync(String code, final ServiceCallback<List<ClassifierValueDetails>> serviceCallback) {
+    public ServiceFuture<List<KlassifikaatoriVRtusDetailid>> getClassifierValuesUsingGETAsync(String code, final ServiceCallback<List<KlassifikaatoriVRtusDetailid>> serviceCallback) {
         return ServiceFuture.fromResponse(getClassifierValuesUsingGETWithServiceResponseAsync(code), serviceCallback);
     }
 
@@ -966,12 +966,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      *
      * @param code Klassifikaatori kood
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;ClassifierValueDetails&gt; object
+     * @return the observable to the List&lt;KlassifikaatoriVRtusDetailid&gt; object
      */
-    public Observable<List<ClassifierValueDetails>> getClassifierValuesUsingGETAsync(String code) {
-        return getClassifierValuesUsingGETWithServiceResponseAsync(code).map(new Func1<ServiceResponse<List<ClassifierValueDetails>>, List<ClassifierValueDetails>>() {
+    public Observable<List<KlassifikaatoriVRtusDetailid>> getClassifierValuesUsingGETAsync(String code) {
+        return getClassifierValuesUsingGETWithServiceResponseAsync(code).map(new Func1<ServiceResponse<List<KlassifikaatoriVRtusDetailid>>, List<KlassifikaatoriVRtusDetailid>>() {
             @Override
-            public List<ClassifierValueDetails> call(ServiceResponse<List<ClassifierValueDetails>> response) {
+            public List<KlassifikaatoriVRtusDetailid> call(ServiceResponse<List<KlassifikaatoriVRtusDetailid>> response) {
                 return response.body();
             }
         });
@@ -982,20 +982,20 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      *
      * @param code Klassifikaatori kood
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;ClassifierValueDetails&gt; object
+     * @return the observable to the List&lt;KlassifikaatoriVRtusDetailid&gt; object
      */
-    public Observable<ServiceResponse<List<ClassifierValueDetails>>> getClassifierValuesUsingGETWithServiceResponseAsync(String code) {
+    public Observable<ServiceResponse<List<KlassifikaatoriVRtusDetailid>>> getClassifierValuesUsingGETWithServiceResponseAsync(String code) {
         if (code == null) {
             throw new IllegalArgumentException("Parameter code is required and cannot be null.");
         }
         final Boolean includeInactive = null;
         final String lang = null;
         return service.getClassifierValuesUsingGET(code, includeInactive, lang)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<ClassifierValueDetails>>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<KlassifikaatoriVRtusDetailid>>>>() {
                 @Override
-                public Observable<ServiceResponse<List<ClassifierValueDetails>>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<List<KlassifikaatoriVRtusDetailid>>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<List<ClassifierValueDetails>> clientResponse = getClassifierValuesUsingGETDelegate(response);
+                        ServiceResponse<List<KlassifikaatoriVRtusDetailid>> clientResponse = getClassifierValuesUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -1013,9 +1013,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;ClassifierValueDetails&gt; object if successful.
+     * @return the List&lt;KlassifikaatoriVRtusDetailid&gt; object if successful.
      */
-    public List<ClassifierValueDetails> getClassifierValuesUsingGET(String code, Boolean includeInactive, String lang) {
+    public List<KlassifikaatoriVRtusDetailid> getClassifierValuesUsingGET(String code, Boolean includeInactive, String lang) {
         return getClassifierValuesUsingGETWithServiceResponseAsync(code, includeInactive, lang).toBlocking().single().body();
     }
 
@@ -1029,7 +1029,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<List<ClassifierValueDetails>> getClassifierValuesUsingGETAsync(String code, Boolean includeInactive, String lang, final ServiceCallback<List<ClassifierValueDetails>> serviceCallback) {
+    public ServiceFuture<List<KlassifikaatoriVRtusDetailid>> getClassifierValuesUsingGETAsync(String code, Boolean includeInactive, String lang, final ServiceCallback<List<KlassifikaatoriVRtusDetailid>> serviceCallback) {
         return ServiceFuture.fromResponse(getClassifierValuesUsingGETWithServiceResponseAsync(code, includeInactive, lang), serviceCallback);
     }
 
@@ -1040,12 +1040,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param includeInactive Kaasa mitteaktiivsed väärtused? (true/false)
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;ClassifierValueDetails&gt; object
+     * @return the observable to the List&lt;KlassifikaatoriVRtusDetailid&gt; object
      */
-    public Observable<List<ClassifierValueDetails>> getClassifierValuesUsingGETAsync(String code, Boolean includeInactive, String lang) {
-        return getClassifierValuesUsingGETWithServiceResponseAsync(code, includeInactive, lang).map(new Func1<ServiceResponse<List<ClassifierValueDetails>>, List<ClassifierValueDetails>>() {
+    public Observable<List<KlassifikaatoriVRtusDetailid>> getClassifierValuesUsingGETAsync(String code, Boolean includeInactive, String lang) {
+        return getClassifierValuesUsingGETWithServiceResponseAsync(code, includeInactive, lang).map(new Func1<ServiceResponse<List<KlassifikaatoriVRtusDetailid>>, List<KlassifikaatoriVRtusDetailid>>() {
             @Override
-            public List<ClassifierValueDetails> call(ServiceResponse<List<ClassifierValueDetails>> response) {
+            public List<KlassifikaatoriVRtusDetailid> call(ServiceResponse<List<KlassifikaatoriVRtusDetailid>> response) {
                 return response.body();
             }
         });
@@ -1058,18 +1058,18 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param includeInactive Kaasa mitteaktiivsed väärtused? (true/false)
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;ClassifierValueDetails&gt; object
+     * @return the observable to the List&lt;KlassifikaatoriVRtusDetailid&gt; object
      */
-    public Observable<ServiceResponse<List<ClassifierValueDetails>>> getClassifierValuesUsingGETWithServiceResponseAsync(String code, Boolean includeInactive, String lang) {
+    public Observable<ServiceResponse<List<KlassifikaatoriVRtusDetailid>>> getClassifierValuesUsingGETWithServiceResponseAsync(String code, Boolean includeInactive, String lang) {
         if (code == null) {
             throw new IllegalArgumentException("Parameter code is required and cannot be null.");
         }
         return service.getClassifierValuesUsingGET(code, includeInactive, lang)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<ClassifierValueDetails>>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<KlassifikaatoriVRtusDetailid>>>>() {
                 @Override
-                public Observable<ServiceResponse<List<ClassifierValueDetails>>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<List<KlassifikaatoriVRtusDetailid>>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<List<ClassifierValueDetails>> clientResponse = getClassifierValuesUsingGETDelegate(response);
+                        ServiceResponse<List<KlassifikaatoriVRtusDetailid>> clientResponse = getClassifierValuesUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -1078,9 +1078,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             });
     }
 
-    private ServiceResponse<List<ClassifierValueDetails>> getClassifierValuesUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException, IllegalArgumentException {
-        return this.restClient().responseBuilderFactory().<List<ClassifierValueDetails>, RestException>newInstance(this.serializerAdapter())
-                .register(200, new TypeToken<List<ClassifierValueDetails>>() { }.getType())
+    private ServiceResponse<List<KlassifikaatoriVRtusDetailid>> getClassifierValuesUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException, IllegalArgumentException {
+        return this.restClient().responseBuilderFactory().<List<KlassifikaatoriVRtusDetailid>, RestException>newInstance(this.serializerAdapter())
+                .register(200, new TypeToken<List<KlassifikaatoriVRtusDetailid>>() { }.getType())
                 .build(response);
     }
 
@@ -1090,9 +1090,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;Contacts&gt; object if successful.
+     * @return the List&lt;KasutajagruppKontaktid&gt; object if successful.
      */
-    public List<Contacts> getContactsUsingGET() {
+    public List<KasutajagruppKontaktid> getContactsUsingGET() {
         return getContactsUsingGETWithServiceResponseAsync().toBlocking().single().body();
     }
 
@@ -1103,7 +1103,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<List<Contacts>> getContactsUsingGETAsync(final ServiceCallback<List<Contacts>> serviceCallback) {
+    public ServiceFuture<List<KasutajagruppKontaktid>> getContactsUsingGETAsync(final ServiceCallback<List<KasutajagruppKontaktid>> serviceCallback) {
         return ServiceFuture.fromResponse(getContactsUsingGETWithServiceResponseAsync(), serviceCallback);
     }
 
@@ -1111,12 +1111,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * Kontaktide nimekiri.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;Contacts&gt; object
+     * @return the observable to the List&lt;KasutajagruppKontaktid&gt; object
      */
-    public Observable<List<Contacts>> getContactsUsingGETAsync() {
-        return getContactsUsingGETWithServiceResponseAsync().map(new Func1<ServiceResponse<List<Contacts>>, List<Contacts>>() {
+    public Observable<List<KasutajagruppKontaktid>> getContactsUsingGETAsync() {
+        return getContactsUsingGETWithServiceResponseAsync().map(new Func1<ServiceResponse<List<KasutajagruppKontaktid>>, List<KasutajagruppKontaktid>>() {
             @Override
-            public List<Contacts> call(ServiceResponse<List<Contacts>> response) {
+            public List<KasutajagruppKontaktid> call(ServiceResponse<List<KasutajagruppKontaktid>> response) {
                 return response.body();
             }
         });
@@ -1126,16 +1126,16 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * Kontaktide nimekiri.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;Contacts&gt; object
+     * @return the observable to the List&lt;KasutajagruppKontaktid&gt; object
      */
-    public Observable<ServiceResponse<List<Contacts>>> getContactsUsingGETWithServiceResponseAsync() {
+    public Observable<ServiceResponse<List<KasutajagruppKontaktid>>> getContactsUsingGETWithServiceResponseAsync() {
         final String lang = null;
         return service.getContactsUsingGET(lang)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<Contacts>>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<KasutajagruppKontaktid>>>>() {
                 @Override
-                public Observable<ServiceResponse<List<Contacts>>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<List<KasutajagruppKontaktid>>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<List<Contacts>> clientResponse = getContactsUsingGETDelegate(response);
+                        ServiceResponse<List<KasutajagruppKontaktid>> clientResponse = getContactsUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -1151,9 +1151,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;Contacts&gt; object if successful.
+     * @return the List&lt;KasutajagruppKontaktid&gt; object if successful.
      */
-    public List<Contacts> getContactsUsingGET(String lang) {
+    public List<KasutajagruppKontaktid> getContactsUsingGET(String lang) {
         return getContactsUsingGETWithServiceResponseAsync(lang).toBlocking().single().body();
     }
 
@@ -1165,7 +1165,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<List<Contacts>> getContactsUsingGETAsync(String lang, final ServiceCallback<List<Contacts>> serviceCallback) {
+    public ServiceFuture<List<KasutajagruppKontaktid>> getContactsUsingGETAsync(String lang, final ServiceCallback<List<KasutajagruppKontaktid>> serviceCallback) {
         return ServiceFuture.fromResponse(getContactsUsingGETWithServiceResponseAsync(lang), serviceCallback);
     }
 
@@ -1174,12 +1174,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      *
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;Contacts&gt; object
+     * @return the observable to the List&lt;KasutajagruppKontaktid&gt; object
      */
-    public Observable<List<Contacts>> getContactsUsingGETAsync(String lang) {
-        return getContactsUsingGETWithServiceResponseAsync(lang).map(new Func1<ServiceResponse<List<Contacts>>, List<Contacts>>() {
+    public Observable<List<KasutajagruppKontaktid>> getContactsUsingGETAsync(String lang) {
+        return getContactsUsingGETWithServiceResponseAsync(lang).map(new Func1<ServiceResponse<List<KasutajagruppKontaktid>>, List<KasutajagruppKontaktid>>() {
             @Override
-            public List<Contacts> call(ServiceResponse<List<Contacts>> response) {
+            public List<KasutajagruppKontaktid> call(ServiceResponse<List<KasutajagruppKontaktid>> response) {
                 return response.body();
             }
         });
@@ -1190,15 +1190,15 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      *
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;Contacts&gt; object
+     * @return the observable to the List&lt;KasutajagruppKontaktid&gt; object
      */
-    public Observable<ServiceResponse<List<Contacts>>> getContactsUsingGETWithServiceResponseAsync(String lang) {
+    public Observable<ServiceResponse<List<KasutajagruppKontaktid>>> getContactsUsingGETWithServiceResponseAsync(String lang) {
         return service.getContactsUsingGET(lang)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<Contacts>>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<KasutajagruppKontaktid>>>>() {
                 @Override
-                public Observable<ServiceResponse<List<Contacts>>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<List<KasutajagruppKontaktid>>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<List<Contacts>> clientResponse = getContactsUsingGETDelegate(response);
+                        ServiceResponse<List<KasutajagruppKontaktid>> clientResponse = getContactsUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -1207,9 +1207,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             });
     }
 
-    private ServiceResponse<List<Contacts>> getContactsUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException {
-        return this.restClient().responseBuilderFactory().<List<Contacts>, RestException>newInstance(this.serializerAdapter())
-                .register(200, new TypeToken<List<Contacts>>() { }.getType())
+    private ServiceResponse<List<KasutajagruppKontaktid>> getContactsUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException {
+        return this.restClient().responseBuilderFactory().<List<KasutajagruppKontaktid>, RestException>newInstance(this.serializerAdapter())
+                .register(200, new TypeToken<List<KasutajagruppKontaktid>>() { }.getType())
                 .build(response);
     }
 
@@ -1220,9 +1220,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the UserDetails object if successful.
+     * @return the KasutajaDetailidKontaktid object if successful.
      */
-    public UserDetails getUserDetailsUsingGET(String uuid) {
+    public KasutajaDetailidKontaktid getUserDetailsUsingGET(String uuid) {
         return getUserDetailsUsingGETWithServiceResponseAsync(uuid).toBlocking().single().body();
     }
 
@@ -1234,7 +1234,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<UserDetails> getUserDetailsUsingGETAsync(String uuid, final ServiceCallback<UserDetails> serviceCallback) {
+    public ServiceFuture<KasutajaDetailidKontaktid> getUserDetailsUsingGETAsync(String uuid, final ServiceCallback<KasutajaDetailidKontaktid> serviceCallback) {
         return ServiceFuture.fromResponse(getUserDetailsUsingGETWithServiceResponseAsync(uuid), serviceCallback);
     }
 
@@ -1243,12 +1243,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      *
      * @param uuid Kasutaja UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the UserDetails object
+     * @return the observable to the KasutajaDetailidKontaktid object
      */
-    public Observable<UserDetails> getUserDetailsUsingGETAsync(String uuid) {
-        return getUserDetailsUsingGETWithServiceResponseAsync(uuid).map(new Func1<ServiceResponse<UserDetails>, UserDetails>() {
+    public Observable<KasutajaDetailidKontaktid> getUserDetailsUsingGETAsync(String uuid) {
+        return getUserDetailsUsingGETWithServiceResponseAsync(uuid).map(new Func1<ServiceResponse<KasutajaDetailidKontaktid>, KasutajaDetailidKontaktid>() {
             @Override
-            public UserDetails call(ServiceResponse<UserDetails> response) {
+            public KasutajaDetailidKontaktid call(ServiceResponse<KasutajaDetailidKontaktid> response) {
                 return response.body();
             }
         });
@@ -1259,19 +1259,19 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      *
      * @param uuid Kasutaja UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the UserDetails object
+     * @return the observable to the KasutajaDetailidKontaktid object
      */
-    public Observable<ServiceResponse<UserDetails>> getUserDetailsUsingGETWithServiceResponseAsync(String uuid) {
+    public Observable<ServiceResponse<KasutajaDetailidKontaktid>> getUserDetailsUsingGETWithServiceResponseAsync(String uuid) {
         if (uuid == null) {
             throw new IllegalArgumentException("Parameter uuid is required and cannot be null.");
         }
         final String lang = null;
         return service.getUserDetailsUsingGET(uuid, lang)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<UserDetails>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<KasutajaDetailidKontaktid>>>() {
                 @Override
-                public Observable<ServiceResponse<UserDetails>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<KasutajaDetailidKontaktid>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<UserDetails> clientResponse = getUserDetailsUsingGETDelegate(response);
+                        ServiceResponse<KasutajaDetailidKontaktid> clientResponse = getUserDetailsUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -1288,9 +1288,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the UserDetails object if successful.
+     * @return the KasutajaDetailidKontaktid object if successful.
      */
-    public UserDetails getUserDetailsUsingGET(String uuid, String lang) {
+    public KasutajaDetailidKontaktid getUserDetailsUsingGET(String uuid, String lang) {
         return getUserDetailsUsingGETWithServiceResponseAsync(uuid, lang).toBlocking().single().body();
     }
 
@@ -1303,7 +1303,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<UserDetails> getUserDetailsUsingGETAsync(String uuid, String lang, final ServiceCallback<UserDetails> serviceCallback) {
+    public ServiceFuture<KasutajaDetailidKontaktid> getUserDetailsUsingGETAsync(String uuid, String lang, final ServiceCallback<KasutajaDetailidKontaktid> serviceCallback) {
         return ServiceFuture.fromResponse(getUserDetailsUsingGETWithServiceResponseAsync(uuid, lang), serviceCallback);
     }
 
@@ -1313,12 +1313,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param uuid Kasutaja UUID
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the UserDetails object
+     * @return the observable to the KasutajaDetailidKontaktid object
      */
-    public Observable<UserDetails> getUserDetailsUsingGETAsync(String uuid, String lang) {
-        return getUserDetailsUsingGETWithServiceResponseAsync(uuid, lang).map(new Func1<ServiceResponse<UserDetails>, UserDetails>() {
+    public Observable<KasutajaDetailidKontaktid> getUserDetailsUsingGETAsync(String uuid, String lang) {
+        return getUserDetailsUsingGETWithServiceResponseAsync(uuid, lang).map(new Func1<ServiceResponse<KasutajaDetailidKontaktid>, KasutajaDetailidKontaktid>() {
             @Override
-            public UserDetails call(ServiceResponse<UserDetails> response) {
+            public KasutajaDetailidKontaktid call(ServiceResponse<KasutajaDetailidKontaktid> response) {
                 return response.body();
             }
         });
@@ -1330,18 +1330,18 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param uuid Kasutaja UUID
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the UserDetails object
+     * @return the observable to the KasutajaDetailidKontaktid object
      */
-    public Observable<ServiceResponse<UserDetails>> getUserDetailsUsingGETWithServiceResponseAsync(String uuid, String lang) {
+    public Observable<ServiceResponse<KasutajaDetailidKontaktid>> getUserDetailsUsingGETWithServiceResponseAsync(String uuid, String lang) {
         if (uuid == null) {
             throw new IllegalArgumentException("Parameter uuid is required and cannot be null.");
         }
         return service.getUserDetailsUsingGET(uuid, lang)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<UserDetails>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<KasutajaDetailidKontaktid>>>() {
                 @Override
-                public Observable<ServiceResponse<UserDetails>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<KasutajaDetailidKontaktid>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<UserDetails> clientResponse = getUserDetailsUsingGETDelegate(response);
+                        ServiceResponse<KasutajaDetailidKontaktid> clientResponse = getUserDetailsUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -1350,9 +1350,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             });
     }
 
-    private ServiceResponse<UserDetails> getUserDetailsUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException, IllegalArgumentException {
-        return this.restClient().responseBuilderFactory().<UserDetails, RestException>newInstance(this.serializerAdapter())
-                .register(200, new TypeToken<UserDetails>() { }.getType())
+    private ServiceResponse<KasutajaDetailidKontaktid> getUserDetailsUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException, IllegalArgumentException {
+        return this.restClient().responseBuilderFactory().<KasutajaDetailidKontaktid, RestException>newInstance(this.serializerAdapter())
+                .register(200, new TypeToken<KasutajaDetailidKontaktid>() { }.getType())
                 .build(response);
     }
 
@@ -1362,9 +1362,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the PagedResourcesOfDocument object if successful.
+     * @return the PagedResourcesDokument object if successful.
      */
-    public PagedResourcesOfDocument findDocumentsUsingGET() {
+    public PagedResourcesDokument findDocumentsUsingGET() {
         return findDocumentsUsingGETWithServiceResponseAsync().toBlocking().single().body();
     }
 
@@ -1375,7 +1375,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<PagedResourcesOfDocument> findDocumentsUsingGETAsync(final ServiceCallback<PagedResourcesOfDocument> serviceCallback) {
+    public ServiceFuture<PagedResourcesDokument> findDocumentsUsingGETAsync(final ServiceCallback<PagedResourcesDokument> serviceCallback) {
         return ServiceFuture.fromResponse(findDocumentsUsingGETWithServiceResponseAsync(), serviceCallback);
     }
 
@@ -1383,12 +1383,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * Dokumentide otsing.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PagedResourcesOfDocument object
+     * @return the observable to the PagedResourcesDokument object
      */
-    public Observable<PagedResourcesOfDocument> findDocumentsUsingGETAsync() {
-        return findDocumentsUsingGETWithServiceResponseAsync().map(new Func1<ServiceResponse<PagedResourcesOfDocument>, PagedResourcesOfDocument>() {
+    public Observable<PagedResourcesDokument> findDocumentsUsingGETAsync() {
+        return findDocumentsUsingGETWithServiceResponseAsync().map(new Func1<ServiceResponse<PagedResourcesDokument>, PagedResourcesDokument>() {
             @Override
-            public PagedResourcesOfDocument call(ServiceResponse<PagedResourcesOfDocument> response) {
+            public PagedResourcesDokument call(ServiceResponse<PagedResourcesDokument> response) {
                 return response.body();
             }
         });
@@ -1398,14 +1398,15 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * Dokumentide otsing.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PagedResourcesOfDocument object
+     * @return the observable to the PagedResourcesDokument object
      */
-    public Observable<ServiceResponse<PagedResourcesOfDocument>> findDocumentsUsingGETWithServiceResponseAsync() {
+    public Observable<ServiceResponse<PagedResourcesDokument>> findDocumentsUsingGETWithServiceResponseAsync() {
         final String authorReference = null;
         final LocalDate createdEnd = null;
         final LocalDate createdStart = null;
         final String directionCode = null;
         final String documentType = null;
+        final String functionGroupUuid = null;
         final String functionUuid = null;
         final String letterAuthor = null;
         final Integer membership = null;
@@ -1424,12 +1425,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
         final String title = null;
         final Boolean unpaged = null;
         String sortConverted = this.serializerAdapter().serializeList(sort, CollectionFormat.MULTI);
-        return service.findDocumentsUsingGET(authorReference, createdEnd, createdStart, directionCode, documentType, functionUuid, letterAuthor, membership, offset, page, pageNumber, pageSize, paged, reference, seriesUuid, size, sortConverted, sortsorted, sortunsorted, subseriesUuid, title, unpaged)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<PagedResourcesOfDocument>>>() {
+        return service.findDocumentsUsingGET(authorReference, createdEnd, createdStart, directionCode, documentType, functionGroupUuid, functionUuid, letterAuthor, membership, offset, page, pageNumber, pageSize, paged, reference, seriesUuid, size, sortConverted, sortsorted, sortunsorted, subseriesUuid, title, unpaged)
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<PagedResourcesDokument>>>() {
                 @Override
-                public Observable<ServiceResponse<PagedResourcesOfDocument>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<PagedResourcesDokument>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<PagedResourcesOfDocument> clientResponse = findDocumentsUsingGETDelegate(response);
+                        ServiceResponse<PagedResourcesDokument> clientResponse = findDocumentsUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -1446,6 +1447,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param createdStart Loomiskuupäeva vahemiku algus (yyyy-MM-dd)
      * @param directionCode [Kiri] Suund (klassifikaator 'kirjaSuund'). Possible values include: 'SISEMINE', 'SISSE', 'VALJA'
      * @param documentType Dokumendi liik. Possible values include: 'yldine', 'lugemiseTekst', 'muudatusettepanek', 'muudatusettepanekugaLiitumine', 'meLoetelu', 'plenaryAgendaItemDocument', 'unitAgendaItemDocument', 'infoAgendaItemDocument', 'interpellationsAgendaItemDocument', 'algtekst', 'lopptekst', 'seletuskiri', 'protokoll', 'interpellationsDocument', 'interpellationsAnswerDocument', 'opinionDocument', 'applicationDocument', 'excursionDocument', 'translationDocument', 'writtenQuestionDocument', 'writtenQuestionAnswerDocument', 'letterDocument', 'directiveDocument', 'pressReleaseDocument', 'decisionDocument', 'otherQuestionDocument', 'officialJourneyDocument', 'orderDocument', 'orderImplementationDocument', 'contractDocument', 'pursueDocument', 'elDocument', 'commissionOpinionDocument', 'vabariigiPresidendiOtsus', 'lisadokumendid', 'aruanne', 'taiskoguToonadalaProtokoll', 'riigikoguSeisukoht', 'uuring', 'meAllkirjastamine', 'jobDescriptionDocument', 'collectiveAddressDocument'
+     * @param functionGroupUuid Funktsioonigrupi UUID
      * @param functionUuid Funktsiooni UUID
      * @param letterAuthor [Kiri] Autor
      * @param membership Koosseisu number
@@ -1466,10 +1468,10 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the PagedResourcesOfDocument object if successful.
+     * @return the PagedResourcesDokument object if successful.
      */
-    public PagedResourcesOfDocument findDocumentsUsingGET(String authorReference, LocalDate createdEnd, LocalDate createdStart, String directionCode, String documentType, String functionUuid, String letterAuthor, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, String reference, String seriesUuid, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, String subseriesUuid, String title, Boolean unpaged) {
-        return findDocumentsUsingGETWithServiceResponseAsync(authorReference, createdEnd, createdStart, directionCode, documentType, functionUuid, letterAuthor, membership, offset, page, pageNumber, pageSize, paged, reference, seriesUuid, size, sort, sortsorted, sortunsorted, subseriesUuid, title, unpaged).toBlocking().single().body();
+    public PagedResourcesDokument findDocumentsUsingGET(String authorReference, LocalDate createdEnd, LocalDate createdStart, String directionCode, String documentType, String functionGroupUuid, String functionUuid, String letterAuthor, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, String reference, String seriesUuid, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, String subseriesUuid, String title, Boolean unpaged) {
+        return findDocumentsUsingGETWithServiceResponseAsync(authorReference, createdEnd, createdStart, directionCode, documentType, functionGroupUuid, functionUuid, letterAuthor, membership, offset, page, pageNumber, pageSize, paged, reference, seriesUuid, size, sort, sortsorted, sortunsorted, subseriesUuid, title, unpaged).toBlocking().single().body();
     }
 
     /**
@@ -1480,6 +1482,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param createdStart Loomiskuupäeva vahemiku algus (yyyy-MM-dd)
      * @param directionCode [Kiri] Suund (klassifikaator 'kirjaSuund'). Possible values include: 'SISEMINE', 'SISSE', 'VALJA'
      * @param documentType Dokumendi liik. Possible values include: 'yldine', 'lugemiseTekst', 'muudatusettepanek', 'muudatusettepanekugaLiitumine', 'meLoetelu', 'plenaryAgendaItemDocument', 'unitAgendaItemDocument', 'infoAgendaItemDocument', 'interpellationsAgendaItemDocument', 'algtekst', 'lopptekst', 'seletuskiri', 'protokoll', 'interpellationsDocument', 'interpellationsAnswerDocument', 'opinionDocument', 'applicationDocument', 'excursionDocument', 'translationDocument', 'writtenQuestionDocument', 'writtenQuestionAnswerDocument', 'letterDocument', 'directiveDocument', 'pressReleaseDocument', 'decisionDocument', 'otherQuestionDocument', 'officialJourneyDocument', 'orderDocument', 'orderImplementationDocument', 'contractDocument', 'pursueDocument', 'elDocument', 'commissionOpinionDocument', 'vabariigiPresidendiOtsus', 'lisadokumendid', 'aruanne', 'taiskoguToonadalaProtokoll', 'riigikoguSeisukoht', 'uuring', 'meAllkirjastamine', 'jobDescriptionDocument', 'collectiveAddressDocument'
+     * @param functionGroupUuid Funktsioonigrupi UUID
      * @param functionUuid Funktsiooni UUID
      * @param letterAuthor [Kiri] Autor
      * @param membership Koosseisu number
@@ -1501,8 +1504,8 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<PagedResourcesOfDocument> findDocumentsUsingGETAsync(String authorReference, LocalDate createdEnd, LocalDate createdStart, String directionCode, String documentType, String functionUuid, String letterAuthor, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, String reference, String seriesUuid, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, String subseriesUuid, String title, Boolean unpaged, final ServiceCallback<PagedResourcesOfDocument> serviceCallback) {
-        return ServiceFuture.fromResponse(findDocumentsUsingGETWithServiceResponseAsync(authorReference, createdEnd, createdStart, directionCode, documentType, functionUuid, letterAuthor, membership, offset, page, pageNumber, pageSize, paged, reference, seriesUuid, size, sort, sortsorted, sortunsorted, subseriesUuid, title, unpaged), serviceCallback);
+    public ServiceFuture<PagedResourcesDokument> findDocumentsUsingGETAsync(String authorReference, LocalDate createdEnd, LocalDate createdStart, String directionCode, String documentType, String functionGroupUuid, String functionUuid, String letterAuthor, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, String reference, String seriesUuid, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, String subseriesUuid, String title, Boolean unpaged, final ServiceCallback<PagedResourcesDokument> serviceCallback) {
+        return ServiceFuture.fromResponse(findDocumentsUsingGETWithServiceResponseAsync(authorReference, createdEnd, createdStart, directionCode, documentType, functionGroupUuid, functionUuid, letterAuthor, membership, offset, page, pageNumber, pageSize, paged, reference, seriesUuid, size, sort, sortsorted, sortunsorted, subseriesUuid, title, unpaged), serviceCallback);
     }
 
     /**
@@ -1513,6 +1516,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param createdStart Loomiskuupäeva vahemiku algus (yyyy-MM-dd)
      * @param directionCode [Kiri] Suund (klassifikaator 'kirjaSuund'). Possible values include: 'SISEMINE', 'SISSE', 'VALJA'
      * @param documentType Dokumendi liik. Possible values include: 'yldine', 'lugemiseTekst', 'muudatusettepanek', 'muudatusettepanekugaLiitumine', 'meLoetelu', 'plenaryAgendaItemDocument', 'unitAgendaItemDocument', 'infoAgendaItemDocument', 'interpellationsAgendaItemDocument', 'algtekst', 'lopptekst', 'seletuskiri', 'protokoll', 'interpellationsDocument', 'interpellationsAnswerDocument', 'opinionDocument', 'applicationDocument', 'excursionDocument', 'translationDocument', 'writtenQuestionDocument', 'writtenQuestionAnswerDocument', 'letterDocument', 'directiveDocument', 'pressReleaseDocument', 'decisionDocument', 'otherQuestionDocument', 'officialJourneyDocument', 'orderDocument', 'orderImplementationDocument', 'contractDocument', 'pursueDocument', 'elDocument', 'commissionOpinionDocument', 'vabariigiPresidendiOtsus', 'lisadokumendid', 'aruanne', 'taiskoguToonadalaProtokoll', 'riigikoguSeisukoht', 'uuring', 'meAllkirjastamine', 'jobDescriptionDocument', 'collectiveAddressDocument'
+     * @param functionGroupUuid Funktsioonigrupi UUID
      * @param functionUuid Funktsiooni UUID
      * @param letterAuthor [Kiri] Autor
      * @param membership Koosseisu number
@@ -1531,12 +1535,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param title Pealkiri
      * @param unpaged the Boolean value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PagedResourcesOfDocument object
+     * @return the observable to the PagedResourcesDokument object
      */
-    public Observable<PagedResourcesOfDocument> findDocumentsUsingGETAsync(String authorReference, LocalDate createdEnd, LocalDate createdStart, String directionCode, String documentType, String functionUuid, String letterAuthor, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, String reference, String seriesUuid, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, String subseriesUuid, String title, Boolean unpaged) {
-        return findDocumentsUsingGETWithServiceResponseAsync(authorReference, createdEnd, createdStart, directionCode, documentType, functionUuid, letterAuthor, membership, offset, page, pageNumber, pageSize, paged, reference, seriesUuid, size, sort, sortsorted, sortunsorted, subseriesUuid, title, unpaged).map(new Func1<ServiceResponse<PagedResourcesOfDocument>, PagedResourcesOfDocument>() {
+    public Observable<PagedResourcesDokument> findDocumentsUsingGETAsync(String authorReference, LocalDate createdEnd, LocalDate createdStart, String directionCode, String documentType, String functionGroupUuid, String functionUuid, String letterAuthor, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, String reference, String seriesUuid, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, String subseriesUuid, String title, Boolean unpaged) {
+        return findDocumentsUsingGETWithServiceResponseAsync(authorReference, createdEnd, createdStart, directionCode, documentType, functionGroupUuid, functionUuid, letterAuthor, membership, offset, page, pageNumber, pageSize, paged, reference, seriesUuid, size, sort, sortsorted, sortunsorted, subseriesUuid, title, unpaged).map(new Func1<ServiceResponse<PagedResourcesDokument>, PagedResourcesDokument>() {
             @Override
-            public PagedResourcesOfDocument call(ServiceResponse<PagedResourcesOfDocument> response) {
+            public PagedResourcesDokument call(ServiceResponse<PagedResourcesDokument> response) {
                 return response.body();
             }
         });
@@ -1550,6 +1554,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param createdStart Loomiskuupäeva vahemiku algus (yyyy-MM-dd)
      * @param directionCode [Kiri] Suund (klassifikaator 'kirjaSuund'). Possible values include: 'SISEMINE', 'SISSE', 'VALJA'
      * @param documentType Dokumendi liik. Possible values include: 'yldine', 'lugemiseTekst', 'muudatusettepanek', 'muudatusettepanekugaLiitumine', 'meLoetelu', 'plenaryAgendaItemDocument', 'unitAgendaItemDocument', 'infoAgendaItemDocument', 'interpellationsAgendaItemDocument', 'algtekst', 'lopptekst', 'seletuskiri', 'protokoll', 'interpellationsDocument', 'interpellationsAnswerDocument', 'opinionDocument', 'applicationDocument', 'excursionDocument', 'translationDocument', 'writtenQuestionDocument', 'writtenQuestionAnswerDocument', 'letterDocument', 'directiveDocument', 'pressReleaseDocument', 'decisionDocument', 'otherQuestionDocument', 'officialJourneyDocument', 'orderDocument', 'orderImplementationDocument', 'contractDocument', 'pursueDocument', 'elDocument', 'commissionOpinionDocument', 'vabariigiPresidendiOtsus', 'lisadokumendid', 'aruanne', 'taiskoguToonadalaProtokoll', 'riigikoguSeisukoht', 'uuring', 'meAllkirjastamine', 'jobDescriptionDocument', 'collectiveAddressDocument'
+     * @param functionGroupUuid Funktsioonigrupi UUID
      * @param functionUuid Funktsiooni UUID
      * @param letterAuthor [Kiri] Autor
      * @param membership Koosseisu number
@@ -1568,17 +1573,17 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param title Pealkiri
      * @param unpaged the Boolean value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PagedResourcesOfDocument object
+     * @return the observable to the PagedResourcesDokument object
      */
-    public Observable<ServiceResponse<PagedResourcesOfDocument>> findDocumentsUsingGETWithServiceResponseAsync(String authorReference, LocalDate createdEnd, LocalDate createdStart, String directionCode, String documentType, String functionUuid, String letterAuthor, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, String reference, String seriesUuid, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, String subseriesUuid, String title, Boolean unpaged) {
+    public Observable<ServiceResponse<PagedResourcesDokument>> findDocumentsUsingGETWithServiceResponseAsync(String authorReference, LocalDate createdEnd, LocalDate createdStart, String directionCode, String documentType, String functionGroupUuid, String functionUuid, String letterAuthor, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, String reference, String seriesUuid, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, String subseriesUuid, String title, Boolean unpaged) {
         Validator.validate(sort);
         String sortConverted = this.serializerAdapter().serializeList(sort, CollectionFormat.MULTI);
-        return service.findDocumentsUsingGET(authorReference, createdEnd, createdStart, directionCode, documentType, functionUuid, letterAuthor, membership, offset, page, pageNumber, pageSize, paged, reference, seriesUuid, size, sortConverted, sortsorted, sortunsorted, subseriesUuid, title, unpaged)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<PagedResourcesOfDocument>>>() {
+        return service.findDocumentsUsingGET(authorReference, createdEnd, createdStart, directionCode, documentType, functionGroupUuid, functionUuid, letterAuthor, membership, offset, page, pageNumber, pageSize, paged, reference, seriesUuid, size, sortConverted, sortsorted, sortunsorted, subseriesUuid, title, unpaged)
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<PagedResourcesDokument>>>() {
                 @Override
-                public Observable<ServiceResponse<PagedResourcesOfDocument>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<PagedResourcesDokument>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<PagedResourcesOfDocument> clientResponse = findDocumentsUsingGETDelegate(response);
+                        ServiceResponse<PagedResourcesDokument> clientResponse = findDocumentsUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -1587,9 +1592,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             });
     }
 
-    private ServiceResponse<PagedResourcesOfDocument> findDocumentsUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException {
-        return this.restClient().responseBuilderFactory().<PagedResourcesOfDocument, RestException>newInstance(this.serializerAdapter())
-                .register(200, new TypeToken<PagedResourcesOfDocument>() { }.getType())
+    private ServiceResponse<PagedResourcesDokument> findDocumentsUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException {
+        return this.restClient().responseBuilderFactory().<PagedResourcesDokument, RestException>newInstance(this.serializerAdapter())
+                .register(200, new TypeToken<PagedResourcesDokument>() { }.getType())
                 .build(response);
     }
 
@@ -1599,9 +1604,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;CollectiveAddress&gt; object if successful.
+     * @return the List&lt;KollektiivnePRdumineDokument&gt; object if successful.
      */
-    public List<CollectiveAddress> findCollectiveAddressesUsingGET() {
+    public List<KollektiivnePRdumineDokument> findCollectiveAddressesUsingGET() {
         return findCollectiveAddressesUsingGETWithServiceResponseAsync().toBlocking().single().body();
     }
 
@@ -1612,7 +1617,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<List<CollectiveAddress>> findCollectiveAddressesUsingGETAsync(final ServiceCallback<List<CollectiveAddress>> serviceCallback) {
+    public ServiceFuture<List<KollektiivnePRdumineDokument>> findCollectiveAddressesUsingGETAsync(final ServiceCallback<List<KollektiivnePRdumineDokument>> serviceCallback) {
         return ServiceFuture.fromResponse(findCollectiveAddressesUsingGETWithServiceResponseAsync(), serviceCallback);
     }
 
@@ -1620,12 +1625,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * Kollektiivsed pöördumised.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;CollectiveAddress&gt; object
+     * @return the observable to the List&lt;KollektiivnePRdumineDokument&gt; object
      */
-    public Observable<List<CollectiveAddress>> findCollectiveAddressesUsingGETAsync() {
-        return findCollectiveAddressesUsingGETWithServiceResponseAsync().map(new Func1<ServiceResponse<List<CollectiveAddress>>, List<CollectiveAddress>>() {
+    public Observable<List<KollektiivnePRdumineDokument>> findCollectiveAddressesUsingGETAsync() {
+        return findCollectiveAddressesUsingGETWithServiceResponseAsync().map(new Func1<ServiceResponse<List<KollektiivnePRdumineDokument>>, List<KollektiivnePRdumineDokument>>() {
             @Override
-            public List<CollectiveAddress> call(ServiceResponse<List<CollectiveAddress>> response) {
+            public List<KollektiivnePRdumineDokument> call(ServiceResponse<List<KollektiivnePRdumineDokument>> response) {
                 return response.body();
             }
         });
@@ -1635,15 +1640,15 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * Kollektiivsed pöördumised.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;CollectiveAddress&gt; object
+     * @return the observable to the List&lt;KollektiivnePRdumineDokument&gt; object
      */
-    public Observable<ServiceResponse<List<CollectiveAddress>>> findCollectiveAddressesUsingGETWithServiceResponseAsync() {
+    public Observable<ServiceResponse<List<KollektiivnePRdumineDokument>>> findCollectiveAddressesUsingGETWithServiceResponseAsync() {
         return service.findCollectiveAddressesUsingGET()
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<CollectiveAddress>>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<KollektiivnePRdumineDokument>>>>() {
                 @Override
-                public Observable<ServiceResponse<List<CollectiveAddress>>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<List<KollektiivnePRdumineDokument>>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<List<CollectiveAddress>> clientResponse = findCollectiveAddressesUsingGETDelegate(response);
+                        ServiceResponse<List<KollektiivnePRdumineDokument>> clientResponse = findCollectiveAddressesUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -1652,9 +1657,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             });
     }
 
-    private ServiceResponse<List<CollectiveAddress>> findCollectiveAddressesUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException {
-        return this.restClient().responseBuilderFactory().<List<CollectiveAddress>, RestException>newInstance(this.serializerAdapter())
-                .register(200, new TypeToken<List<CollectiveAddress>>() { }.getType())
+    private ServiceResponse<List<KollektiivnePRdumineDokument>> findCollectiveAddressesUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException {
+        return this.restClient().responseBuilderFactory().<List<KollektiivnePRdumineDokument>, RestException>newInstance(this.serializerAdapter())
+                .register(200, new TypeToken<List<KollektiivnePRdumineDokument>>() { }.getType())
                 .build(response);
     }
 
@@ -1665,9 +1670,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the CollectiveAddress object if successful.
+     * @return the KollektiivnePRdumineDokument object if successful.
      */
-    public CollectiveAddress findCollectiveAddressUsingGET(String uuidOrSenderRef) {
+    public KollektiivnePRdumineDokument findCollectiveAddressUsingGET(String uuidOrSenderRef) {
         return findCollectiveAddressUsingGETWithServiceResponseAsync(uuidOrSenderRef).toBlocking().single().body();
     }
 
@@ -1679,7 +1684,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<CollectiveAddress> findCollectiveAddressUsingGETAsync(String uuidOrSenderRef, final ServiceCallback<CollectiveAddress> serviceCallback) {
+    public ServiceFuture<KollektiivnePRdumineDokument> findCollectiveAddressUsingGETAsync(String uuidOrSenderRef, final ServiceCallback<KollektiivnePRdumineDokument> serviceCallback) {
         return ServiceFuture.fromResponse(findCollectiveAddressUsingGETWithServiceResponseAsync(uuidOrSenderRef), serviceCallback);
     }
 
@@ -1688,12 +1693,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      *
      * @param uuidOrSenderRef Dokumendi UUID või saatja viit
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the CollectiveAddress object
+     * @return the observable to the KollektiivnePRdumineDokument object
      */
-    public Observable<CollectiveAddress> findCollectiveAddressUsingGETAsync(String uuidOrSenderRef) {
-        return findCollectiveAddressUsingGETWithServiceResponseAsync(uuidOrSenderRef).map(new Func1<ServiceResponse<CollectiveAddress>, CollectiveAddress>() {
+    public Observable<KollektiivnePRdumineDokument> findCollectiveAddressUsingGETAsync(String uuidOrSenderRef) {
+        return findCollectiveAddressUsingGETWithServiceResponseAsync(uuidOrSenderRef).map(new Func1<ServiceResponse<KollektiivnePRdumineDokument>, KollektiivnePRdumineDokument>() {
             @Override
-            public CollectiveAddress call(ServiceResponse<CollectiveAddress> response) {
+            public KollektiivnePRdumineDokument call(ServiceResponse<KollektiivnePRdumineDokument> response) {
                 return response.body();
             }
         });
@@ -1704,18 +1709,18 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      *
      * @param uuidOrSenderRef Dokumendi UUID või saatja viit
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the CollectiveAddress object
+     * @return the observable to the KollektiivnePRdumineDokument object
      */
-    public Observable<ServiceResponse<CollectiveAddress>> findCollectiveAddressUsingGETWithServiceResponseAsync(String uuidOrSenderRef) {
+    public Observable<ServiceResponse<KollektiivnePRdumineDokument>> findCollectiveAddressUsingGETWithServiceResponseAsync(String uuidOrSenderRef) {
         if (uuidOrSenderRef == null) {
             throw new IllegalArgumentException("Parameter uuidOrSenderRef is required and cannot be null.");
         }
         return service.findCollectiveAddressUsingGET(uuidOrSenderRef)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<CollectiveAddress>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<KollektiivnePRdumineDokument>>>() {
                 @Override
-                public Observable<ServiceResponse<CollectiveAddress>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<KollektiivnePRdumineDokument>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<CollectiveAddress> clientResponse = findCollectiveAddressUsingGETDelegate(response);
+                        ServiceResponse<KollektiivnePRdumineDokument> clientResponse = findCollectiveAddressUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -1724,9 +1729,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             });
     }
 
-    private ServiceResponse<CollectiveAddress> findCollectiveAddressUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException, IllegalArgumentException {
-        return this.restClient().responseBuilderFactory().<CollectiveAddress, RestException>newInstance(this.serializerAdapter())
-                .register(200, new TypeToken<CollectiveAddress>() { }.getType())
+    private ServiceResponse<KollektiivnePRdumineDokument> findCollectiveAddressUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException, IllegalArgumentException {
+        return this.restClient().responseBuilderFactory().<KollektiivnePRdumineDokument, RestException>newInstance(this.serializerAdapter())
+                .register(200, new TypeToken<KollektiivnePRdumineDokument>() { }.getType())
                 .build(response);
     }
 
@@ -1736,9 +1741,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the PagedResourcesOfOtherQuestions object if successful.
+     * @return the PagedResourcesDokumentMuuKSimus object if successful.
      */
-    public PagedResourcesOfOtherQuestions findOtherQuestionsUsingGET() {
+    public PagedResourcesDokumentMuuKSimus findOtherQuestionsUsingGET() {
         return findOtherQuestionsUsingGETWithServiceResponseAsync().toBlocking().single().body();
     }
 
@@ -1749,7 +1754,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<PagedResourcesOfOtherQuestions> findOtherQuestionsUsingGETAsync(final ServiceCallback<PagedResourcesOfOtherQuestions> serviceCallback) {
+    public ServiceFuture<PagedResourcesDokumentMuuKSimus> findOtherQuestionsUsingGETAsync(final ServiceCallback<PagedResourcesDokumentMuuKSimus> serviceCallback) {
         return ServiceFuture.fromResponse(findOtherQuestionsUsingGETWithServiceResponseAsync(), serviceCallback);
     }
 
@@ -1757,12 +1762,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * Muud küsimused.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PagedResourcesOfOtherQuestions object
+     * @return the observable to the PagedResourcesDokumentMuuKSimus object
      */
-    public Observable<PagedResourcesOfOtherQuestions> findOtherQuestionsUsingGETAsync() {
-        return findOtherQuestionsUsingGETWithServiceResponseAsync().map(new Func1<ServiceResponse<PagedResourcesOfOtherQuestions>, PagedResourcesOfOtherQuestions>() {
+    public Observable<PagedResourcesDokumentMuuKSimus> findOtherQuestionsUsingGETAsync() {
+        return findOtherQuestionsUsingGETWithServiceResponseAsync().map(new Func1<ServiceResponse<PagedResourcesDokumentMuuKSimus>, PagedResourcesDokumentMuuKSimus>() {
             @Override
-            public PagedResourcesOfOtherQuestions call(ServiceResponse<PagedResourcesOfOtherQuestions> response) {
+            public PagedResourcesDokumentMuuKSimus call(ServiceResponse<PagedResourcesDokumentMuuKSimus> response) {
                 return response.body();
             }
         });
@@ -1772,9 +1777,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * Muud küsimused.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PagedResourcesOfOtherQuestions object
+     * @return the observable to the PagedResourcesDokumentMuuKSimus object
      */
-    public Observable<ServiceResponse<PagedResourcesOfOtherQuestions>> findOtherQuestionsUsingGETWithServiceResponseAsync() {
+    public Observable<ServiceResponse<PagedResourcesDokumentMuuKSimus>> findOtherQuestionsUsingGETWithServiceResponseAsync() {
         final String applicantUuid = null;
         final LocalDate createdEnd = null;
         final LocalDate createdStart = null;
@@ -1800,11 +1805,11 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
         final Boolean unpaged = null;
         String sortConverted = this.serializerAdapter().serializeList(sort, CollectionFormat.MULTI);String subTypeCodeConverted = this.serializerAdapter().serializeList(subTypeCode, CollectionFormat.MULTI);
         return service.findOtherQuestionsUsingGET(applicantUuid, createdEnd, createdStart, dateEnd, dateStart, membership, offset, page, pageNumber, pageSize, paged, querySteno, reference, reporterUuid, sittingDateTimeEnd, sittingDateTimeStart, size, sortConverted, sortsorted, sortunsorted, subTypeCodeConverted, title, unpaged)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<PagedResourcesOfOtherQuestions>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<PagedResourcesDokumentMuuKSimus>>>() {
                 @Override
-                public Observable<ServiceResponse<PagedResourcesOfOtherQuestions>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<PagedResourcesDokumentMuuKSimus>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<PagedResourcesOfOtherQuestions> clientResponse = findOtherQuestionsUsingGETDelegate(response);
+                        ServiceResponse<PagedResourcesDokumentMuuKSimus> clientResponse = findOtherQuestionsUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -1842,9 +1847,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the PagedResourcesOfOtherQuestions object if successful.
+     * @return the PagedResourcesDokumentMuuKSimus object if successful.
      */
-    public PagedResourcesOfOtherQuestions findOtherQuestionsUsingGET(String applicantUuid, LocalDate createdEnd, LocalDate createdStart, LocalDate dateEnd, LocalDate dateStart, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, Boolean querySteno, String reference, String reporterUuid, LocalDate sittingDateTimeEnd, LocalDate sittingDateTimeStart, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, List<String> subTypeCode, String title, Boolean unpaged) {
+    public PagedResourcesDokumentMuuKSimus findOtherQuestionsUsingGET(String applicantUuid, LocalDate createdEnd, LocalDate createdStart, LocalDate dateEnd, LocalDate dateStart, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, Boolean querySteno, String reference, String reporterUuid, LocalDate sittingDateTimeEnd, LocalDate sittingDateTimeStart, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, List<String> subTypeCode, String title, Boolean unpaged) {
         return findOtherQuestionsUsingGETWithServiceResponseAsync(applicantUuid, createdEnd, createdStart, dateEnd, dateStart, membership, offset, page, pageNumber, pageSize, paged, querySteno, reference, reporterUuid, sittingDateTimeEnd, sittingDateTimeStart, size, sort, sortsorted, sortunsorted, subTypeCode, title, unpaged).toBlocking().single().body();
     }
 
@@ -1878,7 +1883,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<PagedResourcesOfOtherQuestions> findOtherQuestionsUsingGETAsync(String applicantUuid, LocalDate createdEnd, LocalDate createdStart, LocalDate dateEnd, LocalDate dateStart, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, Boolean querySteno, String reference, String reporterUuid, LocalDate sittingDateTimeEnd, LocalDate sittingDateTimeStart, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, List<String> subTypeCode, String title, Boolean unpaged, final ServiceCallback<PagedResourcesOfOtherQuestions> serviceCallback) {
+    public ServiceFuture<PagedResourcesDokumentMuuKSimus> findOtherQuestionsUsingGETAsync(String applicantUuid, LocalDate createdEnd, LocalDate createdStart, LocalDate dateEnd, LocalDate dateStart, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, Boolean querySteno, String reference, String reporterUuid, LocalDate sittingDateTimeEnd, LocalDate sittingDateTimeStart, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, List<String> subTypeCode, String title, Boolean unpaged, final ServiceCallback<PagedResourcesDokumentMuuKSimus> serviceCallback) {
         return ServiceFuture.fromResponse(findOtherQuestionsUsingGETWithServiceResponseAsync(applicantUuid, createdEnd, createdStart, dateEnd, dateStart, membership, offset, page, pageNumber, pageSize, paged, querySteno, reference, reporterUuid, sittingDateTimeEnd, sittingDateTimeStart, size, sort, sortsorted, sortunsorted, subTypeCode, title, unpaged), serviceCallback);
     }
 
@@ -1909,12 +1914,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param title Pealkiri
      * @param unpaged the Boolean value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PagedResourcesOfOtherQuestions object
+     * @return the observable to the PagedResourcesDokumentMuuKSimus object
      */
-    public Observable<PagedResourcesOfOtherQuestions> findOtherQuestionsUsingGETAsync(String applicantUuid, LocalDate createdEnd, LocalDate createdStart, LocalDate dateEnd, LocalDate dateStart, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, Boolean querySteno, String reference, String reporterUuid, LocalDate sittingDateTimeEnd, LocalDate sittingDateTimeStart, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, List<String> subTypeCode, String title, Boolean unpaged) {
-        return findOtherQuestionsUsingGETWithServiceResponseAsync(applicantUuid, createdEnd, createdStart, dateEnd, dateStart, membership, offset, page, pageNumber, pageSize, paged, querySteno, reference, reporterUuid, sittingDateTimeEnd, sittingDateTimeStart, size, sort, sortsorted, sortunsorted, subTypeCode, title, unpaged).map(new Func1<ServiceResponse<PagedResourcesOfOtherQuestions>, PagedResourcesOfOtherQuestions>() {
+    public Observable<PagedResourcesDokumentMuuKSimus> findOtherQuestionsUsingGETAsync(String applicantUuid, LocalDate createdEnd, LocalDate createdStart, LocalDate dateEnd, LocalDate dateStart, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, Boolean querySteno, String reference, String reporterUuid, LocalDate sittingDateTimeEnd, LocalDate sittingDateTimeStart, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, List<String> subTypeCode, String title, Boolean unpaged) {
+        return findOtherQuestionsUsingGETWithServiceResponseAsync(applicantUuid, createdEnd, createdStart, dateEnd, dateStart, membership, offset, page, pageNumber, pageSize, paged, querySteno, reference, reporterUuid, sittingDateTimeEnd, sittingDateTimeStart, size, sort, sortsorted, sortunsorted, subTypeCode, title, unpaged).map(new Func1<ServiceResponse<PagedResourcesDokumentMuuKSimus>, PagedResourcesDokumentMuuKSimus>() {
             @Override
-            public PagedResourcesOfOtherQuestions call(ServiceResponse<PagedResourcesOfOtherQuestions> response) {
+            public PagedResourcesDokumentMuuKSimus call(ServiceResponse<PagedResourcesDokumentMuuKSimus> response) {
                 return response.body();
             }
         });
@@ -1947,18 +1952,18 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param title Pealkiri
      * @param unpaged the Boolean value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PagedResourcesOfOtherQuestions object
+     * @return the observable to the PagedResourcesDokumentMuuKSimus object
      */
-    public Observable<ServiceResponse<PagedResourcesOfOtherQuestions>> findOtherQuestionsUsingGETWithServiceResponseAsync(String applicantUuid, LocalDate createdEnd, LocalDate createdStart, LocalDate dateEnd, LocalDate dateStart, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, Boolean querySteno, String reference, String reporterUuid, LocalDate sittingDateTimeEnd, LocalDate sittingDateTimeStart, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, List<String> subTypeCode, String title, Boolean unpaged) {
+    public Observable<ServiceResponse<PagedResourcesDokumentMuuKSimus>> findOtherQuestionsUsingGETWithServiceResponseAsync(String applicantUuid, LocalDate createdEnd, LocalDate createdStart, LocalDate dateEnd, LocalDate dateStart, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, Boolean querySteno, String reference, String reporterUuid, LocalDate sittingDateTimeEnd, LocalDate sittingDateTimeStart, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, List<String> subTypeCode, String title, Boolean unpaged) {
         Validator.validate(sort);
         Validator.validate(subTypeCode);
         String sortConverted = this.serializerAdapter().serializeList(sort, CollectionFormat.MULTI);String subTypeCodeConverted = this.serializerAdapter().serializeList(subTypeCode, CollectionFormat.MULTI);
         return service.findOtherQuestionsUsingGET(applicantUuid, createdEnd, createdStart, dateEnd, dateStart, membership, offset, page, pageNumber, pageSize, paged, querySteno, reference, reporterUuid, sittingDateTimeEnd, sittingDateTimeStart, size, sortConverted, sortsorted, sortunsorted, subTypeCodeConverted, title, unpaged)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<PagedResourcesOfOtherQuestions>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<PagedResourcesDokumentMuuKSimus>>>() {
                 @Override
-                public Observable<ServiceResponse<PagedResourcesOfOtherQuestions>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<PagedResourcesDokumentMuuKSimus>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<PagedResourcesOfOtherQuestions> clientResponse = findOtherQuestionsUsingGETDelegate(response);
+                        ServiceResponse<PagedResourcesDokumentMuuKSimus> clientResponse = findOtherQuestionsUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -1967,9 +1972,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             });
     }
 
-    private ServiceResponse<PagedResourcesOfOtherQuestions> findOtherQuestionsUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException {
-        return this.restClient().responseBuilderFactory().<PagedResourcesOfOtherQuestions, RestException>newInstance(this.serializerAdapter())
-                .register(200, new TypeToken<PagedResourcesOfOtherQuestions>() { }.getType())
+    private ServiceResponse<PagedResourcesDokumentMuuKSimus> findOtherQuestionsUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException {
+        return this.restClient().responseBuilderFactory().<PagedResourcesDokumentMuuKSimus, RestException>newInstance(this.serializerAdapter())
+                .register(200, new TypeToken<PagedResourcesDokumentMuuKSimus>() { }.getType())
                 .build(response);
     }
 
@@ -1980,9 +1985,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Document object if successful.
+     * @return the Dokument object if successful.
      */
-    public Document getDocumentUsingGET(String uuid) {
+    public Dokument getDocumentUsingGET(String uuid) {
         return getDocumentUsingGETWithServiceResponseAsync(uuid).toBlocking().single().body();
     }
 
@@ -1994,7 +1999,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<Document> getDocumentUsingGETAsync(String uuid, final ServiceCallback<Document> serviceCallback) {
+    public ServiceFuture<Dokument> getDocumentUsingGETAsync(String uuid, final ServiceCallback<Dokument> serviceCallback) {
         return ServiceFuture.fromResponse(getDocumentUsingGETWithServiceResponseAsync(uuid), serviceCallback);
     }
 
@@ -2003,12 +2008,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      *
      * @param uuid Dokumendi UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the Document object
+     * @return the observable to the Dokument object
      */
-    public Observable<Document> getDocumentUsingGETAsync(String uuid) {
-        return getDocumentUsingGETWithServiceResponseAsync(uuid).map(new Func1<ServiceResponse<Document>, Document>() {
+    public Observable<Dokument> getDocumentUsingGETAsync(String uuid) {
+        return getDocumentUsingGETWithServiceResponseAsync(uuid).map(new Func1<ServiceResponse<Dokument>, Dokument>() {
             @Override
-            public Document call(ServiceResponse<Document> response) {
+            public Dokument call(ServiceResponse<Dokument> response) {
                 return response.body();
             }
         });
@@ -2019,19 +2024,19 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      *
      * @param uuid Dokumendi UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the Document object
+     * @return the observable to the Dokument object
      */
-    public Observable<ServiceResponse<Document>> getDocumentUsingGETWithServiceResponseAsync(String uuid) {
+    public Observable<ServiceResponse<Dokument>> getDocumentUsingGETWithServiceResponseAsync(String uuid) {
         if (uuid == null) {
             throw new IllegalArgumentException("Parameter uuid is required and cannot be null.");
         }
         final String lang = null;
         return service.getDocumentUsingGET(uuid, lang)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<Document>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<Dokument>>>() {
                 @Override
-                public Observable<ServiceResponse<Document>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<Dokument>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<Document> clientResponse = getDocumentUsingGETDelegate(response);
+                        ServiceResponse<Dokument> clientResponse = getDocumentUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -2048,9 +2053,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Document object if successful.
+     * @return the Dokument object if successful.
      */
-    public Document getDocumentUsingGET(String uuid, String lang) {
+    public Dokument getDocumentUsingGET(String uuid, String lang) {
         return getDocumentUsingGETWithServiceResponseAsync(uuid, lang).toBlocking().single().body();
     }
 
@@ -2063,7 +2068,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<Document> getDocumentUsingGETAsync(String uuid, String lang, final ServiceCallback<Document> serviceCallback) {
+    public ServiceFuture<Dokument> getDocumentUsingGETAsync(String uuid, String lang, final ServiceCallback<Dokument> serviceCallback) {
         return ServiceFuture.fromResponse(getDocumentUsingGETWithServiceResponseAsync(uuid, lang), serviceCallback);
     }
 
@@ -2073,12 +2078,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param uuid Dokumendi UUID
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the Document object
+     * @return the observable to the Dokument object
      */
-    public Observable<Document> getDocumentUsingGETAsync(String uuid, String lang) {
-        return getDocumentUsingGETWithServiceResponseAsync(uuid, lang).map(new Func1<ServiceResponse<Document>, Document>() {
+    public Observable<Dokument> getDocumentUsingGETAsync(String uuid, String lang) {
+        return getDocumentUsingGETWithServiceResponseAsync(uuid, lang).map(new Func1<ServiceResponse<Dokument>, Dokument>() {
             @Override
-            public Document call(ServiceResponse<Document> response) {
+            public Dokument call(ServiceResponse<Dokument> response) {
                 return response.body();
             }
         });
@@ -2090,18 +2095,18 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param uuid Dokumendi UUID
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the Document object
+     * @return the observable to the Dokument object
      */
-    public Observable<ServiceResponse<Document>> getDocumentUsingGETWithServiceResponseAsync(String uuid, String lang) {
+    public Observable<ServiceResponse<Dokument>> getDocumentUsingGETWithServiceResponseAsync(String uuid, String lang) {
         if (uuid == null) {
             throw new IllegalArgumentException("Parameter uuid is required and cannot be null.");
         }
         return service.getDocumentUsingGET(uuid, lang)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<Document>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<Dokument>>>() {
                 @Override
-                public Observable<ServiceResponse<Document>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<Dokument>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<Document> clientResponse = getDocumentUsingGETDelegate(response);
+                        ServiceResponse<Dokument> clientResponse = getDocumentUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -2110,9 +2115,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             });
     }
 
-    private ServiceResponse<Document> getDocumentUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException, IllegalArgumentException {
-        return this.restClient().responseBuilderFactory().<Document, RestException>newInstance(this.serializerAdapter())
-                .register(200, new TypeToken<Document>() { }.getType())
+    private ServiceResponse<Dokument> getDocumentUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException, IllegalArgumentException {
+        return this.restClient().responseBuilderFactory().<Dokument, RestException>newInstance(this.serializerAdapter())
+                .register(200, new TypeToken<Dokument>() { }.getType())
                 .build(response);
     }
 
@@ -2123,9 +2128,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;Events&gt; object if successful.
+     * @return the List&lt;PEvasNdmused&gt; object if successful.
      */
-    public List<Events> getEventsUsingGET() {
+    public List<PEvasNdmused> getEventsUsingGET() {
         return getEventsUsingGETWithServiceResponseAsync().toBlocking().single().body();
     }
 
@@ -2137,7 +2142,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<List<Events>> getEventsUsingGETAsync(final ServiceCallback<List<Events>> serviceCallback) {
+    public ServiceFuture<List<PEvasNdmused>> getEventsUsingGETAsync(final ServiceCallback<List<PEvasNdmused>> serviceCallback) {
         return ServiceFuture.fromResponse(getEventsUsingGETWithServiceResponseAsync(), serviceCallback);
     }
 
@@ -2146,12 +2151,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * Sündmusi saab pärida ühe nädala või suvalise ajavahemiku kohta, täites vastavalt 'date' või 'startDate/endDate' parameetrid.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;Events&gt; object
+     * @return the observable to the List&lt;PEvasNdmused&gt; object
      */
-    public Observable<List<Events>> getEventsUsingGETAsync() {
-        return getEventsUsingGETWithServiceResponseAsync().map(new Func1<ServiceResponse<List<Events>>, List<Events>>() {
+    public Observable<List<PEvasNdmused>> getEventsUsingGETAsync() {
+        return getEventsUsingGETWithServiceResponseAsync().map(new Func1<ServiceResponse<List<PEvasNdmused>>, List<PEvasNdmused>>() {
             @Override
-            public List<Events> call(ServiceResponse<List<Events>> response) {
+            public List<PEvasNdmused> call(ServiceResponse<List<PEvasNdmused>> response) {
                 return response.body();
             }
         });
@@ -2162,9 +2167,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * Sündmusi saab pärida ühe nädala või suvalise ajavahemiku kohta, täites vastavalt 'date' või 'startDate/endDate' parameetrid.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;Events&gt; object
+     * @return the observable to the List&lt;PEvasNdmused&gt; object
      */
-    public Observable<ServiceResponse<List<Events>>> getEventsUsingGETWithServiceResponseAsync() {
+    public Observable<ServiceResponse<List<PEvasNdmused>>> getEventsUsingGETWithServiceResponseAsync() {
         final LocalDate dateParameter = null;
         final LocalDate endDate = null;
         final String lang = null;
@@ -2172,11 +2177,11 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
         final LocalDate startDate = null;
         final String type = null;
         return service.getEventsUsingGET(dateParameter, endDate, lang, querySteno, startDate, type)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<Events>>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<PEvasNdmused>>>>() {
                 @Override
-                public Observable<ServiceResponse<List<Events>>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<List<PEvasNdmused>>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<List<Events>> clientResponse = getEventsUsingGETDelegate(response);
+                        ServiceResponse<List<PEvasNdmused>> clientResponse = getEventsUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -2198,9 +2203,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;Events&gt; object if successful.
+     * @return the List&lt;PEvasNdmused&gt; object if successful.
      */
-    public List<Events> getEventsUsingGET(LocalDate dateParameter, LocalDate endDate, String lang, Boolean querySteno, LocalDate startDate, String type) {
+    public List<PEvasNdmused> getEventsUsingGET(LocalDate dateParameter, LocalDate endDate, String lang, Boolean querySteno, LocalDate startDate, String type) {
         return getEventsUsingGETWithServiceResponseAsync(dateParameter, endDate, lang, querySteno, startDate, type).toBlocking().single().body();
     }
 
@@ -2218,7 +2223,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<List<Events>> getEventsUsingGETAsync(LocalDate dateParameter, LocalDate endDate, String lang, Boolean querySteno, LocalDate startDate, String type, final ServiceCallback<List<Events>> serviceCallback) {
+    public ServiceFuture<List<PEvasNdmused>> getEventsUsingGETAsync(LocalDate dateParameter, LocalDate endDate, String lang, Boolean querySteno, LocalDate startDate, String type, final ServiceCallback<List<PEvasNdmused>> serviceCallback) {
         return ServiceFuture.fromResponse(getEventsUsingGETWithServiceResponseAsync(dateParameter, endDate, lang, querySteno, startDate, type), serviceCallback);
     }
 
@@ -2233,12 +2238,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param startDate Kuupäeva vahemiku algus (yyyy-MM-dd)
      * @param type Sündmuse tüüp. Tühja korral kõik. Possible values include: 'PLENARY', 'COMMITTEE', 'SECONDMENTS', 'VISITS'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;Events&gt; object
+     * @return the observable to the List&lt;PEvasNdmused&gt; object
      */
-    public Observable<List<Events>> getEventsUsingGETAsync(LocalDate dateParameter, LocalDate endDate, String lang, Boolean querySteno, LocalDate startDate, String type) {
-        return getEventsUsingGETWithServiceResponseAsync(dateParameter, endDate, lang, querySteno, startDate, type).map(new Func1<ServiceResponse<List<Events>>, List<Events>>() {
+    public Observable<List<PEvasNdmused>> getEventsUsingGETAsync(LocalDate dateParameter, LocalDate endDate, String lang, Boolean querySteno, LocalDate startDate, String type) {
+        return getEventsUsingGETWithServiceResponseAsync(dateParameter, endDate, lang, querySteno, startDate, type).map(new Func1<ServiceResponse<List<PEvasNdmused>>, List<PEvasNdmused>>() {
             @Override
-            public List<Events> call(ServiceResponse<List<Events>> response) {
+            public List<PEvasNdmused> call(ServiceResponse<List<PEvasNdmused>> response) {
                 return response.body();
             }
         });
@@ -2255,15 +2260,15 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param startDate Kuupäeva vahemiku algus (yyyy-MM-dd)
      * @param type Sündmuse tüüp. Tühja korral kõik. Possible values include: 'PLENARY', 'COMMITTEE', 'SECONDMENTS', 'VISITS'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;Events&gt; object
+     * @return the observable to the List&lt;PEvasNdmused&gt; object
      */
-    public Observable<ServiceResponse<List<Events>>> getEventsUsingGETWithServiceResponseAsync(LocalDate dateParameter, LocalDate endDate, String lang, Boolean querySteno, LocalDate startDate, String type) {
+    public Observable<ServiceResponse<List<PEvasNdmused>>> getEventsUsingGETWithServiceResponseAsync(LocalDate dateParameter, LocalDate endDate, String lang, Boolean querySteno, LocalDate startDate, String type) {
         return service.getEventsUsingGET(dateParameter, endDate, lang, querySteno, startDate, type)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<Events>>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<PEvasNdmused>>>>() {
                 @Override
-                public Observable<ServiceResponse<List<Events>>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<List<PEvasNdmused>>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<List<Events>> clientResponse = getEventsUsingGETDelegate(response);
+                        ServiceResponse<List<PEvasNdmused>> clientResponse = getEventsUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -2272,9 +2277,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             });
     }
 
-    private ServiceResponse<List<Events>> getEventsUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException {
-        return this.restClient().responseBuilderFactory().<List<Events>, RestException>newInstance(this.serializerAdapter())
-                .register(200, new TypeToken<List<Events>>() { }.getType())
+    private ServiceResponse<List<PEvasNdmused>> getEventsUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException {
+        return this.restClient().responseBuilderFactory().<List<PEvasNdmused>, RestException>newInstance(this.serializerAdapter())
+                .register(200, new TypeToken<List<PEvasNdmused>>() { }.getType())
                 .build(response);
     }
 
@@ -2286,9 +2291,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;EventCalendar&gt; object if successful.
+     * @return the List&lt;PEvSNdmused&gt; object if successful.
      */
-    public List<EventCalendar> getEventCalendarUsingGET(LocalDate endDate, LocalDate startDate) {
+    public List<PEvSNdmused> getEventCalendarUsingGET(LocalDate endDate, LocalDate startDate) {
         return getEventCalendarUsingGETWithServiceResponseAsync(endDate, startDate).toBlocking().single().body();
     }
 
@@ -2301,7 +2306,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<List<EventCalendar>> getEventCalendarUsingGETAsync(LocalDate endDate, LocalDate startDate, final ServiceCallback<List<EventCalendar>> serviceCallback) {
+    public ServiceFuture<List<PEvSNdmused>> getEventCalendarUsingGETAsync(LocalDate endDate, LocalDate startDate, final ServiceCallback<List<PEvSNdmused>> serviceCallback) {
         return ServiceFuture.fromResponse(getEventCalendarUsingGETWithServiceResponseAsync(endDate, startDate), serviceCallback);
     }
 
@@ -2311,12 +2316,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param endDate Lõppkuupäev (yyyy-MM-dd)
      * @param startDate Alguskuupäev (yyyy-MM-dd)
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;EventCalendar&gt; object
+     * @return the observable to the List&lt;PEvSNdmused&gt; object
      */
-    public Observable<List<EventCalendar>> getEventCalendarUsingGETAsync(LocalDate endDate, LocalDate startDate) {
-        return getEventCalendarUsingGETWithServiceResponseAsync(endDate, startDate).map(new Func1<ServiceResponse<List<EventCalendar>>, List<EventCalendar>>() {
+    public Observable<List<PEvSNdmused>> getEventCalendarUsingGETAsync(LocalDate endDate, LocalDate startDate) {
+        return getEventCalendarUsingGETWithServiceResponseAsync(endDate, startDate).map(new Func1<ServiceResponse<List<PEvSNdmused>>, List<PEvSNdmused>>() {
             @Override
-            public List<EventCalendar> call(ServiceResponse<List<EventCalendar>> response) {
+            public List<PEvSNdmused> call(ServiceResponse<List<PEvSNdmused>> response) {
                 return response.body();
             }
         });
@@ -2328,9 +2333,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param endDate Lõppkuupäev (yyyy-MM-dd)
      * @param startDate Alguskuupäev (yyyy-MM-dd)
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;EventCalendar&gt; object
+     * @return the observable to the List&lt;PEvSNdmused&gt; object
      */
-    public Observable<ServiceResponse<List<EventCalendar>>> getEventCalendarUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate) {
+    public Observable<ServiceResponse<List<PEvSNdmused>>> getEventCalendarUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate) {
         if (endDate == null) {
             throw new IllegalArgumentException("Parameter endDate is required and cannot be null.");
         }
@@ -2340,11 +2345,11 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
         final String committeeGroupUuid = null;
         final String type = null;
         return service.getEventCalendarUsingGET(committeeGroupUuid, endDate, startDate, type)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<EventCalendar>>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<PEvSNdmused>>>>() {
                 @Override
-                public Observable<ServiceResponse<List<EventCalendar>>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<List<PEvSNdmused>>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<List<EventCalendar>> clientResponse = getEventCalendarUsingGETDelegate(response);
+                        ServiceResponse<List<PEvSNdmused>> clientResponse = getEventCalendarUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -2363,9 +2368,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;EventCalendar&gt; object if successful.
+     * @return the List&lt;PEvSNdmused&gt; object if successful.
      */
-    public List<EventCalendar> getEventCalendarUsingGET(LocalDate endDate, LocalDate startDate, String committeeGroupUuid, String type) {
+    public List<PEvSNdmused> getEventCalendarUsingGET(LocalDate endDate, LocalDate startDate, String committeeGroupUuid, String type) {
         return getEventCalendarUsingGETWithServiceResponseAsync(endDate, startDate, committeeGroupUuid, type).toBlocking().single().body();
     }
 
@@ -2380,7 +2385,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<List<EventCalendar>> getEventCalendarUsingGETAsync(LocalDate endDate, LocalDate startDate, String committeeGroupUuid, String type, final ServiceCallback<List<EventCalendar>> serviceCallback) {
+    public ServiceFuture<List<PEvSNdmused>> getEventCalendarUsingGETAsync(LocalDate endDate, LocalDate startDate, String committeeGroupUuid, String type, final ServiceCallback<List<PEvSNdmused>> serviceCallback) {
         return ServiceFuture.fromResponse(getEventCalendarUsingGETWithServiceResponseAsync(endDate, startDate, committeeGroupUuid, type), serviceCallback);
     }
 
@@ -2392,12 +2397,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param committeeGroupUuid Komisjoni UUID, mille päevakorra sündmusi soovitakse. Asjakohane kui "type=committee"
      * @param type Sündmuse tüüp. Tühja korral kõik. Possible values include: 'PLENARY', 'COMMITTEE', 'SECONDMENTS', 'VISITS'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;EventCalendar&gt; object
+     * @return the observable to the List&lt;PEvSNdmused&gt; object
      */
-    public Observable<List<EventCalendar>> getEventCalendarUsingGETAsync(LocalDate endDate, LocalDate startDate, String committeeGroupUuid, String type) {
-        return getEventCalendarUsingGETWithServiceResponseAsync(endDate, startDate, committeeGroupUuid, type).map(new Func1<ServiceResponse<List<EventCalendar>>, List<EventCalendar>>() {
+    public Observable<List<PEvSNdmused>> getEventCalendarUsingGETAsync(LocalDate endDate, LocalDate startDate, String committeeGroupUuid, String type) {
+        return getEventCalendarUsingGETWithServiceResponseAsync(endDate, startDate, committeeGroupUuid, type).map(new Func1<ServiceResponse<List<PEvSNdmused>>, List<PEvSNdmused>>() {
             @Override
-            public List<EventCalendar> call(ServiceResponse<List<EventCalendar>> response) {
+            public List<PEvSNdmused> call(ServiceResponse<List<PEvSNdmused>> response) {
                 return response.body();
             }
         });
@@ -2411,9 +2416,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param committeeGroupUuid Komisjoni UUID, mille päevakorra sündmusi soovitakse. Asjakohane kui "type=committee"
      * @param type Sündmuse tüüp. Tühja korral kõik. Possible values include: 'PLENARY', 'COMMITTEE', 'SECONDMENTS', 'VISITS'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;EventCalendar&gt; object
+     * @return the observable to the List&lt;PEvSNdmused&gt; object
      */
-    public Observable<ServiceResponse<List<EventCalendar>>> getEventCalendarUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String committeeGroupUuid, String type) {
+    public Observable<ServiceResponse<List<PEvSNdmused>>> getEventCalendarUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String committeeGroupUuid, String type) {
         if (endDate == null) {
             throw new IllegalArgumentException("Parameter endDate is required and cannot be null.");
         }
@@ -2421,11 +2426,11 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             throw new IllegalArgumentException("Parameter startDate is required and cannot be null.");
         }
         return service.getEventCalendarUsingGET(committeeGroupUuid, endDate, startDate, type)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<EventCalendar>>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<PEvSNdmused>>>>() {
                 @Override
-                public Observable<ServiceResponse<List<EventCalendar>>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<List<PEvSNdmused>>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<List<EventCalendar>> clientResponse = getEventCalendarUsingGETDelegate(response);
+                        ServiceResponse<List<PEvSNdmused>> clientResponse = getEventCalendarUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -2434,9 +2439,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             });
     }
 
-    private ServiceResponse<List<EventCalendar>> getEventCalendarUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException, IllegalArgumentException {
-        return this.restClient().responseBuilderFactory().<List<EventCalendar>, RestException>newInstance(this.serializerAdapter())
-                .register(200, new TypeToken<List<EventCalendar>>() { }.getType())
+    private ServiceResponse<List<PEvSNdmused>> getEventCalendarUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException, IllegalArgumentException {
+        return this.restClient().responseBuilderFactory().<List<PEvSNdmused>, RestException>newInstance(this.serializerAdapter())
+                .register(200, new TypeToken<List<PEvSNdmused>>() { }.getType())
                 .build(response);
     }
 
@@ -2447,9 +2452,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the FileMetadata object if successful.
+     * @return the Fail object if successful.
      */
-    public FileMetadata getFileMetadataUsingGET(String uuid) {
+    public Fail getFileMetadataUsingGET(String uuid) {
         return getFileMetadataUsingGETWithServiceResponseAsync(uuid).toBlocking().single().body();
     }
 
@@ -2461,7 +2466,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<FileMetadata> getFileMetadataUsingGETAsync(String uuid, final ServiceCallback<FileMetadata> serviceCallback) {
+    public ServiceFuture<Fail> getFileMetadataUsingGETAsync(String uuid, final ServiceCallback<Fail> serviceCallback) {
         return ServiceFuture.fromResponse(getFileMetadataUsingGETWithServiceResponseAsync(uuid), serviceCallback);
     }
 
@@ -2470,12 +2475,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      *
      * @param uuid Faili UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the FileMetadata object
+     * @return the observable to the Fail object
      */
-    public Observable<FileMetadata> getFileMetadataUsingGETAsync(String uuid) {
-        return getFileMetadataUsingGETWithServiceResponseAsync(uuid).map(new Func1<ServiceResponse<FileMetadata>, FileMetadata>() {
+    public Observable<Fail> getFileMetadataUsingGETAsync(String uuid) {
+        return getFileMetadataUsingGETWithServiceResponseAsync(uuid).map(new Func1<ServiceResponse<Fail>, Fail>() {
             @Override
-            public FileMetadata call(ServiceResponse<FileMetadata> response) {
+            public Fail call(ServiceResponse<Fail> response) {
                 return response.body();
             }
         });
@@ -2486,19 +2491,19 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      *
      * @param uuid Faili UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the FileMetadata object
+     * @return the observable to the Fail object
      */
-    public Observable<ServiceResponse<FileMetadata>> getFileMetadataUsingGETWithServiceResponseAsync(String uuid) {
+    public Observable<ServiceResponse<Fail>> getFileMetadataUsingGETWithServiceResponseAsync(String uuid) {
         if (uuid == null) {
             throw new IllegalArgumentException("Parameter uuid is required and cannot be null.");
         }
         final String lang = null;
         return service.getFileMetadataUsingGET(uuid, lang)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<FileMetadata>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<Fail>>>() {
                 @Override
-                public Observable<ServiceResponse<FileMetadata>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<Fail>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<FileMetadata> clientResponse = getFileMetadataUsingGETDelegate(response);
+                        ServiceResponse<Fail> clientResponse = getFileMetadataUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -2515,9 +2520,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the FileMetadata object if successful.
+     * @return the Fail object if successful.
      */
-    public FileMetadata getFileMetadataUsingGET(String uuid, String lang) {
+    public Fail getFileMetadataUsingGET(String uuid, String lang) {
         return getFileMetadataUsingGETWithServiceResponseAsync(uuid, lang).toBlocking().single().body();
     }
 
@@ -2530,7 +2535,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<FileMetadata> getFileMetadataUsingGETAsync(String uuid, String lang, final ServiceCallback<FileMetadata> serviceCallback) {
+    public ServiceFuture<Fail> getFileMetadataUsingGETAsync(String uuid, String lang, final ServiceCallback<Fail> serviceCallback) {
         return ServiceFuture.fromResponse(getFileMetadataUsingGETWithServiceResponseAsync(uuid, lang), serviceCallback);
     }
 
@@ -2540,12 +2545,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param uuid Faili UUID
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the FileMetadata object
+     * @return the observable to the Fail object
      */
-    public Observable<FileMetadata> getFileMetadataUsingGETAsync(String uuid, String lang) {
-        return getFileMetadataUsingGETWithServiceResponseAsync(uuid, lang).map(new Func1<ServiceResponse<FileMetadata>, FileMetadata>() {
+    public Observable<Fail> getFileMetadataUsingGETAsync(String uuid, String lang) {
+        return getFileMetadataUsingGETWithServiceResponseAsync(uuid, lang).map(new Func1<ServiceResponse<Fail>, Fail>() {
             @Override
-            public FileMetadata call(ServiceResponse<FileMetadata> response) {
+            public Fail call(ServiceResponse<Fail> response) {
                 return response.body();
             }
         });
@@ -2557,18 +2562,18 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param uuid Faili UUID
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the FileMetadata object
+     * @return the observable to the Fail object
      */
-    public Observable<ServiceResponse<FileMetadata>> getFileMetadataUsingGETWithServiceResponseAsync(String uuid, String lang) {
+    public Observable<ServiceResponse<Fail>> getFileMetadataUsingGETWithServiceResponseAsync(String uuid, String lang) {
         if (uuid == null) {
             throw new IllegalArgumentException("Parameter uuid is required and cannot be null.");
         }
         return service.getFileMetadataUsingGET(uuid, lang)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<FileMetadata>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<Fail>>>() {
                 @Override
-                public Observable<ServiceResponse<FileMetadata>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<Fail>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<FileMetadata> clientResponse = getFileMetadataUsingGETDelegate(response);
+                        ServiceResponse<Fail> clientResponse = getFileMetadataUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -2577,9 +2582,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             });
     }
 
-    private ServiceResponse<FileMetadata> getFileMetadataUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException, IllegalArgumentException {
-        return this.restClient().responseBuilderFactory().<FileMetadata, RestException>newInstance(this.serializerAdapter())
-                .register(200, new TypeToken<FileMetadata>() { }.getType())
+    private ServiceResponse<Fail> getFileMetadataUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException, IllegalArgumentException {
+        return this.restClient().responseBuilderFactory().<Fail, RestException>newInstance(this.serializerAdapter())
+                .register(200, new TypeToken<Fail>() { }.getType())
                 .build(response);
     }
 
@@ -2661,9 +2666,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;Hallplan&gt; object if successful.
+     * @return the List&lt;SaaliplaaniKoht&gt; object if successful.
      */
-    public List<Hallplan> getLatestHallplanUsingGET() {
+    public List<SaaliplaaniKoht> getLatestHallplanUsingGET() {
         return getLatestHallplanUsingGETWithServiceResponseAsync().toBlocking().single().body();
     }
 
@@ -2674,7 +2679,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<List<Hallplan>> getLatestHallplanUsingGETAsync(final ServiceCallback<List<Hallplan>> serviceCallback) {
+    public ServiceFuture<List<SaaliplaaniKoht>> getLatestHallplanUsingGETAsync(final ServiceCallback<List<SaaliplaaniKoht>> serviceCallback) {
         return ServiceFuture.fromResponse(getLatestHallplanUsingGETWithServiceResponseAsync(), serviceCallback);
     }
 
@@ -2682,12 +2687,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * Saaliplaan.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;Hallplan&gt; object
+     * @return the observable to the List&lt;SaaliplaaniKoht&gt; object
      */
-    public Observable<List<Hallplan>> getLatestHallplanUsingGETAsync() {
-        return getLatestHallplanUsingGETWithServiceResponseAsync().map(new Func1<ServiceResponse<List<Hallplan>>, List<Hallplan>>() {
+    public Observable<List<SaaliplaaniKoht>> getLatestHallplanUsingGETAsync() {
+        return getLatestHallplanUsingGETWithServiceResponseAsync().map(new Func1<ServiceResponse<List<SaaliplaaniKoht>>, List<SaaliplaaniKoht>>() {
             @Override
-            public List<Hallplan> call(ServiceResponse<List<Hallplan>> response) {
+            public List<SaaliplaaniKoht> call(ServiceResponse<List<SaaliplaaniKoht>> response) {
                 return response.body();
             }
         });
@@ -2697,16 +2702,16 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * Saaliplaan.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;Hallplan&gt; object
+     * @return the observable to the List&lt;SaaliplaaniKoht&gt; object
      */
-    public Observable<ServiceResponse<List<Hallplan>>> getLatestHallplanUsingGETWithServiceResponseAsync() {
+    public Observable<ServiceResponse<List<SaaliplaaniKoht>>> getLatestHallplanUsingGETWithServiceResponseAsync() {
         final String lang = null;
         return service.getLatestHallplanUsingGET(lang)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<Hallplan>>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<SaaliplaaniKoht>>>>() {
                 @Override
-                public Observable<ServiceResponse<List<Hallplan>>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<List<SaaliplaaniKoht>>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<List<Hallplan>> clientResponse = getLatestHallplanUsingGETDelegate(response);
+                        ServiceResponse<List<SaaliplaaniKoht>> clientResponse = getLatestHallplanUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -2722,9 +2727,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;Hallplan&gt; object if successful.
+     * @return the List&lt;SaaliplaaniKoht&gt; object if successful.
      */
-    public List<Hallplan> getLatestHallplanUsingGET(String lang) {
+    public List<SaaliplaaniKoht> getLatestHallplanUsingGET(String lang) {
         return getLatestHallplanUsingGETWithServiceResponseAsync(lang).toBlocking().single().body();
     }
 
@@ -2736,7 +2741,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<List<Hallplan>> getLatestHallplanUsingGETAsync(String lang, final ServiceCallback<List<Hallplan>> serviceCallback) {
+    public ServiceFuture<List<SaaliplaaniKoht>> getLatestHallplanUsingGETAsync(String lang, final ServiceCallback<List<SaaliplaaniKoht>> serviceCallback) {
         return ServiceFuture.fromResponse(getLatestHallplanUsingGETWithServiceResponseAsync(lang), serviceCallback);
     }
 
@@ -2745,12 +2750,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      *
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;Hallplan&gt; object
+     * @return the observable to the List&lt;SaaliplaaniKoht&gt; object
      */
-    public Observable<List<Hallplan>> getLatestHallplanUsingGETAsync(String lang) {
-        return getLatestHallplanUsingGETWithServiceResponseAsync(lang).map(new Func1<ServiceResponse<List<Hallplan>>, List<Hallplan>>() {
+    public Observable<List<SaaliplaaniKoht>> getLatestHallplanUsingGETAsync(String lang) {
+        return getLatestHallplanUsingGETWithServiceResponseAsync(lang).map(new Func1<ServiceResponse<List<SaaliplaaniKoht>>, List<SaaliplaaniKoht>>() {
             @Override
-            public List<Hallplan> call(ServiceResponse<List<Hallplan>> response) {
+            public List<SaaliplaaniKoht> call(ServiceResponse<List<SaaliplaaniKoht>> response) {
                 return response.body();
             }
         });
@@ -2761,15 +2766,15 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      *
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;Hallplan&gt; object
+     * @return the observable to the List&lt;SaaliplaaniKoht&gt; object
      */
-    public Observable<ServiceResponse<List<Hallplan>>> getLatestHallplanUsingGETWithServiceResponseAsync(String lang) {
+    public Observable<ServiceResponse<List<SaaliplaaniKoht>>> getLatestHallplanUsingGETWithServiceResponseAsync(String lang) {
         return service.getLatestHallplanUsingGET(lang)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<Hallplan>>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<SaaliplaaniKoht>>>>() {
                 @Override
-                public Observable<ServiceResponse<List<Hallplan>>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<List<SaaliplaaniKoht>>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<List<Hallplan>> clientResponse = getLatestHallplanUsingGETDelegate(response);
+                        ServiceResponse<List<SaaliplaaniKoht>> clientResponse = getLatestHallplanUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -2778,9 +2783,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             });
     }
 
-    private ServiceResponse<List<Hallplan>> getLatestHallplanUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException {
-        return this.restClient().responseBuilderFactory().<List<Hallplan>, RestException>newInstance(this.serializerAdapter())
-                .register(200, new TypeToken<List<Hallplan>>() { }.getType())
+    private ServiceResponse<List<SaaliplaaniKoht>> getLatestHallplanUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException {
+        return this.restClient().responseBuilderFactory().<List<SaaliplaaniKoht>, RestException>newInstance(this.serializerAdapter())
+                .register(200, new TypeToken<List<SaaliplaaniKoht>>() { }.getType())
                 .build(response);
     }
 
@@ -2790,9 +2795,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;DocumentTree&gt; object if successful.
+     * @return the List&lt;FunktsiooniGrupp&gt; object if successful.
      */
-    public List<DocumentTree> getDocumentTreeUsingGET() {
+    public List<FunktsiooniGrupp> getDocumentTreeUsingGET() {
         return getDocumentTreeUsingGETWithServiceResponseAsync().toBlocking().single().body();
     }
 
@@ -2803,7 +2808,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<List<DocumentTree>> getDocumentTreeUsingGETAsync(final ServiceCallback<List<DocumentTree>> serviceCallback) {
+    public ServiceFuture<List<FunktsiooniGrupp>> getDocumentTreeUsingGETAsync(final ServiceCallback<List<FunktsiooniGrupp>> serviceCallback) {
         return ServiceFuture.fromResponse(getDocumentTreeUsingGETWithServiceResponseAsync(), serviceCallback);
     }
 
@@ -2811,12 +2816,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * Dokumendipuu (hierarhia).
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;DocumentTree&gt; object
+     * @return the observable to the List&lt;FunktsiooniGrupp&gt; object
      */
-    public Observable<List<DocumentTree>> getDocumentTreeUsingGETAsync() {
-        return getDocumentTreeUsingGETWithServiceResponseAsync().map(new Func1<ServiceResponse<List<DocumentTree>>, List<DocumentTree>>() {
+    public Observable<List<FunktsiooniGrupp>> getDocumentTreeUsingGETAsync() {
+        return getDocumentTreeUsingGETWithServiceResponseAsync().map(new Func1<ServiceResponse<List<FunktsiooniGrupp>>, List<FunktsiooniGrupp>>() {
             @Override
-            public List<DocumentTree> call(ServiceResponse<List<DocumentTree>> response) {
+            public List<FunktsiooniGrupp> call(ServiceResponse<List<FunktsiooniGrupp>> response) {
                 return response.body();
             }
         });
@@ -2826,15 +2831,15 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * Dokumendipuu (hierarhia).
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;DocumentTree&gt; object
+     * @return the observable to the List&lt;FunktsiooniGrupp&gt; object
      */
-    public Observable<ServiceResponse<List<DocumentTree>>> getDocumentTreeUsingGETWithServiceResponseAsync() {
+    public Observable<ServiceResponse<List<FunktsiooniGrupp>>> getDocumentTreeUsingGETWithServiceResponseAsync() {
         return service.getDocumentTreeUsingGET()
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<DocumentTree>>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<FunktsiooniGrupp>>>>() {
                 @Override
-                public Observable<ServiceResponse<List<DocumentTree>>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<List<FunktsiooniGrupp>>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<List<DocumentTree>> clientResponse = getDocumentTreeUsingGETDelegate(response);
+                        ServiceResponse<List<FunktsiooniGrupp>> clientResponse = getDocumentTreeUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -2843,9 +2848,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             });
     }
 
-    private ServiceResponse<List<DocumentTree>> getDocumentTreeUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException {
-        return this.restClient().responseBuilderFactory().<List<DocumentTree>, RestException>newInstance(this.serializerAdapter())
-                .register(200, new TypeToken<List<DocumentTree>>() { }.getType())
+    private ServiceResponse<List<FunktsiooniGrupp>> getDocumentTreeUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException {
+        return this.restClient().responseBuilderFactory().<List<FunktsiooniGrupp>, RestException>newInstance(this.serializerAdapter())
+                .register(200, new TypeToken<List<FunktsiooniGrupp>>() { }.getType())
                 .build(response);
     }
 
@@ -2855,9 +2860,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;DocumentTypes&gt; object if successful.
+     * @return the List&lt;DokumenditP&gt; object if successful.
      */
-    public List<DocumentTypes> getDocumentTypesUsingGET() {
+    public List<DokumenditP> getDocumentTypesUsingGET() {
         return getDocumentTypesUsingGETWithServiceResponseAsync().toBlocking().single().body();
     }
 
@@ -2868,7 +2873,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<List<DocumentTypes>> getDocumentTypesUsingGETAsync(final ServiceCallback<List<DocumentTypes>> serviceCallback) {
+    public ServiceFuture<List<DokumenditP>> getDocumentTypesUsingGETAsync(final ServiceCallback<List<DokumenditP>> serviceCallback) {
         return ServiceFuture.fromResponse(getDocumentTypesUsingGETWithServiceResponseAsync(), serviceCallback);
     }
 
@@ -2876,12 +2881,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * Dokumendi liigid.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;DocumentTypes&gt; object
+     * @return the observable to the List&lt;DokumenditP&gt; object
      */
-    public Observable<List<DocumentTypes>> getDocumentTypesUsingGETAsync() {
-        return getDocumentTypesUsingGETWithServiceResponseAsync().map(new Func1<ServiceResponse<List<DocumentTypes>>, List<DocumentTypes>>() {
+    public Observable<List<DokumenditP>> getDocumentTypesUsingGETAsync() {
+        return getDocumentTypesUsingGETWithServiceResponseAsync().map(new Func1<ServiceResponse<List<DokumenditP>>, List<DokumenditP>>() {
             @Override
-            public List<DocumentTypes> call(ServiceResponse<List<DocumentTypes>> response) {
+            public List<DokumenditP> call(ServiceResponse<List<DokumenditP>> response) {
                 return response.body();
             }
         });
@@ -2891,15 +2896,15 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * Dokumendi liigid.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;DocumentTypes&gt; object
+     * @return the observable to the List&lt;DokumenditP&gt; object
      */
-    public Observable<ServiceResponse<List<DocumentTypes>>> getDocumentTypesUsingGETWithServiceResponseAsync() {
+    public Observable<ServiceResponse<List<DokumenditP>>> getDocumentTypesUsingGETWithServiceResponseAsync() {
         return service.getDocumentTypesUsingGET()
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<DocumentTypes>>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<DokumenditP>>>>() {
                 @Override
-                public Observable<ServiceResponse<List<DocumentTypes>>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<List<DokumenditP>>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<List<DocumentTypes>> clientResponse = getDocumentTypesUsingGETDelegate(response);
+                        ServiceResponse<List<DokumenditP>> clientResponse = getDocumentTypesUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -2908,9 +2913,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             });
     }
 
-    private ServiceResponse<List<DocumentTypes>> getDocumentTypesUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException {
-        return this.restClient().responseBuilderFactory().<List<DocumentTypes>, RestException>newInstance(this.serializerAdapter())
-                .register(200, new TypeToken<List<DocumentTypes>>() { }.getType())
+    private ServiceResponse<List<DokumenditP>> getDocumentTypesUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException {
+        return this.restClient().responseBuilderFactory().<List<DokumenditP>, RestException>newInstance(this.serializerAdapter())
+                .register(200, new TypeToken<List<DokumenditP>>() { }.getType())
                 .build(response);
     }
 
@@ -2920,9 +2925,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;DraftInitiators&gt; object if successful.
+     * @return the List&lt;EelnUAlgataja&gt; object if successful.
      */
-    public List<DraftInitiators> getDraftInitiatorsUsingGET() {
+    public List<EelnUAlgataja> getDraftInitiatorsUsingGET() {
         return getDraftInitiatorsUsingGETWithServiceResponseAsync().toBlocking().single().body();
     }
 
@@ -2933,7 +2938,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<List<DraftInitiators>> getDraftInitiatorsUsingGETAsync(final ServiceCallback<List<DraftInitiators>> serviceCallback) {
+    public ServiceFuture<List<EelnUAlgataja>> getDraftInitiatorsUsingGETAsync(final ServiceCallback<List<EelnUAlgataja>> serviceCallback) {
         return ServiceFuture.fromResponse(getDraftInitiatorsUsingGETWithServiceResponseAsync(), serviceCallback);
     }
 
@@ -2941,12 +2946,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * Eelnõu algatajad.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;DraftInitiators&gt; object
+     * @return the observable to the List&lt;EelnUAlgataja&gt; object
      */
-    public Observable<List<DraftInitiators>> getDraftInitiatorsUsingGETAsync() {
-        return getDraftInitiatorsUsingGETWithServiceResponseAsync().map(new Func1<ServiceResponse<List<DraftInitiators>>, List<DraftInitiators>>() {
+    public Observable<List<EelnUAlgataja>> getDraftInitiatorsUsingGETAsync() {
+        return getDraftInitiatorsUsingGETWithServiceResponseAsync().map(new Func1<ServiceResponse<List<EelnUAlgataja>>, List<EelnUAlgataja>>() {
             @Override
-            public List<DraftInitiators> call(ServiceResponse<List<DraftInitiators>> response) {
+            public List<EelnUAlgataja> call(ServiceResponse<List<EelnUAlgataja>> response) {
                 return response.body();
             }
         });
@@ -2956,15 +2961,15 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * Eelnõu algatajad.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;DraftInitiators&gt; object
+     * @return the observable to the List&lt;EelnUAlgataja&gt; object
      */
-    public Observable<ServiceResponse<List<DraftInitiators>>> getDraftInitiatorsUsingGETWithServiceResponseAsync() {
+    public Observable<ServiceResponse<List<EelnUAlgataja>>> getDraftInitiatorsUsingGETWithServiceResponseAsync() {
         return service.getDraftInitiatorsUsingGET()
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<DraftInitiators>>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<EelnUAlgataja>>>>() {
                 @Override
-                public Observable<ServiceResponse<List<DraftInitiators>>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<List<EelnUAlgataja>>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<List<DraftInitiators>> clientResponse = getDraftInitiatorsUsingGETDelegate(response);
+                        ServiceResponse<List<EelnUAlgataja>> clientResponse = getDraftInitiatorsUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -2973,9 +2978,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             });
     }
 
-    private ServiceResponse<List<DraftInitiators>> getDraftInitiatorsUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException {
-        return this.restClient().responseBuilderFactory().<List<DraftInitiators>, RestException>newInstance(this.serializerAdapter())
-                .register(200, new TypeToken<List<DraftInitiators>>() { }.getType())
+    private ServiceResponse<List<EelnUAlgataja>> getDraftInitiatorsUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException {
+        return this.restClient().responseBuilderFactory().<List<EelnUAlgataja>, RestException>newInstance(this.serializerAdapter())
+                .register(200, new TypeToken<List<EelnUAlgataja>>() { }.getType())
                 .build(response);
     }
 
@@ -2985,9 +2990,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;VolumeTypes&gt; object if successful.
+     * @return the List&lt;ToimikuTP&gt; object if successful.
      */
-    public List<VolumeTypes> getVolumeTypesUsingGET() {
+    public List<ToimikuTP> getVolumeTypesUsingGET() {
         return getVolumeTypesUsingGETWithServiceResponseAsync().toBlocking().single().body();
     }
 
@@ -2998,7 +3003,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<List<VolumeTypes>> getVolumeTypesUsingGETAsync(final ServiceCallback<List<VolumeTypes>> serviceCallback) {
+    public ServiceFuture<List<ToimikuTP>> getVolumeTypesUsingGETAsync(final ServiceCallback<List<ToimikuTP>> serviceCallback) {
         return ServiceFuture.fromResponse(getVolumeTypesUsingGETWithServiceResponseAsync(), serviceCallback);
     }
 
@@ -3006,12 +3011,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * Toimiku liigid.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;VolumeTypes&gt; object
+     * @return the observable to the List&lt;ToimikuTP&gt; object
      */
-    public Observable<List<VolumeTypes>> getVolumeTypesUsingGETAsync() {
-        return getVolumeTypesUsingGETWithServiceResponseAsync().map(new Func1<ServiceResponse<List<VolumeTypes>>, List<VolumeTypes>>() {
+    public Observable<List<ToimikuTP>> getVolumeTypesUsingGETAsync() {
+        return getVolumeTypesUsingGETWithServiceResponseAsync().map(new Func1<ServiceResponse<List<ToimikuTP>>, List<ToimikuTP>>() {
             @Override
-            public List<VolumeTypes> call(ServiceResponse<List<VolumeTypes>> response) {
+            public List<ToimikuTP> call(ServiceResponse<List<ToimikuTP>> response) {
                 return response.body();
             }
         });
@@ -3021,15 +3026,15 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * Toimiku liigid.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;VolumeTypes&gt; object
+     * @return the observable to the List&lt;ToimikuTP&gt; object
      */
-    public Observable<ServiceResponse<List<VolumeTypes>>> getVolumeTypesUsingGETWithServiceResponseAsync() {
+    public Observable<ServiceResponse<List<ToimikuTP>>> getVolumeTypesUsingGETWithServiceResponseAsync() {
         return service.getVolumeTypesUsingGET()
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<VolumeTypes>>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<ToimikuTP>>>>() {
                 @Override
-                public Observable<ServiceResponse<List<VolumeTypes>>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<List<ToimikuTP>>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<List<VolumeTypes>> clientResponse = getVolumeTypesUsingGETDelegate(response);
+                        ServiceResponse<List<ToimikuTP>> clientResponse = getVolumeTypesUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -3038,9 +3043,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             });
     }
 
-    private ServiceResponse<List<VolumeTypes>> getVolumeTypesUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException {
-        return this.restClient().responseBuilderFactory().<List<VolumeTypes>, RestException>newInstance(this.serializerAdapter())
-                .register(200, new TypeToken<List<VolumeTypes>>() { }.getType())
+    private ServiceResponse<List<ToimikuTP>> getVolumeTypesUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException {
+        return this.restClient().responseBuilderFactory().<List<ToimikuTP>, RestException>newInstance(this.serializerAdapter())
+                .register(200, new TypeToken<List<ToimikuTP>>() { }.getType())
                 .build(response);
     }
 
@@ -3050,9 +3055,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;Membership&gt; object if successful.
+     * @return the List&lt;Koosseis&gt; object if successful.
      */
-    public List<Membership> getMembershipsUsingGET() {
+    public List<Koosseis> getMembershipsUsingGET() {
         return getMembershipsUsingGETWithServiceResponseAsync().toBlocking().single().body();
     }
 
@@ -3063,7 +3068,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<List<Membership>> getMembershipsUsingGETAsync(final ServiceCallback<List<Membership>> serviceCallback) {
+    public ServiceFuture<List<Koosseis>> getMembershipsUsingGETAsync(final ServiceCallback<List<Koosseis>> serviceCallback) {
         return ServiceFuture.fromResponse(getMembershipsUsingGETWithServiceResponseAsync(), serviceCallback);
     }
 
@@ -3071,12 +3076,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * Kõik koosseisud.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;Membership&gt; object
+     * @return the observable to the List&lt;Koosseis&gt; object
      */
-    public Observable<List<Membership>> getMembershipsUsingGETAsync() {
-        return getMembershipsUsingGETWithServiceResponseAsync().map(new Func1<ServiceResponse<List<Membership>>, List<Membership>>() {
+    public Observable<List<Koosseis>> getMembershipsUsingGETAsync() {
+        return getMembershipsUsingGETWithServiceResponseAsync().map(new Func1<ServiceResponse<List<Koosseis>>, List<Koosseis>>() {
             @Override
-            public List<Membership> call(ServiceResponse<List<Membership>> response) {
+            public List<Koosseis> call(ServiceResponse<List<Koosseis>> response) {
                 return response.body();
             }
         });
@@ -3086,15 +3091,15 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * Kõik koosseisud.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;Membership&gt; object
+     * @return the observable to the List&lt;Koosseis&gt; object
      */
-    public Observable<ServiceResponse<List<Membership>>> getMembershipsUsingGETWithServiceResponseAsync() {
+    public Observable<ServiceResponse<List<Koosseis>>> getMembershipsUsingGETWithServiceResponseAsync() {
         return service.getMembershipsUsingGET()
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<Membership>>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<Koosseis>>>>() {
                 @Override
-                public Observable<ServiceResponse<List<Membership>>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<List<Koosseis>>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<List<Membership>> clientResponse = getMembershipsUsingGETDelegate(response);
+                        ServiceResponse<List<Koosseis>> clientResponse = getMembershipsUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -3103,9 +3108,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             });
     }
 
-    private ServiceResponse<List<Membership>> getMembershipsUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException {
-        return this.restClient().responseBuilderFactory().<List<Membership>, RestException>newInstance(this.serializerAdapter())
-                .register(200, new TypeToken<List<Membership>>() { }.getType())
+    private ServiceResponse<List<Koosseis>> getMembershipsUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException {
+        return this.restClient().responseBuilderFactory().<List<Koosseis>, RestException>newInstance(this.serializerAdapter())
+                .register(200, new TypeToken<List<Koosseis>>() { }.getType())
                 .build(response);
     }
 
@@ -3115,9 +3120,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Membership object if successful.
+     * @return the Koosseis object if successful.
      */
-    public Membership getCurrentMembershipUsingGET() {
+    public Koosseis getCurrentMembershipUsingGET() {
         return getCurrentMembershipUsingGETWithServiceResponseAsync().toBlocking().single().body();
     }
 
@@ -3128,7 +3133,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<Membership> getCurrentMembershipUsingGETAsync(final ServiceCallback<Membership> serviceCallback) {
+    public ServiceFuture<Koosseis> getCurrentMembershipUsingGETAsync(final ServiceCallback<Koosseis> serviceCallback) {
         return ServiceFuture.fromResponse(getCurrentMembershipUsingGETWithServiceResponseAsync(), serviceCallback);
     }
 
@@ -3136,12 +3141,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * Praegune koosseis.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the Membership object
+     * @return the observable to the Koosseis object
      */
-    public Observable<Membership> getCurrentMembershipUsingGETAsync() {
-        return getCurrentMembershipUsingGETWithServiceResponseAsync().map(new Func1<ServiceResponse<Membership>, Membership>() {
+    public Observable<Koosseis> getCurrentMembershipUsingGETAsync() {
+        return getCurrentMembershipUsingGETWithServiceResponseAsync().map(new Func1<ServiceResponse<Koosseis>, Koosseis>() {
             @Override
-            public Membership call(ServiceResponse<Membership> response) {
+            public Koosseis call(ServiceResponse<Koosseis> response) {
                 return response.body();
             }
         });
@@ -3151,15 +3156,15 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * Praegune koosseis.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the Membership object
+     * @return the observable to the Koosseis object
      */
-    public Observable<ServiceResponse<Membership>> getCurrentMembershipUsingGETWithServiceResponseAsync() {
+    public Observable<ServiceResponse<Koosseis>> getCurrentMembershipUsingGETWithServiceResponseAsync() {
         return service.getCurrentMembershipUsingGET()
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<Membership>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<Koosseis>>>() {
                 @Override
-                public Observable<ServiceResponse<Membership>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<Koosseis>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<Membership> clientResponse = getCurrentMembershipUsingGETDelegate(response);
+                        ServiceResponse<Koosseis> clientResponse = getCurrentMembershipUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -3168,9 +3173,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             });
     }
 
-    private ServiceResponse<Membership> getCurrentMembershipUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException {
-        return this.restClient().responseBuilderFactory().<Membership, RestException>newInstance(this.serializerAdapter())
-                .register(200, new TypeToken<Membership>() { }.getType())
+    private ServiceResponse<Koosseis> getCurrentMembershipUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException {
+        return this.restClient().responseBuilderFactory().<Koosseis, RestException>newInstance(this.serializerAdapter())
+                .register(200, new TypeToken<Koosseis>() { }.getType())
                 .build(response);
     }
 
@@ -3181,9 +3186,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Membership object if successful.
+     * @return the Koosseis object if successful.
      */
-    public Membership getMembershipUsingGET(int number) {
+    public Koosseis getMembershipUsingGET(int number) {
         return getMembershipUsingGETWithServiceResponseAsync(number).toBlocking().single().body();
     }
 
@@ -3195,7 +3200,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<Membership> getMembershipUsingGETAsync(int number, final ServiceCallback<Membership> serviceCallback) {
+    public ServiceFuture<Koosseis> getMembershipUsingGETAsync(int number, final ServiceCallback<Koosseis> serviceCallback) {
         return ServiceFuture.fromResponse(getMembershipUsingGETWithServiceResponseAsync(number), serviceCallback);
     }
 
@@ -3204,12 +3209,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      *
      * @param number Koosseisu number
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the Membership object
+     * @return the observable to the Koosseis object
      */
-    public Observable<Membership> getMembershipUsingGETAsync(int number) {
-        return getMembershipUsingGETWithServiceResponseAsync(number).map(new Func1<ServiceResponse<Membership>, Membership>() {
+    public Observable<Koosseis> getMembershipUsingGETAsync(int number) {
+        return getMembershipUsingGETWithServiceResponseAsync(number).map(new Func1<ServiceResponse<Koosseis>, Koosseis>() {
             @Override
-            public Membership call(ServiceResponse<Membership> response) {
+            public Koosseis call(ServiceResponse<Koosseis> response) {
                 return response.body();
             }
         });
@@ -3220,15 +3225,15 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      *
      * @param number Koosseisu number
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the Membership object
+     * @return the observable to the Koosseis object
      */
-    public Observable<ServiceResponse<Membership>> getMembershipUsingGETWithServiceResponseAsync(int number) {
+    public Observable<ServiceResponse<Koosseis>> getMembershipUsingGETWithServiceResponseAsync(int number) {
         return service.getMembershipUsingGET(number)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<Membership>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<Koosseis>>>() {
                 @Override
-                public Observable<ServiceResponse<Membership>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<Koosseis>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<Membership> clientResponse = getMembershipUsingGETDelegate(response);
+                        ServiceResponse<Koosseis> clientResponse = getMembershipUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -3237,9 +3242,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             });
     }
 
-    private ServiceResponse<Membership> getMembershipUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException {
-        return this.restClient().responseBuilderFactory().<Membership, RestException>newInstance(this.serializerAdapter())
-                .register(200, new TypeToken<Membership>() { }.getType())
+    private ServiceResponse<Koosseis> getMembershipUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException {
+        return this.restClient().responseBuilderFactory().<Koosseis, RestException>newInstance(this.serializerAdapter())
+                .register(200, new TypeToken<Koosseis>() { }.getType())
                 .build(response);
     }
 
@@ -3249,9 +3254,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;PlenaryMember&gt; object if successful.
+     * @return the List&lt;RiigikoguLiige&gt; object if successful.
      */
-    public List<PlenaryMember> getPlenaryMembersUsingGET() {
+    public List<RiigikoguLiige> getPlenaryMembersUsingGET() {
         return getPlenaryMembersUsingGETWithServiceResponseAsync().toBlocking().single().body();
     }
 
@@ -3262,7 +3267,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<List<PlenaryMember>> getPlenaryMembersUsingGETAsync(final ServiceCallback<List<PlenaryMember>> serviceCallback) {
+    public ServiceFuture<List<RiigikoguLiige>> getPlenaryMembersUsingGETAsync(final ServiceCallback<List<RiigikoguLiige>> serviceCallback) {
         return ServiceFuture.fromResponse(getPlenaryMembersUsingGETWithServiceResponseAsync(), serviceCallback);
     }
 
@@ -3270,12 +3275,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * Riigikogu liikmete nimekiri / otsing.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;PlenaryMember&gt; object
+     * @return the observable to the List&lt;RiigikoguLiige&gt; object
      */
-    public Observable<List<PlenaryMember>> getPlenaryMembersUsingGETAsync() {
-        return getPlenaryMembersUsingGETWithServiceResponseAsync().map(new Func1<ServiceResponse<List<PlenaryMember>>, List<PlenaryMember>>() {
+    public Observable<List<RiigikoguLiige>> getPlenaryMembersUsingGETAsync() {
+        return getPlenaryMembersUsingGETWithServiceResponseAsync().map(new Func1<ServiceResponse<List<RiigikoguLiige>>, List<RiigikoguLiige>>() {
             @Override
-            public List<PlenaryMember> call(ServiceResponse<List<PlenaryMember>> response) {
+            public List<RiigikoguLiige> call(ServiceResponse<List<RiigikoguLiige>> response) {
                 return response.body();
             }
         });
@@ -3285,9 +3290,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * Riigikogu liikmete nimekiri / otsing.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;PlenaryMember&gt; object
+     * @return the observable to the List&lt;RiigikoguLiige&gt; object
      */
-    public Observable<ServiceResponse<List<PlenaryMember>>> getPlenaryMembersUsingGETWithServiceResponseAsync() {
+    public Observable<ServiceResponse<List<RiigikoguLiige>>> getPlenaryMembersUsingGETWithServiceResponseAsync() {
         final List<String> committeeUuid = null;
         final List<String> electoralDistrictCodes = null;
         final List<String> factionUuid = null;
@@ -3297,11 +3302,11 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
         final String name = null;
         String committeeUuidConverted = this.serializerAdapter().serializeList(committeeUuid, CollectionFormat.MULTI);String electoralDistrictCodesConverted = this.serializerAdapter().serializeList(electoralDistrictCodes, CollectionFormat.MULTI);String factionUuidConverted = this.serializerAdapter().serializeList(factionUuid, CollectionFormat.MULTI);
         return service.getPlenaryMembersUsingGET(committeeUuidConverted, electoralDistrictCodesConverted, factionUuidConverted, includeInactive, lang, membership, name)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<PlenaryMember>>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<RiigikoguLiige>>>>() {
                 @Override
-                public Observable<ServiceResponse<List<PlenaryMember>>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<List<RiigikoguLiige>>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<List<PlenaryMember>> clientResponse = getPlenaryMembersUsingGETDelegate(response);
+                        ServiceResponse<List<RiigikoguLiige>> clientResponse = getPlenaryMembersUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -3323,9 +3328,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;PlenaryMember&gt; object if successful.
+     * @return the List&lt;RiigikoguLiige&gt; object if successful.
      */
-    public List<PlenaryMember> getPlenaryMembersUsingGET(List<String> committeeUuid, List<String> electoralDistrictCodes, List<String> factionUuid, Boolean includeInactive, String lang, Integer membership, String name) {
+    public List<RiigikoguLiige> getPlenaryMembersUsingGET(List<String> committeeUuid, List<String> electoralDistrictCodes, List<String> factionUuid, Boolean includeInactive, String lang, Integer membership, String name) {
         return getPlenaryMembersUsingGETWithServiceResponseAsync(committeeUuid, electoralDistrictCodes, factionUuid, includeInactive, lang, membership, name).toBlocking().single().body();
     }
 
@@ -3343,7 +3348,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<List<PlenaryMember>> getPlenaryMembersUsingGETAsync(List<String> committeeUuid, List<String> electoralDistrictCodes, List<String> factionUuid, Boolean includeInactive, String lang, Integer membership, String name, final ServiceCallback<List<PlenaryMember>> serviceCallback) {
+    public ServiceFuture<List<RiigikoguLiige>> getPlenaryMembersUsingGETAsync(List<String> committeeUuid, List<String> electoralDistrictCodes, List<String> factionUuid, Boolean includeInactive, String lang, Integer membership, String name, final ServiceCallback<List<RiigikoguLiige>> serviceCallback) {
         return ServiceFuture.fromResponse(getPlenaryMembersUsingGETWithServiceResponseAsync(committeeUuid, electoralDistrictCodes, factionUuid, includeInactive, lang, membership, name), serviceCallback);
     }
 
@@ -3358,12 +3363,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param membership Koosseis
      * @param name Liikme nimi. Otsitakse otsisõna sisaldumist nii ees- kui perekonnanimes
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;PlenaryMember&gt; object
+     * @return the observable to the List&lt;RiigikoguLiige&gt; object
      */
-    public Observable<List<PlenaryMember>> getPlenaryMembersUsingGETAsync(List<String> committeeUuid, List<String> electoralDistrictCodes, List<String> factionUuid, Boolean includeInactive, String lang, Integer membership, String name) {
-        return getPlenaryMembersUsingGETWithServiceResponseAsync(committeeUuid, electoralDistrictCodes, factionUuid, includeInactive, lang, membership, name).map(new Func1<ServiceResponse<List<PlenaryMember>>, List<PlenaryMember>>() {
+    public Observable<List<RiigikoguLiige>> getPlenaryMembersUsingGETAsync(List<String> committeeUuid, List<String> electoralDistrictCodes, List<String> factionUuid, Boolean includeInactive, String lang, Integer membership, String name) {
+        return getPlenaryMembersUsingGETWithServiceResponseAsync(committeeUuid, electoralDistrictCodes, factionUuid, includeInactive, lang, membership, name).map(new Func1<ServiceResponse<List<RiigikoguLiige>>, List<RiigikoguLiige>>() {
             @Override
-            public List<PlenaryMember> call(ServiceResponse<List<PlenaryMember>> response) {
+            public List<RiigikoguLiige> call(ServiceResponse<List<RiigikoguLiige>> response) {
                 return response.body();
             }
         });
@@ -3380,19 +3385,19 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param membership Koosseis
      * @param name Liikme nimi. Otsitakse otsisõna sisaldumist nii ees- kui perekonnanimes
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;PlenaryMember&gt; object
+     * @return the observable to the List&lt;RiigikoguLiige&gt; object
      */
-    public Observable<ServiceResponse<List<PlenaryMember>>> getPlenaryMembersUsingGETWithServiceResponseAsync(List<String> committeeUuid, List<String> electoralDistrictCodes, List<String> factionUuid, Boolean includeInactive, String lang, Integer membership, String name) {
+    public Observable<ServiceResponse<List<RiigikoguLiige>>> getPlenaryMembersUsingGETWithServiceResponseAsync(List<String> committeeUuid, List<String> electoralDistrictCodes, List<String> factionUuid, Boolean includeInactive, String lang, Integer membership, String name) {
         Validator.validate(committeeUuid);
         Validator.validate(electoralDistrictCodes);
         Validator.validate(factionUuid);
         String committeeUuidConverted = this.serializerAdapter().serializeList(committeeUuid, CollectionFormat.MULTI);String electoralDistrictCodesConverted = this.serializerAdapter().serializeList(electoralDistrictCodes, CollectionFormat.MULTI);String factionUuidConverted = this.serializerAdapter().serializeList(factionUuid, CollectionFormat.MULTI);
         return service.getPlenaryMembersUsingGET(committeeUuidConverted, electoralDistrictCodesConverted, factionUuidConverted, includeInactive, lang, membership, name)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<PlenaryMember>>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<RiigikoguLiige>>>>() {
                 @Override
-                public Observable<ServiceResponse<List<PlenaryMember>>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<List<RiigikoguLiige>>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<List<PlenaryMember>> clientResponse = getPlenaryMembersUsingGETDelegate(response);
+                        ServiceResponse<List<RiigikoguLiige>> clientResponse = getPlenaryMembersUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -3401,9 +3406,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             });
     }
 
-    private ServiceResponse<List<PlenaryMember>> getPlenaryMembersUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException {
-        return this.restClient().responseBuilderFactory().<List<PlenaryMember>, RestException>newInstance(this.serializerAdapter())
-                .register(200, new TypeToken<List<PlenaryMember>>() { }.getType())
+    private ServiceResponse<List<RiigikoguLiige>> getPlenaryMembersUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException {
+        return this.restClient().responseBuilderFactory().<List<RiigikoguLiige>, RestException>newInstance(this.serializerAdapter())
+                .register(200, new TypeToken<List<RiigikoguLiige>>() { }.getType())
                 .build(response);
     }
 
@@ -3414,9 +3419,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the PlenaryMemberDetails object if successful.
+     * @return the RiigikoguLiikmeDetailid object if successful.
      */
-    public PlenaryMemberDetails getPlenaryMemberDetailsUsingGET(String uuid) {
+    public RiigikoguLiikmeDetailid getPlenaryMemberDetailsUsingGET(String uuid) {
         return getPlenaryMemberDetailsUsingGETWithServiceResponseAsync(uuid).toBlocking().single().body();
     }
 
@@ -3428,7 +3433,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<PlenaryMemberDetails> getPlenaryMemberDetailsUsingGETAsync(String uuid, final ServiceCallback<PlenaryMemberDetails> serviceCallback) {
+    public ServiceFuture<RiigikoguLiikmeDetailid> getPlenaryMemberDetailsUsingGETAsync(String uuid, final ServiceCallback<RiigikoguLiikmeDetailid> serviceCallback) {
         return ServiceFuture.fromResponse(getPlenaryMemberDetailsUsingGETWithServiceResponseAsync(uuid), serviceCallback);
     }
 
@@ -3437,12 +3442,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      *
      * @param uuid Liikme UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PlenaryMemberDetails object
+     * @return the observable to the RiigikoguLiikmeDetailid object
      */
-    public Observable<PlenaryMemberDetails> getPlenaryMemberDetailsUsingGETAsync(String uuid) {
-        return getPlenaryMemberDetailsUsingGETWithServiceResponseAsync(uuid).map(new Func1<ServiceResponse<PlenaryMemberDetails>, PlenaryMemberDetails>() {
+    public Observable<RiigikoguLiikmeDetailid> getPlenaryMemberDetailsUsingGETAsync(String uuid) {
+        return getPlenaryMemberDetailsUsingGETWithServiceResponseAsync(uuid).map(new Func1<ServiceResponse<RiigikoguLiikmeDetailid>, RiigikoguLiikmeDetailid>() {
             @Override
-            public PlenaryMemberDetails call(ServiceResponse<PlenaryMemberDetails> response) {
+            public RiigikoguLiikmeDetailid call(ServiceResponse<RiigikoguLiikmeDetailid> response) {
                 return response.body();
             }
         });
@@ -3453,20 +3458,20 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      *
      * @param uuid Liikme UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PlenaryMemberDetails object
+     * @return the observable to the RiigikoguLiikmeDetailid object
      */
-    public Observable<ServiceResponse<PlenaryMemberDetails>> getPlenaryMemberDetailsUsingGETWithServiceResponseAsync(String uuid) {
+    public Observable<ServiceResponse<RiigikoguLiikmeDetailid>> getPlenaryMemberDetailsUsingGETWithServiceResponseAsync(String uuid) {
         if (uuid == null) {
             throw new IllegalArgumentException("Parameter uuid is required and cannot be null.");
         }
         final String lang = null;
         final Boolean querySteno = null;
         return service.getPlenaryMemberDetailsUsingGET(uuid, lang, querySteno)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<PlenaryMemberDetails>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<RiigikoguLiikmeDetailid>>>() {
                 @Override
-                public Observable<ServiceResponse<PlenaryMemberDetails>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<RiigikoguLiikmeDetailid>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<PlenaryMemberDetails> clientResponse = getPlenaryMemberDetailsUsingGETDelegate(response);
+                        ServiceResponse<RiigikoguLiikmeDetailid> clientResponse = getPlenaryMemberDetailsUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -3484,9 +3489,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the PlenaryMemberDetails object if successful.
+     * @return the RiigikoguLiikmeDetailid object if successful.
      */
-    public PlenaryMemberDetails getPlenaryMemberDetailsUsingGET(String uuid, String lang, Boolean querySteno) {
+    public RiigikoguLiikmeDetailid getPlenaryMemberDetailsUsingGET(String uuid, String lang, Boolean querySteno) {
         return getPlenaryMemberDetailsUsingGETWithServiceResponseAsync(uuid, lang, querySteno).toBlocking().single().body();
     }
 
@@ -3500,7 +3505,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<PlenaryMemberDetails> getPlenaryMemberDetailsUsingGETAsync(String uuid, String lang, Boolean querySteno, final ServiceCallback<PlenaryMemberDetails> serviceCallback) {
+    public ServiceFuture<RiigikoguLiikmeDetailid> getPlenaryMemberDetailsUsingGETAsync(String uuid, String lang, Boolean querySteno, final ServiceCallback<RiigikoguLiikmeDetailid> serviceCallback) {
         return ServiceFuture.fromResponse(getPlenaryMemberDetailsUsingGETWithServiceResponseAsync(uuid, lang, querySteno), serviceCallback);
     }
 
@@ -3511,12 +3516,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @param querySteno Küsi Stenoteksti teenusest liikme viimane kõne? (true/false)
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PlenaryMemberDetails object
+     * @return the observable to the RiigikoguLiikmeDetailid object
      */
-    public Observable<PlenaryMemberDetails> getPlenaryMemberDetailsUsingGETAsync(String uuid, String lang, Boolean querySteno) {
-        return getPlenaryMemberDetailsUsingGETWithServiceResponseAsync(uuid, lang, querySteno).map(new Func1<ServiceResponse<PlenaryMemberDetails>, PlenaryMemberDetails>() {
+    public Observable<RiigikoguLiikmeDetailid> getPlenaryMemberDetailsUsingGETAsync(String uuid, String lang, Boolean querySteno) {
+        return getPlenaryMemberDetailsUsingGETWithServiceResponseAsync(uuid, lang, querySteno).map(new Func1<ServiceResponse<RiigikoguLiikmeDetailid>, RiigikoguLiikmeDetailid>() {
             @Override
-            public PlenaryMemberDetails call(ServiceResponse<PlenaryMemberDetails> response) {
+            public RiigikoguLiikmeDetailid call(ServiceResponse<RiigikoguLiikmeDetailid> response) {
                 return response.body();
             }
         });
@@ -3529,18 +3534,18 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @param querySteno Küsi Stenoteksti teenusest liikme viimane kõne? (true/false)
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PlenaryMemberDetails object
+     * @return the observable to the RiigikoguLiikmeDetailid object
      */
-    public Observable<ServiceResponse<PlenaryMemberDetails>> getPlenaryMemberDetailsUsingGETWithServiceResponseAsync(String uuid, String lang, Boolean querySteno) {
+    public Observable<ServiceResponse<RiigikoguLiikmeDetailid>> getPlenaryMemberDetailsUsingGETWithServiceResponseAsync(String uuid, String lang, Boolean querySteno) {
         if (uuid == null) {
             throw new IllegalArgumentException("Parameter uuid is required and cannot be null.");
         }
         return service.getPlenaryMemberDetailsUsingGET(uuid, lang, querySteno)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<PlenaryMemberDetails>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<RiigikoguLiikmeDetailid>>>() {
                 @Override
-                public Observable<ServiceResponse<PlenaryMemberDetails>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<RiigikoguLiikmeDetailid>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<PlenaryMemberDetails> clientResponse = getPlenaryMemberDetailsUsingGETDelegate(response);
+                        ServiceResponse<RiigikoguLiikmeDetailid> clientResponse = getPlenaryMemberDetailsUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -3549,9 +3554,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             });
     }
 
-    private ServiceResponse<PlenaryMemberDetails> getPlenaryMemberDetailsUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException, IllegalArgumentException {
-        return this.restClient().responseBuilderFactory().<PlenaryMemberDetails, RestException>newInstance(this.serializerAdapter())
-                .register(200, new TypeToken<PlenaryMemberDetails>() { }.getType())
+    private ServiceResponse<RiigikoguLiikmeDetailid> getPlenaryMemberDetailsUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException, IllegalArgumentException {
+        return this.restClient().responseBuilderFactory().<RiigikoguLiikmeDetailid, RestException>newInstance(this.serializerAdapter())
+                .register(200, new TypeToken<RiigikoguLiikmeDetailid>() { }.getType())
                 .build(response);
     }
 
@@ -3561,9 +3566,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;Session&gt; object if successful.
+     * @return the List&lt;IstungjRk&gt; object if successful.
      */
-    public List<Session> getSessionsUsingGET() {
+    public List<IstungjRk> getSessionsUsingGET() {
         return getSessionsUsingGETWithServiceResponseAsync().toBlocking().single().body();
     }
 
@@ -3574,7 +3579,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<List<Session>> getSessionsUsingGETAsync(final ServiceCallback<List<Session>> serviceCallback) {
+    public ServiceFuture<List<IstungjRk>> getSessionsUsingGETAsync(final ServiceCallback<List<IstungjRk>> serviceCallback) {
         return ServiceFuture.fromResponse(getSessionsUsingGETWithServiceResponseAsync(), serviceCallback);
     }
 
@@ -3582,12 +3587,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * Istungjärkude nimekiri.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;Session&gt; object
+     * @return the observable to the List&lt;IstungjRk&gt; object
      */
-    public Observable<List<Session>> getSessionsUsingGETAsync() {
-        return getSessionsUsingGETWithServiceResponseAsync().map(new Func1<ServiceResponse<List<Session>>, List<Session>>() {
+    public Observable<List<IstungjRk>> getSessionsUsingGETAsync() {
+        return getSessionsUsingGETWithServiceResponseAsync().map(new Func1<ServiceResponse<List<IstungjRk>>, List<IstungjRk>>() {
             @Override
-            public List<Session> call(ServiceResponse<List<Session>> response) {
+            public List<IstungjRk> call(ServiceResponse<List<IstungjRk>> response) {
                 return response.body();
             }
         });
@@ -3597,16 +3602,16 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * Istungjärkude nimekiri.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;Session&gt; object
+     * @return the observable to the List&lt;IstungjRk&gt; object
      */
-    public Observable<ServiceResponse<List<Session>>> getSessionsUsingGETWithServiceResponseAsync() {
+    public Observable<ServiceResponse<List<IstungjRk>>> getSessionsUsingGETWithServiceResponseAsync() {
         final String lang = null;
         return service.getSessionsUsingGET(lang)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<Session>>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<IstungjRk>>>>() {
                 @Override
-                public Observable<ServiceResponse<List<Session>>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<List<IstungjRk>>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<List<Session>> clientResponse = getSessionsUsingGETDelegate(response);
+                        ServiceResponse<List<IstungjRk>> clientResponse = getSessionsUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -3622,9 +3627,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;Session&gt; object if successful.
+     * @return the List&lt;IstungjRk&gt; object if successful.
      */
-    public List<Session> getSessionsUsingGET(String lang) {
+    public List<IstungjRk> getSessionsUsingGET(String lang) {
         return getSessionsUsingGETWithServiceResponseAsync(lang).toBlocking().single().body();
     }
 
@@ -3636,7 +3641,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<List<Session>> getSessionsUsingGETAsync(String lang, final ServiceCallback<List<Session>> serviceCallback) {
+    public ServiceFuture<List<IstungjRk>> getSessionsUsingGETAsync(String lang, final ServiceCallback<List<IstungjRk>> serviceCallback) {
         return ServiceFuture.fromResponse(getSessionsUsingGETWithServiceResponseAsync(lang), serviceCallback);
     }
 
@@ -3645,12 +3650,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      *
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;Session&gt; object
+     * @return the observable to the List&lt;IstungjRk&gt; object
      */
-    public Observable<List<Session>> getSessionsUsingGETAsync(String lang) {
-        return getSessionsUsingGETWithServiceResponseAsync(lang).map(new Func1<ServiceResponse<List<Session>>, List<Session>>() {
+    public Observable<List<IstungjRk>> getSessionsUsingGETAsync(String lang) {
+        return getSessionsUsingGETWithServiceResponseAsync(lang).map(new Func1<ServiceResponse<List<IstungjRk>>, List<IstungjRk>>() {
             @Override
-            public List<Session> call(ServiceResponse<List<Session>> response) {
+            public List<IstungjRk> call(ServiceResponse<List<IstungjRk>> response) {
                 return response.body();
             }
         });
@@ -3661,15 +3666,15 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      *
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;Session&gt; object
+     * @return the observable to the List&lt;IstungjRk&gt; object
      */
-    public Observable<ServiceResponse<List<Session>>> getSessionsUsingGETWithServiceResponseAsync(String lang) {
+    public Observable<ServiceResponse<List<IstungjRk>>> getSessionsUsingGETWithServiceResponseAsync(String lang) {
         return service.getSessionsUsingGET(lang)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<Session>>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<IstungjRk>>>>() {
                 @Override
-                public Observable<ServiceResponse<List<Session>>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<List<IstungjRk>>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<List<Session>> clientResponse = getSessionsUsingGETDelegate(response);
+                        ServiceResponse<List<IstungjRk>> clientResponse = getSessionsUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -3678,9 +3683,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             });
     }
 
-    private ServiceResponse<List<Session>> getSessionsUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException {
-        return this.restClient().responseBuilderFactory().<List<Session>, RestException>newInstance(this.serializerAdapter())
-                .register(200, new TypeToken<List<Session>>() { }.getType())
+    private ServiceResponse<List<IstungjRk>> getSessionsUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException {
+        return this.restClient().responseBuilderFactory().<List<IstungjRk>, RestException>newInstance(this.serializerAdapter())
+                .register(200, new TypeToken<List<IstungjRk>>() { }.getType())
                 .build(response);
     }
 
@@ -3690,9 +3695,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Session object if successful.
+     * @return the IstungjRk object if successful.
      */
-    public Session getCurrentSessionUsingGET() {
+    public IstungjRk getCurrentSessionUsingGET() {
         return getCurrentSessionUsingGETWithServiceResponseAsync().toBlocking().single().body();
     }
 
@@ -3703,7 +3708,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<Session> getCurrentSessionUsingGETAsync(final ServiceCallback<Session> serviceCallback) {
+    public ServiceFuture<IstungjRk> getCurrentSessionUsingGETAsync(final ServiceCallback<IstungjRk> serviceCallback) {
         return ServiceFuture.fromResponse(getCurrentSessionUsingGETWithServiceResponseAsync(), serviceCallback);
     }
 
@@ -3711,12 +3716,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * Praegune istungjärk.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the Session object
+     * @return the observable to the IstungjRk object
      */
-    public Observable<Session> getCurrentSessionUsingGETAsync() {
-        return getCurrentSessionUsingGETWithServiceResponseAsync().map(new Func1<ServiceResponse<Session>, Session>() {
+    public Observable<IstungjRk> getCurrentSessionUsingGETAsync() {
+        return getCurrentSessionUsingGETWithServiceResponseAsync().map(new Func1<ServiceResponse<IstungjRk>, IstungjRk>() {
             @Override
-            public Session call(ServiceResponse<Session> response) {
+            public IstungjRk call(ServiceResponse<IstungjRk> response) {
                 return response.body();
             }
         });
@@ -3726,16 +3731,16 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * Praegune istungjärk.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the Session object
+     * @return the observable to the IstungjRk object
      */
-    public Observable<ServiceResponse<Session>> getCurrentSessionUsingGETWithServiceResponseAsync() {
+    public Observable<ServiceResponse<IstungjRk>> getCurrentSessionUsingGETWithServiceResponseAsync() {
         final String lang = null;
         return service.getCurrentSessionUsingGET(lang)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<Session>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<IstungjRk>>>() {
                 @Override
-                public Observable<ServiceResponse<Session>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<IstungjRk>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<Session> clientResponse = getCurrentSessionUsingGETDelegate(response);
+                        ServiceResponse<IstungjRk> clientResponse = getCurrentSessionUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -3751,9 +3756,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Session object if successful.
+     * @return the IstungjRk object if successful.
      */
-    public Session getCurrentSessionUsingGET(String lang) {
+    public IstungjRk getCurrentSessionUsingGET(String lang) {
         return getCurrentSessionUsingGETWithServiceResponseAsync(lang).toBlocking().single().body();
     }
 
@@ -3765,7 +3770,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<Session> getCurrentSessionUsingGETAsync(String lang, final ServiceCallback<Session> serviceCallback) {
+    public ServiceFuture<IstungjRk> getCurrentSessionUsingGETAsync(String lang, final ServiceCallback<IstungjRk> serviceCallback) {
         return ServiceFuture.fromResponse(getCurrentSessionUsingGETWithServiceResponseAsync(lang), serviceCallback);
     }
 
@@ -3774,12 +3779,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      *
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the Session object
+     * @return the observable to the IstungjRk object
      */
-    public Observable<Session> getCurrentSessionUsingGETAsync(String lang) {
-        return getCurrentSessionUsingGETWithServiceResponseAsync(lang).map(new Func1<ServiceResponse<Session>, Session>() {
+    public Observable<IstungjRk> getCurrentSessionUsingGETAsync(String lang) {
+        return getCurrentSessionUsingGETWithServiceResponseAsync(lang).map(new Func1<ServiceResponse<IstungjRk>, IstungjRk>() {
             @Override
-            public Session call(ServiceResponse<Session> response) {
+            public IstungjRk call(ServiceResponse<IstungjRk> response) {
                 return response.body();
             }
         });
@@ -3790,15 +3795,15 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      *
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the Session object
+     * @return the observable to the IstungjRk object
      */
-    public Observable<ServiceResponse<Session>> getCurrentSessionUsingGETWithServiceResponseAsync(String lang) {
+    public Observable<ServiceResponse<IstungjRk>> getCurrentSessionUsingGETWithServiceResponseAsync(String lang) {
         return service.getCurrentSessionUsingGET(lang)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<Session>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<IstungjRk>>>() {
                 @Override
-                public Observable<ServiceResponse<Session>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<IstungjRk>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<Session> clientResponse = getCurrentSessionUsingGETDelegate(response);
+                        ServiceResponse<IstungjRk> clientResponse = getCurrentSessionUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -3807,9 +3812,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             });
     }
 
-    private ServiceResponse<Session> getCurrentSessionUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException {
-        return this.restClient().responseBuilderFactory().<Session, RestException>newInstance(this.serializerAdapter())
-                .register(200, new TypeToken<Session>() { }.getType())
+    private ServiceResponse<IstungjRk> getCurrentSessionUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException {
+        return this.restClient().responseBuilderFactory().<IstungjRk, RestException>newInstance(this.serializerAdapter())
+                .register(200, new TypeToken<IstungjRk>() { }.getType())
                 .build(response);
     }
 
@@ -3822,9 +3827,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;MemberParticipation&gt; object if successful.
+     * @return the List&lt;RiigikoguLiigeOsavTt&gt; object if successful.
      */
-    public List<MemberParticipation> getFactionParticipationUsingGET(LocalDate endDate, LocalDate startDate, String uuid) {
+    public List<RiigikoguLiigeOsavTt> getFactionParticipationUsingGET(LocalDate endDate, LocalDate startDate, String uuid) {
         return getFactionParticipationUsingGETWithServiceResponseAsync(endDate, startDate, uuid).toBlocking().single().body();
     }
 
@@ -3838,7 +3843,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<List<MemberParticipation>> getFactionParticipationUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, final ServiceCallback<List<MemberParticipation>> serviceCallback) {
+    public ServiceFuture<List<RiigikoguLiigeOsavTt>> getFactionParticipationUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, final ServiceCallback<List<RiigikoguLiigeOsavTt>> serviceCallback) {
         return ServiceFuture.fromResponse(getFactionParticipationUsingGETWithServiceResponseAsync(endDate, startDate, uuid), serviceCallback);
     }
 
@@ -3849,12 +3854,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @param uuid Fraktsiooni UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;MemberParticipation&gt; object
+     * @return the observable to the List&lt;RiigikoguLiigeOsavTt&gt; object
      */
-    public Observable<List<MemberParticipation>> getFactionParticipationUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid) {
-        return getFactionParticipationUsingGETWithServiceResponseAsync(endDate, startDate, uuid).map(new Func1<ServiceResponse<List<MemberParticipation>>, List<MemberParticipation>>() {
+    public Observable<List<RiigikoguLiigeOsavTt>> getFactionParticipationUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid) {
+        return getFactionParticipationUsingGETWithServiceResponseAsync(endDate, startDate, uuid).map(new Func1<ServiceResponse<List<RiigikoguLiigeOsavTt>>, List<RiigikoguLiigeOsavTt>>() {
             @Override
-            public List<MemberParticipation> call(ServiceResponse<List<MemberParticipation>> response) {
+            public List<RiigikoguLiigeOsavTt> call(ServiceResponse<List<RiigikoguLiigeOsavTt>> response) {
                 return response.body();
             }
         });
@@ -3867,9 +3872,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @param uuid Fraktsiooni UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;MemberParticipation&gt; object
+     * @return the observable to the List&lt;RiigikoguLiigeOsavTt&gt; object
      */
-    public Observable<ServiceResponse<List<MemberParticipation>>> getFactionParticipationUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String uuid) {
+    public Observable<ServiceResponse<List<RiigikoguLiigeOsavTt>>> getFactionParticipationUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String uuid) {
         if (endDate == null) {
             throw new IllegalArgumentException("Parameter endDate is required and cannot be null.");
         }
@@ -3881,11 +3886,11 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
         }
         final String lang = null;
         return service.getFactionParticipationUsingGET(uuid, endDate, lang, startDate)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<MemberParticipation>>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<RiigikoguLiigeOsavTt>>>>() {
                 @Override
-                public Observable<ServiceResponse<List<MemberParticipation>>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<List<RiigikoguLiigeOsavTt>>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<List<MemberParticipation>> clientResponse = getFactionParticipationUsingGETDelegate(response);
+                        ServiceResponse<List<RiigikoguLiigeOsavTt>> clientResponse = getFactionParticipationUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -3904,9 +3909,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;MemberParticipation&gt; object if successful.
+     * @return the List&lt;RiigikoguLiigeOsavTt&gt; object if successful.
      */
-    public List<MemberParticipation> getFactionParticipationUsingGET(LocalDate endDate, LocalDate startDate, String uuid, String lang) {
+    public List<RiigikoguLiigeOsavTt> getFactionParticipationUsingGET(LocalDate endDate, LocalDate startDate, String uuid, String lang) {
         return getFactionParticipationUsingGETWithServiceResponseAsync(endDate, startDate, uuid, lang).toBlocking().single().body();
     }
 
@@ -3921,7 +3926,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<List<MemberParticipation>> getFactionParticipationUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, String lang, final ServiceCallback<List<MemberParticipation>> serviceCallback) {
+    public ServiceFuture<List<RiigikoguLiigeOsavTt>> getFactionParticipationUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, String lang, final ServiceCallback<List<RiigikoguLiigeOsavTt>> serviceCallback) {
         return ServiceFuture.fromResponse(getFactionParticipationUsingGETWithServiceResponseAsync(endDate, startDate, uuid, lang), serviceCallback);
     }
 
@@ -3933,12 +3938,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param uuid Fraktsiooni UUID
      * @param lang lang. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;MemberParticipation&gt; object
+     * @return the observable to the List&lt;RiigikoguLiigeOsavTt&gt; object
      */
-    public Observable<List<MemberParticipation>> getFactionParticipationUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, String lang) {
-        return getFactionParticipationUsingGETWithServiceResponseAsync(endDate, startDate, uuid, lang).map(new Func1<ServiceResponse<List<MemberParticipation>>, List<MemberParticipation>>() {
+    public Observable<List<RiigikoguLiigeOsavTt>> getFactionParticipationUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, String lang) {
+        return getFactionParticipationUsingGETWithServiceResponseAsync(endDate, startDate, uuid, lang).map(new Func1<ServiceResponse<List<RiigikoguLiigeOsavTt>>, List<RiigikoguLiigeOsavTt>>() {
             @Override
-            public List<MemberParticipation> call(ServiceResponse<List<MemberParticipation>> response) {
+            public List<RiigikoguLiigeOsavTt> call(ServiceResponse<List<RiigikoguLiigeOsavTt>> response) {
                 return response.body();
             }
         });
@@ -3952,9 +3957,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param uuid Fraktsiooni UUID
      * @param lang lang. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;MemberParticipation&gt; object
+     * @return the observable to the List&lt;RiigikoguLiigeOsavTt&gt; object
      */
-    public Observable<ServiceResponse<List<MemberParticipation>>> getFactionParticipationUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String uuid, String lang) {
+    public Observable<ServiceResponse<List<RiigikoguLiigeOsavTt>>> getFactionParticipationUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String uuid, String lang) {
         if (endDate == null) {
             throw new IllegalArgumentException("Parameter endDate is required and cannot be null.");
         }
@@ -3965,11 +3970,11 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             throw new IllegalArgumentException("Parameter uuid is required and cannot be null.");
         }
         return service.getFactionParticipationUsingGET(uuid, endDate, lang, startDate)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<MemberParticipation>>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<RiigikoguLiigeOsavTt>>>>() {
                 @Override
-                public Observable<ServiceResponse<List<MemberParticipation>>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<List<RiigikoguLiigeOsavTt>>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<List<MemberParticipation>> clientResponse = getFactionParticipationUsingGETDelegate(response);
+                        ServiceResponse<List<RiigikoguLiigeOsavTt>> clientResponse = getFactionParticipationUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -3978,9 +3983,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             });
     }
 
-    private ServiceResponse<List<MemberParticipation>> getFactionParticipationUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException, IllegalArgumentException {
-        return this.restClient().responseBuilderFactory().<List<MemberParticipation>, RestException>newInstance(this.serializerAdapter())
-                .register(200, new TypeToken<List<MemberParticipation>>() { }.getType())
+    private ServiceResponse<List<RiigikoguLiigeOsavTt>> getFactionParticipationUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException, IllegalArgumentException {
+        return this.restClient().responseBuilderFactory().<List<RiigikoguLiigeOsavTt>, RestException>newInstance(this.serializerAdapter())
+                .register(200, new TypeToken<List<RiigikoguLiigeOsavTt>>() { }.getType())
                 .build(response);
     }
 
@@ -3993,9 +3998,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the MemberParticipation object if successful.
+     * @return the RiigikoguLiigeOsavTt object if successful.
      */
-    public MemberParticipation getMemberParticipationUsingGET(LocalDate endDate, LocalDate startDate, String uuid) {
+    public RiigikoguLiigeOsavTt getMemberParticipationUsingGET(LocalDate endDate, LocalDate startDate, String uuid) {
         return getMemberParticipationUsingGETWithServiceResponseAsync(endDate, startDate, uuid).toBlocking().single().body();
     }
 
@@ -4009,7 +4014,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<MemberParticipation> getMemberParticipationUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, final ServiceCallback<MemberParticipation> serviceCallback) {
+    public ServiceFuture<RiigikoguLiigeOsavTt> getMemberParticipationUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, final ServiceCallback<RiigikoguLiigeOsavTt> serviceCallback) {
         return ServiceFuture.fromResponse(getMemberParticipationUsingGETWithServiceResponseAsync(endDate, startDate, uuid), serviceCallback);
     }
 
@@ -4020,12 +4025,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @param uuid Liikme UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the MemberParticipation object
+     * @return the observable to the RiigikoguLiigeOsavTt object
      */
-    public Observable<MemberParticipation> getMemberParticipationUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid) {
-        return getMemberParticipationUsingGETWithServiceResponseAsync(endDate, startDate, uuid).map(new Func1<ServiceResponse<MemberParticipation>, MemberParticipation>() {
+    public Observable<RiigikoguLiigeOsavTt> getMemberParticipationUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid) {
+        return getMemberParticipationUsingGETWithServiceResponseAsync(endDate, startDate, uuid).map(new Func1<ServiceResponse<RiigikoguLiigeOsavTt>, RiigikoguLiigeOsavTt>() {
             @Override
-            public MemberParticipation call(ServiceResponse<MemberParticipation> response) {
+            public RiigikoguLiigeOsavTt call(ServiceResponse<RiigikoguLiigeOsavTt> response) {
                 return response.body();
             }
         });
@@ -4038,9 +4043,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @param uuid Liikme UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the MemberParticipation object
+     * @return the observable to the RiigikoguLiigeOsavTt object
      */
-    public Observable<ServiceResponse<MemberParticipation>> getMemberParticipationUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String uuid) {
+    public Observable<ServiceResponse<RiigikoguLiigeOsavTt>> getMemberParticipationUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String uuid) {
         if (endDate == null) {
             throw new IllegalArgumentException("Parameter endDate is required and cannot be null.");
         }
@@ -4053,11 +4058,11 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
         final Boolean details = null;
         final String lang = null;
         return service.getMemberParticipationUsingGET(uuid, details, endDate, lang, startDate)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<MemberParticipation>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<RiigikoguLiigeOsavTt>>>() {
                 @Override
-                public Observable<ServiceResponse<MemberParticipation>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<RiigikoguLiigeOsavTt>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<MemberParticipation> clientResponse = getMemberParticipationUsingGETDelegate(response);
+                        ServiceResponse<RiigikoguLiigeOsavTt> clientResponse = getMemberParticipationUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -4077,9 +4082,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the MemberParticipation object if successful.
+     * @return the RiigikoguLiigeOsavTt object if successful.
      */
-    public MemberParticipation getMemberParticipationUsingGET(LocalDate endDate, LocalDate startDate, String uuid, Boolean details, String lang) {
+    public RiigikoguLiigeOsavTt getMemberParticipationUsingGET(LocalDate endDate, LocalDate startDate, String uuid, Boolean details, String lang) {
         return getMemberParticipationUsingGETWithServiceResponseAsync(endDate, startDate, uuid, details, lang).toBlocking().single().body();
     }
 
@@ -4095,7 +4100,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<MemberParticipation> getMemberParticipationUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, Boolean details, String lang, final ServiceCallback<MemberParticipation> serviceCallback) {
+    public ServiceFuture<RiigikoguLiigeOsavTt> getMemberParticipationUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, Boolean details, String lang, final ServiceCallback<RiigikoguLiigeOsavTt> serviceCallback) {
         return ServiceFuture.fromResponse(getMemberParticipationUsingGETWithServiceResponseAsync(endDate, startDate, uuid, details, lang), serviceCallback);
     }
 
@@ -4108,12 +4113,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param details details
      * @param lang lang. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the MemberParticipation object
+     * @return the observable to the RiigikoguLiigeOsavTt object
      */
-    public Observable<MemberParticipation> getMemberParticipationUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, Boolean details, String lang) {
-        return getMemberParticipationUsingGETWithServiceResponseAsync(endDate, startDate, uuid, details, lang).map(new Func1<ServiceResponse<MemberParticipation>, MemberParticipation>() {
+    public Observable<RiigikoguLiigeOsavTt> getMemberParticipationUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, Boolean details, String lang) {
+        return getMemberParticipationUsingGETWithServiceResponseAsync(endDate, startDate, uuid, details, lang).map(new Func1<ServiceResponse<RiigikoguLiigeOsavTt>, RiigikoguLiigeOsavTt>() {
             @Override
-            public MemberParticipation call(ServiceResponse<MemberParticipation> response) {
+            public RiigikoguLiigeOsavTt call(ServiceResponse<RiigikoguLiigeOsavTt> response) {
                 return response.body();
             }
         });
@@ -4128,9 +4133,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param details details
      * @param lang lang. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the MemberParticipation object
+     * @return the observable to the RiigikoguLiigeOsavTt object
      */
-    public Observable<ServiceResponse<MemberParticipation>> getMemberParticipationUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String uuid, Boolean details, String lang) {
+    public Observable<ServiceResponse<RiigikoguLiigeOsavTt>> getMemberParticipationUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String uuid, Boolean details, String lang) {
         if (endDate == null) {
             throw new IllegalArgumentException("Parameter endDate is required and cannot be null.");
         }
@@ -4141,11 +4146,11 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             throw new IllegalArgumentException("Parameter uuid is required and cannot be null.");
         }
         return service.getMemberParticipationUsingGET(uuid, details, endDate, lang, startDate)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<MemberParticipation>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<RiigikoguLiigeOsavTt>>>() {
                 @Override
-                public Observable<ServiceResponse<MemberParticipation>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<RiigikoguLiigeOsavTt>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<MemberParticipation> clientResponse = getMemberParticipationUsingGETDelegate(response);
+                        ServiceResponse<RiigikoguLiigeOsavTt> clientResponse = getMemberParticipationUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -4154,9 +4159,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             });
     }
 
-    private ServiceResponse<MemberParticipation> getMemberParticipationUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException, IllegalArgumentException {
-        return this.restClient().responseBuilderFactory().<MemberParticipation, RestException>newInstance(this.serializerAdapter())
-                .register(200, new TypeToken<MemberParticipation>() { }.getType())
+    private ServiceResponse<RiigikoguLiigeOsavTt> getMemberParticipationUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException, IllegalArgumentException {
+        return this.restClient().responseBuilderFactory().<RiigikoguLiigeOsavTt, RestException>newInstance(this.serializerAdapter())
+                .register(200, new TypeToken<RiigikoguLiigeOsavTt>() { }.getType())
                 .build(response);
     }
 
@@ -4168,9 +4173,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;MemberParticipation&gt; object if successful.
+     * @return the List&lt;RiigikoguLiigeOsavTt&gt; object if successful.
      */
-    public List<MemberParticipation> getPlenaryParticipationUsingGET(LocalDate endDate, LocalDate startDate) {
+    public List<RiigikoguLiigeOsavTt> getPlenaryParticipationUsingGET(LocalDate endDate, LocalDate startDate) {
         return getPlenaryParticipationUsingGETWithServiceResponseAsync(endDate, startDate).toBlocking().single().body();
     }
 
@@ -4183,7 +4188,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<List<MemberParticipation>> getPlenaryParticipationUsingGETAsync(LocalDate endDate, LocalDate startDate, final ServiceCallback<List<MemberParticipation>> serviceCallback) {
+    public ServiceFuture<List<RiigikoguLiigeOsavTt>> getPlenaryParticipationUsingGETAsync(LocalDate endDate, LocalDate startDate, final ServiceCallback<List<RiigikoguLiigeOsavTt>> serviceCallback) {
         return ServiceFuture.fromResponse(getPlenaryParticipationUsingGETWithServiceResponseAsync(endDate, startDate), serviceCallback);
     }
 
@@ -4193,12 +4198,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param endDate Kuupäevavahemiku lõpp (yyyy-MM-dd)
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;MemberParticipation&gt; object
+     * @return the observable to the List&lt;RiigikoguLiigeOsavTt&gt; object
      */
-    public Observable<List<MemberParticipation>> getPlenaryParticipationUsingGETAsync(LocalDate endDate, LocalDate startDate) {
-        return getPlenaryParticipationUsingGETWithServiceResponseAsync(endDate, startDate).map(new Func1<ServiceResponse<List<MemberParticipation>>, List<MemberParticipation>>() {
+    public Observable<List<RiigikoguLiigeOsavTt>> getPlenaryParticipationUsingGETAsync(LocalDate endDate, LocalDate startDate) {
+        return getPlenaryParticipationUsingGETWithServiceResponseAsync(endDate, startDate).map(new Func1<ServiceResponse<List<RiigikoguLiigeOsavTt>>, List<RiigikoguLiigeOsavTt>>() {
             @Override
-            public List<MemberParticipation> call(ServiceResponse<List<MemberParticipation>> response) {
+            public List<RiigikoguLiigeOsavTt> call(ServiceResponse<List<RiigikoguLiigeOsavTt>> response) {
                 return response.body();
             }
         });
@@ -4210,9 +4215,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param endDate Kuupäevavahemiku lõpp (yyyy-MM-dd)
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;MemberParticipation&gt; object
+     * @return the observable to the List&lt;RiigikoguLiigeOsavTt&gt; object
      */
-    public Observable<ServiceResponse<List<MemberParticipation>>> getPlenaryParticipationUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate) {
+    public Observable<ServiceResponse<List<RiigikoguLiigeOsavTt>>> getPlenaryParticipationUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate) {
         if (endDate == null) {
             throw new IllegalArgumentException("Parameter endDate is required and cannot be null.");
         }
@@ -4221,11 +4226,11 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
         }
         final String lang = null;
         return service.getPlenaryParticipationUsingGET(endDate, lang, startDate)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<MemberParticipation>>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<RiigikoguLiigeOsavTt>>>>() {
                 @Override
-                public Observable<ServiceResponse<List<MemberParticipation>>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<List<RiigikoguLiigeOsavTt>>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<List<MemberParticipation>> clientResponse = getPlenaryParticipationUsingGETDelegate(response);
+                        ServiceResponse<List<RiigikoguLiigeOsavTt>> clientResponse = getPlenaryParticipationUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -4243,9 +4248,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;MemberParticipation&gt; object if successful.
+     * @return the List&lt;RiigikoguLiigeOsavTt&gt; object if successful.
      */
-    public List<MemberParticipation> getPlenaryParticipationUsingGET(LocalDate endDate, LocalDate startDate, String lang) {
+    public List<RiigikoguLiigeOsavTt> getPlenaryParticipationUsingGET(LocalDate endDate, LocalDate startDate, String lang) {
         return getPlenaryParticipationUsingGETWithServiceResponseAsync(endDate, startDate, lang).toBlocking().single().body();
     }
 
@@ -4259,7 +4264,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<List<MemberParticipation>> getPlenaryParticipationUsingGETAsync(LocalDate endDate, LocalDate startDate, String lang, final ServiceCallback<List<MemberParticipation>> serviceCallback) {
+    public ServiceFuture<List<RiigikoguLiigeOsavTt>> getPlenaryParticipationUsingGETAsync(LocalDate endDate, LocalDate startDate, String lang, final ServiceCallback<List<RiigikoguLiigeOsavTt>> serviceCallback) {
         return ServiceFuture.fromResponse(getPlenaryParticipationUsingGETWithServiceResponseAsync(endDate, startDate, lang), serviceCallback);
     }
 
@@ -4270,12 +4275,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @param lang lang. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;MemberParticipation&gt; object
+     * @return the observable to the List&lt;RiigikoguLiigeOsavTt&gt; object
      */
-    public Observable<List<MemberParticipation>> getPlenaryParticipationUsingGETAsync(LocalDate endDate, LocalDate startDate, String lang) {
-        return getPlenaryParticipationUsingGETWithServiceResponseAsync(endDate, startDate, lang).map(new Func1<ServiceResponse<List<MemberParticipation>>, List<MemberParticipation>>() {
+    public Observable<List<RiigikoguLiigeOsavTt>> getPlenaryParticipationUsingGETAsync(LocalDate endDate, LocalDate startDate, String lang) {
+        return getPlenaryParticipationUsingGETWithServiceResponseAsync(endDate, startDate, lang).map(new Func1<ServiceResponse<List<RiigikoguLiigeOsavTt>>, List<RiigikoguLiigeOsavTt>>() {
             @Override
-            public List<MemberParticipation> call(ServiceResponse<List<MemberParticipation>> response) {
+            public List<RiigikoguLiigeOsavTt> call(ServiceResponse<List<RiigikoguLiigeOsavTt>> response) {
                 return response.body();
             }
         });
@@ -4288,9 +4293,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @param lang lang. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;MemberParticipation&gt; object
+     * @return the observable to the List&lt;RiigikoguLiigeOsavTt&gt; object
      */
-    public Observable<ServiceResponse<List<MemberParticipation>>> getPlenaryParticipationUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String lang) {
+    public Observable<ServiceResponse<List<RiigikoguLiigeOsavTt>>> getPlenaryParticipationUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String lang) {
         if (endDate == null) {
             throw new IllegalArgumentException("Parameter endDate is required and cannot be null.");
         }
@@ -4298,11 +4303,11 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             throw new IllegalArgumentException("Parameter startDate is required and cannot be null.");
         }
         return service.getPlenaryParticipationUsingGET(endDate, lang, startDate)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<MemberParticipation>>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<RiigikoguLiigeOsavTt>>>>() {
                 @Override
-                public Observable<ServiceResponse<List<MemberParticipation>>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<List<RiigikoguLiigeOsavTt>>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<List<MemberParticipation>> clientResponse = getPlenaryParticipationUsingGETDelegate(response);
+                        ServiceResponse<List<RiigikoguLiigeOsavTt>> clientResponse = getPlenaryParticipationUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -4311,9 +4316,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             });
     }
 
-    private ServiceResponse<List<MemberParticipation>> getPlenaryParticipationUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException, IllegalArgumentException {
-        return this.restClient().responseBuilderFactory().<List<MemberParticipation>, RestException>newInstance(this.serializerAdapter())
-                .register(200, new TypeToken<List<MemberParticipation>>() { }.getType())
+    private ServiceResponse<List<RiigikoguLiigeOsavTt>> getPlenaryParticipationUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException, IllegalArgumentException {
+        return this.restClient().responseBuilderFactory().<List<RiigikoguLiigeOsavTt>, RestException>newInstance(this.serializerAdapter())
+                .register(200, new TypeToken<List<RiigikoguLiigeOsavTt>>() { }.getType())
                 .build(response);
     }
 
@@ -4326,9 +4331,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;FactionSpeech&gt; object if successful.
+     * @return the List&lt;RiigikoguLiigeSNavTud&gt; object if successful.
      */
-    public List<FactionSpeech> getFactionSpeechStatisticsUsingGET(LocalDate endDate, LocalDate startDate, String uuid) {
+    public List<RiigikoguLiigeSNavTud> getFactionSpeechStatisticsUsingGET(LocalDate endDate, LocalDate startDate, String uuid) {
         return getFactionSpeechStatisticsUsingGETWithServiceResponseAsync(endDate, startDate, uuid).toBlocking().single().body();
     }
 
@@ -4342,7 +4347,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<List<FactionSpeech>> getFactionSpeechStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, final ServiceCallback<List<FactionSpeech>> serviceCallback) {
+    public ServiceFuture<List<RiigikoguLiigeSNavTud>> getFactionSpeechStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, final ServiceCallback<List<RiigikoguLiigeSNavTud>> serviceCallback) {
         return ServiceFuture.fromResponse(getFactionSpeechStatisticsUsingGETWithServiceResponseAsync(endDate, startDate, uuid), serviceCallback);
     }
 
@@ -4353,12 +4358,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @param uuid Fraktsiooni UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;FactionSpeech&gt; object
+     * @return the observable to the List&lt;RiigikoguLiigeSNavTud&gt; object
      */
-    public Observable<List<FactionSpeech>> getFactionSpeechStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid) {
-        return getFactionSpeechStatisticsUsingGETWithServiceResponseAsync(endDate, startDate, uuid).map(new Func1<ServiceResponse<List<FactionSpeech>>, List<FactionSpeech>>() {
+    public Observable<List<RiigikoguLiigeSNavTud>> getFactionSpeechStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid) {
+        return getFactionSpeechStatisticsUsingGETWithServiceResponseAsync(endDate, startDate, uuid).map(new Func1<ServiceResponse<List<RiigikoguLiigeSNavTud>>, List<RiigikoguLiigeSNavTud>>() {
             @Override
-            public List<FactionSpeech> call(ServiceResponse<List<FactionSpeech>> response) {
+            public List<RiigikoguLiigeSNavTud> call(ServiceResponse<List<RiigikoguLiigeSNavTud>> response) {
                 return response.body();
             }
         });
@@ -4371,9 +4376,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @param uuid Fraktsiooni UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;FactionSpeech&gt; object
+     * @return the observable to the List&lt;RiigikoguLiigeSNavTud&gt; object
      */
-    public Observable<ServiceResponse<List<FactionSpeech>>> getFactionSpeechStatisticsUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String uuid) {
+    public Observable<ServiceResponse<List<RiigikoguLiigeSNavTud>>> getFactionSpeechStatisticsUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String uuid) {
         if (endDate == null) {
             throw new IllegalArgumentException("Parameter endDate is required and cannot be null.");
         }
@@ -4385,11 +4390,11 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
         }
         final String lang = null;
         return service.getFactionSpeechStatisticsUsingGET(uuid, endDate, lang, startDate)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<FactionSpeech>>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<RiigikoguLiigeSNavTud>>>>() {
                 @Override
-                public Observable<ServiceResponse<List<FactionSpeech>>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<List<RiigikoguLiigeSNavTud>>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<List<FactionSpeech>> clientResponse = getFactionSpeechStatisticsUsingGETDelegate(response);
+                        ServiceResponse<List<RiigikoguLiigeSNavTud>> clientResponse = getFactionSpeechStatisticsUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -4408,9 +4413,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;FactionSpeech&gt; object if successful.
+     * @return the List&lt;RiigikoguLiigeSNavTud&gt; object if successful.
      */
-    public List<FactionSpeech> getFactionSpeechStatisticsUsingGET(LocalDate endDate, LocalDate startDate, String uuid, String lang) {
+    public List<RiigikoguLiigeSNavTud> getFactionSpeechStatisticsUsingGET(LocalDate endDate, LocalDate startDate, String uuid, String lang) {
         return getFactionSpeechStatisticsUsingGETWithServiceResponseAsync(endDate, startDate, uuid, lang).toBlocking().single().body();
     }
 
@@ -4425,7 +4430,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<List<FactionSpeech>> getFactionSpeechStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, String lang, final ServiceCallback<List<FactionSpeech>> serviceCallback) {
+    public ServiceFuture<List<RiigikoguLiigeSNavTud>> getFactionSpeechStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, String lang, final ServiceCallback<List<RiigikoguLiigeSNavTud>> serviceCallback) {
         return ServiceFuture.fromResponse(getFactionSpeechStatisticsUsingGETWithServiceResponseAsync(endDate, startDate, uuid, lang), serviceCallback);
     }
 
@@ -4437,12 +4442,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param uuid Fraktsiooni UUID
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;FactionSpeech&gt; object
+     * @return the observable to the List&lt;RiigikoguLiigeSNavTud&gt; object
      */
-    public Observable<List<FactionSpeech>> getFactionSpeechStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, String lang) {
-        return getFactionSpeechStatisticsUsingGETWithServiceResponseAsync(endDate, startDate, uuid, lang).map(new Func1<ServiceResponse<List<FactionSpeech>>, List<FactionSpeech>>() {
+    public Observable<List<RiigikoguLiigeSNavTud>> getFactionSpeechStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, String lang) {
+        return getFactionSpeechStatisticsUsingGETWithServiceResponseAsync(endDate, startDate, uuid, lang).map(new Func1<ServiceResponse<List<RiigikoguLiigeSNavTud>>, List<RiigikoguLiigeSNavTud>>() {
             @Override
-            public List<FactionSpeech> call(ServiceResponse<List<FactionSpeech>> response) {
+            public List<RiigikoguLiigeSNavTud> call(ServiceResponse<List<RiigikoguLiigeSNavTud>> response) {
                 return response.body();
             }
         });
@@ -4456,9 +4461,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param uuid Fraktsiooni UUID
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;FactionSpeech&gt; object
+     * @return the observable to the List&lt;RiigikoguLiigeSNavTud&gt; object
      */
-    public Observable<ServiceResponse<List<FactionSpeech>>> getFactionSpeechStatisticsUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String uuid, String lang) {
+    public Observable<ServiceResponse<List<RiigikoguLiigeSNavTud>>> getFactionSpeechStatisticsUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String uuid, String lang) {
         if (endDate == null) {
             throw new IllegalArgumentException("Parameter endDate is required and cannot be null.");
         }
@@ -4469,11 +4474,11 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             throw new IllegalArgumentException("Parameter uuid is required and cannot be null.");
         }
         return service.getFactionSpeechStatisticsUsingGET(uuid, endDate, lang, startDate)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<FactionSpeech>>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<RiigikoguLiigeSNavTud>>>>() {
                 @Override
-                public Observable<ServiceResponse<List<FactionSpeech>>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<List<RiigikoguLiigeSNavTud>>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<List<FactionSpeech>> clientResponse = getFactionSpeechStatisticsUsingGETDelegate(response);
+                        ServiceResponse<List<RiigikoguLiigeSNavTud>> clientResponse = getFactionSpeechStatisticsUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -4482,9 +4487,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             });
     }
 
-    private ServiceResponse<List<FactionSpeech>> getFactionSpeechStatisticsUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException, IllegalArgumentException {
-        return this.restClient().responseBuilderFactory().<List<FactionSpeech>, RestException>newInstance(this.serializerAdapter())
-                .register(200, new TypeToken<List<FactionSpeech>>() { }.getType())
+    private ServiceResponse<List<RiigikoguLiigeSNavTud>> getFactionSpeechStatisticsUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException, IllegalArgumentException {
+        return this.restClient().responseBuilderFactory().<List<RiigikoguLiigeSNavTud>, RestException>newInstance(this.serializerAdapter())
+                .register(200, new TypeToken<List<RiigikoguLiigeSNavTud>>() { }.getType())
                 .build(response);
     }
 
@@ -4497,9 +4502,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the FactionSpeech object if successful.
+     * @return the RiigikoguLiigeSNavTud object if successful.
      */
-    public FactionSpeech getMemberSpeechStatisticsUsingGET(LocalDate endDate, LocalDate startDate, String uuid) {
+    public RiigikoguLiigeSNavTud getMemberSpeechStatisticsUsingGET(LocalDate endDate, LocalDate startDate, String uuid) {
         return getMemberSpeechStatisticsUsingGETWithServiceResponseAsync(endDate, startDate, uuid).toBlocking().single().body();
     }
 
@@ -4513,7 +4518,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<FactionSpeech> getMemberSpeechStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, final ServiceCallback<FactionSpeech> serviceCallback) {
+    public ServiceFuture<RiigikoguLiigeSNavTud> getMemberSpeechStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, final ServiceCallback<RiigikoguLiigeSNavTud> serviceCallback) {
         return ServiceFuture.fromResponse(getMemberSpeechStatisticsUsingGETWithServiceResponseAsync(endDate, startDate, uuid), serviceCallback);
     }
 
@@ -4524,12 +4529,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @param uuid Liikme UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the FactionSpeech object
+     * @return the observable to the RiigikoguLiigeSNavTud object
      */
-    public Observable<FactionSpeech> getMemberSpeechStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid) {
-        return getMemberSpeechStatisticsUsingGETWithServiceResponseAsync(endDate, startDate, uuid).map(new Func1<ServiceResponse<FactionSpeech>, FactionSpeech>() {
+    public Observable<RiigikoguLiigeSNavTud> getMemberSpeechStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid) {
+        return getMemberSpeechStatisticsUsingGETWithServiceResponseAsync(endDate, startDate, uuid).map(new Func1<ServiceResponse<RiigikoguLiigeSNavTud>, RiigikoguLiigeSNavTud>() {
             @Override
-            public FactionSpeech call(ServiceResponse<FactionSpeech> response) {
+            public RiigikoguLiigeSNavTud call(ServiceResponse<RiigikoguLiigeSNavTud> response) {
                 return response.body();
             }
         });
@@ -4542,9 +4547,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @param uuid Liikme UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the FactionSpeech object
+     * @return the observable to the RiigikoguLiigeSNavTud object
      */
-    public Observable<ServiceResponse<FactionSpeech>> getMemberSpeechStatisticsUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String uuid) {
+    public Observable<ServiceResponse<RiigikoguLiigeSNavTud>> getMemberSpeechStatisticsUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String uuid) {
         if (endDate == null) {
             throw new IllegalArgumentException("Parameter endDate is required and cannot be null.");
         }
@@ -4556,11 +4561,11 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
         }
         final String lang = null;
         return service.getMemberSpeechStatisticsUsingGET(uuid, endDate, lang, startDate)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<FactionSpeech>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<RiigikoguLiigeSNavTud>>>() {
                 @Override
-                public Observable<ServiceResponse<FactionSpeech>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<RiigikoguLiigeSNavTud>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<FactionSpeech> clientResponse = getMemberSpeechStatisticsUsingGETDelegate(response);
+                        ServiceResponse<RiigikoguLiigeSNavTud> clientResponse = getMemberSpeechStatisticsUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -4579,9 +4584,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the FactionSpeech object if successful.
+     * @return the RiigikoguLiigeSNavTud object if successful.
      */
-    public FactionSpeech getMemberSpeechStatisticsUsingGET(LocalDate endDate, LocalDate startDate, String uuid, String lang) {
+    public RiigikoguLiigeSNavTud getMemberSpeechStatisticsUsingGET(LocalDate endDate, LocalDate startDate, String uuid, String lang) {
         return getMemberSpeechStatisticsUsingGETWithServiceResponseAsync(endDate, startDate, uuid, lang).toBlocking().single().body();
     }
 
@@ -4596,7 +4601,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<FactionSpeech> getMemberSpeechStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, String lang, final ServiceCallback<FactionSpeech> serviceCallback) {
+    public ServiceFuture<RiigikoguLiigeSNavTud> getMemberSpeechStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, String lang, final ServiceCallback<RiigikoguLiigeSNavTud> serviceCallback) {
         return ServiceFuture.fromResponse(getMemberSpeechStatisticsUsingGETWithServiceResponseAsync(endDate, startDate, uuid, lang), serviceCallback);
     }
 
@@ -4608,12 +4613,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param uuid Liikme UUID
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the FactionSpeech object
+     * @return the observable to the RiigikoguLiigeSNavTud object
      */
-    public Observable<FactionSpeech> getMemberSpeechStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, String lang) {
-        return getMemberSpeechStatisticsUsingGETWithServiceResponseAsync(endDate, startDate, uuid, lang).map(new Func1<ServiceResponse<FactionSpeech>, FactionSpeech>() {
+    public Observable<RiigikoguLiigeSNavTud> getMemberSpeechStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, String lang) {
+        return getMemberSpeechStatisticsUsingGETWithServiceResponseAsync(endDate, startDate, uuid, lang).map(new Func1<ServiceResponse<RiigikoguLiigeSNavTud>, RiigikoguLiigeSNavTud>() {
             @Override
-            public FactionSpeech call(ServiceResponse<FactionSpeech> response) {
+            public RiigikoguLiigeSNavTud call(ServiceResponse<RiigikoguLiigeSNavTud> response) {
                 return response.body();
             }
         });
@@ -4627,9 +4632,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param uuid Liikme UUID
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the FactionSpeech object
+     * @return the observable to the RiigikoguLiigeSNavTud object
      */
-    public Observable<ServiceResponse<FactionSpeech>> getMemberSpeechStatisticsUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String uuid, String lang) {
+    public Observable<ServiceResponse<RiigikoguLiigeSNavTud>> getMemberSpeechStatisticsUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String uuid, String lang) {
         if (endDate == null) {
             throw new IllegalArgumentException("Parameter endDate is required and cannot be null.");
         }
@@ -4640,11 +4645,11 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             throw new IllegalArgumentException("Parameter uuid is required and cannot be null.");
         }
         return service.getMemberSpeechStatisticsUsingGET(uuid, endDate, lang, startDate)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<FactionSpeech>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<RiigikoguLiigeSNavTud>>>() {
                 @Override
-                public Observable<ServiceResponse<FactionSpeech>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<RiigikoguLiigeSNavTud>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<FactionSpeech> clientResponse = getMemberSpeechStatisticsUsingGETDelegate(response);
+                        ServiceResponse<RiigikoguLiigeSNavTud> clientResponse = getMemberSpeechStatisticsUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -4653,9 +4658,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             });
     }
 
-    private ServiceResponse<FactionSpeech> getMemberSpeechStatisticsUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException, IllegalArgumentException {
-        return this.restClient().responseBuilderFactory().<FactionSpeech, RestException>newInstance(this.serializerAdapter())
-                .register(200, new TypeToken<FactionSpeech>() { }.getType())
+    private ServiceResponse<RiigikoguLiigeSNavTud> getMemberSpeechStatisticsUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException, IllegalArgumentException {
+        return this.restClient().responseBuilderFactory().<RiigikoguLiigeSNavTud, RestException>newInstance(this.serializerAdapter())
+                .register(200, new TypeToken<RiigikoguLiigeSNavTud>() { }.getType())
                 .build(response);
     }
 
@@ -4667,9 +4672,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;FactionSpeech&gt; object if successful.
+     * @return the List&lt;RiigikoguLiigeSNavTud&gt; object if successful.
      */
-    public List<FactionSpeech> getPlenarySpeechStatisticsUsingGET(LocalDate endDate, LocalDate startDate) {
+    public List<RiigikoguLiigeSNavTud> getPlenarySpeechStatisticsUsingGET(LocalDate endDate, LocalDate startDate) {
         return getPlenarySpeechStatisticsUsingGETWithServiceResponseAsync(endDate, startDate).toBlocking().single().body();
     }
 
@@ -4682,7 +4687,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<List<FactionSpeech>> getPlenarySpeechStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, final ServiceCallback<List<FactionSpeech>> serviceCallback) {
+    public ServiceFuture<List<RiigikoguLiigeSNavTud>> getPlenarySpeechStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, final ServiceCallback<List<RiigikoguLiigeSNavTud>> serviceCallback) {
         return ServiceFuture.fromResponse(getPlenarySpeechStatisticsUsingGETWithServiceResponseAsync(endDate, startDate), serviceCallback);
     }
 
@@ -4692,12 +4697,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param endDate Kuupäevavahemiku lõpp (yyyy-MM-dd)
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;FactionSpeech&gt; object
+     * @return the observable to the List&lt;RiigikoguLiigeSNavTud&gt; object
      */
-    public Observable<List<FactionSpeech>> getPlenarySpeechStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate) {
-        return getPlenarySpeechStatisticsUsingGETWithServiceResponseAsync(endDate, startDate).map(new Func1<ServiceResponse<List<FactionSpeech>>, List<FactionSpeech>>() {
+    public Observable<List<RiigikoguLiigeSNavTud>> getPlenarySpeechStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate) {
+        return getPlenarySpeechStatisticsUsingGETWithServiceResponseAsync(endDate, startDate).map(new Func1<ServiceResponse<List<RiigikoguLiigeSNavTud>>, List<RiigikoguLiigeSNavTud>>() {
             @Override
-            public List<FactionSpeech> call(ServiceResponse<List<FactionSpeech>> response) {
+            public List<RiigikoguLiigeSNavTud> call(ServiceResponse<List<RiigikoguLiigeSNavTud>> response) {
                 return response.body();
             }
         });
@@ -4709,9 +4714,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param endDate Kuupäevavahemiku lõpp (yyyy-MM-dd)
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;FactionSpeech&gt; object
+     * @return the observable to the List&lt;RiigikoguLiigeSNavTud&gt; object
      */
-    public Observable<ServiceResponse<List<FactionSpeech>>> getPlenarySpeechStatisticsUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate) {
+    public Observable<ServiceResponse<List<RiigikoguLiigeSNavTud>>> getPlenarySpeechStatisticsUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate) {
         if (endDate == null) {
             throw new IllegalArgumentException("Parameter endDate is required and cannot be null.");
         }
@@ -4720,11 +4725,11 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
         }
         final String lang = null;
         return service.getPlenarySpeechStatisticsUsingGET(endDate, lang, startDate)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<FactionSpeech>>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<RiigikoguLiigeSNavTud>>>>() {
                 @Override
-                public Observable<ServiceResponse<List<FactionSpeech>>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<List<RiigikoguLiigeSNavTud>>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<List<FactionSpeech>> clientResponse = getPlenarySpeechStatisticsUsingGETDelegate(response);
+                        ServiceResponse<List<RiigikoguLiigeSNavTud>> clientResponse = getPlenarySpeechStatisticsUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -4742,9 +4747,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;FactionSpeech&gt; object if successful.
+     * @return the List&lt;RiigikoguLiigeSNavTud&gt; object if successful.
      */
-    public List<FactionSpeech> getPlenarySpeechStatisticsUsingGET(LocalDate endDate, LocalDate startDate, String lang) {
+    public List<RiigikoguLiigeSNavTud> getPlenarySpeechStatisticsUsingGET(LocalDate endDate, LocalDate startDate, String lang) {
         return getPlenarySpeechStatisticsUsingGETWithServiceResponseAsync(endDate, startDate, lang).toBlocking().single().body();
     }
 
@@ -4758,7 +4763,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<List<FactionSpeech>> getPlenarySpeechStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String lang, final ServiceCallback<List<FactionSpeech>> serviceCallback) {
+    public ServiceFuture<List<RiigikoguLiigeSNavTud>> getPlenarySpeechStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String lang, final ServiceCallback<List<RiigikoguLiigeSNavTud>> serviceCallback) {
         return ServiceFuture.fromResponse(getPlenarySpeechStatisticsUsingGETWithServiceResponseAsync(endDate, startDate, lang), serviceCallback);
     }
 
@@ -4769,12 +4774,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;FactionSpeech&gt; object
+     * @return the observable to the List&lt;RiigikoguLiigeSNavTud&gt; object
      */
-    public Observable<List<FactionSpeech>> getPlenarySpeechStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String lang) {
-        return getPlenarySpeechStatisticsUsingGETWithServiceResponseAsync(endDate, startDate, lang).map(new Func1<ServiceResponse<List<FactionSpeech>>, List<FactionSpeech>>() {
+    public Observable<List<RiigikoguLiigeSNavTud>> getPlenarySpeechStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String lang) {
+        return getPlenarySpeechStatisticsUsingGETWithServiceResponseAsync(endDate, startDate, lang).map(new Func1<ServiceResponse<List<RiigikoguLiigeSNavTud>>, List<RiigikoguLiigeSNavTud>>() {
             @Override
-            public List<FactionSpeech> call(ServiceResponse<List<FactionSpeech>> response) {
+            public List<RiigikoguLiigeSNavTud> call(ServiceResponse<List<RiigikoguLiigeSNavTud>> response) {
                 return response.body();
             }
         });
@@ -4787,9 +4792,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;FactionSpeech&gt; object
+     * @return the observable to the List&lt;RiigikoguLiigeSNavTud&gt; object
      */
-    public Observable<ServiceResponse<List<FactionSpeech>>> getPlenarySpeechStatisticsUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String lang) {
+    public Observable<ServiceResponse<List<RiigikoguLiigeSNavTud>>> getPlenarySpeechStatisticsUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String lang) {
         if (endDate == null) {
             throw new IllegalArgumentException("Parameter endDate is required and cannot be null.");
         }
@@ -4797,11 +4802,11 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             throw new IllegalArgumentException("Parameter startDate is required and cannot be null.");
         }
         return service.getPlenarySpeechStatisticsUsingGET(endDate, lang, startDate)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<FactionSpeech>>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<RiigikoguLiigeSNavTud>>>>() {
                 @Override
-                public Observable<ServiceResponse<List<FactionSpeech>>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<List<RiigikoguLiigeSNavTud>>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<List<FactionSpeech>> clientResponse = getPlenarySpeechStatisticsUsingGETDelegate(response);
+                        ServiceResponse<List<RiigikoguLiigeSNavTud>> clientResponse = getPlenarySpeechStatisticsUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -4810,9 +4815,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             });
     }
 
-    private ServiceResponse<List<FactionSpeech>> getPlenarySpeechStatisticsUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException, IllegalArgumentException {
-        return this.restClient().responseBuilderFactory().<List<FactionSpeech>, RestException>newInstance(this.serializerAdapter())
-                .register(200, new TypeToken<List<FactionSpeech>>() { }.getType())
+    private ServiceResponse<List<RiigikoguLiigeSNavTud>> getPlenarySpeechStatisticsUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException, IllegalArgumentException {
+        return this.restClient().responseBuilderFactory().<List<RiigikoguLiigeSNavTud>, RestException>newInstance(this.serializerAdapter())
+                .register(200, new TypeToken<List<RiigikoguLiigeSNavTud>>() { }.getType())
                 .build(response);
     }
 
@@ -4825,9 +4830,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;PlenaryMemberVoting&gt; object if successful.
+     * @return the List&lt;RiigikoguLiigeHLetused&gt; object if successful.
      */
-    public List<PlenaryMemberVoting> getFactionVotingStatisticsUsingGET(LocalDate endDate, LocalDate startDate, String uuid) {
+    public List<RiigikoguLiigeHLetused> getFactionVotingStatisticsUsingGET(LocalDate endDate, LocalDate startDate, String uuid) {
         return getFactionVotingStatisticsUsingGETWithServiceResponseAsync(endDate, startDate, uuid).toBlocking().single().body();
     }
 
@@ -4841,7 +4846,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<List<PlenaryMemberVoting>> getFactionVotingStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, final ServiceCallback<List<PlenaryMemberVoting>> serviceCallback) {
+    public ServiceFuture<List<RiigikoguLiigeHLetused>> getFactionVotingStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, final ServiceCallback<List<RiigikoguLiigeHLetused>> serviceCallback) {
         return ServiceFuture.fromResponse(getFactionVotingStatisticsUsingGETWithServiceResponseAsync(endDate, startDate, uuid), serviceCallback);
     }
 
@@ -4852,12 +4857,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @param uuid Fraktsiooni UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;PlenaryMemberVoting&gt; object
+     * @return the observable to the List&lt;RiigikoguLiigeHLetused&gt; object
      */
-    public Observable<List<PlenaryMemberVoting>> getFactionVotingStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid) {
-        return getFactionVotingStatisticsUsingGETWithServiceResponseAsync(endDate, startDate, uuid).map(new Func1<ServiceResponse<List<PlenaryMemberVoting>>, List<PlenaryMemberVoting>>() {
+    public Observable<List<RiigikoguLiigeHLetused>> getFactionVotingStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid) {
+        return getFactionVotingStatisticsUsingGETWithServiceResponseAsync(endDate, startDate, uuid).map(new Func1<ServiceResponse<List<RiigikoguLiigeHLetused>>, List<RiigikoguLiigeHLetused>>() {
             @Override
-            public List<PlenaryMemberVoting> call(ServiceResponse<List<PlenaryMemberVoting>> response) {
+            public List<RiigikoguLiigeHLetused> call(ServiceResponse<List<RiigikoguLiigeHLetused>> response) {
                 return response.body();
             }
         });
@@ -4870,9 +4875,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @param uuid Fraktsiooni UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;PlenaryMemberVoting&gt; object
+     * @return the observable to the List&lt;RiigikoguLiigeHLetused&gt; object
      */
-    public Observable<ServiceResponse<List<PlenaryMemberVoting>>> getFactionVotingStatisticsUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String uuid) {
+    public Observable<ServiceResponse<List<RiigikoguLiigeHLetused>>> getFactionVotingStatisticsUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String uuid) {
         if (endDate == null) {
             throw new IllegalArgumentException("Parameter endDate is required and cannot be null.");
         }
@@ -4884,11 +4889,11 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
         }
         final String lang = null;
         return service.getFactionVotingStatisticsUsingGET(uuid, endDate, lang, startDate)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<PlenaryMemberVoting>>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<RiigikoguLiigeHLetused>>>>() {
                 @Override
-                public Observable<ServiceResponse<List<PlenaryMemberVoting>>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<List<RiigikoguLiigeHLetused>>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<List<PlenaryMemberVoting>> clientResponse = getFactionVotingStatisticsUsingGETDelegate(response);
+                        ServiceResponse<List<RiigikoguLiigeHLetused>> clientResponse = getFactionVotingStatisticsUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -4907,9 +4912,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;PlenaryMemberVoting&gt; object if successful.
+     * @return the List&lt;RiigikoguLiigeHLetused&gt; object if successful.
      */
-    public List<PlenaryMemberVoting> getFactionVotingStatisticsUsingGET(LocalDate endDate, LocalDate startDate, String uuid, String lang) {
+    public List<RiigikoguLiigeHLetused> getFactionVotingStatisticsUsingGET(LocalDate endDate, LocalDate startDate, String uuid, String lang) {
         return getFactionVotingStatisticsUsingGETWithServiceResponseAsync(endDate, startDate, uuid, lang).toBlocking().single().body();
     }
 
@@ -4924,7 +4929,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<List<PlenaryMemberVoting>> getFactionVotingStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, String lang, final ServiceCallback<List<PlenaryMemberVoting>> serviceCallback) {
+    public ServiceFuture<List<RiigikoguLiigeHLetused>> getFactionVotingStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, String lang, final ServiceCallback<List<RiigikoguLiigeHLetused>> serviceCallback) {
         return ServiceFuture.fromResponse(getFactionVotingStatisticsUsingGETWithServiceResponseAsync(endDate, startDate, uuid, lang), serviceCallback);
     }
 
@@ -4936,12 +4941,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param uuid Fraktsiooni UUID
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;PlenaryMemberVoting&gt; object
+     * @return the observable to the List&lt;RiigikoguLiigeHLetused&gt; object
      */
-    public Observable<List<PlenaryMemberVoting>> getFactionVotingStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, String lang) {
-        return getFactionVotingStatisticsUsingGETWithServiceResponseAsync(endDate, startDate, uuid, lang).map(new Func1<ServiceResponse<List<PlenaryMemberVoting>>, List<PlenaryMemberVoting>>() {
+    public Observable<List<RiigikoguLiigeHLetused>> getFactionVotingStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, String lang) {
+        return getFactionVotingStatisticsUsingGETWithServiceResponseAsync(endDate, startDate, uuid, lang).map(new Func1<ServiceResponse<List<RiigikoguLiigeHLetused>>, List<RiigikoguLiigeHLetused>>() {
             @Override
-            public List<PlenaryMemberVoting> call(ServiceResponse<List<PlenaryMemberVoting>> response) {
+            public List<RiigikoguLiigeHLetused> call(ServiceResponse<List<RiigikoguLiigeHLetused>> response) {
                 return response.body();
             }
         });
@@ -4955,9 +4960,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param uuid Fraktsiooni UUID
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;PlenaryMemberVoting&gt; object
+     * @return the observable to the List&lt;RiigikoguLiigeHLetused&gt; object
      */
-    public Observable<ServiceResponse<List<PlenaryMemberVoting>>> getFactionVotingStatisticsUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String uuid, String lang) {
+    public Observable<ServiceResponse<List<RiigikoguLiigeHLetused>>> getFactionVotingStatisticsUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String uuid, String lang) {
         if (endDate == null) {
             throw new IllegalArgumentException("Parameter endDate is required and cannot be null.");
         }
@@ -4968,11 +4973,11 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             throw new IllegalArgumentException("Parameter uuid is required and cannot be null.");
         }
         return service.getFactionVotingStatisticsUsingGET(uuid, endDate, lang, startDate)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<PlenaryMemberVoting>>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<RiigikoguLiigeHLetused>>>>() {
                 @Override
-                public Observable<ServiceResponse<List<PlenaryMemberVoting>>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<List<RiigikoguLiigeHLetused>>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<List<PlenaryMemberVoting>> clientResponse = getFactionVotingStatisticsUsingGETDelegate(response);
+                        ServiceResponse<List<RiigikoguLiigeHLetused>> clientResponse = getFactionVotingStatisticsUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -4981,9 +4986,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             });
     }
 
-    private ServiceResponse<List<PlenaryMemberVoting>> getFactionVotingStatisticsUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException, IllegalArgumentException {
-        return this.restClient().responseBuilderFactory().<List<PlenaryMemberVoting>, RestException>newInstance(this.serializerAdapter())
-                .register(200, new TypeToken<List<PlenaryMemberVoting>>() { }.getType())
+    private ServiceResponse<List<RiigikoguLiigeHLetused>> getFactionVotingStatisticsUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException, IllegalArgumentException {
+        return this.restClient().responseBuilderFactory().<List<RiigikoguLiigeHLetused>, RestException>newInstance(this.serializerAdapter())
+                .register(200, new TypeToken<List<RiigikoguLiigeHLetused>>() { }.getType())
                 .build(response);
     }
 
@@ -4996,9 +5001,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the PlenaryMemberVoting object if successful.
+     * @return the RiigikoguLiigeHLetused object if successful.
      */
-    public PlenaryMemberVoting getMemberVotingStatisticsUsingGET(LocalDate endDate, LocalDate startDate, String uuid) {
+    public RiigikoguLiigeHLetused getMemberVotingStatisticsUsingGET(LocalDate endDate, LocalDate startDate, String uuid) {
         return getMemberVotingStatisticsUsingGETWithServiceResponseAsync(endDate, startDate, uuid).toBlocking().single().body();
     }
 
@@ -5012,7 +5017,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<PlenaryMemberVoting> getMemberVotingStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, final ServiceCallback<PlenaryMemberVoting> serviceCallback) {
+    public ServiceFuture<RiigikoguLiigeHLetused> getMemberVotingStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, final ServiceCallback<RiigikoguLiigeHLetused> serviceCallback) {
         return ServiceFuture.fromResponse(getMemberVotingStatisticsUsingGETWithServiceResponseAsync(endDate, startDate, uuid), serviceCallback);
     }
 
@@ -5023,12 +5028,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @param uuid Liikme UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PlenaryMemberVoting object
+     * @return the observable to the RiigikoguLiigeHLetused object
      */
-    public Observable<PlenaryMemberVoting> getMemberVotingStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid) {
-        return getMemberVotingStatisticsUsingGETWithServiceResponseAsync(endDate, startDate, uuid).map(new Func1<ServiceResponse<PlenaryMemberVoting>, PlenaryMemberVoting>() {
+    public Observable<RiigikoguLiigeHLetused> getMemberVotingStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid) {
+        return getMemberVotingStatisticsUsingGETWithServiceResponseAsync(endDate, startDate, uuid).map(new Func1<ServiceResponse<RiigikoguLiigeHLetused>, RiigikoguLiigeHLetused>() {
             @Override
-            public PlenaryMemberVoting call(ServiceResponse<PlenaryMemberVoting> response) {
+            public RiigikoguLiigeHLetused call(ServiceResponse<RiigikoguLiigeHLetused> response) {
                 return response.body();
             }
         });
@@ -5041,9 +5046,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @param uuid Liikme UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PlenaryMemberVoting object
+     * @return the observable to the RiigikoguLiigeHLetused object
      */
-    public Observable<ServiceResponse<PlenaryMemberVoting>> getMemberVotingStatisticsUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String uuid) {
+    public Observable<ServiceResponse<RiigikoguLiigeHLetused>> getMemberVotingStatisticsUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String uuid) {
         if (endDate == null) {
             throw new IllegalArgumentException("Parameter endDate is required and cannot be null.");
         }
@@ -5055,11 +5060,11 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
         }
         final String lang = null;
         return service.getMemberVotingStatisticsUsingGET(uuid, endDate, lang, startDate)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<PlenaryMemberVoting>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<RiigikoguLiigeHLetused>>>() {
                 @Override
-                public Observable<ServiceResponse<PlenaryMemberVoting>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<RiigikoguLiigeHLetused>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<PlenaryMemberVoting> clientResponse = getMemberVotingStatisticsUsingGETDelegate(response);
+                        ServiceResponse<RiigikoguLiigeHLetused> clientResponse = getMemberVotingStatisticsUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -5078,9 +5083,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the PlenaryMemberVoting object if successful.
+     * @return the RiigikoguLiigeHLetused object if successful.
      */
-    public PlenaryMemberVoting getMemberVotingStatisticsUsingGET(LocalDate endDate, LocalDate startDate, String uuid, String lang) {
+    public RiigikoguLiigeHLetused getMemberVotingStatisticsUsingGET(LocalDate endDate, LocalDate startDate, String uuid, String lang) {
         return getMemberVotingStatisticsUsingGETWithServiceResponseAsync(endDate, startDate, uuid, lang).toBlocking().single().body();
     }
 
@@ -5095,7 +5100,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<PlenaryMemberVoting> getMemberVotingStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, String lang, final ServiceCallback<PlenaryMemberVoting> serviceCallback) {
+    public ServiceFuture<RiigikoguLiigeHLetused> getMemberVotingStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, String lang, final ServiceCallback<RiigikoguLiigeHLetused> serviceCallback) {
         return ServiceFuture.fromResponse(getMemberVotingStatisticsUsingGETWithServiceResponseAsync(endDate, startDate, uuid, lang), serviceCallback);
     }
 
@@ -5107,12 +5112,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param uuid Liikme UUID
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PlenaryMemberVoting object
+     * @return the observable to the RiigikoguLiigeHLetused object
      */
-    public Observable<PlenaryMemberVoting> getMemberVotingStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, String lang) {
-        return getMemberVotingStatisticsUsingGETWithServiceResponseAsync(endDate, startDate, uuid, lang).map(new Func1<ServiceResponse<PlenaryMemberVoting>, PlenaryMemberVoting>() {
+    public Observable<RiigikoguLiigeHLetused> getMemberVotingStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, String lang) {
+        return getMemberVotingStatisticsUsingGETWithServiceResponseAsync(endDate, startDate, uuid, lang).map(new Func1<ServiceResponse<RiigikoguLiigeHLetused>, RiigikoguLiigeHLetused>() {
             @Override
-            public PlenaryMemberVoting call(ServiceResponse<PlenaryMemberVoting> response) {
+            public RiigikoguLiigeHLetused call(ServiceResponse<RiigikoguLiigeHLetused> response) {
                 return response.body();
             }
         });
@@ -5126,9 +5131,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param uuid Liikme UUID
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PlenaryMemberVoting object
+     * @return the observable to the RiigikoguLiigeHLetused object
      */
-    public Observable<ServiceResponse<PlenaryMemberVoting>> getMemberVotingStatisticsUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String uuid, String lang) {
+    public Observable<ServiceResponse<RiigikoguLiigeHLetused>> getMemberVotingStatisticsUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String uuid, String lang) {
         if (endDate == null) {
             throw new IllegalArgumentException("Parameter endDate is required and cannot be null.");
         }
@@ -5139,11 +5144,11 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             throw new IllegalArgumentException("Parameter uuid is required and cannot be null.");
         }
         return service.getMemberVotingStatisticsUsingGET(uuid, endDate, lang, startDate)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<PlenaryMemberVoting>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<RiigikoguLiigeHLetused>>>() {
                 @Override
-                public Observable<ServiceResponse<PlenaryMemberVoting>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<RiigikoguLiigeHLetused>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<PlenaryMemberVoting> clientResponse = getMemberVotingStatisticsUsingGETDelegate(response);
+                        ServiceResponse<RiigikoguLiigeHLetused> clientResponse = getMemberVotingStatisticsUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -5152,9 +5157,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             });
     }
 
-    private ServiceResponse<PlenaryMemberVoting> getMemberVotingStatisticsUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException, IllegalArgumentException {
-        return this.restClient().responseBuilderFactory().<PlenaryMemberVoting, RestException>newInstance(this.serializerAdapter())
-                .register(200, new TypeToken<PlenaryMemberVoting>() { }.getType())
+    private ServiceResponse<RiigikoguLiigeHLetused> getMemberVotingStatisticsUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException, IllegalArgumentException {
+        return this.restClient().responseBuilderFactory().<RiigikoguLiigeHLetused, RestException>newInstance(this.serializerAdapter())
+                .register(200, new TypeToken<RiigikoguLiigeHLetused>() { }.getType())
                 .build(response);
     }
 
@@ -5166,9 +5171,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;PlenaryMemberVoting&gt; object if successful.
+     * @return the List&lt;RiigikoguLiigeHLetused&gt; object if successful.
      */
-    public List<PlenaryMemberVoting> getPlenaryVotingStatisticsUsingGET(LocalDate endDate, LocalDate startDate) {
+    public List<RiigikoguLiigeHLetused> getPlenaryVotingStatisticsUsingGET(LocalDate endDate, LocalDate startDate) {
         return getPlenaryVotingStatisticsUsingGETWithServiceResponseAsync(endDate, startDate).toBlocking().single().body();
     }
 
@@ -5181,7 +5186,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<List<PlenaryMemberVoting>> getPlenaryVotingStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, final ServiceCallback<List<PlenaryMemberVoting>> serviceCallback) {
+    public ServiceFuture<List<RiigikoguLiigeHLetused>> getPlenaryVotingStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, final ServiceCallback<List<RiigikoguLiigeHLetused>> serviceCallback) {
         return ServiceFuture.fromResponse(getPlenaryVotingStatisticsUsingGETWithServiceResponseAsync(endDate, startDate), serviceCallback);
     }
 
@@ -5191,12 +5196,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param endDate Kuupäevavahemiku lõpp (yyyy-MM-dd)
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;PlenaryMemberVoting&gt; object
+     * @return the observable to the List&lt;RiigikoguLiigeHLetused&gt; object
      */
-    public Observable<List<PlenaryMemberVoting>> getPlenaryVotingStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate) {
-        return getPlenaryVotingStatisticsUsingGETWithServiceResponseAsync(endDate, startDate).map(new Func1<ServiceResponse<List<PlenaryMemberVoting>>, List<PlenaryMemberVoting>>() {
+    public Observable<List<RiigikoguLiigeHLetused>> getPlenaryVotingStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate) {
+        return getPlenaryVotingStatisticsUsingGETWithServiceResponseAsync(endDate, startDate).map(new Func1<ServiceResponse<List<RiigikoguLiigeHLetused>>, List<RiigikoguLiigeHLetused>>() {
             @Override
-            public List<PlenaryMemberVoting> call(ServiceResponse<List<PlenaryMemberVoting>> response) {
+            public List<RiigikoguLiigeHLetused> call(ServiceResponse<List<RiigikoguLiigeHLetused>> response) {
                 return response.body();
             }
         });
@@ -5208,9 +5213,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param endDate Kuupäevavahemiku lõpp (yyyy-MM-dd)
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;PlenaryMemberVoting&gt; object
+     * @return the observable to the List&lt;RiigikoguLiigeHLetused&gt; object
      */
-    public Observable<ServiceResponse<List<PlenaryMemberVoting>>> getPlenaryVotingStatisticsUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate) {
+    public Observable<ServiceResponse<List<RiigikoguLiigeHLetused>>> getPlenaryVotingStatisticsUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate) {
         if (endDate == null) {
             throw new IllegalArgumentException("Parameter endDate is required and cannot be null.");
         }
@@ -5219,11 +5224,11 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
         }
         final String lang = null;
         return service.getPlenaryVotingStatisticsUsingGET(endDate, lang, startDate)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<PlenaryMemberVoting>>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<RiigikoguLiigeHLetused>>>>() {
                 @Override
-                public Observable<ServiceResponse<List<PlenaryMemberVoting>>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<List<RiigikoguLiigeHLetused>>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<List<PlenaryMemberVoting>> clientResponse = getPlenaryVotingStatisticsUsingGETDelegate(response);
+                        ServiceResponse<List<RiigikoguLiigeHLetused>> clientResponse = getPlenaryVotingStatisticsUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -5241,9 +5246,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;PlenaryMemberVoting&gt; object if successful.
+     * @return the List&lt;RiigikoguLiigeHLetused&gt; object if successful.
      */
-    public List<PlenaryMemberVoting> getPlenaryVotingStatisticsUsingGET(LocalDate endDate, LocalDate startDate, String lang) {
+    public List<RiigikoguLiigeHLetused> getPlenaryVotingStatisticsUsingGET(LocalDate endDate, LocalDate startDate, String lang) {
         return getPlenaryVotingStatisticsUsingGETWithServiceResponseAsync(endDate, startDate, lang).toBlocking().single().body();
     }
 
@@ -5257,7 +5262,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<List<PlenaryMemberVoting>> getPlenaryVotingStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String lang, final ServiceCallback<List<PlenaryMemberVoting>> serviceCallback) {
+    public ServiceFuture<List<RiigikoguLiigeHLetused>> getPlenaryVotingStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String lang, final ServiceCallback<List<RiigikoguLiigeHLetused>> serviceCallback) {
         return ServiceFuture.fromResponse(getPlenaryVotingStatisticsUsingGETWithServiceResponseAsync(endDate, startDate, lang), serviceCallback);
     }
 
@@ -5268,12 +5273,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;PlenaryMemberVoting&gt; object
+     * @return the observable to the List&lt;RiigikoguLiigeHLetused&gt; object
      */
-    public Observable<List<PlenaryMemberVoting>> getPlenaryVotingStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String lang) {
-        return getPlenaryVotingStatisticsUsingGETWithServiceResponseAsync(endDate, startDate, lang).map(new Func1<ServiceResponse<List<PlenaryMemberVoting>>, List<PlenaryMemberVoting>>() {
+    public Observable<List<RiigikoguLiigeHLetused>> getPlenaryVotingStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String lang) {
+        return getPlenaryVotingStatisticsUsingGETWithServiceResponseAsync(endDate, startDate, lang).map(new Func1<ServiceResponse<List<RiigikoguLiigeHLetused>>, List<RiigikoguLiigeHLetused>>() {
             @Override
-            public List<PlenaryMemberVoting> call(ServiceResponse<List<PlenaryMemberVoting>> response) {
+            public List<RiigikoguLiigeHLetused> call(ServiceResponse<List<RiigikoguLiigeHLetused>> response) {
                 return response.body();
             }
         });
@@ -5286,9 +5291,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;PlenaryMemberVoting&gt; object
+     * @return the observable to the List&lt;RiigikoguLiigeHLetused&gt; object
      */
-    public Observable<ServiceResponse<List<PlenaryMemberVoting>>> getPlenaryVotingStatisticsUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String lang) {
+    public Observable<ServiceResponse<List<RiigikoguLiigeHLetused>>> getPlenaryVotingStatisticsUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String lang) {
         if (endDate == null) {
             throw new IllegalArgumentException("Parameter endDate is required and cannot be null.");
         }
@@ -5296,11 +5301,11 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             throw new IllegalArgumentException("Parameter startDate is required and cannot be null.");
         }
         return service.getPlenaryVotingStatisticsUsingGET(endDate, lang, startDate)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<PlenaryMemberVoting>>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<RiigikoguLiigeHLetused>>>>() {
                 @Override
-                public Observable<ServiceResponse<List<PlenaryMemberVoting>>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<List<RiigikoguLiigeHLetused>>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<List<PlenaryMemberVoting>> clientResponse = getPlenaryVotingStatisticsUsingGETDelegate(response);
+                        ServiceResponse<List<RiigikoguLiigeHLetused>> clientResponse = getPlenaryVotingStatisticsUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -5309,9 +5314,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             });
     }
 
-    private ServiceResponse<List<PlenaryMemberVoting>> getPlenaryVotingStatisticsUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException, IllegalArgumentException {
-        return this.restClient().responseBuilderFactory().<List<PlenaryMemberVoting>, RestException>newInstance(this.serializerAdapter())
-                .register(200, new TypeToken<List<PlenaryMemberVoting>>() { }.getType())
+    private ServiceResponse<List<RiigikoguLiigeHLetused>> getPlenaryVotingStatisticsUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException, IllegalArgumentException {
+        return this.restClient().responseBuilderFactory().<List<RiigikoguLiigeHLetused>, RestException>newInstance(this.serializerAdapter())
+                .register(200, new TypeToken<List<RiigikoguLiigeHLetused>>() { }.getType())
                 .build(response);
     }
 
@@ -5323,9 +5328,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;AgendaStenoUrl&gt; object if successful.
+     * @return the List&lt;StenoPEvakorrapunkt&gt; object if successful.
      */
-    public List<AgendaStenoUrl> getAgendaUrlsUsingGET(String uuids) {
+    public List<StenoPEvakorrapunkt> getAgendaUrlsUsingGET(String uuids) {
         return getAgendaUrlsUsingGETWithServiceResponseAsync(uuids).toBlocking().single().body();
     }
 
@@ -5338,7 +5343,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<List<AgendaStenoUrl>> getAgendaUrlsUsingGETAsync(String uuids, final ServiceCallback<List<AgendaStenoUrl>> serviceCallback) {
+    public ServiceFuture<List<StenoPEvakorrapunkt>> getAgendaUrlsUsingGETAsync(String uuids, final ServiceCallback<List<StenoPEvakorrapunkt>> serviceCallback) {
         return ServiceFuture.fromResponse(getAgendaUrlsUsingGETWithServiceResponseAsync(uuids), serviceCallback);
     }
 
@@ -5348,12 +5353,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      *
      * @param uuids Päevakorrapunktide UUID-d (komaga eraldatud)
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;AgendaStenoUrl&gt; object
+     * @return the observable to the List&lt;StenoPEvakorrapunkt&gt; object
      */
-    public Observable<List<AgendaStenoUrl>> getAgendaUrlsUsingGETAsync(String uuids) {
-        return getAgendaUrlsUsingGETWithServiceResponseAsync(uuids).map(new Func1<ServiceResponse<List<AgendaStenoUrl>>, List<AgendaStenoUrl>>() {
+    public Observable<List<StenoPEvakorrapunkt>> getAgendaUrlsUsingGETAsync(String uuids) {
+        return getAgendaUrlsUsingGETWithServiceResponseAsync(uuids).map(new Func1<ServiceResponse<List<StenoPEvakorrapunkt>>, List<StenoPEvakorrapunkt>>() {
             @Override
-            public List<AgendaStenoUrl> call(ServiceResponse<List<AgendaStenoUrl>> response) {
+            public List<StenoPEvakorrapunkt> call(ServiceResponse<List<StenoPEvakorrapunkt>> response) {
                 return response.body();
             }
         });
@@ -5365,18 +5370,18 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      *
      * @param uuids Päevakorrapunktide UUID-d (komaga eraldatud)
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;AgendaStenoUrl&gt; object
+     * @return the observable to the List&lt;StenoPEvakorrapunkt&gt; object
      */
-    public Observable<ServiceResponse<List<AgendaStenoUrl>>> getAgendaUrlsUsingGETWithServiceResponseAsync(String uuids) {
+    public Observable<ServiceResponse<List<StenoPEvakorrapunkt>>> getAgendaUrlsUsingGETWithServiceResponseAsync(String uuids) {
         if (uuids == null) {
             throw new IllegalArgumentException("Parameter uuids is required and cannot be null.");
         }
         return service.getAgendaUrlsUsingGET(uuids)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<AgendaStenoUrl>>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<StenoPEvakorrapunkt>>>>() {
                 @Override
-                public Observable<ServiceResponse<List<AgendaStenoUrl>>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<List<StenoPEvakorrapunkt>>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<List<AgendaStenoUrl>> clientResponse = getAgendaUrlsUsingGETDelegate(response);
+                        ServiceResponse<List<StenoPEvakorrapunkt>> clientResponse = getAgendaUrlsUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -5385,9 +5390,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             });
     }
 
-    private ServiceResponse<List<AgendaStenoUrl>> getAgendaUrlsUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException, IllegalArgumentException {
-        return this.restClient().responseBuilderFactory().<List<AgendaStenoUrl>, RestException>newInstance(this.serializerAdapter())
-                .register(200, new TypeToken<List<AgendaStenoUrl>>() { }.getType())
+    private ServiceResponse<List<StenoPEvakorrapunkt>> getAgendaUrlsUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException, IllegalArgumentException {
+        return this.restClient().responseBuilderFactory().<List<StenoPEvakorrapunkt>, RestException>newInstance(this.serializerAdapter())
+                .register(200, new TypeToken<List<StenoPEvakorrapunkt>>() { }.getType())
                 .build(response);
     }
 
@@ -5538,9 +5543,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;StenoSpeeches&gt; object if successful.
+     * @return the List&lt;StenoSNavTud&gt; object if successful.
      */
-    public List<StenoSpeeches> getSpeechesUsingGET(LocalDate endDate, LocalDate startDate, String userUuids) {
+    public List<StenoSNavTud> getSpeechesUsingGET(LocalDate endDate, LocalDate startDate, String userUuids) {
         return getSpeechesUsingGETWithServiceResponseAsync(endDate, startDate, userUuids).toBlocking().single().body();
     }
 
@@ -5555,7 +5560,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<List<StenoSpeeches>> getSpeechesUsingGETAsync(LocalDate endDate, LocalDate startDate, String userUuids, final ServiceCallback<List<StenoSpeeches>> serviceCallback) {
+    public ServiceFuture<List<StenoSNavTud>> getSpeechesUsingGETAsync(LocalDate endDate, LocalDate startDate, String userUuids, final ServiceCallback<List<StenoSNavTud>> serviceCallback) {
         return ServiceFuture.fromResponse(getSpeechesUsingGETWithServiceResponseAsync(endDate, startDate, userUuids), serviceCallback);
     }
 
@@ -5567,12 +5572,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param startDate Alguskuupäev (yyyy-MM-dd)
      * @param userUuids Isikute UUID-d (komaga eraldatud)
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;StenoSpeeches&gt; object
+     * @return the observable to the List&lt;StenoSNavTud&gt; object
      */
-    public Observable<List<StenoSpeeches>> getSpeechesUsingGETAsync(LocalDate endDate, LocalDate startDate, String userUuids) {
-        return getSpeechesUsingGETWithServiceResponseAsync(endDate, startDate, userUuids).map(new Func1<ServiceResponse<List<StenoSpeeches>>, List<StenoSpeeches>>() {
+    public Observable<List<StenoSNavTud>> getSpeechesUsingGETAsync(LocalDate endDate, LocalDate startDate, String userUuids) {
+        return getSpeechesUsingGETWithServiceResponseAsync(endDate, startDate, userUuids).map(new Func1<ServiceResponse<List<StenoSNavTud>>, List<StenoSNavTud>>() {
             @Override
-            public List<StenoSpeeches> call(ServiceResponse<List<StenoSpeeches>> response) {
+            public List<StenoSNavTud> call(ServiceResponse<List<StenoSNavTud>> response) {
                 return response.body();
             }
         });
@@ -5586,9 +5591,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param startDate Alguskuupäev (yyyy-MM-dd)
      * @param userUuids Isikute UUID-d (komaga eraldatud)
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;StenoSpeeches&gt; object
+     * @return the observable to the List&lt;StenoSNavTud&gt; object
      */
-    public Observable<ServiceResponse<List<StenoSpeeches>>> getSpeechesUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String userUuids) {
+    public Observable<ServiceResponse<List<StenoSNavTud>>> getSpeechesUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String userUuids) {
         if (endDate == null) {
             throw new IllegalArgumentException("Parameter endDate is required and cannot be null.");
         }
@@ -5600,11 +5605,11 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
         }
         final Integer membership = null;
         return service.getSpeechesUsingGET(endDate, membership, startDate, userUuids)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<StenoSpeeches>>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<StenoSNavTud>>>>() {
                 @Override
-                public Observable<ServiceResponse<List<StenoSpeeches>>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<List<StenoSNavTud>>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<List<StenoSpeeches>> clientResponse = getSpeechesUsingGETDelegate(response);
+                        ServiceResponse<List<StenoSNavTud>> clientResponse = getSpeechesUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -5624,9 +5629,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;StenoSpeeches&gt; object if successful.
+     * @return the List&lt;StenoSNavTud&gt; object if successful.
      */
-    public List<StenoSpeeches> getSpeechesUsingGET(LocalDate endDate, LocalDate startDate, String userUuids, Integer membership) {
+    public List<StenoSNavTud> getSpeechesUsingGET(LocalDate endDate, LocalDate startDate, String userUuids, Integer membership) {
         return getSpeechesUsingGETWithServiceResponseAsync(endDate, startDate, userUuids, membership).toBlocking().single().body();
     }
 
@@ -5642,7 +5647,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<List<StenoSpeeches>> getSpeechesUsingGETAsync(LocalDate endDate, LocalDate startDate, String userUuids, Integer membership, final ServiceCallback<List<StenoSpeeches>> serviceCallback) {
+    public ServiceFuture<List<StenoSNavTud>> getSpeechesUsingGETAsync(LocalDate endDate, LocalDate startDate, String userUuids, Integer membership, final ServiceCallback<List<StenoSNavTud>> serviceCallback) {
         return ServiceFuture.fromResponse(getSpeechesUsingGETWithServiceResponseAsync(endDate, startDate, userUuids, membership), serviceCallback);
     }
 
@@ -5655,12 +5660,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param userUuids Isikute UUID-d (komaga eraldatud)
      * @param membership Koosseisu number
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;StenoSpeeches&gt; object
+     * @return the observable to the List&lt;StenoSNavTud&gt; object
      */
-    public Observable<List<StenoSpeeches>> getSpeechesUsingGETAsync(LocalDate endDate, LocalDate startDate, String userUuids, Integer membership) {
-        return getSpeechesUsingGETWithServiceResponseAsync(endDate, startDate, userUuids, membership).map(new Func1<ServiceResponse<List<StenoSpeeches>>, List<StenoSpeeches>>() {
+    public Observable<List<StenoSNavTud>> getSpeechesUsingGETAsync(LocalDate endDate, LocalDate startDate, String userUuids, Integer membership) {
+        return getSpeechesUsingGETWithServiceResponseAsync(endDate, startDate, userUuids, membership).map(new Func1<ServiceResponse<List<StenoSNavTud>>, List<StenoSNavTud>>() {
             @Override
-            public List<StenoSpeeches> call(ServiceResponse<List<StenoSpeeches>> response) {
+            public List<StenoSNavTud> call(ServiceResponse<List<StenoSNavTud>> response) {
                 return response.body();
             }
         });
@@ -5675,9 +5680,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param userUuids Isikute UUID-d (komaga eraldatud)
      * @param membership Koosseisu number
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;StenoSpeeches&gt; object
+     * @return the observable to the List&lt;StenoSNavTud&gt; object
      */
-    public Observable<ServiceResponse<List<StenoSpeeches>>> getSpeechesUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String userUuids, Integer membership) {
+    public Observable<ServiceResponse<List<StenoSNavTud>>> getSpeechesUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String userUuids, Integer membership) {
         if (endDate == null) {
             throw new IllegalArgumentException("Parameter endDate is required and cannot be null.");
         }
@@ -5688,11 +5693,11 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             throw new IllegalArgumentException("Parameter userUuids is required and cannot be null.");
         }
         return service.getSpeechesUsingGET(endDate, membership, startDate, userUuids)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<StenoSpeeches>>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<StenoSNavTud>>>>() {
                 @Override
-                public Observable<ServiceResponse<List<StenoSpeeches>>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<List<StenoSNavTud>>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<List<StenoSpeeches>> clientResponse = getSpeechesUsingGETDelegate(response);
+                        ServiceResponse<List<StenoSNavTud>> clientResponse = getSpeechesUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -5701,9 +5706,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             });
     }
 
-    private ServiceResponse<List<StenoSpeeches>> getSpeechesUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException, IllegalArgumentException {
-        return this.restClient().responseBuilderFactory().<List<StenoSpeeches>, RestException>newInstance(this.serializerAdapter())
-                .register(200, new TypeToken<List<StenoSpeeches>>() { }.getType())
+    private ServiceResponse<List<StenoSNavTud>> getSpeechesUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException, IllegalArgumentException {
+        return this.restClient().responseBuilderFactory().<List<StenoSNavTud>, RestException>newInstance(this.serializerAdapter())
+                .register(200, new TypeToken<List<StenoSNavTud>>() { }.getType())
                 .build(response);
     }
 
@@ -5717,9 +5722,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the StenoSpeechesCount object if successful.
+     * @return the StenoSNavTtudeArv object if successful.
      */
-    public StenoSpeechesCount getSpeechCountUsingGET(LocalDate endDate, LocalDate startDate, String userUuid) {
+    public StenoSNavTtudeArv getSpeechCountUsingGET(LocalDate endDate, LocalDate startDate, String userUuid) {
         return getSpeechCountUsingGETWithServiceResponseAsync(endDate, startDate, userUuid).toBlocking().single().body();
     }
 
@@ -5734,7 +5739,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<StenoSpeechesCount> getSpeechCountUsingGETAsync(LocalDate endDate, LocalDate startDate, String userUuid, final ServiceCallback<StenoSpeechesCount> serviceCallback) {
+    public ServiceFuture<StenoSNavTtudeArv> getSpeechCountUsingGETAsync(LocalDate endDate, LocalDate startDate, String userUuid, final ServiceCallback<StenoSNavTtudeArv> serviceCallback) {
         return ServiceFuture.fromResponse(getSpeechCountUsingGETWithServiceResponseAsync(endDate, startDate, userUuid), serviceCallback);
     }
 
@@ -5746,12 +5751,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param startDate Alguskuupäev (yyyy-MM-dd)
      * @param userUuid Isiku UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the StenoSpeechesCount object
+     * @return the observable to the StenoSNavTtudeArv object
      */
-    public Observable<StenoSpeechesCount> getSpeechCountUsingGETAsync(LocalDate endDate, LocalDate startDate, String userUuid) {
-        return getSpeechCountUsingGETWithServiceResponseAsync(endDate, startDate, userUuid).map(new Func1<ServiceResponse<StenoSpeechesCount>, StenoSpeechesCount>() {
+    public Observable<StenoSNavTtudeArv> getSpeechCountUsingGETAsync(LocalDate endDate, LocalDate startDate, String userUuid) {
+        return getSpeechCountUsingGETWithServiceResponseAsync(endDate, startDate, userUuid).map(new Func1<ServiceResponse<StenoSNavTtudeArv>, StenoSNavTtudeArv>() {
             @Override
-            public StenoSpeechesCount call(ServiceResponse<StenoSpeechesCount> response) {
+            public StenoSNavTtudeArv call(ServiceResponse<StenoSNavTtudeArv> response) {
                 return response.body();
             }
         });
@@ -5765,9 +5770,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param startDate Alguskuupäev (yyyy-MM-dd)
      * @param userUuid Isiku UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the StenoSpeechesCount object
+     * @return the observable to the StenoSNavTtudeArv object
      */
-    public Observable<ServiceResponse<StenoSpeechesCount>> getSpeechCountUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String userUuid) {
+    public Observable<ServiceResponse<StenoSNavTtudeArv>> getSpeechCountUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String userUuid) {
         if (endDate == null) {
             throw new IllegalArgumentException("Parameter endDate is required and cannot be null.");
         }
@@ -5780,11 +5785,11 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
         final Integer membership = null;
         final String type = null;
         return service.getSpeechCountUsingGET(endDate, membership, startDate, type, userUuid)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<StenoSpeechesCount>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<StenoSNavTtudeArv>>>() {
                 @Override
-                public Observable<ServiceResponse<StenoSpeechesCount>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<StenoSNavTtudeArv>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<StenoSpeechesCount> clientResponse = getSpeechCountUsingGETDelegate(response);
+                        ServiceResponse<StenoSNavTtudeArv> clientResponse = getSpeechCountUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -5805,9 +5810,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the StenoSpeechesCount object if successful.
+     * @return the StenoSNavTtudeArv object if successful.
      */
-    public StenoSpeechesCount getSpeechCountUsingGET(LocalDate endDate, LocalDate startDate, String userUuid, Integer membership, String type) {
+    public StenoSNavTtudeArv getSpeechCountUsingGET(LocalDate endDate, LocalDate startDate, String userUuid, Integer membership, String type) {
         return getSpeechCountUsingGETWithServiceResponseAsync(endDate, startDate, userUuid, membership, type).toBlocking().single().body();
     }
 
@@ -5824,7 +5829,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<StenoSpeechesCount> getSpeechCountUsingGETAsync(LocalDate endDate, LocalDate startDate, String userUuid, Integer membership, String type, final ServiceCallback<StenoSpeechesCount> serviceCallback) {
+    public ServiceFuture<StenoSNavTtudeArv> getSpeechCountUsingGETAsync(LocalDate endDate, LocalDate startDate, String userUuid, Integer membership, String type, final ServiceCallback<StenoSNavTtudeArv> serviceCallback) {
         return ServiceFuture.fromResponse(getSpeechCountUsingGETWithServiceResponseAsync(endDate, startDate, userUuid, membership, type), serviceCallback);
     }
 
@@ -5838,12 +5843,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param membership Koosseisu number
      * @param type Istungi tüüp. Possible values include: 'IS', 'IT'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the StenoSpeechesCount object
+     * @return the observable to the StenoSNavTtudeArv object
      */
-    public Observable<StenoSpeechesCount> getSpeechCountUsingGETAsync(LocalDate endDate, LocalDate startDate, String userUuid, Integer membership, String type) {
-        return getSpeechCountUsingGETWithServiceResponseAsync(endDate, startDate, userUuid, membership, type).map(new Func1<ServiceResponse<StenoSpeechesCount>, StenoSpeechesCount>() {
+    public Observable<StenoSNavTtudeArv> getSpeechCountUsingGETAsync(LocalDate endDate, LocalDate startDate, String userUuid, Integer membership, String type) {
+        return getSpeechCountUsingGETWithServiceResponseAsync(endDate, startDate, userUuid, membership, type).map(new Func1<ServiceResponse<StenoSNavTtudeArv>, StenoSNavTtudeArv>() {
             @Override
-            public StenoSpeechesCount call(ServiceResponse<StenoSpeechesCount> response) {
+            public StenoSNavTtudeArv call(ServiceResponse<StenoSNavTtudeArv> response) {
                 return response.body();
             }
         });
@@ -5859,9 +5864,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param membership Koosseisu number
      * @param type Istungi tüüp. Possible values include: 'IS', 'IT'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the StenoSpeechesCount object
+     * @return the observable to the StenoSNavTtudeArv object
      */
-    public Observable<ServiceResponse<StenoSpeechesCount>> getSpeechCountUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String userUuid, Integer membership, String type) {
+    public Observable<ServiceResponse<StenoSNavTtudeArv>> getSpeechCountUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String userUuid, Integer membership, String type) {
         if (endDate == null) {
             throw new IllegalArgumentException("Parameter endDate is required and cannot be null.");
         }
@@ -5872,11 +5877,11 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             throw new IllegalArgumentException("Parameter userUuid is required and cannot be null.");
         }
         return service.getSpeechCountUsingGET(endDate, membership, startDate, type, userUuid)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<StenoSpeechesCount>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<StenoSNavTtudeArv>>>() {
                 @Override
-                public Observable<ServiceResponse<StenoSpeechesCount>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<StenoSNavTtudeArv>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<StenoSpeechesCount> clientResponse = getSpeechCountUsingGETDelegate(response);
+                        ServiceResponse<StenoSNavTtudeArv> clientResponse = getSpeechCountUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -5885,9 +5890,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             });
     }
 
-    private ServiceResponse<StenoSpeechesCount> getSpeechCountUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException, IllegalArgumentException {
-        return this.restClient().responseBuilderFactory().<StenoSpeechesCount, RestException>newInstance(this.serializerAdapter())
-                .register(200, new TypeToken<StenoSpeechesCount>() { }.getType())
+    private ServiceResponse<StenoSNavTtudeArv> getSpeechCountUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException, IllegalArgumentException {
+        return this.restClient().responseBuilderFactory().<StenoSNavTtudeArv, RestException>newInstance(this.serializerAdapter())
+                .register(200, new TypeToken<StenoSNavTtudeArv>() { }.getType())
                 .build(response);
     }
 
@@ -5899,9 +5904,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the LastStenoSpeech object if successful.
+     * @return the StenoViimaneSNavTt object if successful.
      */
-    public LastStenoSpeech getLastSpeechUsingGET(String userUuid) {
+    public StenoViimaneSNavTt getLastSpeechUsingGET(String userUuid) {
         return getLastSpeechUsingGETWithServiceResponseAsync(userUuid).toBlocking().single().body();
     }
 
@@ -5914,7 +5919,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<LastStenoSpeech> getLastSpeechUsingGETAsync(String userUuid, final ServiceCallback<LastStenoSpeech> serviceCallback) {
+    public ServiceFuture<StenoViimaneSNavTt> getLastSpeechUsingGETAsync(String userUuid, final ServiceCallback<StenoViimaneSNavTt> serviceCallback) {
         return ServiceFuture.fromResponse(getLastSpeechUsingGETWithServiceResponseAsync(userUuid), serviceCallback);
     }
 
@@ -5924,12 +5929,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      *
      * @param userUuid Isiku UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the LastStenoSpeech object
+     * @return the observable to the StenoViimaneSNavTt object
      */
-    public Observable<LastStenoSpeech> getLastSpeechUsingGETAsync(String userUuid) {
-        return getLastSpeechUsingGETWithServiceResponseAsync(userUuid).map(new Func1<ServiceResponse<LastStenoSpeech>, LastStenoSpeech>() {
+    public Observable<StenoViimaneSNavTt> getLastSpeechUsingGETAsync(String userUuid) {
+        return getLastSpeechUsingGETWithServiceResponseAsync(userUuid).map(new Func1<ServiceResponse<StenoViimaneSNavTt>, StenoViimaneSNavTt>() {
             @Override
-            public LastStenoSpeech call(ServiceResponse<LastStenoSpeech> response) {
+            public StenoViimaneSNavTt call(ServiceResponse<StenoViimaneSNavTt> response) {
                 return response.body();
             }
         });
@@ -5941,9 +5946,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      *
      * @param userUuid Isiku UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the LastStenoSpeech object
+     * @return the observable to the StenoViimaneSNavTt object
      */
-    public Observable<ServiceResponse<LastStenoSpeech>> getLastSpeechUsingGETWithServiceResponseAsync(String userUuid) {
+    public Observable<ServiceResponse<StenoViimaneSNavTt>> getLastSpeechUsingGETWithServiceResponseAsync(String userUuid) {
         if (userUuid == null) {
             throw new IllegalArgumentException("Parameter userUuid is required and cannot be null.");
         }
@@ -5951,11 +5956,11 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
         final Integer membership = null;
         final String type = null;
         return service.getLastSpeechUsingGET(charCount, membership, type, userUuid)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<LastStenoSpeech>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<StenoViimaneSNavTt>>>() {
                 @Override
-                public Observable<ServiceResponse<LastStenoSpeech>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<StenoViimaneSNavTt>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<LastStenoSpeech> clientResponse = getLastSpeechUsingGETDelegate(response);
+                        ServiceResponse<StenoViimaneSNavTt> clientResponse = getLastSpeechUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -5975,9 +5980,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the LastStenoSpeech object if successful.
+     * @return the StenoViimaneSNavTt object if successful.
      */
-    public LastStenoSpeech getLastSpeechUsingGET(String userUuid, Integer charCount, Integer membership, String type) {
+    public StenoViimaneSNavTt getLastSpeechUsingGET(String userUuid, Integer charCount, Integer membership, String type) {
         return getLastSpeechUsingGETWithServiceResponseAsync(userUuid, charCount, membership, type).toBlocking().single().body();
     }
 
@@ -5993,7 +5998,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<LastStenoSpeech> getLastSpeechUsingGETAsync(String userUuid, Integer charCount, Integer membership, String type, final ServiceCallback<LastStenoSpeech> serviceCallback) {
+    public ServiceFuture<StenoViimaneSNavTt> getLastSpeechUsingGETAsync(String userUuid, Integer charCount, Integer membership, String type, final ServiceCallback<StenoViimaneSNavTt> serviceCallback) {
         return ServiceFuture.fromResponse(getLastSpeechUsingGETWithServiceResponseAsync(userUuid, charCount, membership, type), serviceCallback);
     }
 
@@ -6006,12 +6011,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param membership Koosseisu number
      * @param type Istungi tüüp. Possible values include: 'IS', 'IT'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the LastStenoSpeech object
+     * @return the observable to the StenoViimaneSNavTt object
      */
-    public Observable<LastStenoSpeech> getLastSpeechUsingGETAsync(String userUuid, Integer charCount, Integer membership, String type) {
-        return getLastSpeechUsingGETWithServiceResponseAsync(userUuid, charCount, membership, type).map(new Func1<ServiceResponse<LastStenoSpeech>, LastStenoSpeech>() {
+    public Observable<StenoViimaneSNavTt> getLastSpeechUsingGETAsync(String userUuid, Integer charCount, Integer membership, String type) {
+        return getLastSpeechUsingGETWithServiceResponseAsync(userUuid, charCount, membership, type).map(new Func1<ServiceResponse<StenoViimaneSNavTt>, StenoViimaneSNavTt>() {
             @Override
-            public LastStenoSpeech call(ServiceResponse<LastStenoSpeech> response) {
+            public StenoViimaneSNavTt call(ServiceResponse<StenoViimaneSNavTt> response) {
                 return response.body();
             }
         });
@@ -6026,18 +6031,18 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param membership Koosseisu number
      * @param type Istungi tüüp. Possible values include: 'IS', 'IT'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the LastStenoSpeech object
+     * @return the observable to the StenoViimaneSNavTt object
      */
-    public Observable<ServiceResponse<LastStenoSpeech>> getLastSpeechUsingGETWithServiceResponseAsync(String userUuid, Integer charCount, Integer membership, String type) {
+    public Observable<ServiceResponse<StenoViimaneSNavTt>> getLastSpeechUsingGETWithServiceResponseAsync(String userUuid, Integer charCount, Integer membership, String type) {
         if (userUuid == null) {
             throw new IllegalArgumentException("Parameter userUuid is required and cannot be null.");
         }
         return service.getLastSpeechUsingGET(charCount, membership, type, userUuid)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<LastStenoSpeech>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<StenoViimaneSNavTt>>>() {
                 @Override
-                public Observable<ServiceResponse<LastStenoSpeech>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<StenoViimaneSNavTt>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<LastStenoSpeech> clientResponse = getLastSpeechUsingGETDelegate(response);
+                        ServiceResponse<StenoViimaneSNavTt> clientResponse = getLastSpeechUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -6046,9 +6051,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             });
     }
 
-    private ServiceResponse<LastStenoSpeech> getLastSpeechUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException, IllegalArgumentException {
-        return this.restClient().responseBuilderFactory().<LastStenoSpeech, RestException>newInstance(this.serializerAdapter())
-                .register(200, new TypeToken<LastStenoSpeech>() { }.getType())
+    private ServiceResponse<StenoViimaneSNavTt> getLastSpeechUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException, IllegalArgumentException {
+        return this.restClient().responseBuilderFactory().<StenoViimaneSNavTt, RestException>newInstance(this.serializerAdapter())
+                .register(200, new TypeToken<StenoViimaneSNavTt>() { }.getType())
                 .build(response);
     }
 
@@ -6058,9 +6063,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;UserGroup&gt; object if successful.
+     * @return the List&lt;Kasutajagrupp&gt; object if successful.
      */
-    public List<UserGroup> findUserGroupsUsingGET() {
+    public List<Kasutajagrupp> findUserGroupsUsingGET() {
         return findUserGroupsUsingGETWithServiceResponseAsync().toBlocking().single().body();
     }
 
@@ -6071,7 +6076,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<List<UserGroup>> findUserGroupsUsingGETAsync(final ServiceCallback<List<UserGroup>> serviceCallback) {
+    public ServiceFuture<List<Kasutajagrupp>> findUserGroupsUsingGETAsync(final ServiceCallback<List<Kasutajagrupp>> serviceCallback) {
         return ServiceFuture.fromResponse(findUserGroupsUsingGETWithServiceResponseAsync(), serviceCallback);
     }
 
@@ -6079,12 +6084,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * Kasutajagruppide nimekiri/otsing.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;UserGroup&gt; object
+     * @return the observable to the List&lt;Kasutajagrupp&gt; object
      */
-    public Observable<List<UserGroup>> findUserGroupsUsingGETAsync() {
-        return findUserGroupsUsingGETWithServiceResponseAsync().map(new Func1<ServiceResponse<List<UserGroup>>, List<UserGroup>>() {
+    public Observable<List<Kasutajagrupp>> findUserGroupsUsingGETAsync() {
+        return findUserGroupsUsingGETWithServiceResponseAsync().map(new Func1<ServiceResponse<List<Kasutajagrupp>>, List<Kasutajagrupp>>() {
             @Override
-            public List<UserGroup> call(ServiceResponse<List<UserGroup>> response) {
+            public List<Kasutajagrupp> call(ServiceResponse<List<Kasutajagrupp>> response) {
                 return response.body();
             }
         });
@@ -6094,19 +6099,19 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * Kasutajagruppide nimekiri/otsing.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;UserGroup&gt; object
+     * @return the observable to the List&lt;Kasutajagrupp&gt; object
      */
-    public Observable<ServiceResponse<List<UserGroup>>> findUserGroupsUsingGETWithServiceResponseAsync() {
+    public Observable<ServiceResponse<List<Kasutajagrupp>>> findUserGroupsUsingGETWithServiceResponseAsync() {
         final Boolean hideInactive = null;
         final String lang = null;
         final String name = null;
         final String typeCode = null;
         return service.findUserGroupsUsingGET(hideInactive, lang, name, typeCode)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<UserGroup>>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<Kasutajagrupp>>>>() {
                 @Override
-                public Observable<ServiceResponse<List<UserGroup>>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<List<Kasutajagrupp>>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<List<UserGroup>> clientResponse = findUserGroupsUsingGETDelegate(response);
+                        ServiceResponse<List<Kasutajagrupp>> clientResponse = findUserGroupsUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -6125,9 +6130,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;UserGroup&gt; object if successful.
+     * @return the List&lt;Kasutajagrupp&gt; object if successful.
      */
-    public List<UserGroup> findUserGroupsUsingGET(Boolean hideInactive, String lang, String name, String typeCode) {
+    public List<Kasutajagrupp> findUserGroupsUsingGET(Boolean hideInactive, String lang, String name, String typeCode) {
         return findUserGroupsUsingGETWithServiceResponseAsync(hideInactive, lang, name, typeCode).toBlocking().single().body();
     }
 
@@ -6142,7 +6147,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<List<UserGroup>> findUserGroupsUsingGETAsync(Boolean hideInactive, String lang, String name, String typeCode, final ServiceCallback<List<UserGroup>> serviceCallback) {
+    public ServiceFuture<List<Kasutajagrupp>> findUserGroupsUsingGETAsync(Boolean hideInactive, String lang, String name, String typeCode, final ServiceCallback<List<Kasutajagrupp>> serviceCallback) {
         return ServiceFuture.fromResponse(findUserGroupsUsingGETWithServiceResponseAsync(hideInactive, lang, name, typeCode), serviceCallback);
     }
 
@@ -6154,12 +6159,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param name Nimi
      * @param typeCode Tüübi kood (klassifikaator 'kasutajagrupiTuup'). Possible values include: 'UURIMISKOMISJON', 'VANA_FRAKTSIOON', 'VANA_ERIKOMISJON', 'VANA_ALALINE_KOMISJON', 'ALALINE_KOMISJON', 'ERIKOMISJON', 'RIIGIKOGU_JUHATUS', 'ESIMEHE_BÜROO', 'OSAKOND', 'VALIMISRINGKOND', 'TOETUSRYHM', 'ASUTUSE_YKSUS', 'PARLAMENDIRYHM', 'YHENDUS', 'FRAKTSIOON', 'DELEGATSIOON', 'RIIGIKOGU_TAISKOGU', 'ERAKOND', 'AMETNIK', 'TALITUS'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;UserGroup&gt; object
+     * @return the observable to the List&lt;Kasutajagrupp&gt; object
      */
-    public Observable<List<UserGroup>> findUserGroupsUsingGETAsync(Boolean hideInactive, String lang, String name, String typeCode) {
-        return findUserGroupsUsingGETWithServiceResponseAsync(hideInactive, lang, name, typeCode).map(new Func1<ServiceResponse<List<UserGroup>>, List<UserGroup>>() {
+    public Observable<List<Kasutajagrupp>> findUserGroupsUsingGETAsync(Boolean hideInactive, String lang, String name, String typeCode) {
+        return findUserGroupsUsingGETWithServiceResponseAsync(hideInactive, lang, name, typeCode).map(new Func1<ServiceResponse<List<Kasutajagrupp>>, List<Kasutajagrupp>>() {
             @Override
-            public List<UserGroup> call(ServiceResponse<List<UserGroup>> response) {
+            public List<Kasutajagrupp> call(ServiceResponse<List<Kasutajagrupp>> response) {
                 return response.body();
             }
         });
@@ -6173,15 +6178,15 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param name Nimi
      * @param typeCode Tüübi kood (klassifikaator 'kasutajagrupiTuup'). Possible values include: 'UURIMISKOMISJON', 'VANA_FRAKTSIOON', 'VANA_ERIKOMISJON', 'VANA_ALALINE_KOMISJON', 'ALALINE_KOMISJON', 'ERIKOMISJON', 'RIIGIKOGU_JUHATUS', 'ESIMEHE_BÜROO', 'OSAKOND', 'VALIMISRINGKOND', 'TOETUSRYHM', 'ASUTUSE_YKSUS', 'PARLAMENDIRYHM', 'YHENDUS', 'FRAKTSIOON', 'DELEGATSIOON', 'RIIGIKOGU_TAISKOGU', 'ERAKOND', 'AMETNIK', 'TALITUS'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;UserGroup&gt; object
+     * @return the observable to the List&lt;Kasutajagrupp&gt; object
      */
-    public Observable<ServiceResponse<List<UserGroup>>> findUserGroupsUsingGETWithServiceResponseAsync(Boolean hideInactive, String lang, String name, String typeCode) {
+    public Observable<ServiceResponse<List<Kasutajagrupp>>> findUserGroupsUsingGETWithServiceResponseAsync(Boolean hideInactive, String lang, String name, String typeCode) {
         return service.findUserGroupsUsingGET(hideInactive, lang, name, typeCode)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<UserGroup>>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<Kasutajagrupp>>>>() {
                 @Override
-                public Observable<ServiceResponse<List<UserGroup>>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<List<Kasutajagrupp>>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<List<UserGroup>> clientResponse = findUserGroupsUsingGETDelegate(response);
+                        ServiceResponse<List<Kasutajagrupp>> clientResponse = findUserGroupsUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -6190,9 +6195,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             });
     }
 
-    private ServiceResponse<List<UserGroup>> findUserGroupsUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException {
-        return this.restClient().responseBuilderFactory().<List<UserGroup>, RestException>newInstance(this.serializerAdapter())
-                .register(200, new TypeToken<List<UserGroup>>() { }.getType())
+    private ServiceResponse<List<Kasutajagrupp>> findUserGroupsUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException {
+        return this.restClient().responseBuilderFactory().<List<Kasutajagrupp>, RestException>newInstance(this.serializerAdapter())
+                .register(200, new TypeToken<List<Kasutajagrupp>>() { }.getType())
                 .build(response);
     }
 
@@ -6203,9 +6208,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the UserGroup object if successful.
+     * @return the Kasutajagrupp object if successful.
      */
-    public UserGroup getUserGroupUsingGET(String uuid) {
+    public Kasutajagrupp getUserGroupUsingGET(String uuid) {
         return getUserGroupUsingGETWithServiceResponseAsync(uuid).toBlocking().single().body();
     }
 
@@ -6217,7 +6222,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<UserGroup> getUserGroupUsingGETAsync(String uuid, final ServiceCallback<UserGroup> serviceCallback) {
+    public ServiceFuture<Kasutajagrupp> getUserGroupUsingGETAsync(String uuid, final ServiceCallback<Kasutajagrupp> serviceCallback) {
         return ServiceFuture.fromResponse(getUserGroupUsingGETWithServiceResponseAsync(uuid), serviceCallback);
     }
 
@@ -6226,12 +6231,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      *
      * @param uuid Kasutajagrupi UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the UserGroup object
+     * @return the observable to the Kasutajagrupp object
      */
-    public Observable<UserGroup> getUserGroupUsingGETAsync(String uuid) {
-        return getUserGroupUsingGETWithServiceResponseAsync(uuid).map(new Func1<ServiceResponse<UserGroup>, UserGroup>() {
+    public Observable<Kasutajagrupp> getUserGroupUsingGETAsync(String uuid) {
+        return getUserGroupUsingGETWithServiceResponseAsync(uuid).map(new Func1<ServiceResponse<Kasutajagrupp>, Kasutajagrupp>() {
             @Override
-            public UserGroup call(ServiceResponse<UserGroup> response) {
+            public Kasutajagrupp call(ServiceResponse<Kasutajagrupp> response) {
                 return response.body();
             }
         });
@@ -6242,19 +6247,19 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      *
      * @param uuid Kasutajagrupi UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the UserGroup object
+     * @return the observable to the Kasutajagrupp object
      */
-    public Observable<ServiceResponse<UserGroup>> getUserGroupUsingGETWithServiceResponseAsync(String uuid) {
+    public Observable<ServiceResponse<Kasutajagrupp>> getUserGroupUsingGETWithServiceResponseAsync(String uuid) {
         if (uuid == null) {
             throw new IllegalArgumentException("Parameter uuid is required and cannot be null.");
         }
         final String lang = null;
         return service.getUserGroupUsingGET(uuid, lang)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<UserGroup>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<Kasutajagrupp>>>() {
                 @Override
-                public Observable<ServiceResponse<UserGroup>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<Kasutajagrupp>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<UserGroup> clientResponse = getUserGroupUsingGETDelegate(response);
+                        ServiceResponse<Kasutajagrupp> clientResponse = getUserGroupUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -6271,9 +6276,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the UserGroup object if successful.
+     * @return the Kasutajagrupp object if successful.
      */
-    public UserGroup getUserGroupUsingGET(String uuid, String lang) {
+    public Kasutajagrupp getUserGroupUsingGET(String uuid, String lang) {
         return getUserGroupUsingGETWithServiceResponseAsync(uuid, lang).toBlocking().single().body();
     }
 
@@ -6286,7 +6291,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<UserGroup> getUserGroupUsingGETAsync(String uuid, String lang, final ServiceCallback<UserGroup> serviceCallback) {
+    public ServiceFuture<Kasutajagrupp> getUserGroupUsingGETAsync(String uuid, String lang, final ServiceCallback<Kasutajagrupp> serviceCallback) {
         return ServiceFuture.fromResponse(getUserGroupUsingGETWithServiceResponseAsync(uuid, lang), serviceCallback);
     }
 
@@ -6296,12 +6301,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param uuid Kasutajagrupi UUID
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the UserGroup object
+     * @return the observable to the Kasutajagrupp object
      */
-    public Observable<UserGroup> getUserGroupUsingGETAsync(String uuid, String lang) {
-        return getUserGroupUsingGETWithServiceResponseAsync(uuid, lang).map(new Func1<ServiceResponse<UserGroup>, UserGroup>() {
+    public Observable<Kasutajagrupp> getUserGroupUsingGETAsync(String uuid, String lang) {
+        return getUserGroupUsingGETWithServiceResponseAsync(uuid, lang).map(new Func1<ServiceResponse<Kasutajagrupp>, Kasutajagrupp>() {
             @Override
-            public UserGroup call(ServiceResponse<UserGroup> response) {
+            public Kasutajagrupp call(ServiceResponse<Kasutajagrupp> response) {
                 return response.body();
             }
         });
@@ -6313,18 +6318,18 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param uuid Kasutajagrupi UUID
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the UserGroup object
+     * @return the observable to the Kasutajagrupp object
      */
-    public Observable<ServiceResponse<UserGroup>> getUserGroupUsingGETWithServiceResponseAsync(String uuid, String lang) {
+    public Observable<ServiceResponse<Kasutajagrupp>> getUserGroupUsingGETWithServiceResponseAsync(String uuid, String lang) {
         if (uuid == null) {
             throw new IllegalArgumentException("Parameter uuid is required and cannot be null.");
         }
         return service.getUserGroupUsingGET(uuid, lang)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<UserGroup>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<Kasutajagrupp>>>() {
                 @Override
-                public Observable<ServiceResponse<UserGroup>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<Kasutajagrupp>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<UserGroup> clientResponse = getUserGroupUsingGETDelegate(response);
+                        ServiceResponse<Kasutajagrupp> clientResponse = getUserGroupUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -6333,9 +6338,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             });
     }
 
-    private ServiceResponse<UserGroup> getUserGroupUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException, IllegalArgumentException {
-        return this.restClient().responseBuilderFactory().<UserGroup, RestException>newInstance(this.serializerAdapter())
-                .register(200, new TypeToken<UserGroup>() { }.getType())
+    private ServiceResponse<Kasutajagrupp> getUserGroupUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException, IllegalArgumentException {
+        return this.restClient().responseBuilderFactory().<Kasutajagrupp, RestException>newInstance(this.serializerAdapter())
+                .register(200, new TypeToken<Kasutajagrupp>() { }.getType())
                 .build(response);
     }
 
@@ -6345,9 +6350,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the PagedResourcesOfVolumes object if successful.
+     * @return the PagedResourcesToimikOtsing object if successful.
      */
-    public PagedResourcesOfVolumes findVolumesUsingGET() {
+    public PagedResourcesToimikOtsing findVolumesUsingGET() {
         return findVolumesUsingGETWithServiceResponseAsync().toBlocking().single().body();
     }
 
@@ -6358,7 +6363,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<PagedResourcesOfVolumes> findVolumesUsingGETAsync(final ServiceCallback<PagedResourcesOfVolumes> serviceCallback) {
+    public ServiceFuture<PagedResourcesToimikOtsing> findVolumesUsingGETAsync(final ServiceCallback<PagedResourcesToimikOtsing> serviceCallback) {
         return ServiceFuture.fromResponse(findVolumesUsingGETWithServiceResponseAsync(), serviceCallback);
     }
 
@@ -6366,12 +6371,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * Toimikute otsing.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PagedResourcesOfVolumes object
+     * @return the observable to the PagedResourcesToimikOtsing object
      */
-    public Observable<PagedResourcesOfVolumes> findVolumesUsingGETAsync() {
-        return findVolumesUsingGETWithServiceResponseAsync().map(new Func1<ServiceResponse<PagedResourcesOfVolumes>, PagedResourcesOfVolumes>() {
+    public Observable<PagedResourcesToimikOtsing> findVolumesUsingGETAsync() {
+        return findVolumesUsingGETWithServiceResponseAsync().map(new Func1<ServiceResponse<PagedResourcesToimikOtsing>, PagedResourcesToimikOtsing>() {
             @Override
-            public PagedResourcesOfVolumes call(ServiceResponse<PagedResourcesOfVolumes> response) {
+            public PagedResourcesToimikOtsing call(ServiceResponse<PagedResourcesToimikOtsing> response) {
                 return response.body();
             }
         });
@@ -6381,9 +6386,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * Toimikute otsing.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PagedResourcesOfVolumes object
+     * @return the observable to the PagedResourcesToimikOtsing object
      */
-    public Observable<ServiceResponse<PagedResourcesOfVolumes>> findVolumesUsingGETWithServiceResponseAsync() {
+    public Observable<ServiceResponse<PagedResourcesToimikOtsing>> findVolumesUsingGETWithServiceResponseAsync() {
         final LocalDate createdEndDate = null;
         final LocalDate createdStartDate = null;
         final String functionGroupUuid = null;
@@ -6406,11 +6411,11 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
         final String volumeType = null;
         String sortConverted = this.serializerAdapter().serializeList(sort, CollectionFormat.MULTI);
         return service.findVolumesUsingGET(createdEndDate, createdStartDate, functionGroupUuid, functionUuid, membership, offset, page, pageNumber, pageSize, paged, reference, seriesUuid, size, sortConverted, sortsorted, sortunsorted, subseriesUuid, title, unpaged, volumeType)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<PagedResourcesOfVolumes>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<PagedResourcesToimikOtsing>>>() {
                 @Override
-                public Observable<ServiceResponse<PagedResourcesOfVolumes>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<PagedResourcesToimikOtsing>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<PagedResourcesOfVolumes> clientResponse = findVolumesUsingGETDelegate(response);
+                        ServiceResponse<PagedResourcesToimikOtsing> clientResponse = findVolumesUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -6445,9 +6450,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the PagedResourcesOfVolumes object if successful.
+     * @return the PagedResourcesToimikOtsing object if successful.
      */
-    public PagedResourcesOfVolumes findVolumesUsingGET(LocalDate createdEndDate, LocalDate createdStartDate, String functionGroupUuid, String functionUuid, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, String reference, String seriesUuid, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, String subseriesUuid, String title, Boolean unpaged, String volumeType) {
+    public PagedResourcesToimikOtsing findVolumesUsingGET(LocalDate createdEndDate, LocalDate createdStartDate, String functionGroupUuid, String functionUuid, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, String reference, String seriesUuid, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, String subseriesUuid, String title, Boolean unpaged, String volumeType) {
         return findVolumesUsingGETWithServiceResponseAsync(createdEndDate, createdStartDate, functionGroupUuid, functionUuid, membership, offset, page, pageNumber, pageSize, paged, reference, seriesUuid, size, sort, sortsorted, sortunsorted, subseriesUuid, title, unpaged, volumeType).toBlocking().single().body();
     }
 
@@ -6478,7 +6483,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<PagedResourcesOfVolumes> findVolumesUsingGETAsync(LocalDate createdEndDate, LocalDate createdStartDate, String functionGroupUuid, String functionUuid, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, String reference, String seriesUuid, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, String subseriesUuid, String title, Boolean unpaged, String volumeType, final ServiceCallback<PagedResourcesOfVolumes> serviceCallback) {
+    public ServiceFuture<PagedResourcesToimikOtsing> findVolumesUsingGETAsync(LocalDate createdEndDate, LocalDate createdStartDate, String functionGroupUuid, String functionUuid, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, String reference, String seriesUuid, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, String subseriesUuid, String title, Boolean unpaged, String volumeType, final ServiceCallback<PagedResourcesToimikOtsing> serviceCallback) {
         return ServiceFuture.fromResponse(findVolumesUsingGETWithServiceResponseAsync(createdEndDate, createdStartDate, functionGroupUuid, functionUuid, membership, offset, page, pageNumber, pageSize, paged, reference, seriesUuid, size, sort, sortsorted, sortunsorted, subseriesUuid, title, unpaged, volumeType), serviceCallback);
     }
 
@@ -6506,12 +6511,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param unpaged the Boolean value
      * @param volumeType Toimiku tüüp. Possible values include: 'letterVolume', 'elVolume', 'dokumenditoimik', 'unitSittingVolume', 'officialJourneyVolume', 'opinionVolume', 'plenarySittingVolume', 'infoSittingVolume', 'interpellationsVolume', 'eelnou', 'writtenQuestionVolume', 'researchVolume', 'procurementVolume', 'visitVolume'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PagedResourcesOfVolumes object
+     * @return the observable to the PagedResourcesToimikOtsing object
      */
-    public Observable<PagedResourcesOfVolumes> findVolumesUsingGETAsync(LocalDate createdEndDate, LocalDate createdStartDate, String functionGroupUuid, String functionUuid, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, String reference, String seriesUuid, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, String subseriesUuid, String title, Boolean unpaged, String volumeType) {
-        return findVolumesUsingGETWithServiceResponseAsync(createdEndDate, createdStartDate, functionGroupUuid, functionUuid, membership, offset, page, pageNumber, pageSize, paged, reference, seriesUuid, size, sort, sortsorted, sortunsorted, subseriesUuid, title, unpaged, volumeType).map(new Func1<ServiceResponse<PagedResourcesOfVolumes>, PagedResourcesOfVolumes>() {
+    public Observable<PagedResourcesToimikOtsing> findVolumesUsingGETAsync(LocalDate createdEndDate, LocalDate createdStartDate, String functionGroupUuid, String functionUuid, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, String reference, String seriesUuid, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, String subseriesUuid, String title, Boolean unpaged, String volumeType) {
+        return findVolumesUsingGETWithServiceResponseAsync(createdEndDate, createdStartDate, functionGroupUuid, functionUuid, membership, offset, page, pageNumber, pageSize, paged, reference, seriesUuid, size, sort, sortsorted, sortunsorted, subseriesUuid, title, unpaged, volumeType).map(new Func1<ServiceResponse<PagedResourcesToimikOtsing>, PagedResourcesToimikOtsing>() {
             @Override
-            public PagedResourcesOfVolumes call(ServiceResponse<PagedResourcesOfVolumes> response) {
+            public PagedResourcesToimikOtsing call(ServiceResponse<PagedResourcesToimikOtsing> response) {
                 return response.body();
             }
         });
@@ -6541,17 +6546,17 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param unpaged the Boolean value
      * @param volumeType Toimiku tüüp. Possible values include: 'letterVolume', 'elVolume', 'dokumenditoimik', 'unitSittingVolume', 'officialJourneyVolume', 'opinionVolume', 'plenarySittingVolume', 'infoSittingVolume', 'interpellationsVolume', 'eelnou', 'writtenQuestionVolume', 'researchVolume', 'procurementVolume', 'visitVolume'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PagedResourcesOfVolumes object
+     * @return the observable to the PagedResourcesToimikOtsing object
      */
-    public Observable<ServiceResponse<PagedResourcesOfVolumes>> findVolumesUsingGETWithServiceResponseAsync(LocalDate createdEndDate, LocalDate createdStartDate, String functionGroupUuid, String functionUuid, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, String reference, String seriesUuid, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, String subseriesUuid, String title, Boolean unpaged, String volumeType) {
+    public Observable<ServiceResponse<PagedResourcesToimikOtsing>> findVolumesUsingGETWithServiceResponseAsync(LocalDate createdEndDate, LocalDate createdStartDate, String functionGroupUuid, String functionUuid, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, String reference, String seriesUuid, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, String subseriesUuid, String title, Boolean unpaged, String volumeType) {
         Validator.validate(sort);
         String sortConverted = this.serializerAdapter().serializeList(sort, CollectionFormat.MULTI);
         return service.findVolumesUsingGET(createdEndDate, createdStartDate, functionGroupUuid, functionUuid, membership, offset, page, pageNumber, pageSize, paged, reference, seriesUuid, size, sortConverted, sortsorted, sortunsorted, subseriesUuid, title, unpaged, volumeType)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<PagedResourcesOfVolumes>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<PagedResourcesToimikOtsing>>>() {
                 @Override
-                public Observable<ServiceResponse<PagedResourcesOfVolumes>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<PagedResourcesToimikOtsing>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<PagedResourcesOfVolumes> clientResponse = findVolumesUsingGETDelegate(response);
+                        ServiceResponse<PagedResourcesToimikOtsing> clientResponse = findVolumesUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -6560,9 +6565,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             });
     }
 
-    private ServiceResponse<PagedResourcesOfVolumes> findVolumesUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException {
-        return this.restClient().responseBuilderFactory().<PagedResourcesOfVolumes, RestException>newInstance(this.serializerAdapter())
-                .register(200, new TypeToken<PagedResourcesOfVolumes>() { }.getType())
+    private ServiceResponse<PagedResourcesToimikOtsing> findVolumesUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException {
+        return this.restClient().responseBuilderFactory().<PagedResourcesToimikOtsing, RestException>newInstance(this.serializerAdapter())
+                .register(200, new TypeToken<PagedResourcesToimikOtsing>() { }.getType())
                 .build(response);
     }
 
@@ -6572,9 +6577,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the PagedResourcesOfDraftVolumes object if successful.
+     * @return the PagedResourcesEelnUOtsing object if successful.
      */
-    public PagedResourcesOfDraftVolumes findDraftVolumesUsingGET() {
+    public PagedResourcesEelnUOtsing findDraftVolumesUsingGET() {
         return findDraftVolumesUsingGETWithServiceResponseAsync().toBlocking().single().body();
     }
 
@@ -6585,7 +6590,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<PagedResourcesOfDraftVolumes> findDraftVolumesUsingGETAsync(final ServiceCallback<PagedResourcesOfDraftVolumes> serviceCallback) {
+    public ServiceFuture<PagedResourcesEelnUOtsing> findDraftVolumesUsingGETAsync(final ServiceCallback<PagedResourcesEelnUOtsing> serviceCallback) {
         return ServiceFuture.fromResponse(findDraftVolumesUsingGETWithServiceResponseAsync(), serviceCallback);
     }
 
@@ -6593,12 +6598,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * Eelnõude otsing.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PagedResourcesOfDraftVolumes object
+     * @return the observable to the PagedResourcesEelnUOtsing object
      */
-    public Observable<PagedResourcesOfDraftVolumes> findDraftVolumesUsingGETAsync() {
-        return findDraftVolumesUsingGETWithServiceResponseAsync().map(new Func1<ServiceResponse<PagedResourcesOfDraftVolumes>, PagedResourcesOfDraftVolumes>() {
+    public Observable<PagedResourcesEelnUOtsing> findDraftVolumesUsingGETAsync() {
+        return findDraftVolumesUsingGETWithServiceResponseAsync().map(new Func1<ServiceResponse<PagedResourcesEelnUOtsing>, PagedResourcesEelnUOtsing>() {
             @Override
-            public PagedResourcesOfDraftVolumes call(ServiceResponse<PagedResourcesOfDraftVolumes> response) {
+            public PagedResourcesEelnUOtsing call(ServiceResponse<PagedResourcesEelnUOtsing> response) {
                 return response.body();
             }
         });
@@ -6608,9 +6613,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * Eelnõude otsing.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PagedResourcesOfDraftVolumes object
+     * @return the observable to the PagedResourcesEelnUOtsing object
      */
-    public Observable<ServiceResponse<PagedResourcesOfDraftVolumes>> findDraftVolumesUsingGETWithServiceResponseAsync() {
+    public Observable<ServiceResponse<PagedResourcesEelnUOtsing>> findDraftVolumesUsingGETWithServiceResponseAsync() {
         final String activeDraftStage = null;
         final LocalDate amendmentsDeadlineEndDate = null;
         final LocalDate amendmentsDeadlineStartDate = null;
@@ -6639,11 +6644,11 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
         final Boolean unpaged = null;
         String sortConverted = this.serializerAdapter().serializeList(sort, CollectionFormat.MULTI);
         return service.findDraftVolumesUsingGET(activeDraftStage, amendmentsDeadlineEndDate, amendmentsDeadlineStartDate, descriptorId, draftTypeCode, initiatedEndDate, initiatedStartDate, initiatorUuid, lang, leadingCommitteeUuid, mark, membership, offset, page, pageNumber, pageSize, paged, proceedingStatus, reference, responsibleMemberUuid, size, sortConverted, sortsorted, sortunsorted, title, unpaged)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<PagedResourcesOfDraftVolumes>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<PagedResourcesEelnUOtsing>>>() {
                 @Override
-                public Observable<ServiceResponse<PagedResourcesOfDraftVolumes>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<PagedResourcesEelnUOtsing>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<PagedResourcesOfDraftVolumes> clientResponse = findDraftVolumesUsingGETDelegate(response);
+                        ServiceResponse<PagedResourcesEelnUOtsing> clientResponse = findDraftVolumesUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -6684,9 +6689,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the PagedResourcesOfDraftVolumes object if successful.
+     * @return the PagedResourcesEelnUOtsing object if successful.
      */
-    public PagedResourcesOfDraftVolumes findDraftVolumesUsingGET(String activeDraftStage, LocalDate amendmentsDeadlineEndDate, LocalDate amendmentsDeadlineStartDate, Integer descriptorId, String draftTypeCode, LocalDate initiatedEndDate, LocalDate initiatedStartDate, String initiatorUuid, String lang, String leadingCommitteeUuid, Integer mark, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, String proceedingStatus, String reference, String responsibleMemberUuid, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, String title, Boolean unpaged) {
+    public PagedResourcesEelnUOtsing findDraftVolumesUsingGET(String activeDraftStage, LocalDate amendmentsDeadlineEndDate, LocalDate amendmentsDeadlineStartDate, Integer descriptorId, String draftTypeCode, LocalDate initiatedEndDate, LocalDate initiatedStartDate, String initiatorUuid, String lang, String leadingCommitteeUuid, Integer mark, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, String proceedingStatus, String reference, String responsibleMemberUuid, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, String title, Boolean unpaged) {
         return findDraftVolumesUsingGETWithServiceResponseAsync(activeDraftStage, amendmentsDeadlineEndDate, amendmentsDeadlineStartDate, descriptorId, draftTypeCode, initiatedEndDate, initiatedStartDate, initiatorUuid, lang, leadingCommitteeUuid, mark, membership, offset, page, pageNumber, pageSize, paged, proceedingStatus, reference, responsibleMemberUuid, size, sort, sortsorted, sortunsorted, title, unpaged).toBlocking().single().body();
     }
 
@@ -6723,7 +6728,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<PagedResourcesOfDraftVolumes> findDraftVolumesUsingGETAsync(String activeDraftStage, LocalDate amendmentsDeadlineEndDate, LocalDate amendmentsDeadlineStartDate, Integer descriptorId, String draftTypeCode, LocalDate initiatedEndDate, LocalDate initiatedStartDate, String initiatorUuid, String lang, String leadingCommitteeUuid, Integer mark, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, String proceedingStatus, String reference, String responsibleMemberUuid, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, String title, Boolean unpaged, final ServiceCallback<PagedResourcesOfDraftVolumes> serviceCallback) {
+    public ServiceFuture<PagedResourcesEelnUOtsing> findDraftVolumesUsingGETAsync(String activeDraftStage, LocalDate amendmentsDeadlineEndDate, LocalDate amendmentsDeadlineStartDate, Integer descriptorId, String draftTypeCode, LocalDate initiatedEndDate, LocalDate initiatedStartDate, String initiatorUuid, String lang, String leadingCommitteeUuid, Integer mark, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, String proceedingStatus, String reference, String responsibleMemberUuid, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, String title, Boolean unpaged, final ServiceCallback<PagedResourcesEelnUOtsing> serviceCallback) {
         return ServiceFuture.fromResponse(findDraftVolumesUsingGETWithServiceResponseAsync(activeDraftStage, amendmentsDeadlineEndDate, amendmentsDeadlineStartDate, descriptorId, draftTypeCode, initiatedEndDate, initiatedStartDate, initiatorUuid, lang, leadingCommitteeUuid, mark, membership, offset, page, pageNumber, pageSize, paged, proceedingStatus, reference, responsibleMemberUuid, size, sort, sortsorted, sortunsorted, title, unpaged), serviceCallback);
     }
 
@@ -6757,12 +6762,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param title Pealkiri
      * @param unpaged the Boolean value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PagedResourcesOfDraftVolumes object
+     * @return the observable to the PagedResourcesEelnUOtsing object
      */
-    public Observable<PagedResourcesOfDraftVolumes> findDraftVolumesUsingGETAsync(String activeDraftStage, LocalDate amendmentsDeadlineEndDate, LocalDate amendmentsDeadlineStartDate, Integer descriptorId, String draftTypeCode, LocalDate initiatedEndDate, LocalDate initiatedStartDate, String initiatorUuid, String lang, String leadingCommitteeUuid, Integer mark, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, String proceedingStatus, String reference, String responsibleMemberUuid, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, String title, Boolean unpaged) {
-        return findDraftVolumesUsingGETWithServiceResponseAsync(activeDraftStage, amendmentsDeadlineEndDate, amendmentsDeadlineStartDate, descriptorId, draftTypeCode, initiatedEndDate, initiatedStartDate, initiatorUuid, lang, leadingCommitteeUuid, mark, membership, offset, page, pageNumber, pageSize, paged, proceedingStatus, reference, responsibleMemberUuid, size, sort, sortsorted, sortunsorted, title, unpaged).map(new Func1<ServiceResponse<PagedResourcesOfDraftVolumes>, PagedResourcesOfDraftVolumes>() {
+    public Observable<PagedResourcesEelnUOtsing> findDraftVolumesUsingGETAsync(String activeDraftStage, LocalDate amendmentsDeadlineEndDate, LocalDate amendmentsDeadlineStartDate, Integer descriptorId, String draftTypeCode, LocalDate initiatedEndDate, LocalDate initiatedStartDate, String initiatorUuid, String lang, String leadingCommitteeUuid, Integer mark, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, String proceedingStatus, String reference, String responsibleMemberUuid, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, String title, Boolean unpaged) {
+        return findDraftVolumesUsingGETWithServiceResponseAsync(activeDraftStage, amendmentsDeadlineEndDate, amendmentsDeadlineStartDate, descriptorId, draftTypeCode, initiatedEndDate, initiatedStartDate, initiatorUuid, lang, leadingCommitteeUuid, mark, membership, offset, page, pageNumber, pageSize, paged, proceedingStatus, reference, responsibleMemberUuid, size, sort, sortsorted, sortunsorted, title, unpaged).map(new Func1<ServiceResponse<PagedResourcesEelnUOtsing>, PagedResourcesEelnUOtsing>() {
             @Override
-            public PagedResourcesOfDraftVolumes call(ServiceResponse<PagedResourcesOfDraftVolumes> response) {
+            public PagedResourcesEelnUOtsing call(ServiceResponse<PagedResourcesEelnUOtsing> response) {
                 return response.body();
             }
         });
@@ -6798,17 +6803,17 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param title Pealkiri
      * @param unpaged the Boolean value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PagedResourcesOfDraftVolumes object
+     * @return the observable to the PagedResourcesEelnUOtsing object
      */
-    public Observable<ServiceResponse<PagedResourcesOfDraftVolumes>> findDraftVolumesUsingGETWithServiceResponseAsync(String activeDraftStage, LocalDate amendmentsDeadlineEndDate, LocalDate amendmentsDeadlineStartDate, Integer descriptorId, String draftTypeCode, LocalDate initiatedEndDate, LocalDate initiatedStartDate, String initiatorUuid, String lang, String leadingCommitteeUuid, Integer mark, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, String proceedingStatus, String reference, String responsibleMemberUuid, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, String title, Boolean unpaged) {
+    public Observable<ServiceResponse<PagedResourcesEelnUOtsing>> findDraftVolumesUsingGETWithServiceResponseAsync(String activeDraftStage, LocalDate amendmentsDeadlineEndDate, LocalDate amendmentsDeadlineStartDate, Integer descriptorId, String draftTypeCode, LocalDate initiatedEndDate, LocalDate initiatedStartDate, String initiatorUuid, String lang, String leadingCommitteeUuid, Integer mark, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, String proceedingStatus, String reference, String responsibleMemberUuid, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, String title, Boolean unpaged) {
         Validator.validate(sort);
         String sortConverted = this.serializerAdapter().serializeList(sort, CollectionFormat.MULTI);
         return service.findDraftVolumesUsingGET(activeDraftStage, amendmentsDeadlineEndDate, amendmentsDeadlineStartDate, descriptorId, draftTypeCode, initiatedEndDate, initiatedStartDate, initiatorUuid, lang, leadingCommitteeUuid, mark, membership, offset, page, pageNumber, pageSize, paged, proceedingStatus, reference, responsibleMemberUuid, size, sortConverted, sortsorted, sortunsorted, title, unpaged)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<PagedResourcesOfDraftVolumes>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<PagedResourcesEelnUOtsing>>>() {
                 @Override
-                public Observable<ServiceResponse<PagedResourcesOfDraftVolumes>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<PagedResourcesEelnUOtsing>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<PagedResourcesOfDraftVolumes> clientResponse = findDraftVolumesUsingGETDelegate(response);
+                        ServiceResponse<PagedResourcesEelnUOtsing> clientResponse = findDraftVolumesUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -6817,9 +6822,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             });
     }
 
-    private ServiceResponse<PagedResourcesOfDraftVolumes> findDraftVolumesUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException {
-        return this.restClient().responseBuilderFactory().<PagedResourcesOfDraftVolumes, RestException>newInstance(this.serializerAdapter())
-                .register(200, new TypeToken<PagedResourcesOfDraftVolumes>() { }.getType())
+    private ServiceResponse<PagedResourcesEelnUOtsing> findDraftVolumesUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException {
+        return this.restClient().responseBuilderFactory().<PagedResourcesEelnUOtsing, RestException>newInstance(this.serializerAdapter())
+                .register(200, new TypeToken<PagedResourcesEelnUOtsing>() { }.getType())
                 .build(response);
     }
 
@@ -6987,9 +6992,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the DraftVolume object if successful.
+     * @return the EelnUToimikBaas object if successful.
      */
-    public DraftVolume getDraftVolumeUsingGET(String uuid) {
+    public EelnUToimikBaas getDraftVolumeUsingGET(String uuid) {
         return getDraftVolumeUsingGETWithServiceResponseAsync(uuid).toBlocking().single().body();
     }
 
@@ -7001,7 +7006,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<DraftVolume> getDraftVolumeUsingGETAsync(String uuid, final ServiceCallback<DraftVolume> serviceCallback) {
+    public ServiceFuture<EelnUToimikBaas> getDraftVolumeUsingGETAsync(String uuid, final ServiceCallback<EelnUToimikBaas> serviceCallback) {
         return ServiceFuture.fromResponse(getDraftVolumeUsingGETWithServiceResponseAsync(uuid), serviceCallback);
     }
 
@@ -7010,12 +7015,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      *
      * @param uuid Eelnõu toimiku UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the DraftVolume object
+     * @return the observable to the EelnUToimikBaas object
      */
-    public Observable<DraftVolume> getDraftVolumeUsingGETAsync(String uuid) {
-        return getDraftVolumeUsingGETWithServiceResponseAsync(uuid).map(new Func1<ServiceResponse<DraftVolume>, DraftVolume>() {
+    public Observable<EelnUToimikBaas> getDraftVolumeUsingGETAsync(String uuid) {
+        return getDraftVolumeUsingGETWithServiceResponseAsync(uuid).map(new Func1<ServiceResponse<EelnUToimikBaas>, EelnUToimikBaas>() {
             @Override
-            public DraftVolume call(ServiceResponse<DraftVolume> response) {
+            public EelnUToimikBaas call(ServiceResponse<EelnUToimikBaas> response) {
                 return response.body();
             }
         });
@@ -7026,20 +7031,20 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      *
      * @param uuid Eelnõu toimiku UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the DraftVolume object
+     * @return the observable to the EelnUToimikBaas object
      */
-    public Observable<ServiceResponse<DraftVolume>> getDraftVolumeUsingGETWithServiceResponseAsync(String uuid) {
+    public Observable<ServiceResponse<EelnUToimikBaas>> getDraftVolumeUsingGETWithServiceResponseAsync(String uuid) {
         if (uuid == null) {
             throw new IllegalArgumentException("Parameter uuid is required and cannot be null.");
         }
         final String lang = null;
         final Boolean querySteno = null;
         return service.getDraftVolumeUsingGET(uuid, lang, querySteno)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<DraftVolume>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<EelnUToimikBaas>>>() {
                 @Override
-                public Observable<ServiceResponse<DraftVolume>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<EelnUToimikBaas>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<DraftVolume> clientResponse = getDraftVolumeUsingGETDelegate(response);
+                        ServiceResponse<EelnUToimikBaas> clientResponse = getDraftVolumeUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -7057,9 +7062,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the DraftVolume object if successful.
+     * @return the EelnUToimikBaas object if successful.
      */
-    public DraftVolume getDraftVolumeUsingGET(String uuid, String lang, Boolean querySteno) {
+    public EelnUToimikBaas getDraftVolumeUsingGET(String uuid, String lang, Boolean querySteno) {
         return getDraftVolumeUsingGETWithServiceResponseAsync(uuid, lang, querySteno).toBlocking().single().body();
     }
 
@@ -7073,7 +7078,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<DraftVolume> getDraftVolumeUsingGETAsync(String uuid, String lang, Boolean querySteno, final ServiceCallback<DraftVolume> serviceCallback) {
+    public ServiceFuture<EelnUToimikBaas> getDraftVolumeUsingGETAsync(String uuid, String lang, Boolean querySteno, final ServiceCallback<EelnUToimikBaas> serviceCallback) {
         return ServiceFuture.fromResponse(getDraftVolumeUsingGETWithServiceResponseAsync(uuid, lang, querySteno), serviceCallback);
     }
 
@@ -7084,12 +7089,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @param querySteno Küsi Stenoteksti teenusest päevakorra lingid? (true/false)
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the DraftVolume object
+     * @return the observable to the EelnUToimikBaas object
      */
-    public Observable<DraftVolume> getDraftVolumeUsingGETAsync(String uuid, String lang, Boolean querySteno) {
-        return getDraftVolumeUsingGETWithServiceResponseAsync(uuid, lang, querySteno).map(new Func1<ServiceResponse<DraftVolume>, DraftVolume>() {
+    public Observable<EelnUToimikBaas> getDraftVolumeUsingGETAsync(String uuid, String lang, Boolean querySteno) {
+        return getDraftVolumeUsingGETWithServiceResponseAsync(uuid, lang, querySteno).map(new Func1<ServiceResponse<EelnUToimikBaas>, EelnUToimikBaas>() {
             @Override
-            public DraftVolume call(ServiceResponse<DraftVolume> response) {
+            public EelnUToimikBaas call(ServiceResponse<EelnUToimikBaas> response) {
                 return response.body();
             }
         });
@@ -7102,18 +7107,18 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @param querySteno Küsi Stenoteksti teenusest päevakorra lingid? (true/false)
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the DraftVolume object
+     * @return the observable to the EelnUToimikBaas object
      */
-    public Observable<ServiceResponse<DraftVolume>> getDraftVolumeUsingGETWithServiceResponseAsync(String uuid, String lang, Boolean querySteno) {
+    public Observable<ServiceResponse<EelnUToimikBaas>> getDraftVolumeUsingGETWithServiceResponseAsync(String uuid, String lang, Boolean querySteno) {
         if (uuid == null) {
             throw new IllegalArgumentException("Parameter uuid is required and cannot be null.");
         }
         return service.getDraftVolumeUsingGET(uuid, lang, querySteno)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<DraftVolume>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<EelnUToimikBaas>>>() {
                 @Override
-                public Observable<ServiceResponse<DraftVolume>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<EelnUToimikBaas>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<DraftVolume> clientResponse = getDraftVolumeUsingGETDelegate(response);
+                        ServiceResponse<EelnUToimikBaas> clientResponse = getDraftVolumeUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -7122,9 +7127,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             });
     }
 
-    private ServiceResponse<DraftVolume> getDraftVolumeUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException, IllegalArgumentException {
-        return this.restClient().responseBuilderFactory().<DraftVolume, RestException>newInstance(this.serializerAdapter())
-                .register(200, new TypeToken<DraftVolume>() { }.getType())
+    private ServiceResponse<EelnUToimikBaas> getDraftVolumeUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException, IllegalArgumentException {
+        return this.restClient().responseBuilderFactory().<EelnUToimikBaas, RestException>newInstance(this.serializerAdapter())
+                .register(200, new TypeToken<EelnUToimikBaas>() { }.getType())
                 .build(response);
     }
 
@@ -7134,9 +7139,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;ErjkProtocol&gt; object if successful.
+     * @return the List&lt;ToimikERJK&gt; object if successful.
      */
-    public List<ErjkProtocol> findErjkProtocolsUsingGET() {
+    public List<ToimikERJK> findErjkProtocolsUsingGET() {
         return findErjkProtocolsUsingGETWithServiceResponseAsync().toBlocking().single().body();
     }
 
@@ -7147,7 +7152,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<List<ErjkProtocol>> findErjkProtocolsUsingGETAsync(final ServiceCallback<List<ErjkProtocol>> serviceCallback) {
+    public ServiceFuture<List<ToimikERJK>> findErjkProtocolsUsingGETAsync(final ServiceCallback<List<ToimikERJK>> serviceCallback) {
         return ServiceFuture.fromResponse(findErjkProtocolsUsingGETWithServiceResponseAsync(), serviceCallback);
     }
 
@@ -7155,12 +7160,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * ERJK protokollide nimekiri.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;ErjkProtocol&gt; object
+     * @return the observable to the List&lt;ToimikERJK&gt; object
      */
-    public Observable<List<ErjkProtocol>> findErjkProtocolsUsingGETAsync() {
-        return findErjkProtocolsUsingGETWithServiceResponseAsync().map(new Func1<ServiceResponse<List<ErjkProtocol>>, List<ErjkProtocol>>() {
+    public Observable<List<ToimikERJK>> findErjkProtocolsUsingGETAsync() {
+        return findErjkProtocolsUsingGETWithServiceResponseAsync().map(new Func1<ServiceResponse<List<ToimikERJK>>, List<ToimikERJK>>() {
             @Override
-            public List<ErjkProtocol> call(ServiceResponse<List<ErjkProtocol>> response) {
+            public List<ToimikERJK> call(ServiceResponse<List<ToimikERJK>> response) {
                 return response.body();
             }
         });
@@ -7170,19 +7175,19 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * ERJK protokollide nimekiri.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;ErjkProtocol&gt; object
+     * @return the observable to the List&lt;ToimikERJK&gt; object
      */
-    public Observable<ServiceResponse<List<ErjkProtocol>>> findErjkProtocolsUsingGETWithServiceResponseAsync() {
+    public Observable<ServiceResponse<List<ToimikERJK>>> findErjkProtocolsUsingGETWithServiceResponseAsync() {
         final List<String> sort = null;
         final Boolean sorted = null;
         final Boolean unsorted = null;
         String sortConverted = this.serializerAdapter().serializeList(sort, CollectionFormat.MULTI);
         return service.findErjkProtocolsUsingGET(sortConverted, sorted, unsorted)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<ErjkProtocol>>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<ToimikERJK>>>>() {
                 @Override
-                public Observable<ServiceResponse<List<ErjkProtocol>>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<List<ToimikERJK>>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<List<ErjkProtocol>> clientResponse = findErjkProtocolsUsingGETDelegate(response);
+                        ServiceResponse<List<ToimikERJK>> clientResponse = findErjkProtocolsUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -7200,9 +7205,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;ErjkProtocol&gt; object if successful.
+     * @return the List&lt;ToimikERJK&gt; object if successful.
      */
-    public List<ErjkProtocol> findErjkProtocolsUsingGET(List<String> sort, Boolean sorted, Boolean unsorted) {
+    public List<ToimikERJK> findErjkProtocolsUsingGET(List<String> sort, Boolean sorted, Boolean unsorted) {
         return findErjkProtocolsUsingGETWithServiceResponseAsync(sort, sorted, unsorted).toBlocking().single().body();
     }
 
@@ -7216,7 +7221,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<List<ErjkProtocol>> findErjkProtocolsUsingGETAsync(List<String> sort, Boolean sorted, Boolean unsorted, final ServiceCallback<List<ErjkProtocol>> serviceCallback) {
+    public ServiceFuture<List<ToimikERJK>> findErjkProtocolsUsingGETAsync(List<String> sort, Boolean sorted, Boolean unsorted, final ServiceCallback<List<ToimikERJK>> serviceCallback) {
         return ServiceFuture.fromResponse(findErjkProtocolsUsingGETWithServiceResponseAsync(sort, sorted, unsorted), serviceCallback);
     }
 
@@ -7227,12 +7232,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param sorted the Boolean value
      * @param unsorted the Boolean value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;ErjkProtocol&gt; object
+     * @return the observable to the List&lt;ToimikERJK&gt; object
      */
-    public Observable<List<ErjkProtocol>> findErjkProtocolsUsingGETAsync(List<String> sort, Boolean sorted, Boolean unsorted) {
-        return findErjkProtocolsUsingGETWithServiceResponseAsync(sort, sorted, unsorted).map(new Func1<ServiceResponse<List<ErjkProtocol>>, List<ErjkProtocol>>() {
+    public Observable<List<ToimikERJK>> findErjkProtocolsUsingGETAsync(List<String> sort, Boolean sorted, Boolean unsorted) {
+        return findErjkProtocolsUsingGETWithServiceResponseAsync(sort, sorted, unsorted).map(new Func1<ServiceResponse<List<ToimikERJK>>, List<ToimikERJK>>() {
             @Override
-            public List<ErjkProtocol> call(ServiceResponse<List<ErjkProtocol>> response) {
+            public List<ToimikERJK> call(ServiceResponse<List<ToimikERJK>> response) {
                 return response.body();
             }
         });
@@ -7245,17 +7250,17 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param sorted the Boolean value
      * @param unsorted the Boolean value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;ErjkProtocol&gt; object
+     * @return the observable to the List&lt;ToimikERJK&gt; object
      */
-    public Observable<ServiceResponse<List<ErjkProtocol>>> findErjkProtocolsUsingGETWithServiceResponseAsync(List<String> sort, Boolean sorted, Boolean unsorted) {
+    public Observable<ServiceResponse<List<ToimikERJK>>> findErjkProtocolsUsingGETWithServiceResponseAsync(List<String> sort, Boolean sorted, Boolean unsorted) {
         Validator.validate(sort);
         String sortConverted = this.serializerAdapter().serializeList(sort, CollectionFormat.MULTI);
         return service.findErjkProtocolsUsingGET(sortConverted, sorted, unsorted)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<ErjkProtocol>>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<ToimikERJK>>>>() {
                 @Override
-                public Observable<ServiceResponse<List<ErjkProtocol>>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<List<ToimikERJK>>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<List<ErjkProtocol>> clientResponse = findErjkProtocolsUsingGETDelegate(response);
+                        ServiceResponse<List<ToimikERJK>> clientResponse = findErjkProtocolsUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -7264,9 +7269,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             });
     }
 
-    private ServiceResponse<List<ErjkProtocol>> findErjkProtocolsUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException {
-        return this.restClient().responseBuilderFactory().<List<ErjkProtocol>, RestException>newInstance(this.serializerAdapter())
-                .register(200, new TypeToken<List<ErjkProtocol>>() { }.getType())
+    private ServiceResponse<List<ToimikERJK>> findErjkProtocolsUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException {
+        return this.restClient().responseBuilderFactory().<List<ToimikERJK>, RestException>newInstance(this.serializerAdapter())
+                .register(200, new TypeToken<List<ToimikERJK>>() { }.getType())
                 .build(response);
     }
 
@@ -7277,9 +7282,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the ErjkProtocol object if successful.
+     * @return the ToimikERJK object if successful.
      */
-    public ErjkProtocol findErjkProtocolUsingGET(String uuid) {
+    public ToimikERJK findErjkProtocolUsingGET(String uuid) {
         return findErjkProtocolUsingGETWithServiceResponseAsync(uuid).toBlocking().single().body();
     }
 
@@ -7291,7 +7296,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<ErjkProtocol> findErjkProtocolUsingGETAsync(String uuid, final ServiceCallback<ErjkProtocol> serviceCallback) {
+    public ServiceFuture<ToimikERJK> findErjkProtocolUsingGETAsync(String uuid, final ServiceCallback<ToimikERJK> serviceCallback) {
         return ServiceFuture.fromResponse(findErjkProtocolUsingGETWithServiceResponseAsync(uuid), serviceCallback);
     }
 
@@ -7300,12 +7305,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      *
      * @param uuid Toimiku UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the ErjkProtocol object
+     * @return the observable to the ToimikERJK object
      */
-    public Observable<ErjkProtocol> findErjkProtocolUsingGETAsync(String uuid) {
-        return findErjkProtocolUsingGETWithServiceResponseAsync(uuid).map(new Func1<ServiceResponse<ErjkProtocol>, ErjkProtocol>() {
+    public Observable<ToimikERJK> findErjkProtocolUsingGETAsync(String uuid) {
+        return findErjkProtocolUsingGETWithServiceResponseAsync(uuid).map(new Func1<ServiceResponse<ToimikERJK>, ToimikERJK>() {
             @Override
-            public ErjkProtocol call(ServiceResponse<ErjkProtocol> response) {
+            public ToimikERJK call(ServiceResponse<ToimikERJK> response) {
                 return response.body();
             }
         });
@@ -7316,18 +7321,18 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      *
      * @param uuid Toimiku UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the ErjkProtocol object
+     * @return the observable to the ToimikERJK object
      */
-    public Observable<ServiceResponse<ErjkProtocol>> findErjkProtocolUsingGETWithServiceResponseAsync(String uuid) {
+    public Observable<ServiceResponse<ToimikERJK>> findErjkProtocolUsingGETWithServiceResponseAsync(String uuid) {
         if (uuid == null) {
             throw new IllegalArgumentException("Parameter uuid is required and cannot be null.");
         }
         return service.findErjkProtocolUsingGET(uuid)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<ErjkProtocol>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<ToimikERJK>>>() {
                 @Override
-                public Observable<ServiceResponse<ErjkProtocol>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<ToimikERJK>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<ErjkProtocol> clientResponse = findErjkProtocolUsingGETDelegate(response);
+                        ServiceResponse<ToimikERJK> clientResponse = findErjkProtocolUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -7336,9 +7341,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             });
     }
 
-    private ServiceResponse<ErjkProtocol> findErjkProtocolUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException, IllegalArgumentException {
-        return this.restClient().responseBuilderFactory().<ErjkProtocol, RestException>newInstance(this.serializerAdapter())
-                .register(200, new TypeToken<ErjkProtocol>() { }.getType())
+    private ServiceResponse<ToimikERJK> findErjkProtocolUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException, IllegalArgumentException {
+        return this.restClient().responseBuilderFactory().<ToimikERJK, RestException>newInstance(this.serializerAdapter())
+                .register(200, new TypeToken<ToimikERJK>() { }.getType())
                 .build(response);
     }
 
@@ -7348,9 +7353,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the PagedResourcesOfEuropeanUnionDocument object if successful.
+     * @return the PagedResourcesELToimikOtsing object if successful.
      */
-    public PagedResourcesOfEuropeanUnionDocument findEuropeanUnionDocumentsUsingGET() {
+    public PagedResourcesELToimikOtsing findEuropeanUnionDocumentsUsingGET() {
         return findEuropeanUnionDocumentsUsingGETWithServiceResponseAsync().toBlocking().single().body();
     }
 
@@ -7361,7 +7366,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<PagedResourcesOfEuropeanUnionDocument> findEuropeanUnionDocumentsUsingGETAsync(final ServiceCallback<PagedResourcesOfEuropeanUnionDocument> serviceCallback) {
+    public ServiceFuture<PagedResourcesELToimikOtsing> findEuropeanUnionDocumentsUsingGETAsync(final ServiceCallback<PagedResourcesELToimikOtsing> serviceCallback) {
         return ServiceFuture.fromResponse(findEuropeanUnionDocumentsUsingGETWithServiceResponseAsync(), serviceCallback);
     }
 
@@ -7369,12 +7374,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * Euroopa Liidu toimikute otsing.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PagedResourcesOfEuropeanUnionDocument object
+     * @return the observable to the PagedResourcesELToimikOtsing object
      */
-    public Observable<PagedResourcesOfEuropeanUnionDocument> findEuropeanUnionDocumentsUsingGETAsync() {
-        return findEuropeanUnionDocumentsUsingGETWithServiceResponseAsync().map(new Func1<ServiceResponse<PagedResourcesOfEuropeanUnionDocument>, PagedResourcesOfEuropeanUnionDocument>() {
+    public Observable<PagedResourcesELToimikOtsing> findEuropeanUnionDocumentsUsingGETAsync() {
+        return findEuropeanUnionDocumentsUsingGETWithServiceResponseAsync().map(new Func1<ServiceResponse<PagedResourcesELToimikOtsing>, PagedResourcesELToimikOtsing>() {
             @Override
-            public PagedResourcesOfEuropeanUnionDocument call(ServiceResponse<PagedResourcesOfEuropeanUnionDocument> response) {
+            public PagedResourcesELToimikOtsing call(ServiceResponse<PagedResourcesELToimikOtsing> response) {
                 return response.body();
             }
         });
@@ -7384,9 +7389,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * Euroopa Liidu toimikute otsing.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PagedResourcesOfEuropeanUnionDocument object
+     * @return the observable to the PagedResourcesELToimikOtsing object
      */
-    public Observable<ServiceResponse<PagedResourcesOfEuropeanUnionDocument>> findEuropeanUnionDocumentsUsingGETWithServiceResponseAsync() {
+    public Observable<ServiceResponse<PagedResourcesELToimikOtsing>> findEuropeanUnionDocumentsUsingGETWithServiceResponseAsync() {
         final LocalDate createdEndDate = null;
         final LocalDate createdStartDate = null;
         final String documentType = null;
@@ -7415,11 +7420,11 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
         final Boolean unpaged = null;
         String sortConverted = this.serializerAdapter().serializeList(sort, CollectionFormat.MULTI);
         return service.findEuropeanUnionDocumentsUsingGET(createdEndDate, createdStartDate, documentType, elMark, elTypeCode, lang, membership, offset, opinionCommitteeUuid, page, pageNumber, pageSize, paged, receiveDateEnd, receiveDateStart, reference, responsibleCommitteeUuid, sectorCode, sectorCommitteeUuid, size, sortConverted, sortsorted, sortunsorted, title, titleEn, unpaged)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<PagedResourcesOfEuropeanUnionDocument>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<PagedResourcesELToimikOtsing>>>() {
                 @Override
-                public Observable<ServiceResponse<PagedResourcesOfEuropeanUnionDocument>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<PagedResourcesELToimikOtsing>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<PagedResourcesOfEuropeanUnionDocument> clientResponse = findEuropeanUnionDocumentsUsingGETDelegate(response);
+                        ServiceResponse<PagedResourcesELToimikOtsing> clientResponse = findEuropeanUnionDocumentsUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -7460,9 +7465,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the PagedResourcesOfEuropeanUnionDocument object if successful.
+     * @return the PagedResourcesELToimikOtsing object if successful.
      */
-    public PagedResourcesOfEuropeanUnionDocument findEuropeanUnionDocumentsUsingGET(LocalDate createdEndDate, LocalDate createdStartDate, String documentType, String elMark, String elTypeCode, String lang, Integer membership, Long offset, String opinionCommitteeUuid, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, LocalDate receiveDateEnd, LocalDate receiveDateStart, String reference, String responsibleCommitteeUuid, String sectorCode, String sectorCommitteeUuid, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, String title, String titleEn, Boolean unpaged) {
+    public PagedResourcesELToimikOtsing findEuropeanUnionDocumentsUsingGET(LocalDate createdEndDate, LocalDate createdStartDate, String documentType, String elMark, String elTypeCode, String lang, Integer membership, Long offset, String opinionCommitteeUuid, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, LocalDate receiveDateEnd, LocalDate receiveDateStart, String reference, String responsibleCommitteeUuid, String sectorCode, String sectorCommitteeUuid, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, String title, String titleEn, Boolean unpaged) {
         return findEuropeanUnionDocumentsUsingGETWithServiceResponseAsync(createdEndDate, createdStartDate, documentType, elMark, elTypeCode, lang, membership, offset, opinionCommitteeUuid, page, pageNumber, pageSize, paged, receiveDateEnd, receiveDateStart, reference, responsibleCommitteeUuid, sectorCode, sectorCommitteeUuid, size, sort, sortsorted, sortunsorted, title, titleEn, unpaged).toBlocking().single().body();
     }
 
@@ -7499,7 +7504,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<PagedResourcesOfEuropeanUnionDocument> findEuropeanUnionDocumentsUsingGETAsync(LocalDate createdEndDate, LocalDate createdStartDate, String documentType, String elMark, String elTypeCode, String lang, Integer membership, Long offset, String opinionCommitteeUuid, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, LocalDate receiveDateEnd, LocalDate receiveDateStart, String reference, String responsibleCommitteeUuid, String sectorCode, String sectorCommitteeUuid, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, String title, String titleEn, Boolean unpaged, final ServiceCallback<PagedResourcesOfEuropeanUnionDocument> serviceCallback) {
+    public ServiceFuture<PagedResourcesELToimikOtsing> findEuropeanUnionDocumentsUsingGETAsync(LocalDate createdEndDate, LocalDate createdStartDate, String documentType, String elMark, String elTypeCode, String lang, Integer membership, Long offset, String opinionCommitteeUuid, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, LocalDate receiveDateEnd, LocalDate receiveDateStart, String reference, String responsibleCommitteeUuid, String sectorCode, String sectorCommitteeUuid, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, String title, String titleEn, Boolean unpaged, final ServiceCallback<PagedResourcesELToimikOtsing> serviceCallback) {
         return ServiceFuture.fromResponse(findEuropeanUnionDocumentsUsingGETWithServiceResponseAsync(createdEndDate, createdStartDate, documentType, elMark, elTypeCode, lang, membership, offset, opinionCommitteeUuid, page, pageNumber, pageSize, paged, receiveDateEnd, receiveDateStart, reference, responsibleCommitteeUuid, sectorCode, sectorCommitteeUuid, size, sort, sortsorted, sortunsorted, title, titleEn, unpaged), serviceCallback);
     }
 
@@ -7533,12 +7538,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param titleEn Pealkiri inglise keeles
      * @param unpaged the Boolean value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PagedResourcesOfEuropeanUnionDocument object
+     * @return the observable to the PagedResourcesELToimikOtsing object
      */
-    public Observable<PagedResourcesOfEuropeanUnionDocument> findEuropeanUnionDocumentsUsingGETAsync(LocalDate createdEndDate, LocalDate createdStartDate, String documentType, String elMark, String elTypeCode, String lang, Integer membership, Long offset, String opinionCommitteeUuid, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, LocalDate receiveDateEnd, LocalDate receiveDateStart, String reference, String responsibleCommitteeUuid, String sectorCode, String sectorCommitteeUuid, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, String title, String titleEn, Boolean unpaged) {
-        return findEuropeanUnionDocumentsUsingGETWithServiceResponseAsync(createdEndDate, createdStartDate, documentType, elMark, elTypeCode, lang, membership, offset, opinionCommitteeUuid, page, pageNumber, pageSize, paged, receiveDateEnd, receiveDateStart, reference, responsibleCommitteeUuid, sectorCode, sectorCommitteeUuid, size, sort, sortsorted, sortunsorted, title, titleEn, unpaged).map(new Func1<ServiceResponse<PagedResourcesOfEuropeanUnionDocument>, PagedResourcesOfEuropeanUnionDocument>() {
+    public Observable<PagedResourcesELToimikOtsing> findEuropeanUnionDocumentsUsingGETAsync(LocalDate createdEndDate, LocalDate createdStartDate, String documentType, String elMark, String elTypeCode, String lang, Integer membership, Long offset, String opinionCommitteeUuid, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, LocalDate receiveDateEnd, LocalDate receiveDateStart, String reference, String responsibleCommitteeUuid, String sectorCode, String sectorCommitteeUuid, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, String title, String titleEn, Boolean unpaged) {
+        return findEuropeanUnionDocumentsUsingGETWithServiceResponseAsync(createdEndDate, createdStartDate, documentType, elMark, elTypeCode, lang, membership, offset, opinionCommitteeUuid, page, pageNumber, pageSize, paged, receiveDateEnd, receiveDateStart, reference, responsibleCommitteeUuid, sectorCode, sectorCommitteeUuid, size, sort, sortsorted, sortunsorted, title, titleEn, unpaged).map(new Func1<ServiceResponse<PagedResourcesELToimikOtsing>, PagedResourcesELToimikOtsing>() {
             @Override
-            public PagedResourcesOfEuropeanUnionDocument call(ServiceResponse<PagedResourcesOfEuropeanUnionDocument> response) {
+            public PagedResourcesELToimikOtsing call(ServiceResponse<PagedResourcesELToimikOtsing> response) {
                 return response.body();
             }
         });
@@ -7574,17 +7579,17 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param titleEn Pealkiri inglise keeles
      * @param unpaged the Boolean value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PagedResourcesOfEuropeanUnionDocument object
+     * @return the observable to the PagedResourcesELToimikOtsing object
      */
-    public Observable<ServiceResponse<PagedResourcesOfEuropeanUnionDocument>> findEuropeanUnionDocumentsUsingGETWithServiceResponseAsync(LocalDate createdEndDate, LocalDate createdStartDate, String documentType, String elMark, String elTypeCode, String lang, Integer membership, Long offset, String opinionCommitteeUuid, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, LocalDate receiveDateEnd, LocalDate receiveDateStart, String reference, String responsibleCommitteeUuid, String sectorCode, String sectorCommitteeUuid, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, String title, String titleEn, Boolean unpaged) {
+    public Observable<ServiceResponse<PagedResourcesELToimikOtsing>> findEuropeanUnionDocumentsUsingGETWithServiceResponseAsync(LocalDate createdEndDate, LocalDate createdStartDate, String documentType, String elMark, String elTypeCode, String lang, Integer membership, Long offset, String opinionCommitteeUuid, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, LocalDate receiveDateEnd, LocalDate receiveDateStart, String reference, String responsibleCommitteeUuid, String sectorCode, String sectorCommitteeUuid, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, String title, String titleEn, Boolean unpaged) {
         Validator.validate(sort);
         String sortConverted = this.serializerAdapter().serializeList(sort, CollectionFormat.MULTI);
         return service.findEuropeanUnionDocumentsUsingGET(createdEndDate, createdStartDate, documentType, elMark, elTypeCode, lang, membership, offset, opinionCommitteeUuid, page, pageNumber, pageSize, paged, receiveDateEnd, receiveDateStart, reference, responsibleCommitteeUuid, sectorCode, sectorCommitteeUuid, size, sortConverted, sortsorted, sortunsorted, title, titleEn, unpaged)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<PagedResourcesOfEuropeanUnionDocument>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<PagedResourcesELToimikOtsing>>>() {
                 @Override
-                public Observable<ServiceResponse<PagedResourcesOfEuropeanUnionDocument>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<PagedResourcesELToimikOtsing>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<PagedResourcesOfEuropeanUnionDocument> clientResponse = findEuropeanUnionDocumentsUsingGETDelegate(response);
+                        ServiceResponse<PagedResourcesELToimikOtsing> clientResponse = findEuropeanUnionDocumentsUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -7593,9 +7598,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             });
     }
 
-    private ServiceResponse<PagedResourcesOfEuropeanUnionDocument> findEuropeanUnionDocumentsUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException {
-        return this.restClient().responseBuilderFactory().<PagedResourcesOfEuropeanUnionDocument, RestException>newInstance(this.serializerAdapter())
-                .register(200, new TypeToken<PagedResourcesOfEuropeanUnionDocument>() { }.getType())
+    private ServiceResponse<PagedResourcesELToimikOtsing> findEuropeanUnionDocumentsUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException {
+        return this.restClient().responseBuilderFactory().<PagedResourcesELToimikOtsing, RestException>newInstance(this.serializerAdapter())
+                .register(200, new TypeToken<PagedResourcesELToimikOtsing>() { }.getType())
                 .build(response);
     }
 
@@ -7605,9 +7610,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the PagedResourcesOfInterpellations object if successful.
+     * @return the PagedResourcesToimikArupRimine object if successful.
      */
-    public PagedResourcesOfInterpellations findInterpellationsUsingGET() {
+    public PagedResourcesToimikArupRimine findInterpellationsUsingGET() {
         return findInterpellationsUsingGETWithServiceResponseAsync().toBlocking().single().body();
     }
 
@@ -7618,7 +7623,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<PagedResourcesOfInterpellations> findInterpellationsUsingGETAsync(final ServiceCallback<PagedResourcesOfInterpellations> serviceCallback) {
+    public ServiceFuture<PagedResourcesToimikArupRimine> findInterpellationsUsingGETAsync(final ServiceCallback<PagedResourcesToimikArupRimine> serviceCallback) {
         return ServiceFuture.fromResponse(findInterpellationsUsingGETWithServiceResponseAsync(), serviceCallback);
     }
 
@@ -7626,12 +7631,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * Arupärimised.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PagedResourcesOfInterpellations object
+     * @return the observable to the PagedResourcesToimikArupRimine object
      */
-    public Observable<PagedResourcesOfInterpellations> findInterpellationsUsingGETAsync() {
-        return findInterpellationsUsingGETWithServiceResponseAsync().map(new Func1<ServiceResponse<PagedResourcesOfInterpellations>, PagedResourcesOfInterpellations>() {
+    public Observable<PagedResourcesToimikArupRimine> findInterpellationsUsingGETAsync() {
+        return findInterpellationsUsingGETWithServiceResponseAsync().map(new Func1<ServiceResponse<PagedResourcesToimikArupRimine>, PagedResourcesToimikArupRimine>() {
             @Override
-            public PagedResourcesOfInterpellations call(ServiceResponse<PagedResourcesOfInterpellations> response) {
+            public PagedResourcesToimikArupRimine call(ServiceResponse<PagedResourcesToimikArupRimine> response) {
                 return response.body();
             }
         });
@@ -7641,9 +7646,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * Arupärimised.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PagedResourcesOfInterpellations object
+     * @return the observable to the PagedResourcesToimikArupRimine object
      */
-    public Observable<ServiceResponse<PagedResourcesOfInterpellations>> findInterpellationsUsingGETWithServiceResponseAsync() {
+    public Observable<ServiceResponse<PagedResourcesToimikArupRimine>> findInterpellationsUsingGETWithServiceResponseAsync() {
         final String enquirerUuid = null;
         final String lang = null;
         final Integer membership = null;
@@ -7659,11 +7664,11 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
         final Boolean unpaged = null;
         String sortConverted = this.serializerAdapter().serializeList(sort, CollectionFormat.MULTI);
         return service.findInterpellationsUsingGET(enquirerUuid, lang, membership, offset, page, pageNumber, pageSize, paged, size, sortConverted, sortsorted, sortunsorted, unpaged)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<PagedResourcesOfInterpellations>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<PagedResourcesToimikArupRimine>>>() {
                 @Override
-                public Observable<ServiceResponse<PagedResourcesOfInterpellations>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<PagedResourcesToimikArupRimine>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<PagedResourcesOfInterpellations> clientResponse = findInterpellationsUsingGETDelegate(response);
+                        ServiceResponse<PagedResourcesToimikArupRimine> clientResponse = findInterpellationsUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -7691,9 +7696,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the PagedResourcesOfInterpellations object if successful.
+     * @return the PagedResourcesToimikArupRimine object if successful.
      */
-    public PagedResourcesOfInterpellations findInterpellationsUsingGET(String enquirerUuid, String lang, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, Boolean unpaged) {
+    public PagedResourcesToimikArupRimine findInterpellationsUsingGET(String enquirerUuid, String lang, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, Boolean unpaged) {
         return findInterpellationsUsingGETWithServiceResponseAsync(enquirerUuid, lang, membership, offset, page, pageNumber, pageSize, paged, size, sort, sortsorted, sortunsorted, unpaged).toBlocking().single().body();
     }
 
@@ -7717,7 +7722,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<PagedResourcesOfInterpellations> findInterpellationsUsingGETAsync(String enquirerUuid, String lang, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, Boolean unpaged, final ServiceCallback<PagedResourcesOfInterpellations> serviceCallback) {
+    public ServiceFuture<PagedResourcesToimikArupRimine> findInterpellationsUsingGETAsync(String enquirerUuid, String lang, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, Boolean unpaged, final ServiceCallback<PagedResourcesToimikArupRimine> serviceCallback) {
         return ServiceFuture.fromResponse(findInterpellationsUsingGETWithServiceResponseAsync(enquirerUuid, lang, membership, offset, page, pageNumber, pageSize, paged, size, sort, sortsorted, sortunsorted, unpaged), serviceCallback);
     }
 
@@ -7738,12 +7743,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param sortunsorted the Boolean value
      * @param unpaged the Boolean value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PagedResourcesOfInterpellations object
+     * @return the observable to the PagedResourcesToimikArupRimine object
      */
-    public Observable<PagedResourcesOfInterpellations> findInterpellationsUsingGETAsync(String enquirerUuid, String lang, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, Boolean unpaged) {
-        return findInterpellationsUsingGETWithServiceResponseAsync(enquirerUuid, lang, membership, offset, page, pageNumber, pageSize, paged, size, sort, sortsorted, sortunsorted, unpaged).map(new Func1<ServiceResponse<PagedResourcesOfInterpellations>, PagedResourcesOfInterpellations>() {
+    public Observable<PagedResourcesToimikArupRimine> findInterpellationsUsingGETAsync(String enquirerUuid, String lang, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, Boolean unpaged) {
+        return findInterpellationsUsingGETWithServiceResponseAsync(enquirerUuid, lang, membership, offset, page, pageNumber, pageSize, paged, size, sort, sortsorted, sortunsorted, unpaged).map(new Func1<ServiceResponse<PagedResourcesToimikArupRimine>, PagedResourcesToimikArupRimine>() {
             @Override
-            public PagedResourcesOfInterpellations call(ServiceResponse<PagedResourcesOfInterpellations> response) {
+            public PagedResourcesToimikArupRimine call(ServiceResponse<PagedResourcesToimikArupRimine> response) {
                 return response.body();
             }
         });
@@ -7766,17 +7771,17 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param sortunsorted the Boolean value
      * @param unpaged the Boolean value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PagedResourcesOfInterpellations object
+     * @return the observable to the PagedResourcesToimikArupRimine object
      */
-    public Observable<ServiceResponse<PagedResourcesOfInterpellations>> findInterpellationsUsingGETWithServiceResponseAsync(String enquirerUuid, String lang, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, Boolean unpaged) {
+    public Observable<ServiceResponse<PagedResourcesToimikArupRimine>> findInterpellationsUsingGETWithServiceResponseAsync(String enquirerUuid, String lang, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, Boolean unpaged) {
         Validator.validate(sort);
         String sortConverted = this.serializerAdapter().serializeList(sort, CollectionFormat.MULTI);
         return service.findInterpellationsUsingGET(enquirerUuid, lang, membership, offset, page, pageNumber, pageSize, paged, size, sortConverted, sortsorted, sortunsorted, unpaged)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<PagedResourcesOfInterpellations>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<PagedResourcesToimikArupRimine>>>() {
                 @Override
-                public Observable<ServiceResponse<PagedResourcesOfInterpellations>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<PagedResourcesToimikArupRimine>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<PagedResourcesOfInterpellations> clientResponse = findInterpellationsUsingGETDelegate(response);
+                        ServiceResponse<PagedResourcesToimikArupRimine> clientResponse = findInterpellationsUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -7785,9 +7790,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             });
     }
 
-    private ServiceResponse<PagedResourcesOfInterpellations> findInterpellationsUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException {
-        return this.restClient().responseBuilderFactory().<PagedResourcesOfInterpellations, RestException>newInstance(this.serializerAdapter())
-                .register(200, new TypeToken<PagedResourcesOfInterpellations>() { }.getType())
+    private ServiceResponse<PagedResourcesToimikArupRimine> findInterpellationsUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException {
+        return this.restClient().responseBuilderFactory().<PagedResourcesToimikArupRimine, RestException>newInstance(this.serializerAdapter())
+                .register(200, new TypeToken<PagedResourcesToimikArupRimine>() { }.getType())
                 .build(response);
     }
 
@@ -7797,9 +7802,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the PagedResourcesOfWrittenQuestions object if successful.
+     * @return the PagedResourcesToimikKirjalikKSimus object if successful.
      */
-    public PagedResourcesOfWrittenQuestions findWrittenQuestionsUsingGET() {
+    public PagedResourcesToimikKirjalikKSimus findWrittenQuestionsUsingGET() {
         return findWrittenQuestionsUsingGETWithServiceResponseAsync().toBlocking().single().body();
     }
 
@@ -7810,7 +7815,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<PagedResourcesOfWrittenQuestions> findWrittenQuestionsUsingGETAsync(final ServiceCallback<PagedResourcesOfWrittenQuestions> serviceCallback) {
+    public ServiceFuture<PagedResourcesToimikKirjalikKSimus> findWrittenQuestionsUsingGETAsync(final ServiceCallback<PagedResourcesToimikKirjalikKSimus> serviceCallback) {
         return ServiceFuture.fromResponse(findWrittenQuestionsUsingGETWithServiceResponseAsync(), serviceCallback);
     }
 
@@ -7818,12 +7823,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * Kirjalikud küsimused.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PagedResourcesOfWrittenQuestions object
+     * @return the observable to the PagedResourcesToimikKirjalikKSimus object
      */
-    public Observable<PagedResourcesOfWrittenQuestions> findWrittenQuestionsUsingGETAsync() {
-        return findWrittenQuestionsUsingGETWithServiceResponseAsync().map(new Func1<ServiceResponse<PagedResourcesOfWrittenQuestions>, PagedResourcesOfWrittenQuestions>() {
+    public Observable<PagedResourcesToimikKirjalikKSimus> findWrittenQuestionsUsingGETAsync() {
+        return findWrittenQuestionsUsingGETWithServiceResponseAsync().map(new Func1<ServiceResponse<PagedResourcesToimikKirjalikKSimus>, PagedResourcesToimikKirjalikKSimus>() {
             @Override
-            public PagedResourcesOfWrittenQuestions call(ServiceResponse<PagedResourcesOfWrittenQuestions> response) {
+            public PagedResourcesToimikKirjalikKSimus call(ServiceResponse<PagedResourcesToimikKirjalikKSimus> response) {
                 return response.body();
             }
         });
@@ -7833,9 +7838,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * Kirjalikud küsimused.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PagedResourcesOfWrittenQuestions object
+     * @return the observable to the PagedResourcesToimikKirjalikKSimus object
      */
-    public Observable<ServiceResponse<PagedResourcesOfWrittenQuestions>> findWrittenQuestionsUsingGETWithServiceResponseAsync() {
+    public Observable<ServiceResponse<PagedResourcesToimikKirjalikKSimus>> findWrittenQuestionsUsingGETWithServiceResponseAsync() {
         final String enquirerUuid = null;
         final String lang = null;
         final Integer membership = null;
@@ -7851,11 +7856,11 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
         final Boolean unpaged = null;
         String sortConverted = this.serializerAdapter().serializeList(sort, CollectionFormat.MULTI);
         return service.findWrittenQuestionsUsingGET(enquirerUuid, lang, membership, offset, page, pageNumber, pageSize, paged, size, sortConverted, sortsorted, sortunsorted, unpaged)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<PagedResourcesOfWrittenQuestions>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<PagedResourcesToimikKirjalikKSimus>>>() {
                 @Override
-                public Observable<ServiceResponse<PagedResourcesOfWrittenQuestions>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<PagedResourcesToimikKirjalikKSimus>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<PagedResourcesOfWrittenQuestions> clientResponse = findWrittenQuestionsUsingGETDelegate(response);
+                        ServiceResponse<PagedResourcesToimikKirjalikKSimus> clientResponse = findWrittenQuestionsUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -7883,9 +7888,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the PagedResourcesOfWrittenQuestions object if successful.
+     * @return the PagedResourcesToimikKirjalikKSimus object if successful.
      */
-    public PagedResourcesOfWrittenQuestions findWrittenQuestionsUsingGET(String enquirerUuid, String lang, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, Boolean unpaged) {
+    public PagedResourcesToimikKirjalikKSimus findWrittenQuestionsUsingGET(String enquirerUuid, String lang, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, Boolean unpaged) {
         return findWrittenQuestionsUsingGETWithServiceResponseAsync(enquirerUuid, lang, membership, offset, page, pageNumber, pageSize, paged, size, sort, sortsorted, sortunsorted, unpaged).toBlocking().single().body();
     }
 
@@ -7909,7 +7914,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<PagedResourcesOfWrittenQuestions> findWrittenQuestionsUsingGETAsync(String enquirerUuid, String lang, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, Boolean unpaged, final ServiceCallback<PagedResourcesOfWrittenQuestions> serviceCallback) {
+    public ServiceFuture<PagedResourcesToimikKirjalikKSimus> findWrittenQuestionsUsingGETAsync(String enquirerUuid, String lang, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, Boolean unpaged, final ServiceCallback<PagedResourcesToimikKirjalikKSimus> serviceCallback) {
         return ServiceFuture.fromResponse(findWrittenQuestionsUsingGETWithServiceResponseAsync(enquirerUuid, lang, membership, offset, page, pageNumber, pageSize, paged, size, sort, sortsorted, sortunsorted, unpaged), serviceCallback);
     }
 
@@ -7930,12 +7935,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param sortunsorted the Boolean value
      * @param unpaged the Boolean value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PagedResourcesOfWrittenQuestions object
+     * @return the observable to the PagedResourcesToimikKirjalikKSimus object
      */
-    public Observable<PagedResourcesOfWrittenQuestions> findWrittenQuestionsUsingGETAsync(String enquirerUuid, String lang, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, Boolean unpaged) {
-        return findWrittenQuestionsUsingGETWithServiceResponseAsync(enquirerUuid, lang, membership, offset, page, pageNumber, pageSize, paged, size, sort, sortsorted, sortunsorted, unpaged).map(new Func1<ServiceResponse<PagedResourcesOfWrittenQuestions>, PagedResourcesOfWrittenQuestions>() {
+    public Observable<PagedResourcesToimikKirjalikKSimus> findWrittenQuestionsUsingGETAsync(String enquirerUuid, String lang, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, Boolean unpaged) {
+        return findWrittenQuestionsUsingGETWithServiceResponseAsync(enquirerUuid, lang, membership, offset, page, pageNumber, pageSize, paged, size, sort, sortsorted, sortunsorted, unpaged).map(new Func1<ServiceResponse<PagedResourcesToimikKirjalikKSimus>, PagedResourcesToimikKirjalikKSimus>() {
             @Override
-            public PagedResourcesOfWrittenQuestions call(ServiceResponse<PagedResourcesOfWrittenQuestions> response) {
+            public PagedResourcesToimikKirjalikKSimus call(ServiceResponse<PagedResourcesToimikKirjalikKSimus> response) {
                 return response.body();
             }
         });
@@ -7958,17 +7963,17 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param sortunsorted the Boolean value
      * @param unpaged the Boolean value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PagedResourcesOfWrittenQuestions object
+     * @return the observable to the PagedResourcesToimikKirjalikKSimus object
      */
-    public Observable<ServiceResponse<PagedResourcesOfWrittenQuestions>> findWrittenQuestionsUsingGETWithServiceResponseAsync(String enquirerUuid, String lang, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, Boolean unpaged) {
+    public Observable<ServiceResponse<PagedResourcesToimikKirjalikKSimus>> findWrittenQuestionsUsingGETWithServiceResponseAsync(String enquirerUuid, String lang, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, Boolean unpaged) {
         Validator.validate(sort);
         String sortConverted = this.serializerAdapter().serializeList(sort, CollectionFormat.MULTI);
         return service.findWrittenQuestionsUsingGET(enquirerUuid, lang, membership, offset, page, pageNumber, pageSize, paged, size, sortConverted, sortsorted, sortunsorted, unpaged)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<PagedResourcesOfWrittenQuestions>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<PagedResourcesToimikKirjalikKSimus>>>() {
                 @Override
-                public Observable<ServiceResponse<PagedResourcesOfWrittenQuestions>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<PagedResourcesToimikKirjalikKSimus>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<PagedResourcesOfWrittenQuestions> clientResponse = findWrittenQuestionsUsingGETDelegate(response);
+                        ServiceResponse<PagedResourcesToimikKirjalikKSimus> clientResponse = findWrittenQuestionsUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -7977,9 +7982,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             });
     }
 
-    private ServiceResponse<PagedResourcesOfWrittenQuestions> findWrittenQuestionsUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException {
-        return this.restClient().responseBuilderFactory().<PagedResourcesOfWrittenQuestions, RestException>newInstance(this.serializerAdapter())
-                .register(200, new TypeToken<PagedResourcesOfWrittenQuestions>() { }.getType())
+    private ServiceResponse<PagedResourcesToimikKirjalikKSimus> findWrittenQuestionsUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException {
+        return this.restClient().responseBuilderFactory().<PagedResourcesToimikKirjalikKSimus, RestException>newInstance(this.serializerAdapter())
+                .register(200, new TypeToken<PagedResourcesToimikKirjalikKSimus>() { }.getType())
                 .build(response);
     }
 
@@ -7990,9 +7995,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Volume object if successful.
+     * @return the Toimik object if successful.
      */
-    public Volume getVolumeUsingGET(String uuid) {
+    public Toimik getVolumeUsingGET(String uuid) {
         return getVolumeUsingGETWithServiceResponseAsync(uuid).toBlocking().single().body();
     }
 
@@ -8004,7 +8009,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<Volume> getVolumeUsingGETAsync(String uuid, final ServiceCallback<Volume> serviceCallback) {
+    public ServiceFuture<Toimik> getVolumeUsingGETAsync(String uuid, final ServiceCallback<Toimik> serviceCallback) {
         return ServiceFuture.fromResponse(getVolumeUsingGETWithServiceResponseAsync(uuid), serviceCallback);
     }
 
@@ -8013,12 +8018,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      *
      * @param uuid Toimiku UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the Volume object
+     * @return the observable to the Toimik object
      */
-    public Observable<Volume> getVolumeUsingGETAsync(String uuid) {
-        return getVolumeUsingGETWithServiceResponseAsync(uuid).map(new Func1<ServiceResponse<Volume>, Volume>() {
+    public Observable<Toimik> getVolumeUsingGETAsync(String uuid) {
+        return getVolumeUsingGETWithServiceResponseAsync(uuid).map(new Func1<ServiceResponse<Toimik>, Toimik>() {
             @Override
-            public Volume call(ServiceResponse<Volume> response) {
+            public Toimik call(ServiceResponse<Toimik> response) {
                 return response.body();
             }
         });
@@ -8029,19 +8034,19 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      *
      * @param uuid Toimiku UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the Volume object
+     * @return the observable to the Toimik object
      */
-    public Observable<ServiceResponse<Volume>> getVolumeUsingGETWithServiceResponseAsync(String uuid) {
+    public Observable<ServiceResponse<Toimik>> getVolumeUsingGETWithServiceResponseAsync(String uuid) {
         if (uuid == null) {
             throw new IllegalArgumentException("Parameter uuid is required and cannot be null.");
         }
         final String lang = null;
         return service.getVolumeUsingGET(uuid, lang)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<Volume>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<Toimik>>>() {
                 @Override
-                public Observable<ServiceResponse<Volume>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<Toimik>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<Volume> clientResponse = getVolumeUsingGETDelegate(response);
+                        ServiceResponse<Toimik> clientResponse = getVolumeUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -8058,9 +8063,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Volume object if successful.
+     * @return the Toimik object if successful.
      */
-    public Volume getVolumeUsingGET(String uuid, String lang) {
+    public Toimik getVolumeUsingGET(String uuid, String lang) {
         return getVolumeUsingGETWithServiceResponseAsync(uuid, lang).toBlocking().single().body();
     }
 
@@ -8073,7 +8078,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<Volume> getVolumeUsingGETAsync(String uuid, String lang, final ServiceCallback<Volume> serviceCallback) {
+    public ServiceFuture<Toimik> getVolumeUsingGETAsync(String uuid, String lang, final ServiceCallback<Toimik> serviceCallback) {
         return ServiceFuture.fromResponse(getVolumeUsingGETWithServiceResponseAsync(uuid, lang), serviceCallback);
     }
 
@@ -8083,12 +8088,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param uuid Toimiku UUID
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the Volume object
+     * @return the observable to the Toimik object
      */
-    public Observable<Volume> getVolumeUsingGETAsync(String uuid, String lang) {
-        return getVolumeUsingGETWithServiceResponseAsync(uuid, lang).map(new Func1<ServiceResponse<Volume>, Volume>() {
+    public Observable<Toimik> getVolumeUsingGETAsync(String uuid, String lang) {
+        return getVolumeUsingGETWithServiceResponseAsync(uuid, lang).map(new Func1<ServiceResponse<Toimik>, Toimik>() {
             @Override
-            public Volume call(ServiceResponse<Volume> response) {
+            public Toimik call(ServiceResponse<Toimik> response) {
                 return response.body();
             }
         });
@@ -8100,18 +8105,18 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param uuid Toimiku UUID
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the Volume object
+     * @return the observable to the Toimik object
      */
-    public Observable<ServiceResponse<Volume>> getVolumeUsingGETWithServiceResponseAsync(String uuid, String lang) {
+    public Observable<ServiceResponse<Toimik>> getVolumeUsingGETWithServiceResponseAsync(String uuid, String lang) {
         if (uuid == null) {
             throw new IllegalArgumentException("Parameter uuid is required and cannot be null.");
         }
         return service.getVolumeUsingGET(uuid, lang)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<Volume>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<Toimik>>>() {
                 @Override
-                public Observable<ServiceResponse<Volume>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<Toimik>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<Volume> clientResponse = getVolumeUsingGETDelegate(response);
+                        ServiceResponse<Toimik> clientResponse = getVolumeUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -8120,9 +8125,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             });
     }
 
-    private ServiceResponse<Volume> getVolumeUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException, IllegalArgumentException {
-        return this.restClient().responseBuilderFactory().<Volume, RestException>newInstance(this.serializerAdapter())
-                .register(200, new TypeToken<Volume>() { }.getType())
+    private ServiceResponse<Toimik> getVolumeUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException, IllegalArgumentException {
+        return this.restClient().responseBuilderFactory().<Toimik, RestException>newInstance(this.serializerAdapter())
+                .register(200, new TypeToken<Toimik>() { }.getType())
                 .build(response);
     }
 
@@ -8134,9 +8139,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;PlenarySittingVoting&gt; object if successful.
+     * @return the List&lt;TIskoguIstungHLetus&gt; object if successful.
      */
-    public List<PlenarySittingVoting> getVotingsUsingGET(LocalDate endDate, LocalDate startDate) {
+    public List<TIskoguIstungHLetus> getVotingsUsingGET(LocalDate endDate, LocalDate startDate) {
         return getVotingsUsingGETWithServiceResponseAsync(endDate, startDate).toBlocking().single().body();
     }
 
@@ -8149,7 +8154,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<List<PlenarySittingVoting>> getVotingsUsingGETAsync(LocalDate endDate, LocalDate startDate, final ServiceCallback<List<PlenarySittingVoting>> serviceCallback) {
+    public ServiceFuture<List<TIskoguIstungHLetus>> getVotingsUsingGETAsync(LocalDate endDate, LocalDate startDate, final ServiceCallback<List<TIskoguIstungHLetus>> serviceCallback) {
         return ServiceFuture.fromResponse(getVotingsUsingGETWithServiceResponseAsync(endDate, startDate), serviceCallback);
     }
 
@@ -8159,12 +8164,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param endDate Kuupäevavahemiku lõpp (yyyy-MM-dd)
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;PlenarySittingVoting&gt; object
+     * @return the observable to the List&lt;TIskoguIstungHLetus&gt; object
      */
-    public Observable<List<PlenarySittingVoting>> getVotingsUsingGETAsync(LocalDate endDate, LocalDate startDate) {
-        return getVotingsUsingGETWithServiceResponseAsync(endDate, startDate).map(new Func1<ServiceResponse<List<PlenarySittingVoting>>, List<PlenarySittingVoting>>() {
+    public Observable<List<TIskoguIstungHLetus>> getVotingsUsingGETAsync(LocalDate endDate, LocalDate startDate) {
+        return getVotingsUsingGETWithServiceResponseAsync(endDate, startDate).map(new Func1<ServiceResponse<List<TIskoguIstungHLetus>>, List<TIskoguIstungHLetus>>() {
             @Override
-            public List<PlenarySittingVoting> call(ServiceResponse<List<PlenarySittingVoting>> response) {
+            public List<TIskoguIstungHLetus> call(ServiceResponse<List<TIskoguIstungHLetus>> response) {
                 return response.body();
             }
         });
@@ -8176,9 +8181,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param endDate Kuupäevavahemiku lõpp (yyyy-MM-dd)
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;PlenarySittingVoting&gt; object
+     * @return the observable to the List&lt;TIskoguIstungHLetus&gt; object
      */
-    public Observable<ServiceResponse<List<PlenarySittingVoting>>> getVotingsUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate) {
+    public Observable<ServiceResponse<List<TIskoguIstungHLetus>>> getVotingsUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate) {
         if (endDate == null) {
             throw new IllegalArgumentException("Parameter endDate is required and cannot be null.");
         }
@@ -8187,11 +8192,11 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
         }
         final String lang = null;
         return service.getVotingsUsingGET(endDate, lang, startDate)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<PlenarySittingVoting>>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<TIskoguIstungHLetus>>>>() {
                 @Override
-                public Observable<ServiceResponse<List<PlenarySittingVoting>>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<List<TIskoguIstungHLetus>>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<List<PlenarySittingVoting>> clientResponse = getVotingsUsingGETDelegate(response);
+                        ServiceResponse<List<TIskoguIstungHLetus>> clientResponse = getVotingsUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -8209,9 +8214,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;PlenarySittingVoting&gt; object if successful.
+     * @return the List&lt;TIskoguIstungHLetus&gt; object if successful.
      */
-    public List<PlenarySittingVoting> getVotingsUsingGET(LocalDate endDate, LocalDate startDate, String lang) {
+    public List<TIskoguIstungHLetus> getVotingsUsingGET(LocalDate endDate, LocalDate startDate, String lang) {
         return getVotingsUsingGETWithServiceResponseAsync(endDate, startDate, lang).toBlocking().single().body();
     }
 
@@ -8225,7 +8230,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<List<PlenarySittingVoting>> getVotingsUsingGETAsync(LocalDate endDate, LocalDate startDate, String lang, final ServiceCallback<List<PlenarySittingVoting>> serviceCallback) {
+    public ServiceFuture<List<TIskoguIstungHLetus>> getVotingsUsingGETAsync(LocalDate endDate, LocalDate startDate, String lang, final ServiceCallback<List<TIskoguIstungHLetus>> serviceCallback) {
         return ServiceFuture.fromResponse(getVotingsUsingGETWithServiceResponseAsync(endDate, startDate, lang), serviceCallback);
     }
 
@@ -8236,12 +8241,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;PlenarySittingVoting&gt; object
+     * @return the observable to the List&lt;TIskoguIstungHLetus&gt; object
      */
-    public Observable<List<PlenarySittingVoting>> getVotingsUsingGETAsync(LocalDate endDate, LocalDate startDate, String lang) {
-        return getVotingsUsingGETWithServiceResponseAsync(endDate, startDate, lang).map(new Func1<ServiceResponse<List<PlenarySittingVoting>>, List<PlenarySittingVoting>>() {
+    public Observable<List<TIskoguIstungHLetus>> getVotingsUsingGETAsync(LocalDate endDate, LocalDate startDate, String lang) {
+        return getVotingsUsingGETWithServiceResponseAsync(endDate, startDate, lang).map(new Func1<ServiceResponse<List<TIskoguIstungHLetus>>, List<TIskoguIstungHLetus>>() {
             @Override
-            public List<PlenarySittingVoting> call(ServiceResponse<List<PlenarySittingVoting>> response) {
+            public List<TIskoguIstungHLetus> call(ServiceResponse<List<TIskoguIstungHLetus>> response) {
                 return response.body();
             }
         });
@@ -8254,9 +8259,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;PlenarySittingVoting&gt; object
+     * @return the observable to the List&lt;TIskoguIstungHLetus&gt; object
      */
-    public Observable<ServiceResponse<List<PlenarySittingVoting>>> getVotingsUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String lang) {
+    public Observable<ServiceResponse<List<TIskoguIstungHLetus>>> getVotingsUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String lang) {
         if (endDate == null) {
             throw new IllegalArgumentException("Parameter endDate is required and cannot be null.");
         }
@@ -8264,11 +8269,11 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             throw new IllegalArgumentException("Parameter startDate is required and cannot be null.");
         }
         return service.getVotingsUsingGET(endDate, lang, startDate)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<PlenarySittingVoting>>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<TIskoguIstungHLetus>>>>() {
                 @Override
-                public Observable<ServiceResponse<List<PlenarySittingVoting>>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<List<TIskoguIstungHLetus>>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<List<PlenarySittingVoting>> clientResponse = getVotingsUsingGETDelegate(response);
+                        ServiceResponse<List<TIskoguIstungHLetus>> clientResponse = getVotingsUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -8277,9 +8282,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             });
     }
 
-    private ServiceResponse<List<PlenarySittingVoting>> getVotingsUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException, IllegalArgumentException {
-        return this.restClient().responseBuilderFactory().<List<PlenarySittingVoting>, RestException>newInstance(this.serializerAdapter())
-                .register(200, new TypeToken<List<PlenarySittingVoting>>() { }.getType())
+    private ServiceResponse<List<TIskoguIstungHLetus>> getVotingsUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException, IllegalArgumentException {
+        return this.restClient().responseBuilderFactory().<List<TIskoguIstungHLetus>, RestException>newInstance(this.serializerAdapter())
+                .register(200, new TypeToken<List<TIskoguIstungHLetus>>() { }.getType())
                 .build(response);
     }
 
@@ -8292,9 +8297,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;VotingCalendar&gt; object if successful.
+     * @return the List&lt;HLetuspEv&gt; object if successful.
      */
-    public List<VotingCalendar> getVotingCalendarUsingGET(LocalDate endDate, LocalDate startDate) {
+    public List<HLetuspEv> getVotingCalendarUsingGET(LocalDate endDate, LocalDate startDate) {
         return getVotingCalendarUsingGETWithServiceResponseAsync(endDate, startDate).toBlocking().single().body();
     }
 
@@ -8308,7 +8313,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<List<VotingCalendar>> getVotingCalendarUsingGETAsync(LocalDate endDate, LocalDate startDate, final ServiceCallback<List<VotingCalendar>> serviceCallback) {
+    public ServiceFuture<List<HLetuspEv>> getVotingCalendarUsingGETAsync(LocalDate endDate, LocalDate startDate, final ServiceCallback<List<HLetuspEv>> serviceCallback) {
         return ServiceFuture.fromResponse(getVotingCalendarUsingGETWithServiceResponseAsync(endDate, startDate), serviceCallback);
     }
 
@@ -8319,12 +8324,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param endDate Kuupäevavahemiku lõpp (yyyy-MM-dd)
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;VotingCalendar&gt; object
+     * @return the observable to the List&lt;HLetuspEv&gt; object
      */
-    public Observable<List<VotingCalendar>> getVotingCalendarUsingGETAsync(LocalDate endDate, LocalDate startDate) {
-        return getVotingCalendarUsingGETWithServiceResponseAsync(endDate, startDate).map(new Func1<ServiceResponse<List<VotingCalendar>>, List<VotingCalendar>>() {
+    public Observable<List<HLetuspEv>> getVotingCalendarUsingGETAsync(LocalDate endDate, LocalDate startDate) {
+        return getVotingCalendarUsingGETWithServiceResponseAsync(endDate, startDate).map(new Func1<ServiceResponse<List<HLetuspEv>>, List<HLetuspEv>>() {
             @Override
-            public List<VotingCalendar> call(ServiceResponse<List<VotingCalendar>> response) {
+            public List<HLetuspEv> call(ServiceResponse<List<HLetuspEv>> response) {
                 return response.body();
             }
         });
@@ -8337,9 +8342,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param endDate Kuupäevavahemiku lõpp (yyyy-MM-dd)
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;VotingCalendar&gt; object
+     * @return the observable to the List&lt;HLetuspEv&gt; object
      */
-    public Observable<ServiceResponse<List<VotingCalendar>>> getVotingCalendarUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate) {
+    public Observable<ServiceResponse<List<HLetuspEv>>> getVotingCalendarUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate) {
         if (endDate == null) {
             throw new IllegalArgumentException("Parameter endDate is required and cannot be null.");
         }
@@ -8347,11 +8352,11 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             throw new IllegalArgumentException("Parameter startDate is required and cannot be null.");
         }
         return service.getVotingCalendarUsingGET(endDate, startDate)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<VotingCalendar>>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<HLetuspEv>>>>() {
                 @Override
-                public Observable<ServiceResponse<List<VotingCalendar>>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<List<HLetuspEv>>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<List<VotingCalendar>> clientResponse = getVotingCalendarUsingGETDelegate(response);
+                        ServiceResponse<List<HLetuspEv>> clientResponse = getVotingCalendarUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -8360,9 +8365,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             });
     }
 
-    private ServiceResponse<List<VotingCalendar>> getVotingCalendarUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException, IllegalArgumentException {
-        return this.restClient().responseBuilderFactory().<List<VotingCalendar>, RestException>newInstance(this.serializerAdapter())
-                .register(200, new TypeToken<List<VotingCalendar>>() { }.getType())
+    private ServiceResponse<List<HLetuspEv>> getVotingCalendarUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException, IllegalArgumentException {
+        return this.restClient().responseBuilderFactory().<List<HLetuspEv>, RestException>newInstance(this.serializerAdapter())
+                .register(200, new TypeToken<List<HLetuspEv>>() { }.getType())
                 .build(response);
     }
 
@@ -8373,9 +8378,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;UserGroup&gt; object if successful.
+     * @return the List&lt;Kasutajagrupp&gt; object if successful.
      */
-    public List<UserGroup> findCommitteeMemberVotingsUsingGET(String userUuid) {
+    public List<Kasutajagrupp> findCommitteeMemberVotingsUsingGET(String userUuid) {
         return findCommitteeMemberVotingsUsingGETWithServiceResponseAsync(userUuid).toBlocking().single().body();
     }
 
@@ -8387,7 +8392,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<List<UserGroup>> findCommitteeMemberVotingsUsingGETAsync(String userUuid, final ServiceCallback<List<UserGroup>> serviceCallback) {
+    public ServiceFuture<List<Kasutajagrupp>> findCommitteeMemberVotingsUsingGETAsync(String userUuid, final ServiceCallback<List<Kasutajagrupp>> serviceCallback) {
         return ServiceFuture.fromResponse(findCommitteeMemberVotingsUsingGETWithServiceResponseAsync(userUuid), serviceCallback);
     }
 
@@ -8396,12 +8401,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      *
      * @param userUuid userUuid
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;UserGroup&gt; object
+     * @return the observable to the List&lt;Kasutajagrupp&gt; object
      */
-    public Observable<List<UserGroup>> findCommitteeMemberVotingsUsingGETAsync(String userUuid) {
-        return findCommitteeMemberVotingsUsingGETWithServiceResponseAsync(userUuid).map(new Func1<ServiceResponse<List<UserGroup>>, List<UserGroup>>() {
+    public Observable<List<Kasutajagrupp>> findCommitteeMemberVotingsUsingGETAsync(String userUuid) {
+        return findCommitteeMemberVotingsUsingGETWithServiceResponseAsync(userUuid).map(new Func1<ServiceResponse<List<Kasutajagrupp>>, List<Kasutajagrupp>>() {
             @Override
-            public List<UserGroup> call(ServiceResponse<List<UserGroup>> response) {
+            public List<Kasutajagrupp> call(ServiceResponse<List<Kasutajagrupp>> response) {
                 return response.body();
             }
         });
@@ -8412,9 +8417,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      *
      * @param userUuid userUuid
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;UserGroup&gt; object
+     * @return the observable to the List&lt;Kasutajagrupp&gt; object
      */
-    public Observable<ServiceResponse<List<UserGroup>>> findCommitteeMemberVotingsUsingGETWithServiceResponseAsync(String userUuid) {
+    public Observable<ServiceResponse<List<Kasutajagrupp>>> findCommitteeMemberVotingsUsingGETWithServiceResponseAsync(String userUuid) {
         if (userUuid == null) {
             throw new IllegalArgumentException("Parameter userUuid is required and cannot be null.");
         }
@@ -8422,11 +8427,11 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
         final String lang = null;
         final LocalDate startDate = null;
         return service.findCommitteeMemberVotingsUsingGET(endDate, lang, startDate, userUuid)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<UserGroup>>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<Kasutajagrupp>>>>() {
                 @Override
-                public Observable<ServiceResponse<List<UserGroup>>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<List<Kasutajagrupp>>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<List<UserGroup>> clientResponse = findCommitteeMemberVotingsUsingGETDelegate(response);
+                        ServiceResponse<List<Kasutajagrupp>> clientResponse = findCommitteeMemberVotingsUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -8445,9 +8450,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;UserGroup&gt; object if successful.
+     * @return the List&lt;Kasutajagrupp&gt; object if successful.
      */
-    public List<UserGroup> findCommitteeMemberVotingsUsingGET(String userUuid, LocalDate endDate, String lang, LocalDate startDate) {
+    public List<Kasutajagrupp> findCommitteeMemberVotingsUsingGET(String userUuid, LocalDate endDate, String lang, LocalDate startDate) {
         return findCommitteeMemberVotingsUsingGETWithServiceResponseAsync(userUuid, endDate, lang, startDate).toBlocking().single().body();
     }
 
@@ -8462,7 +8467,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<List<UserGroup>> findCommitteeMemberVotingsUsingGETAsync(String userUuid, LocalDate endDate, String lang, LocalDate startDate, final ServiceCallback<List<UserGroup>> serviceCallback) {
+    public ServiceFuture<List<Kasutajagrupp>> findCommitteeMemberVotingsUsingGETAsync(String userUuid, LocalDate endDate, String lang, LocalDate startDate, final ServiceCallback<List<Kasutajagrupp>> serviceCallback) {
         return ServiceFuture.fromResponse(findCommitteeMemberVotingsUsingGETWithServiceResponseAsync(userUuid, endDate, lang, startDate), serviceCallback);
     }
 
@@ -8474,12 +8479,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param lang lang. Possible values include: 'et', 'ru', 'en'
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;UserGroup&gt; object
+     * @return the observable to the List&lt;Kasutajagrupp&gt; object
      */
-    public Observable<List<UserGroup>> findCommitteeMemberVotingsUsingGETAsync(String userUuid, LocalDate endDate, String lang, LocalDate startDate) {
-        return findCommitteeMemberVotingsUsingGETWithServiceResponseAsync(userUuid, endDate, lang, startDate).map(new Func1<ServiceResponse<List<UserGroup>>, List<UserGroup>>() {
+    public Observable<List<Kasutajagrupp>> findCommitteeMemberVotingsUsingGETAsync(String userUuid, LocalDate endDate, String lang, LocalDate startDate) {
+        return findCommitteeMemberVotingsUsingGETWithServiceResponseAsync(userUuid, endDate, lang, startDate).map(new Func1<ServiceResponse<List<Kasutajagrupp>>, List<Kasutajagrupp>>() {
             @Override
-            public List<UserGroup> call(ServiceResponse<List<UserGroup>> response) {
+            public List<Kasutajagrupp> call(ServiceResponse<List<Kasutajagrupp>> response) {
                 return response.body();
             }
         });
@@ -8493,18 +8498,18 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param lang lang. Possible values include: 'et', 'ru', 'en'
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;UserGroup&gt; object
+     * @return the observable to the List&lt;Kasutajagrupp&gt; object
      */
-    public Observable<ServiceResponse<List<UserGroup>>> findCommitteeMemberVotingsUsingGETWithServiceResponseAsync(String userUuid, LocalDate endDate, String lang, LocalDate startDate) {
+    public Observable<ServiceResponse<List<Kasutajagrupp>>> findCommitteeMemberVotingsUsingGETWithServiceResponseAsync(String userUuid, LocalDate endDate, String lang, LocalDate startDate) {
         if (userUuid == null) {
             throw new IllegalArgumentException("Parameter userUuid is required and cannot be null.");
         }
         return service.findCommitteeMemberVotingsUsingGET(endDate, lang, startDate, userUuid)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<UserGroup>>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<Kasutajagrupp>>>>() {
                 @Override
-                public Observable<ServiceResponse<List<UserGroup>>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<List<Kasutajagrupp>>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<List<UserGroup>> clientResponse = findCommitteeMemberVotingsUsingGETDelegate(response);
+                        ServiceResponse<List<Kasutajagrupp>> clientResponse = findCommitteeMemberVotingsUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -8513,9 +8518,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             });
     }
 
-    private ServiceResponse<List<UserGroup>> findCommitteeMemberVotingsUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException, IllegalArgumentException {
-        return this.restClient().responseBuilderFactory().<List<UserGroup>, RestException>newInstance(this.serializerAdapter())
-                .register(200, new TypeToken<List<UserGroup>>() { }.getType())
+    private ServiceResponse<List<Kasutajagrupp>> findCommitteeMemberVotingsUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException, IllegalArgumentException {
+        return this.restClient().responseBuilderFactory().<List<Kasutajagrupp>, RestException>newInstance(this.serializerAdapter())
+                .register(200, new TypeToken<List<Kasutajagrupp>>() { }.getType())
                 .build(response);
     }
 
@@ -8526,9 +8531,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;CommitteeSitting&gt; object if successful.
+     * @return the List&lt;KomisjoniIstung&gt; object if successful.
      */
-    public List<CommitteeSitting> findCommitteeVotingsUsingGET(String uuid) {
+    public List<KomisjoniIstung> findCommitteeVotingsUsingGET(String uuid) {
         return findCommitteeVotingsUsingGETWithServiceResponseAsync(uuid).toBlocking().single().body();
     }
 
@@ -8540,7 +8545,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<List<CommitteeSitting>> findCommitteeVotingsUsingGETAsync(String uuid, final ServiceCallback<List<CommitteeSitting>> serviceCallback) {
+    public ServiceFuture<List<KomisjoniIstung>> findCommitteeVotingsUsingGETAsync(String uuid, final ServiceCallback<List<KomisjoniIstung>> serviceCallback) {
         return ServiceFuture.fromResponse(findCommitteeVotingsUsingGETWithServiceResponseAsync(uuid), serviceCallback);
     }
 
@@ -8549,12 +8554,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      *
      * @param uuid uuid
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;CommitteeSitting&gt; object
+     * @return the observable to the List&lt;KomisjoniIstung&gt; object
      */
-    public Observable<List<CommitteeSitting>> findCommitteeVotingsUsingGETAsync(String uuid) {
-        return findCommitteeVotingsUsingGETWithServiceResponseAsync(uuid).map(new Func1<ServiceResponse<List<CommitteeSitting>>, List<CommitteeSitting>>() {
+    public Observable<List<KomisjoniIstung>> findCommitteeVotingsUsingGETAsync(String uuid) {
+        return findCommitteeVotingsUsingGETWithServiceResponseAsync(uuid).map(new Func1<ServiceResponse<List<KomisjoniIstung>>, List<KomisjoniIstung>>() {
             @Override
-            public List<CommitteeSitting> call(ServiceResponse<List<CommitteeSitting>> response) {
+            public List<KomisjoniIstung> call(ServiceResponse<List<KomisjoniIstung>> response) {
                 return response.body();
             }
         });
@@ -8565,9 +8570,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      *
      * @param uuid uuid
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;CommitteeSitting&gt; object
+     * @return the observable to the List&lt;KomisjoniIstung&gt; object
      */
-    public Observable<ServiceResponse<List<CommitteeSitting>>> findCommitteeVotingsUsingGETWithServiceResponseAsync(String uuid) {
+    public Observable<ServiceResponse<List<KomisjoniIstung>>> findCommitteeVotingsUsingGETWithServiceResponseAsync(String uuid) {
         if (uuid == null) {
             throw new IllegalArgumentException("Parameter uuid is required and cannot be null.");
         }
@@ -8575,11 +8580,11 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
         final String lang = null;
         final LocalDate startDate = null;
         return service.findCommitteeVotingsUsingGET(uuid, endDate, lang, startDate)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<CommitteeSitting>>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<KomisjoniIstung>>>>() {
                 @Override
-                public Observable<ServiceResponse<List<CommitteeSitting>>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<List<KomisjoniIstung>>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<List<CommitteeSitting>> clientResponse = findCommitteeVotingsUsingGETDelegate(response);
+                        ServiceResponse<List<KomisjoniIstung>> clientResponse = findCommitteeVotingsUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -8598,9 +8603,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;CommitteeSitting&gt; object if successful.
+     * @return the List&lt;KomisjoniIstung&gt; object if successful.
      */
-    public List<CommitteeSitting> findCommitteeVotingsUsingGET(String uuid, LocalDate endDate, String lang, LocalDate startDate) {
+    public List<KomisjoniIstung> findCommitteeVotingsUsingGET(String uuid, LocalDate endDate, String lang, LocalDate startDate) {
         return findCommitteeVotingsUsingGETWithServiceResponseAsync(uuid, endDate, lang, startDate).toBlocking().single().body();
     }
 
@@ -8615,7 +8620,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<List<CommitteeSitting>> findCommitteeVotingsUsingGETAsync(String uuid, LocalDate endDate, String lang, LocalDate startDate, final ServiceCallback<List<CommitteeSitting>> serviceCallback) {
+    public ServiceFuture<List<KomisjoniIstung>> findCommitteeVotingsUsingGETAsync(String uuid, LocalDate endDate, String lang, LocalDate startDate, final ServiceCallback<List<KomisjoniIstung>> serviceCallback) {
         return ServiceFuture.fromResponse(findCommitteeVotingsUsingGETWithServiceResponseAsync(uuid, endDate, lang, startDate), serviceCallback);
     }
 
@@ -8627,12 +8632,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param lang lang. Possible values include: 'et', 'ru', 'en'
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;CommitteeSitting&gt; object
+     * @return the observable to the List&lt;KomisjoniIstung&gt; object
      */
-    public Observable<List<CommitteeSitting>> findCommitteeVotingsUsingGETAsync(String uuid, LocalDate endDate, String lang, LocalDate startDate) {
-        return findCommitteeVotingsUsingGETWithServiceResponseAsync(uuid, endDate, lang, startDate).map(new Func1<ServiceResponse<List<CommitteeSitting>>, List<CommitteeSitting>>() {
+    public Observable<List<KomisjoniIstung>> findCommitteeVotingsUsingGETAsync(String uuid, LocalDate endDate, String lang, LocalDate startDate) {
+        return findCommitteeVotingsUsingGETWithServiceResponseAsync(uuid, endDate, lang, startDate).map(new Func1<ServiceResponse<List<KomisjoniIstung>>, List<KomisjoniIstung>>() {
             @Override
-            public List<CommitteeSitting> call(ServiceResponse<List<CommitteeSitting>> response) {
+            public List<KomisjoniIstung> call(ServiceResponse<List<KomisjoniIstung>> response) {
                 return response.body();
             }
         });
@@ -8646,18 +8651,18 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param lang lang. Possible values include: 'et', 'ru', 'en'
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;CommitteeSitting&gt; object
+     * @return the observable to the List&lt;KomisjoniIstung&gt; object
      */
-    public Observable<ServiceResponse<List<CommitteeSitting>>> findCommitteeVotingsUsingGETWithServiceResponseAsync(String uuid, LocalDate endDate, String lang, LocalDate startDate) {
+    public Observable<ServiceResponse<List<KomisjoniIstung>>> findCommitteeVotingsUsingGETWithServiceResponseAsync(String uuid, LocalDate endDate, String lang, LocalDate startDate) {
         if (uuid == null) {
             throw new IllegalArgumentException("Parameter uuid is required and cannot be null.");
         }
         return service.findCommitteeVotingsUsingGET(uuid, endDate, lang, startDate)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<CommitteeSitting>>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<List<KomisjoniIstung>>>>() {
                 @Override
-                public Observable<ServiceResponse<List<CommitteeSitting>>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<List<KomisjoniIstung>>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<List<CommitteeSitting>> clientResponse = findCommitteeVotingsUsingGETDelegate(response);
+                        ServiceResponse<List<KomisjoniIstung>> clientResponse = findCommitteeVotingsUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -8666,9 +8671,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             });
     }
 
-    private ServiceResponse<List<CommitteeSitting>> findCommitteeVotingsUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException, IllegalArgumentException {
-        return this.restClient().responseBuilderFactory().<List<CommitteeSitting>, RestException>newInstance(this.serializerAdapter())
-                .register(200, new TypeToken<List<CommitteeSitting>>() { }.getType())
+    private ServiceResponse<List<KomisjoniIstung>> findCommitteeVotingsUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException, IllegalArgumentException {
+        return this.restClient().responseBuilderFactory().<List<KomisjoniIstung>, RestException>newInstance(this.serializerAdapter())
+                .register(200, new TypeToken<List<KomisjoniIstung>>() { }.getType())
                 .build(response);
     }
 
@@ -8678,9 +8683,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the PlenaryVotingDetails object if successful.
+     * @return the TIskoguHLetusDetailid object if successful.
      */
-    public PlenaryVotingDetails getLastVotingUsingGET() {
+    public TIskoguHLetusDetailid getLastVotingUsingGET() {
         return getLastVotingUsingGETWithServiceResponseAsync().toBlocking().single().body();
     }
 
@@ -8691,7 +8696,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<PlenaryVotingDetails> getLastVotingUsingGETAsync(final ServiceCallback<PlenaryVotingDetails> serviceCallback) {
+    public ServiceFuture<TIskoguHLetusDetailid> getLastVotingUsingGETAsync(final ServiceCallback<TIskoguHLetusDetailid> serviceCallback) {
         return ServiceFuture.fromResponse(getLastVotingUsingGETWithServiceResponseAsync(), serviceCallback);
     }
 
@@ -8699,12 +8704,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * Viimane hääletus.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PlenaryVotingDetails object
+     * @return the observable to the TIskoguHLetusDetailid object
      */
-    public Observable<PlenaryVotingDetails> getLastVotingUsingGETAsync() {
-        return getLastVotingUsingGETWithServiceResponseAsync().map(new Func1<ServiceResponse<PlenaryVotingDetails>, PlenaryVotingDetails>() {
+    public Observable<TIskoguHLetusDetailid> getLastVotingUsingGETAsync() {
+        return getLastVotingUsingGETWithServiceResponseAsync().map(new Func1<ServiceResponse<TIskoguHLetusDetailid>, TIskoguHLetusDetailid>() {
             @Override
-            public PlenaryVotingDetails call(ServiceResponse<PlenaryVotingDetails> response) {
+            public TIskoguHLetusDetailid call(ServiceResponse<TIskoguHLetusDetailid> response) {
                 return response.body();
             }
         });
@@ -8714,16 +8719,16 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * Viimane hääletus.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PlenaryVotingDetails object
+     * @return the observable to the TIskoguHLetusDetailid object
      */
-    public Observable<ServiceResponse<PlenaryVotingDetails>> getLastVotingUsingGETWithServiceResponseAsync() {
+    public Observable<ServiceResponse<TIskoguHLetusDetailid>> getLastVotingUsingGETWithServiceResponseAsync() {
         final String lang = null;
         return service.getLastVotingUsingGET(lang)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<PlenaryVotingDetails>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<TIskoguHLetusDetailid>>>() {
                 @Override
-                public Observable<ServiceResponse<PlenaryVotingDetails>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<TIskoguHLetusDetailid>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<PlenaryVotingDetails> clientResponse = getLastVotingUsingGETDelegate(response);
+                        ServiceResponse<TIskoguHLetusDetailid> clientResponse = getLastVotingUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -8739,9 +8744,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the PlenaryVotingDetails object if successful.
+     * @return the TIskoguHLetusDetailid object if successful.
      */
-    public PlenaryVotingDetails getLastVotingUsingGET(String lang) {
+    public TIskoguHLetusDetailid getLastVotingUsingGET(String lang) {
         return getLastVotingUsingGETWithServiceResponseAsync(lang).toBlocking().single().body();
     }
 
@@ -8753,7 +8758,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<PlenaryVotingDetails> getLastVotingUsingGETAsync(String lang, final ServiceCallback<PlenaryVotingDetails> serviceCallback) {
+    public ServiceFuture<TIskoguHLetusDetailid> getLastVotingUsingGETAsync(String lang, final ServiceCallback<TIskoguHLetusDetailid> serviceCallback) {
         return ServiceFuture.fromResponse(getLastVotingUsingGETWithServiceResponseAsync(lang), serviceCallback);
     }
 
@@ -8762,12 +8767,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      *
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PlenaryVotingDetails object
+     * @return the observable to the TIskoguHLetusDetailid object
      */
-    public Observable<PlenaryVotingDetails> getLastVotingUsingGETAsync(String lang) {
-        return getLastVotingUsingGETWithServiceResponseAsync(lang).map(new Func1<ServiceResponse<PlenaryVotingDetails>, PlenaryVotingDetails>() {
+    public Observable<TIskoguHLetusDetailid> getLastVotingUsingGETAsync(String lang) {
+        return getLastVotingUsingGETWithServiceResponseAsync(lang).map(new Func1<ServiceResponse<TIskoguHLetusDetailid>, TIskoguHLetusDetailid>() {
             @Override
-            public PlenaryVotingDetails call(ServiceResponse<PlenaryVotingDetails> response) {
+            public TIskoguHLetusDetailid call(ServiceResponse<TIskoguHLetusDetailid> response) {
                 return response.body();
             }
         });
@@ -8778,15 +8783,15 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      *
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PlenaryVotingDetails object
+     * @return the observable to the TIskoguHLetusDetailid object
      */
-    public Observable<ServiceResponse<PlenaryVotingDetails>> getLastVotingUsingGETWithServiceResponseAsync(String lang) {
+    public Observable<ServiceResponse<TIskoguHLetusDetailid>> getLastVotingUsingGETWithServiceResponseAsync(String lang) {
         return service.getLastVotingUsingGET(lang)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<PlenaryVotingDetails>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<TIskoguHLetusDetailid>>>() {
                 @Override
-                public Observable<ServiceResponse<PlenaryVotingDetails>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<TIskoguHLetusDetailid>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<PlenaryVotingDetails> clientResponse = getLastVotingUsingGETDelegate(response);
+                        ServiceResponse<TIskoguHLetusDetailid> clientResponse = getLastVotingUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -8795,9 +8800,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             });
     }
 
-    private ServiceResponse<PlenaryVotingDetails> getLastVotingUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException {
-        return this.restClient().responseBuilderFactory().<PlenaryVotingDetails, RestException>newInstance(this.serializerAdapter())
-                .register(200, new TypeToken<PlenaryVotingDetails>() { }.getType())
+    private ServiceResponse<TIskoguHLetusDetailid> getLastVotingUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException {
+        return this.restClient().responseBuilderFactory().<TIskoguHLetusDetailid, RestException>newInstance(this.serializerAdapter())
+                .register(200, new TypeToken<TIskoguHLetusDetailid>() { }.getType())
                 .build(response);
     }
 
@@ -8808,9 +8813,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the PagedResourcesOfPlenaryMemberSitting object if successful.
+     * @return the PagedResourcesRiigikoguLiikmeHLetus object if successful.
      */
-    public PagedResourcesOfPlenaryMemberSitting getPlenaryMemberVotingsUsingGET(String uuid) {
+    public PagedResourcesRiigikoguLiikmeHLetus getPlenaryMemberVotingsUsingGET(String uuid) {
         return getPlenaryMemberVotingsUsingGETWithServiceResponseAsync(uuid).toBlocking().single().body();
     }
 
@@ -8822,7 +8827,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<PagedResourcesOfPlenaryMemberSitting> getPlenaryMemberVotingsUsingGETAsync(String uuid, final ServiceCallback<PagedResourcesOfPlenaryMemberSitting> serviceCallback) {
+    public ServiceFuture<PagedResourcesRiigikoguLiikmeHLetus> getPlenaryMemberVotingsUsingGETAsync(String uuid, final ServiceCallback<PagedResourcesRiigikoguLiikmeHLetus> serviceCallback) {
         return ServiceFuture.fromResponse(getPlenaryMemberVotingsUsingGETWithServiceResponseAsync(uuid), serviceCallback);
     }
 
@@ -8831,12 +8836,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      *
      * @param uuid Liikme UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PagedResourcesOfPlenaryMemberSitting object
+     * @return the observable to the PagedResourcesRiigikoguLiikmeHLetus object
      */
-    public Observable<PagedResourcesOfPlenaryMemberSitting> getPlenaryMemberVotingsUsingGETAsync(String uuid) {
-        return getPlenaryMemberVotingsUsingGETWithServiceResponseAsync(uuid).map(new Func1<ServiceResponse<PagedResourcesOfPlenaryMemberSitting>, PagedResourcesOfPlenaryMemberSitting>() {
+    public Observable<PagedResourcesRiigikoguLiikmeHLetus> getPlenaryMemberVotingsUsingGETAsync(String uuid) {
+        return getPlenaryMemberVotingsUsingGETWithServiceResponseAsync(uuid).map(new Func1<ServiceResponse<PagedResourcesRiigikoguLiikmeHLetus>, PagedResourcesRiigikoguLiikmeHLetus>() {
             @Override
-            public PagedResourcesOfPlenaryMemberSitting call(ServiceResponse<PagedResourcesOfPlenaryMemberSitting> response) {
+            public PagedResourcesRiigikoguLiikmeHLetus call(ServiceResponse<PagedResourcesRiigikoguLiikmeHLetus> response) {
                 return response.body();
             }
         });
@@ -8847,9 +8852,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      *
      * @param uuid Liikme UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PagedResourcesOfPlenaryMemberSitting object
+     * @return the observable to the PagedResourcesRiigikoguLiikmeHLetus object
      */
-    public Observable<ServiceResponse<PagedResourcesOfPlenaryMemberSitting>> getPlenaryMemberVotingsUsingGETWithServiceResponseAsync(String uuid) {
+    public Observable<ServiceResponse<PagedResourcesRiigikoguLiikmeHLetus>> getPlenaryMemberVotingsUsingGETWithServiceResponseAsync(String uuid) {
         if (uuid == null) {
             throw new IllegalArgumentException("Parameter uuid is required and cannot be null.");
         }
@@ -8864,11 +8869,11 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
         final LocalDate startDate = null;
         final Boolean unpaged = null;
         return service.getPlenaryMemberVotingsUsingGET(uuid, endDate, lang, offset, pageNumber, pageSize, paged, sortsorted, sortunsorted, startDate, unpaged)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<PagedResourcesOfPlenaryMemberSitting>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<PagedResourcesRiigikoguLiikmeHLetus>>>() {
                 @Override
-                public Observable<ServiceResponse<PagedResourcesOfPlenaryMemberSitting>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<PagedResourcesRiigikoguLiikmeHLetus>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<PagedResourcesOfPlenaryMemberSitting> clientResponse = getPlenaryMemberVotingsUsingGETDelegate(response);
+                        ServiceResponse<PagedResourcesRiigikoguLiikmeHLetus> clientResponse = getPlenaryMemberVotingsUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -8894,9 +8899,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the PagedResourcesOfPlenaryMemberSitting object if successful.
+     * @return the PagedResourcesRiigikoguLiikmeHLetus object if successful.
      */
-    public PagedResourcesOfPlenaryMemberSitting getPlenaryMemberVotingsUsingGET(String uuid, LocalDate endDate, String lang, Long offset, Integer pageNumber, Integer pageSize, Boolean paged, Boolean sortsorted, Boolean sortunsorted, LocalDate startDate, Boolean unpaged) {
+    public PagedResourcesRiigikoguLiikmeHLetus getPlenaryMemberVotingsUsingGET(String uuid, LocalDate endDate, String lang, Long offset, Integer pageNumber, Integer pageSize, Boolean paged, Boolean sortsorted, Boolean sortunsorted, LocalDate startDate, Boolean unpaged) {
         return getPlenaryMemberVotingsUsingGETWithServiceResponseAsync(uuid, endDate, lang, offset, pageNumber, pageSize, paged, sortsorted, sortunsorted, startDate, unpaged).toBlocking().single().body();
     }
 
@@ -8918,7 +8923,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<PagedResourcesOfPlenaryMemberSitting> getPlenaryMemberVotingsUsingGETAsync(String uuid, LocalDate endDate, String lang, Long offset, Integer pageNumber, Integer pageSize, Boolean paged, Boolean sortsorted, Boolean sortunsorted, LocalDate startDate, Boolean unpaged, final ServiceCallback<PagedResourcesOfPlenaryMemberSitting> serviceCallback) {
+    public ServiceFuture<PagedResourcesRiigikoguLiikmeHLetus> getPlenaryMemberVotingsUsingGETAsync(String uuid, LocalDate endDate, String lang, Long offset, Integer pageNumber, Integer pageSize, Boolean paged, Boolean sortsorted, Boolean sortunsorted, LocalDate startDate, Boolean unpaged, final ServiceCallback<PagedResourcesRiigikoguLiikmeHLetus> serviceCallback) {
         return ServiceFuture.fromResponse(getPlenaryMemberVotingsUsingGETWithServiceResponseAsync(uuid, endDate, lang, offset, pageNumber, pageSize, paged, sortsorted, sortunsorted, startDate, unpaged), serviceCallback);
     }
 
@@ -8937,12 +8942,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param startDate Kuupäevavahemiku lõpp (yyyy-MM-dd)
      * @param unpaged the Boolean value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PagedResourcesOfPlenaryMemberSitting object
+     * @return the observable to the PagedResourcesRiigikoguLiikmeHLetus object
      */
-    public Observable<PagedResourcesOfPlenaryMemberSitting> getPlenaryMemberVotingsUsingGETAsync(String uuid, LocalDate endDate, String lang, Long offset, Integer pageNumber, Integer pageSize, Boolean paged, Boolean sortsorted, Boolean sortunsorted, LocalDate startDate, Boolean unpaged) {
-        return getPlenaryMemberVotingsUsingGETWithServiceResponseAsync(uuid, endDate, lang, offset, pageNumber, pageSize, paged, sortsorted, sortunsorted, startDate, unpaged).map(new Func1<ServiceResponse<PagedResourcesOfPlenaryMemberSitting>, PagedResourcesOfPlenaryMemberSitting>() {
+    public Observable<PagedResourcesRiigikoguLiikmeHLetus> getPlenaryMemberVotingsUsingGETAsync(String uuid, LocalDate endDate, String lang, Long offset, Integer pageNumber, Integer pageSize, Boolean paged, Boolean sortsorted, Boolean sortunsorted, LocalDate startDate, Boolean unpaged) {
+        return getPlenaryMemberVotingsUsingGETWithServiceResponseAsync(uuid, endDate, lang, offset, pageNumber, pageSize, paged, sortsorted, sortunsorted, startDate, unpaged).map(new Func1<ServiceResponse<PagedResourcesRiigikoguLiikmeHLetus>, PagedResourcesRiigikoguLiikmeHLetus>() {
             @Override
-            public PagedResourcesOfPlenaryMemberSitting call(ServiceResponse<PagedResourcesOfPlenaryMemberSitting> response) {
+            public PagedResourcesRiigikoguLiikmeHLetus call(ServiceResponse<PagedResourcesRiigikoguLiikmeHLetus> response) {
                 return response.body();
             }
         });
@@ -8963,18 +8968,18 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param startDate Kuupäevavahemiku lõpp (yyyy-MM-dd)
      * @param unpaged the Boolean value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PagedResourcesOfPlenaryMemberSitting object
+     * @return the observable to the PagedResourcesRiigikoguLiikmeHLetus object
      */
-    public Observable<ServiceResponse<PagedResourcesOfPlenaryMemberSitting>> getPlenaryMemberVotingsUsingGETWithServiceResponseAsync(String uuid, LocalDate endDate, String lang, Long offset, Integer pageNumber, Integer pageSize, Boolean paged, Boolean sortsorted, Boolean sortunsorted, LocalDate startDate, Boolean unpaged) {
+    public Observable<ServiceResponse<PagedResourcesRiigikoguLiikmeHLetus>> getPlenaryMemberVotingsUsingGETWithServiceResponseAsync(String uuid, LocalDate endDate, String lang, Long offset, Integer pageNumber, Integer pageSize, Boolean paged, Boolean sortsorted, Boolean sortunsorted, LocalDate startDate, Boolean unpaged) {
         if (uuid == null) {
             throw new IllegalArgumentException("Parameter uuid is required and cannot be null.");
         }
         return service.getPlenaryMemberVotingsUsingGET(uuid, endDate, lang, offset, pageNumber, pageSize, paged, sortsorted, sortunsorted, startDate, unpaged)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<PagedResourcesOfPlenaryMemberSitting>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<PagedResourcesRiigikoguLiikmeHLetus>>>() {
                 @Override
-                public Observable<ServiceResponse<PagedResourcesOfPlenaryMemberSitting>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<PagedResourcesRiigikoguLiikmeHLetus>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<PagedResourcesOfPlenaryMemberSitting> clientResponse = getPlenaryMemberVotingsUsingGETDelegate(response);
+                        ServiceResponse<PagedResourcesRiigikoguLiikmeHLetus> clientResponse = getPlenaryMemberVotingsUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -8983,9 +8988,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             });
     }
 
-    private ServiceResponse<PagedResourcesOfPlenaryMemberSitting> getPlenaryMemberVotingsUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException, IllegalArgumentException {
-        return this.restClient().responseBuilderFactory().<PagedResourcesOfPlenaryMemberSitting, RestException>newInstance(this.serializerAdapter())
-                .register(200, new TypeToken<PagedResourcesOfPlenaryMemberSitting>() { }.getType())
+    private ServiceResponse<PagedResourcesRiigikoguLiikmeHLetus> getPlenaryMemberVotingsUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException, IllegalArgumentException {
+        return this.restClient().responseBuilderFactory().<PagedResourcesRiigikoguLiikmeHLetus, RestException>newInstance(this.serializerAdapter())
+                .register(200, new TypeToken<PagedResourcesRiigikoguLiikmeHLetus>() { }.getType())
                 .build(response);
     }
 
@@ -8996,9 +9001,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the PlenaryVotingDetails object if successful.
+     * @return the TIskoguHLetusDetailid object if successful.
      */
-    public PlenaryVotingDetails getVotingUsingGET(String uuid) {
+    public TIskoguHLetusDetailid getVotingUsingGET(String uuid) {
         return getVotingUsingGETWithServiceResponseAsync(uuid).toBlocking().single().body();
     }
 
@@ -9010,7 +9015,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<PlenaryVotingDetails> getVotingUsingGETAsync(String uuid, final ServiceCallback<PlenaryVotingDetails> serviceCallback) {
+    public ServiceFuture<TIskoguHLetusDetailid> getVotingUsingGETAsync(String uuid, final ServiceCallback<TIskoguHLetusDetailid> serviceCallback) {
         return ServiceFuture.fromResponse(getVotingUsingGETWithServiceResponseAsync(uuid), serviceCallback);
     }
 
@@ -9019,12 +9024,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      *
      * @param uuid Hääletuse UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PlenaryVotingDetails object
+     * @return the observable to the TIskoguHLetusDetailid object
      */
-    public Observable<PlenaryVotingDetails> getVotingUsingGETAsync(String uuid) {
-        return getVotingUsingGETWithServiceResponseAsync(uuid).map(new Func1<ServiceResponse<PlenaryVotingDetails>, PlenaryVotingDetails>() {
+    public Observable<TIskoguHLetusDetailid> getVotingUsingGETAsync(String uuid) {
+        return getVotingUsingGETWithServiceResponseAsync(uuid).map(new Func1<ServiceResponse<TIskoguHLetusDetailid>, TIskoguHLetusDetailid>() {
             @Override
-            public PlenaryVotingDetails call(ServiceResponse<PlenaryVotingDetails> response) {
+            public TIskoguHLetusDetailid call(ServiceResponse<TIskoguHLetusDetailid> response) {
                 return response.body();
             }
         });
@@ -9035,19 +9040,19 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      *
      * @param uuid Hääletuse UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PlenaryVotingDetails object
+     * @return the observable to the TIskoguHLetusDetailid object
      */
-    public Observable<ServiceResponse<PlenaryVotingDetails>> getVotingUsingGETWithServiceResponseAsync(String uuid) {
+    public Observable<ServiceResponse<TIskoguHLetusDetailid>> getVotingUsingGETWithServiceResponseAsync(String uuid) {
         if (uuid == null) {
             throw new IllegalArgumentException("Parameter uuid is required and cannot be null.");
         }
         final String lang = null;
         return service.getVotingUsingGET(uuid, lang)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<PlenaryVotingDetails>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<TIskoguHLetusDetailid>>>() {
                 @Override
-                public Observable<ServiceResponse<PlenaryVotingDetails>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<TIskoguHLetusDetailid>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<PlenaryVotingDetails> clientResponse = getVotingUsingGETDelegate(response);
+                        ServiceResponse<TIskoguHLetusDetailid> clientResponse = getVotingUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -9064,9 +9069,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the PlenaryVotingDetails object if successful.
+     * @return the TIskoguHLetusDetailid object if successful.
      */
-    public PlenaryVotingDetails getVotingUsingGET(String uuid, String lang) {
+    public TIskoguHLetusDetailid getVotingUsingGET(String uuid, String lang) {
         return getVotingUsingGETWithServiceResponseAsync(uuid, lang).toBlocking().single().body();
     }
 
@@ -9079,7 +9084,7 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    public ServiceFuture<PlenaryVotingDetails> getVotingUsingGETAsync(String uuid, String lang, final ServiceCallback<PlenaryVotingDetails> serviceCallback) {
+    public ServiceFuture<TIskoguHLetusDetailid> getVotingUsingGETAsync(String uuid, String lang, final ServiceCallback<TIskoguHLetusDetailid> serviceCallback) {
         return ServiceFuture.fromResponse(getVotingUsingGETWithServiceResponseAsync(uuid, lang), serviceCallback);
     }
 
@@ -9089,12 +9094,12 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param uuid Hääletuse UUID
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PlenaryVotingDetails object
+     * @return the observable to the TIskoguHLetusDetailid object
      */
-    public Observable<PlenaryVotingDetails> getVotingUsingGETAsync(String uuid, String lang) {
-        return getVotingUsingGETWithServiceResponseAsync(uuid, lang).map(new Func1<ServiceResponse<PlenaryVotingDetails>, PlenaryVotingDetails>() {
+    public Observable<TIskoguHLetusDetailid> getVotingUsingGETAsync(String uuid, String lang) {
+        return getVotingUsingGETWithServiceResponseAsync(uuid, lang).map(new Func1<ServiceResponse<TIskoguHLetusDetailid>, TIskoguHLetusDetailid>() {
             @Override
-            public PlenaryVotingDetails call(ServiceResponse<PlenaryVotingDetails> response) {
+            public TIskoguHLetusDetailid call(ServiceResponse<TIskoguHLetusDetailid> response) {
                 return response.body();
             }
         });
@@ -9106,18 +9111,18 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
      * @param uuid Hääletuse UUID
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PlenaryVotingDetails object
+     * @return the observable to the TIskoguHLetusDetailid object
      */
-    public Observable<ServiceResponse<PlenaryVotingDetails>> getVotingUsingGETWithServiceResponseAsync(String uuid, String lang) {
+    public Observable<ServiceResponse<TIskoguHLetusDetailid>> getVotingUsingGETWithServiceResponseAsync(String uuid, String lang) {
         if (uuid == null) {
             throw new IllegalArgumentException("Parameter uuid is required and cannot be null.");
         }
         return service.getVotingUsingGET(uuid, lang)
-            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<PlenaryVotingDetails>>>() {
+            .flatMap(new Func1<Response<ResponseBody>, Observable<ServiceResponse<TIskoguHLetusDetailid>>>() {
                 @Override
-                public Observable<ServiceResponse<PlenaryVotingDetails>> call(Response<ResponseBody> response) {
+                public Observable<ServiceResponse<TIskoguHLetusDetailid>> call(Response<ResponseBody> response) {
                     try {
-                        ServiceResponse<PlenaryVotingDetails> clientResponse = getVotingUsingGETDelegate(response);
+                        ServiceResponse<TIskoguHLetusDetailid> clientResponse = getVotingUsingGETDelegate(response);
                         return Observable.just(clientResponse);
                     } catch (Throwable t) {
                         return Observable.error(t);
@@ -9126,9 +9131,9 @@ public class EMSAPIdokumentatsioonImpl extends ServiceClient implements EMSAPIdo
             });
     }
 
-    private ServiceResponse<PlenaryVotingDetails> getVotingUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException, IllegalArgumentException {
-        return this.restClient().responseBuilderFactory().<PlenaryVotingDetails, RestException>newInstance(this.serializerAdapter())
-                .register(200, new TypeToken<PlenaryVotingDetails>() { }.getType())
+    private ServiceResponse<TIskoguHLetusDetailid> getVotingUsingGETDelegate(Response<ResponseBody> response) throws RestException, IOException, IllegalArgumentException {
+        return this.restClient().responseBuilderFactory().<TIskoguHLetusDetailid, RestException>newInstance(this.serializerAdapter())
+                .register(200, new TypeToken<TIskoguHLetusDetailid>() { }.getType())
                 .build(response);
     }
 

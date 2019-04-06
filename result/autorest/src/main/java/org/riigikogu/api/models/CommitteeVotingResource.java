@@ -29,13 +29,13 @@ public class CommitteeVotingResource {
      * Kasutaja.
      */
     @JsonProperty(value = "user")
-    private User user;
+    private Kasutaja user;
 
     /**
      * Asendusliige.
      */
     @JsonProperty(value = "substitutee")
-    private User substitutee;
+    private Kasutaja substitutee;
 
     /**
      * Otsus.
@@ -88,7 +88,7 @@ public class CommitteeVotingResource {
      *
      * @return the user value
      */
-    public User user() {
+    public Kasutaja user() {
         return this.user;
     }
 
@@ -98,7 +98,7 @@ public class CommitteeVotingResource {
      * @param user the user value to set
      * @return the CommitteeVotingResource object itself.
      */
-    public CommitteeVotingResource withUser(User user) {
+    public CommitteeVotingResource withUser(Kasutaja user) {
         this.user = user;
         return this;
     }
@@ -108,7 +108,7 @@ public class CommitteeVotingResource {
      *
      * @return the substitutee value
      */
-    public User substitutee() {
+    public Kasutaja substitutee() {
         return this.substitutee;
     }
 
@@ -118,7 +118,7 @@ public class CommitteeVotingResource {
      * @param substitutee the substitutee value to set
      * @return the CommitteeVotingResource object itself.
      */
-    public CommitteeVotingResource withSubstitutee(User substitutee) {
+    public CommitteeVotingResource withSubstitutee(Kasutaja substitutee) {
         this.substitutee = substitutee;
         return this;
     }

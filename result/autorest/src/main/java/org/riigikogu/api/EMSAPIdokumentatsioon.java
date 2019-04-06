@@ -13,49 +13,49 @@ import com.microsoft.rest.ServiceResponse;
 import java.io.IOException;
 import java.util.List;
 import org.joda.time.LocalDate;
-import org.riigikogu.api.models.Agenda;
-import org.riigikogu.api.models.AgendaStenoUrl;
-import org.riigikogu.api.models.Classifier;
-import org.riigikogu.api.models.ClassifierValueDetails;
-import org.riigikogu.api.models.CollectiveAddress;
-import org.riigikogu.api.models.CommitteeSitting;
-import org.riigikogu.api.models.Contacts;
-import org.riigikogu.api.models.Document;
-import org.riigikogu.api.models.DocumentTree;
-import org.riigikogu.api.models.DocumentTypes;
-import org.riigikogu.api.models.DraftInitiators;
-import org.riigikogu.api.models.DraftVolume;
-import org.riigikogu.api.models.ErjkProtocol;
-import org.riigikogu.api.models.EventCalendar;
-import org.riigikogu.api.models.Events;
-import org.riigikogu.api.models.FactionSpeech;
-import org.riigikogu.api.models.FileMetadata;
-import org.riigikogu.api.models.Hallplan;
-import org.riigikogu.api.models.LastStenoSpeech;
-import org.riigikogu.api.models.MemberParticipation;
-import org.riigikogu.api.models.Membership;
-import org.riigikogu.api.models.PagedResourcesOfDocument;
-import org.riigikogu.api.models.PagedResourcesOfDraftVolumes;
-import org.riigikogu.api.models.PagedResourcesOfEuropeanUnionDocument;
-import org.riigikogu.api.models.PagedResourcesOfInterpellations;
-import org.riigikogu.api.models.PagedResourcesOfOtherQuestions;
-import org.riigikogu.api.models.PagedResourcesOfPlenaryMemberSitting;
-import org.riigikogu.api.models.PagedResourcesOfVolumes;
-import org.riigikogu.api.models.PagedResourcesOfWrittenQuestions;
-import org.riigikogu.api.models.PlenaryMember;
-import org.riigikogu.api.models.PlenaryMemberDetails;
-import org.riigikogu.api.models.PlenaryMemberVoting;
-import org.riigikogu.api.models.PlenarySittingVoting;
-import org.riigikogu.api.models.PlenaryVotingDetails;
-import org.riigikogu.api.models.Session;
-import org.riigikogu.api.models.StenoSpeeches;
-import org.riigikogu.api.models.StenoSpeechesCount;
-import org.riigikogu.api.models.UnitAgenda;
-import org.riigikogu.api.models.UserDetails;
-import org.riigikogu.api.models.UserGroup;
-import org.riigikogu.api.models.Volume;
-import org.riigikogu.api.models.VolumeTypes;
-import org.riigikogu.api.models.VotingCalendar;
+import org.riigikogu.api.models._ksusePEvakord;
+import org.riigikogu.api.models.DokumenditP;
+import org.riigikogu.api.models.Dokument;
+import org.riigikogu.api.models.EelnUAlgataja;
+import org.riigikogu.api.models.EelnUToimikBaas;
+import org.riigikogu.api.models.Fail;
+import org.riigikogu.api.models.FunktsiooniGrupp;
+import org.riigikogu.api.models.HLetuspEv;
+import org.riigikogu.api.models.IstungjRk;
+import org.riigikogu.api.models.KasutajaDetailidKontaktid;
+import org.riigikogu.api.models.Kasutajagrupp;
+import org.riigikogu.api.models.KasutajagruppKontaktid;
+import org.riigikogu.api.models.Klassifikaator;
+import org.riigikogu.api.models.KlassifikaatoriVRtusDetailid;
+import org.riigikogu.api.models.KollektiivnePRdumineDokument;
+import org.riigikogu.api.models.KomisjoniIstung;
+import org.riigikogu.api.models.Koosseis;
+import org.riigikogu.api.models.PagedResourcesDokument;
+import org.riigikogu.api.models.PagedResourcesDokumentMuuKSimus;
+import org.riigikogu.api.models.PagedResourcesEelnUOtsing;
+import org.riigikogu.api.models.PagedResourcesELToimikOtsing;
+import org.riigikogu.api.models.PagedResourcesRiigikoguLiikmeHLetus;
+import org.riigikogu.api.models.PagedResourcesToimikArupRimine;
+import org.riigikogu.api.models.PagedResourcesToimikKirjalikKSimus;
+import org.riigikogu.api.models.PagedResourcesToimikOtsing;
+import org.riigikogu.api.models.PEvakord;
+import org.riigikogu.api.models.PEvasNdmused;
+import org.riigikogu.api.models.PEvSNdmused;
+import org.riigikogu.api.models.RiigikoguLiige;
+import org.riigikogu.api.models.RiigikoguLiigeHLetused;
+import org.riigikogu.api.models.RiigikoguLiigeOsavTt;
+import org.riigikogu.api.models.RiigikoguLiigeSNavTud;
+import org.riigikogu.api.models.RiigikoguLiikmeDetailid;
+import org.riigikogu.api.models.SaaliplaaniKoht;
+import org.riigikogu.api.models.StenoPEvakorrapunkt;
+import org.riigikogu.api.models.StenoSNavTtudeArv;
+import org.riigikogu.api.models.StenoSNavTud;
+import org.riigikogu.api.models.StenoViimaneSNavTt;
+import org.riigikogu.api.models.TIskoguHLetusDetailid;
+import org.riigikogu.api.models.TIskoguIstungHLetus;
+import org.riigikogu.api.models.Toimik;
+import org.riigikogu.api.models.ToimikERJK;
+import org.riigikogu.api.models.ToimikuTP;
 import rx.Observable;
 import com.microsoft.rest.RestClient;
 
@@ -82,9 +82,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Agenda object if successful.
+     * @return the PEvakord object if successful.
      */
-    Agenda getPlenaryAgendaUsingGET();
+    PEvakord getPlenaryAgendaUsingGET();
 
     /**
      * Täiskogu päevakord.
@@ -94,25 +94,25 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<Agenda> getPlenaryAgendaUsingGETAsync(final ServiceCallback<Agenda> serviceCallback);
+    ServiceFuture<PEvakord> getPlenaryAgendaUsingGETAsync(final ServiceCallback<PEvakord> serviceCallback);
 
     /**
      * Täiskogu päevakord.
      * Päevakorda saab küsida ühe nädala või suvalise ajavahemiku kohta, täites vastavalt 'date' või 'startDate/endDate' parameetrid.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the Agenda object
+     * @return the observable to the PEvakord object
      */
-    Observable<Agenda> getPlenaryAgendaUsingGETAsync();
+    Observable<PEvakord> getPlenaryAgendaUsingGETAsync();
 
     /**
      * Täiskogu päevakord.
      * Päevakorda saab küsida ühe nädala või suvalise ajavahemiku kohta, täites vastavalt 'date' või 'startDate/endDate' parameetrid.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the Agenda object
+     * @return the observable to the PEvakord object
      */
-    Observable<ServiceResponse<Agenda>> getPlenaryAgendaUsingGETWithServiceResponseAsync();
+    Observable<ServiceResponse<PEvakord>> getPlenaryAgendaUsingGETWithServiceResponseAsync();
     /**
      * Täiskogu päevakord.
      * Päevakorda saab küsida ühe nädala või suvalise ajavahemiku kohta, täites vastavalt 'date' või 'startDate/endDate' parameetrid.
@@ -125,9 +125,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Agenda object if successful.
+     * @return the PEvakord object if successful.
      */
-    Agenda getPlenaryAgendaUsingGET(LocalDate dateParameter, LocalDate endDate, String lang, Boolean querySteno, LocalDate startDate);
+    PEvakord getPlenaryAgendaUsingGET(LocalDate dateParameter, LocalDate endDate, String lang, Boolean querySteno, LocalDate startDate);
 
     /**
      * Täiskogu päevakord.
@@ -142,21 +142,7 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<Agenda> getPlenaryAgendaUsingGETAsync(LocalDate dateParameter, LocalDate endDate, String lang, Boolean querySteno, LocalDate startDate, final ServiceCallback<Agenda> serviceCallback);
-
-    /**
-     * Täiskogu päevakord.
-     * Päevakorda saab küsida ühe nädala või suvalise ajavahemiku kohta, täites vastavalt 'date' või 'startDate/endDate' parameetrid.
-     *
-     * @param dateParameter Kuupäev nädalas, mille päevakorda soovitakse
-     * @param endDate Kuupäevavahemiku lõpp (yyyy-MM-dd)
-     * @param lang Keel. Possible values include: 'et', 'ru', 'en'
-     * @param querySteno Küsi Stenoteksti teenusest päevakorra lingid? (true/false)
-     * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
-     * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the Agenda object
-     */
-    Observable<Agenda> getPlenaryAgendaUsingGETAsync(LocalDate dateParameter, LocalDate endDate, String lang, Boolean querySteno, LocalDate startDate);
+    ServiceFuture<PEvakord> getPlenaryAgendaUsingGETAsync(LocalDate dateParameter, LocalDate endDate, String lang, Boolean querySteno, LocalDate startDate, final ServiceCallback<PEvakord> serviceCallback);
 
     /**
      * Täiskogu päevakord.
@@ -168,9 +154,23 @@ public interface EMSAPIdokumentatsioon {
      * @param querySteno Küsi Stenoteksti teenusest päevakorra lingid? (true/false)
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the Agenda object
+     * @return the observable to the PEvakord object
      */
-    Observable<ServiceResponse<Agenda>> getPlenaryAgendaUsingGETWithServiceResponseAsync(LocalDate dateParameter, LocalDate endDate, String lang, Boolean querySteno, LocalDate startDate);
+    Observable<PEvakord> getPlenaryAgendaUsingGETAsync(LocalDate dateParameter, LocalDate endDate, String lang, Boolean querySteno, LocalDate startDate);
+
+    /**
+     * Täiskogu päevakord.
+     * Päevakorda saab küsida ühe nädala või suvalise ajavahemiku kohta, täites vastavalt 'date' või 'startDate/endDate' parameetrid.
+     *
+     * @param dateParameter Kuupäev nädalas, mille päevakorda soovitakse
+     * @param endDate Kuupäevavahemiku lõpp (yyyy-MM-dd)
+     * @param lang Keel. Possible values include: 'et', 'ru', 'en'
+     * @param querySteno Küsi Stenoteksti teenusest päevakorra lingid? (true/false)
+     * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
+     * @throws IllegalArgumentException thrown if parameters fail the validation
+     * @return the observable to the PEvakord object
+     */
+    Observable<ServiceResponse<PEvakord>> getPlenaryAgendaUsingGETWithServiceResponseAsync(LocalDate dateParameter, LocalDate endDate, String lang, Boolean querySteno, LocalDate startDate);
 
     /**
      * Üksuse päevakord.
@@ -180,9 +180,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the UnitAgenda object if successful.
+     * @return the _ksusePEvakord object if successful.
      */
-    UnitAgenda getUnitAgendaUsingGET(String uuid);
+    _ksusePEvakord getUnitAgendaUsingGET(String uuid);
 
     /**
      * Üksuse päevakord.
@@ -193,7 +193,7 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<UnitAgenda> getUnitAgendaUsingGETAsync(String uuid, final ServiceCallback<UnitAgenda> serviceCallback);
+    ServiceFuture<_ksusePEvakord> getUnitAgendaUsingGETAsync(String uuid, final ServiceCallback<_ksusePEvakord> serviceCallback);
 
     /**
      * Üksuse päevakord.
@@ -201,9 +201,9 @@ public interface EMSAPIdokumentatsioon {
      *
      * @param uuid Kasutajagrupi UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the UnitAgenda object
+     * @return the observable to the _ksusePEvakord object
      */
-    Observable<UnitAgenda> getUnitAgendaUsingGETAsync(String uuid);
+    Observable<_ksusePEvakord> getUnitAgendaUsingGETAsync(String uuid);
 
     /**
      * Üksuse päevakord.
@@ -211,9 +211,9 @@ public interface EMSAPIdokumentatsioon {
      *
      * @param uuid Kasutajagrupi UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the UnitAgenda object
+     * @return the observable to the _ksusePEvakord object
      */
-    Observable<ServiceResponse<UnitAgenda>> getUnitAgendaUsingGETWithServiceResponseAsync(String uuid);
+    Observable<ServiceResponse<_ksusePEvakord>> getUnitAgendaUsingGETWithServiceResponseAsync(String uuid);
     /**
      * Üksuse päevakord.
      * Päevakorda saab küsida ühe nädala või suvalise ajavahemiku kohta, täites vastavalt 'date' või 'startDate/endDate' parameetrid.
@@ -226,9 +226,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the UnitAgenda object if successful.
+     * @return the _ksusePEvakord object if successful.
      */
-    UnitAgenda getUnitAgendaUsingGET(String uuid, LocalDate dateParameter, LocalDate endDate, String lang, LocalDate startDate);
+    _ksusePEvakord getUnitAgendaUsingGET(String uuid, LocalDate dateParameter, LocalDate endDate, String lang, LocalDate startDate);
 
     /**
      * Üksuse päevakord.
@@ -243,7 +243,7 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<UnitAgenda> getUnitAgendaUsingGETAsync(String uuid, LocalDate dateParameter, LocalDate endDate, String lang, LocalDate startDate, final ServiceCallback<UnitAgenda> serviceCallback);
+    ServiceFuture<_ksusePEvakord> getUnitAgendaUsingGETAsync(String uuid, LocalDate dateParameter, LocalDate endDate, String lang, LocalDate startDate, final ServiceCallback<_ksusePEvakord> serviceCallback);
 
     /**
      * Üksuse päevakord.
@@ -255,9 +255,9 @@ public interface EMSAPIdokumentatsioon {
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the UnitAgenda object
+     * @return the observable to the _ksusePEvakord object
      */
-    Observable<UnitAgenda> getUnitAgendaUsingGETAsync(String uuid, LocalDate dateParameter, LocalDate endDate, String lang, LocalDate startDate);
+    Observable<_ksusePEvakord> getUnitAgendaUsingGETAsync(String uuid, LocalDate dateParameter, LocalDate endDate, String lang, LocalDate startDate);
 
     /**
      * Üksuse päevakord.
@@ -269,9 +269,9 @@ public interface EMSAPIdokumentatsioon {
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the UnitAgenda object
+     * @return the observable to the _ksusePEvakord object
      */
-    Observable<ServiceResponse<UnitAgenda>> getUnitAgendaUsingGETWithServiceResponseAsync(String uuid, LocalDate dateParameter, LocalDate endDate, String lang, LocalDate startDate);
+    Observable<ServiceResponse<_ksusePEvakord>> getUnitAgendaUsingGETWithServiceResponseAsync(String uuid, LocalDate dateParameter, LocalDate endDate, String lang, LocalDate startDate);
 
     /**
      * Klassifikaatorid.
@@ -279,9 +279,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;Classifier&gt; object if successful.
+     * @return the List&lt;Klassifikaator&gt; object if successful.
      */
-    List<Classifier> getClassifiersUsingGET();
+    List<Klassifikaator> getClassifiersUsingGET();
 
     /**
      * Klassifikaatorid.
@@ -290,23 +290,23 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<List<Classifier>> getClassifiersUsingGETAsync(final ServiceCallback<List<Classifier>> serviceCallback);
+    ServiceFuture<List<Klassifikaator>> getClassifiersUsingGETAsync(final ServiceCallback<List<Klassifikaator>> serviceCallback);
 
     /**
      * Klassifikaatorid.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;Classifier&gt; object
+     * @return the observable to the List&lt;Klassifikaator&gt; object
      */
-    Observable<List<Classifier>> getClassifiersUsingGETAsync();
+    Observable<List<Klassifikaator>> getClassifiersUsingGETAsync();
 
     /**
      * Klassifikaatorid.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;Classifier&gt; object
+     * @return the observable to the List&lt;Klassifikaator&gt; object
      */
-    Observable<ServiceResponse<List<Classifier>>> getClassifiersUsingGETWithServiceResponseAsync();
+    Observable<ServiceResponse<List<Klassifikaator>>> getClassifiersUsingGETWithServiceResponseAsync();
 
     /**
      * Klassifikaatori väärtus.
@@ -316,9 +316,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the ClassifierValueDetails object if successful.
+     * @return the KlassifikaatoriVRtusDetailid object if successful.
      */
-    ClassifierValueDetails getClassifierValueUsingGET(String classifierCode, String valueCode);
+    KlassifikaatoriVRtusDetailid getClassifierValueUsingGET(String classifierCode, String valueCode);
 
     /**
      * Klassifikaatori väärtus.
@@ -329,7 +329,7 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<ClassifierValueDetails> getClassifierValueUsingGETAsync(String classifierCode, String valueCode, final ServiceCallback<ClassifierValueDetails> serviceCallback);
+    ServiceFuture<KlassifikaatoriVRtusDetailid> getClassifierValueUsingGETAsync(String classifierCode, String valueCode, final ServiceCallback<KlassifikaatoriVRtusDetailid> serviceCallback);
 
     /**
      * Klassifikaatori väärtus.
@@ -337,9 +337,9 @@ public interface EMSAPIdokumentatsioon {
      * @param classifierCode Klassifikaatori kood
      * @param valueCode Väärtuse kood
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the ClassifierValueDetails object
+     * @return the observable to the KlassifikaatoriVRtusDetailid object
      */
-    Observable<ClassifierValueDetails> getClassifierValueUsingGETAsync(String classifierCode, String valueCode);
+    Observable<KlassifikaatoriVRtusDetailid> getClassifierValueUsingGETAsync(String classifierCode, String valueCode);
 
     /**
      * Klassifikaatori väärtus.
@@ -347,9 +347,9 @@ public interface EMSAPIdokumentatsioon {
      * @param classifierCode Klassifikaatori kood
      * @param valueCode Väärtuse kood
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the ClassifierValueDetails object
+     * @return the observable to the KlassifikaatoriVRtusDetailid object
      */
-    Observable<ServiceResponse<ClassifierValueDetails>> getClassifierValueUsingGETWithServiceResponseAsync(String classifierCode, String valueCode);
+    Observable<ServiceResponse<KlassifikaatoriVRtusDetailid>> getClassifierValueUsingGETWithServiceResponseAsync(String classifierCode, String valueCode);
     /**
      * Klassifikaatori väärtus.
      *
@@ -359,9 +359,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the ClassifierValueDetails object if successful.
+     * @return the KlassifikaatoriVRtusDetailid object if successful.
      */
-    ClassifierValueDetails getClassifierValueUsingGET(String classifierCode, String valueCode, String lang);
+    KlassifikaatoriVRtusDetailid getClassifierValueUsingGET(String classifierCode, String valueCode, String lang);
 
     /**
      * Klassifikaatori väärtus.
@@ -373,7 +373,7 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<ClassifierValueDetails> getClassifierValueUsingGETAsync(String classifierCode, String valueCode, String lang, final ServiceCallback<ClassifierValueDetails> serviceCallback);
+    ServiceFuture<KlassifikaatoriVRtusDetailid> getClassifierValueUsingGETAsync(String classifierCode, String valueCode, String lang, final ServiceCallback<KlassifikaatoriVRtusDetailid> serviceCallback);
 
     /**
      * Klassifikaatori väärtus.
@@ -382,9 +382,9 @@ public interface EMSAPIdokumentatsioon {
      * @param valueCode Väärtuse kood
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the ClassifierValueDetails object
+     * @return the observable to the KlassifikaatoriVRtusDetailid object
      */
-    Observable<ClassifierValueDetails> getClassifierValueUsingGETAsync(String classifierCode, String valueCode, String lang);
+    Observable<KlassifikaatoriVRtusDetailid> getClassifierValueUsingGETAsync(String classifierCode, String valueCode, String lang);
 
     /**
      * Klassifikaatori väärtus.
@@ -393,9 +393,9 @@ public interface EMSAPIdokumentatsioon {
      * @param valueCode Väärtuse kood
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the ClassifierValueDetails object
+     * @return the observable to the KlassifikaatoriVRtusDetailid object
      */
-    Observable<ServiceResponse<ClassifierValueDetails>> getClassifierValueUsingGETWithServiceResponseAsync(String classifierCode, String valueCode, String lang);
+    Observable<ServiceResponse<KlassifikaatoriVRtusDetailid>> getClassifierValueUsingGETWithServiceResponseAsync(String classifierCode, String valueCode, String lang);
 
     /**
      * Klassifikaatori väärtused.
@@ -404,9 +404,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;ClassifierValueDetails&gt; object if successful.
+     * @return the List&lt;KlassifikaatoriVRtusDetailid&gt; object if successful.
      */
-    List<ClassifierValueDetails> getClassifierValuesUsingGET(String code);
+    List<KlassifikaatoriVRtusDetailid> getClassifierValuesUsingGET(String code);
 
     /**
      * Klassifikaatori väärtused.
@@ -416,25 +416,25 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<List<ClassifierValueDetails>> getClassifierValuesUsingGETAsync(String code, final ServiceCallback<List<ClassifierValueDetails>> serviceCallback);
+    ServiceFuture<List<KlassifikaatoriVRtusDetailid>> getClassifierValuesUsingGETAsync(String code, final ServiceCallback<List<KlassifikaatoriVRtusDetailid>> serviceCallback);
 
     /**
      * Klassifikaatori väärtused.
      *
      * @param code Klassifikaatori kood
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;ClassifierValueDetails&gt; object
+     * @return the observable to the List&lt;KlassifikaatoriVRtusDetailid&gt; object
      */
-    Observable<List<ClassifierValueDetails>> getClassifierValuesUsingGETAsync(String code);
+    Observable<List<KlassifikaatoriVRtusDetailid>> getClassifierValuesUsingGETAsync(String code);
 
     /**
      * Klassifikaatori väärtused.
      *
      * @param code Klassifikaatori kood
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;ClassifierValueDetails&gt; object
+     * @return the observable to the List&lt;KlassifikaatoriVRtusDetailid&gt; object
      */
-    Observable<ServiceResponse<List<ClassifierValueDetails>>> getClassifierValuesUsingGETWithServiceResponseAsync(String code);
+    Observable<ServiceResponse<List<KlassifikaatoriVRtusDetailid>>> getClassifierValuesUsingGETWithServiceResponseAsync(String code);
     /**
      * Klassifikaatori väärtused.
      *
@@ -444,9 +444,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;ClassifierValueDetails&gt; object if successful.
+     * @return the List&lt;KlassifikaatoriVRtusDetailid&gt; object if successful.
      */
-    List<ClassifierValueDetails> getClassifierValuesUsingGET(String code, Boolean includeInactive, String lang);
+    List<KlassifikaatoriVRtusDetailid> getClassifierValuesUsingGET(String code, Boolean includeInactive, String lang);
 
     /**
      * Klassifikaatori väärtused.
@@ -458,7 +458,7 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<List<ClassifierValueDetails>> getClassifierValuesUsingGETAsync(String code, Boolean includeInactive, String lang, final ServiceCallback<List<ClassifierValueDetails>> serviceCallback);
+    ServiceFuture<List<KlassifikaatoriVRtusDetailid>> getClassifierValuesUsingGETAsync(String code, Boolean includeInactive, String lang, final ServiceCallback<List<KlassifikaatoriVRtusDetailid>> serviceCallback);
 
     /**
      * Klassifikaatori väärtused.
@@ -467,9 +467,9 @@ public interface EMSAPIdokumentatsioon {
      * @param includeInactive Kaasa mitteaktiivsed väärtused? (true/false)
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;ClassifierValueDetails&gt; object
+     * @return the observable to the List&lt;KlassifikaatoriVRtusDetailid&gt; object
      */
-    Observable<List<ClassifierValueDetails>> getClassifierValuesUsingGETAsync(String code, Boolean includeInactive, String lang);
+    Observable<List<KlassifikaatoriVRtusDetailid>> getClassifierValuesUsingGETAsync(String code, Boolean includeInactive, String lang);
 
     /**
      * Klassifikaatori väärtused.
@@ -478,9 +478,9 @@ public interface EMSAPIdokumentatsioon {
      * @param includeInactive Kaasa mitteaktiivsed väärtused? (true/false)
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;ClassifierValueDetails&gt; object
+     * @return the observable to the List&lt;KlassifikaatoriVRtusDetailid&gt; object
      */
-    Observable<ServiceResponse<List<ClassifierValueDetails>>> getClassifierValuesUsingGETWithServiceResponseAsync(String code, Boolean includeInactive, String lang);
+    Observable<ServiceResponse<List<KlassifikaatoriVRtusDetailid>>> getClassifierValuesUsingGETWithServiceResponseAsync(String code, Boolean includeInactive, String lang);
 
     /**
      * Kontaktide nimekiri.
@@ -488,9 +488,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;Contacts&gt; object if successful.
+     * @return the List&lt;KasutajagruppKontaktid&gt; object if successful.
      */
-    List<Contacts> getContactsUsingGET();
+    List<KasutajagruppKontaktid> getContactsUsingGET();
 
     /**
      * Kontaktide nimekiri.
@@ -499,23 +499,23 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<List<Contacts>> getContactsUsingGETAsync(final ServiceCallback<List<Contacts>> serviceCallback);
+    ServiceFuture<List<KasutajagruppKontaktid>> getContactsUsingGETAsync(final ServiceCallback<List<KasutajagruppKontaktid>> serviceCallback);
 
     /**
      * Kontaktide nimekiri.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;Contacts&gt; object
+     * @return the observable to the List&lt;KasutajagruppKontaktid&gt; object
      */
-    Observable<List<Contacts>> getContactsUsingGETAsync();
+    Observable<List<KasutajagruppKontaktid>> getContactsUsingGETAsync();
 
     /**
      * Kontaktide nimekiri.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;Contacts&gt; object
+     * @return the observable to the List&lt;KasutajagruppKontaktid&gt; object
      */
-    Observable<ServiceResponse<List<Contacts>>> getContactsUsingGETWithServiceResponseAsync();
+    Observable<ServiceResponse<List<KasutajagruppKontaktid>>> getContactsUsingGETWithServiceResponseAsync();
     /**
      * Kontaktide nimekiri.
      *
@@ -523,9 +523,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;Contacts&gt; object if successful.
+     * @return the List&lt;KasutajagruppKontaktid&gt; object if successful.
      */
-    List<Contacts> getContactsUsingGET(String lang);
+    List<KasutajagruppKontaktid> getContactsUsingGET(String lang);
 
     /**
      * Kontaktide nimekiri.
@@ -535,25 +535,25 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<List<Contacts>> getContactsUsingGETAsync(String lang, final ServiceCallback<List<Contacts>> serviceCallback);
+    ServiceFuture<List<KasutajagruppKontaktid>> getContactsUsingGETAsync(String lang, final ServiceCallback<List<KasutajagruppKontaktid>> serviceCallback);
 
     /**
      * Kontaktide nimekiri.
      *
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;Contacts&gt; object
+     * @return the observable to the List&lt;KasutajagruppKontaktid&gt; object
      */
-    Observable<List<Contacts>> getContactsUsingGETAsync(String lang);
+    Observable<List<KasutajagruppKontaktid>> getContactsUsingGETAsync(String lang);
 
     /**
      * Kontaktide nimekiri.
      *
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;Contacts&gt; object
+     * @return the observable to the List&lt;KasutajagruppKontaktid&gt; object
      */
-    Observable<ServiceResponse<List<Contacts>>> getContactsUsingGETWithServiceResponseAsync(String lang);
+    Observable<ServiceResponse<List<KasutajagruppKontaktid>>> getContactsUsingGETWithServiceResponseAsync(String lang);
 
     /**
      * Detailid.
@@ -562,9 +562,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the UserDetails object if successful.
+     * @return the KasutajaDetailidKontaktid object if successful.
      */
-    UserDetails getUserDetailsUsingGET(String uuid);
+    KasutajaDetailidKontaktid getUserDetailsUsingGET(String uuid);
 
     /**
      * Detailid.
@@ -574,25 +574,25 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<UserDetails> getUserDetailsUsingGETAsync(String uuid, final ServiceCallback<UserDetails> serviceCallback);
+    ServiceFuture<KasutajaDetailidKontaktid> getUserDetailsUsingGETAsync(String uuid, final ServiceCallback<KasutajaDetailidKontaktid> serviceCallback);
 
     /**
      * Detailid.
      *
      * @param uuid Kasutaja UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the UserDetails object
+     * @return the observable to the KasutajaDetailidKontaktid object
      */
-    Observable<UserDetails> getUserDetailsUsingGETAsync(String uuid);
+    Observable<KasutajaDetailidKontaktid> getUserDetailsUsingGETAsync(String uuid);
 
     /**
      * Detailid.
      *
      * @param uuid Kasutaja UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the UserDetails object
+     * @return the observable to the KasutajaDetailidKontaktid object
      */
-    Observable<ServiceResponse<UserDetails>> getUserDetailsUsingGETWithServiceResponseAsync(String uuid);
+    Observable<ServiceResponse<KasutajaDetailidKontaktid>> getUserDetailsUsingGETWithServiceResponseAsync(String uuid);
     /**
      * Detailid.
      *
@@ -601,9 +601,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the UserDetails object if successful.
+     * @return the KasutajaDetailidKontaktid object if successful.
      */
-    UserDetails getUserDetailsUsingGET(String uuid, String lang);
+    KasutajaDetailidKontaktid getUserDetailsUsingGET(String uuid, String lang);
 
     /**
      * Detailid.
@@ -614,7 +614,7 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<UserDetails> getUserDetailsUsingGETAsync(String uuid, String lang, final ServiceCallback<UserDetails> serviceCallback);
+    ServiceFuture<KasutajaDetailidKontaktid> getUserDetailsUsingGETAsync(String uuid, String lang, final ServiceCallback<KasutajaDetailidKontaktid> serviceCallback);
 
     /**
      * Detailid.
@@ -622,9 +622,9 @@ public interface EMSAPIdokumentatsioon {
      * @param uuid Kasutaja UUID
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the UserDetails object
+     * @return the observable to the KasutajaDetailidKontaktid object
      */
-    Observable<UserDetails> getUserDetailsUsingGETAsync(String uuid, String lang);
+    Observable<KasutajaDetailidKontaktid> getUserDetailsUsingGETAsync(String uuid, String lang);
 
     /**
      * Detailid.
@@ -632,9 +632,9 @@ public interface EMSAPIdokumentatsioon {
      * @param uuid Kasutaja UUID
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the UserDetails object
+     * @return the observable to the KasutajaDetailidKontaktid object
      */
-    Observable<ServiceResponse<UserDetails>> getUserDetailsUsingGETWithServiceResponseAsync(String uuid, String lang);
+    Observable<ServiceResponse<KasutajaDetailidKontaktid>> getUserDetailsUsingGETWithServiceResponseAsync(String uuid, String lang);
 
     /**
      * Dokumentide otsing.
@@ -642,9 +642,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the PagedResourcesOfDocument object if successful.
+     * @return the PagedResourcesDokument object if successful.
      */
-    PagedResourcesOfDocument findDocumentsUsingGET();
+    PagedResourcesDokument findDocumentsUsingGET();
 
     /**
      * Dokumentide otsing.
@@ -653,23 +653,23 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<PagedResourcesOfDocument> findDocumentsUsingGETAsync(final ServiceCallback<PagedResourcesOfDocument> serviceCallback);
+    ServiceFuture<PagedResourcesDokument> findDocumentsUsingGETAsync(final ServiceCallback<PagedResourcesDokument> serviceCallback);
 
     /**
      * Dokumentide otsing.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PagedResourcesOfDocument object
+     * @return the observable to the PagedResourcesDokument object
      */
-    Observable<PagedResourcesOfDocument> findDocumentsUsingGETAsync();
+    Observable<PagedResourcesDokument> findDocumentsUsingGETAsync();
 
     /**
      * Dokumentide otsing.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PagedResourcesOfDocument object
+     * @return the observable to the PagedResourcesDokument object
      */
-    Observable<ServiceResponse<PagedResourcesOfDocument>> findDocumentsUsingGETWithServiceResponseAsync();
+    Observable<ServiceResponse<PagedResourcesDokument>> findDocumentsUsingGETWithServiceResponseAsync();
     /**
      * Dokumentide otsing.
      *
@@ -678,6 +678,7 @@ public interface EMSAPIdokumentatsioon {
      * @param createdStart Loomiskuupäeva vahemiku algus (yyyy-MM-dd)
      * @param directionCode [Kiri] Suund (klassifikaator 'kirjaSuund'). Possible values include: 'SISEMINE', 'SISSE', 'VALJA'
      * @param documentType Dokumendi liik. Possible values include: 'yldine', 'lugemiseTekst', 'muudatusettepanek', 'muudatusettepanekugaLiitumine', 'meLoetelu', 'plenaryAgendaItemDocument', 'unitAgendaItemDocument', 'infoAgendaItemDocument', 'interpellationsAgendaItemDocument', 'algtekst', 'lopptekst', 'seletuskiri', 'protokoll', 'interpellationsDocument', 'interpellationsAnswerDocument', 'opinionDocument', 'applicationDocument', 'excursionDocument', 'translationDocument', 'writtenQuestionDocument', 'writtenQuestionAnswerDocument', 'letterDocument', 'directiveDocument', 'pressReleaseDocument', 'decisionDocument', 'otherQuestionDocument', 'officialJourneyDocument', 'orderDocument', 'orderImplementationDocument', 'contractDocument', 'pursueDocument', 'elDocument', 'commissionOpinionDocument', 'vabariigiPresidendiOtsus', 'lisadokumendid', 'aruanne', 'taiskoguToonadalaProtokoll', 'riigikoguSeisukoht', 'uuring', 'meAllkirjastamine', 'jobDescriptionDocument', 'collectiveAddressDocument'
+     * @param functionGroupUuid Funktsioonigrupi UUID
      * @param functionUuid Funktsiooni UUID
      * @param letterAuthor [Kiri] Autor
      * @param membership Koosseisu number
@@ -698,9 +699,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the PagedResourcesOfDocument object if successful.
+     * @return the PagedResourcesDokument object if successful.
      */
-    PagedResourcesOfDocument findDocumentsUsingGET(String authorReference, LocalDate createdEnd, LocalDate createdStart, String directionCode, String documentType, String functionUuid, String letterAuthor, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, String reference, String seriesUuid, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, String subseriesUuid, String title, Boolean unpaged);
+    PagedResourcesDokument findDocumentsUsingGET(String authorReference, LocalDate createdEnd, LocalDate createdStart, String directionCode, String documentType, String functionGroupUuid, String functionUuid, String letterAuthor, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, String reference, String seriesUuid, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, String subseriesUuid, String title, Boolean unpaged);
 
     /**
      * Dokumentide otsing.
@@ -710,6 +711,7 @@ public interface EMSAPIdokumentatsioon {
      * @param createdStart Loomiskuupäeva vahemiku algus (yyyy-MM-dd)
      * @param directionCode [Kiri] Suund (klassifikaator 'kirjaSuund'). Possible values include: 'SISEMINE', 'SISSE', 'VALJA'
      * @param documentType Dokumendi liik. Possible values include: 'yldine', 'lugemiseTekst', 'muudatusettepanek', 'muudatusettepanekugaLiitumine', 'meLoetelu', 'plenaryAgendaItemDocument', 'unitAgendaItemDocument', 'infoAgendaItemDocument', 'interpellationsAgendaItemDocument', 'algtekst', 'lopptekst', 'seletuskiri', 'protokoll', 'interpellationsDocument', 'interpellationsAnswerDocument', 'opinionDocument', 'applicationDocument', 'excursionDocument', 'translationDocument', 'writtenQuestionDocument', 'writtenQuestionAnswerDocument', 'letterDocument', 'directiveDocument', 'pressReleaseDocument', 'decisionDocument', 'otherQuestionDocument', 'officialJourneyDocument', 'orderDocument', 'orderImplementationDocument', 'contractDocument', 'pursueDocument', 'elDocument', 'commissionOpinionDocument', 'vabariigiPresidendiOtsus', 'lisadokumendid', 'aruanne', 'taiskoguToonadalaProtokoll', 'riigikoguSeisukoht', 'uuring', 'meAllkirjastamine', 'jobDescriptionDocument', 'collectiveAddressDocument'
+     * @param functionGroupUuid Funktsioonigrupi UUID
      * @param functionUuid Funktsiooni UUID
      * @param letterAuthor [Kiri] Autor
      * @param membership Koosseisu number
@@ -731,7 +733,7 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<PagedResourcesOfDocument> findDocumentsUsingGETAsync(String authorReference, LocalDate createdEnd, LocalDate createdStart, String directionCode, String documentType, String functionUuid, String letterAuthor, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, String reference, String seriesUuid, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, String subseriesUuid, String title, Boolean unpaged, final ServiceCallback<PagedResourcesOfDocument> serviceCallback);
+    ServiceFuture<PagedResourcesDokument> findDocumentsUsingGETAsync(String authorReference, LocalDate createdEnd, LocalDate createdStart, String directionCode, String documentType, String functionGroupUuid, String functionUuid, String letterAuthor, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, String reference, String seriesUuid, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, String subseriesUuid, String title, Boolean unpaged, final ServiceCallback<PagedResourcesDokument> serviceCallback);
 
     /**
      * Dokumentide otsing.
@@ -741,6 +743,7 @@ public interface EMSAPIdokumentatsioon {
      * @param createdStart Loomiskuupäeva vahemiku algus (yyyy-MM-dd)
      * @param directionCode [Kiri] Suund (klassifikaator 'kirjaSuund'). Possible values include: 'SISEMINE', 'SISSE', 'VALJA'
      * @param documentType Dokumendi liik. Possible values include: 'yldine', 'lugemiseTekst', 'muudatusettepanek', 'muudatusettepanekugaLiitumine', 'meLoetelu', 'plenaryAgendaItemDocument', 'unitAgendaItemDocument', 'infoAgendaItemDocument', 'interpellationsAgendaItemDocument', 'algtekst', 'lopptekst', 'seletuskiri', 'protokoll', 'interpellationsDocument', 'interpellationsAnswerDocument', 'opinionDocument', 'applicationDocument', 'excursionDocument', 'translationDocument', 'writtenQuestionDocument', 'writtenQuestionAnswerDocument', 'letterDocument', 'directiveDocument', 'pressReleaseDocument', 'decisionDocument', 'otherQuestionDocument', 'officialJourneyDocument', 'orderDocument', 'orderImplementationDocument', 'contractDocument', 'pursueDocument', 'elDocument', 'commissionOpinionDocument', 'vabariigiPresidendiOtsus', 'lisadokumendid', 'aruanne', 'taiskoguToonadalaProtokoll', 'riigikoguSeisukoht', 'uuring', 'meAllkirjastamine', 'jobDescriptionDocument', 'collectiveAddressDocument'
+     * @param functionGroupUuid Funktsioonigrupi UUID
      * @param functionUuid Funktsiooni UUID
      * @param letterAuthor [Kiri] Autor
      * @param membership Koosseisu number
@@ -759,9 +762,9 @@ public interface EMSAPIdokumentatsioon {
      * @param title Pealkiri
      * @param unpaged the Boolean value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PagedResourcesOfDocument object
+     * @return the observable to the PagedResourcesDokument object
      */
-    Observable<PagedResourcesOfDocument> findDocumentsUsingGETAsync(String authorReference, LocalDate createdEnd, LocalDate createdStart, String directionCode, String documentType, String functionUuid, String letterAuthor, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, String reference, String seriesUuid, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, String subseriesUuid, String title, Boolean unpaged);
+    Observable<PagedResourcesDokument> findDocumentsUsingGETAsync(String authorReference, LocalDate createdEnd, LocalDate createdStart, String directionCode, String documentType, String functionGroupUuid, String functionUuid, String letterAuthor, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, String reference, String seriesUuid, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, String subseriesUuid, String title, Boolean unpaged);
 
     /**
      * Dokumentide otsing.
@@ -771,6 +774,7 @@ public interface EMSAPIdokumentatsioon {
      * @param createdStart Loomiskuupäeva vahemiku algus (yyyy-MM-dd)
      * @param directionCode [Kiri] Suund (klassifikaator 'kirjaSuund'). Possible values include: 'SISEMINE', 'SISSE', 'VALJA'
      * @param documentType Dokumendi liik. Possible values include: 'yldine', 'lugemiseTekst', 'muudatusettepanek', 'muudatusettepanekugaLiitumine', 'meLoetelu', 'plenaryAgendaItemDocument', 'unitAgendaItemDocument', 'infoAgendaItemDocument', 'interpellationsAgendaItemDocument', 'algtekst', 'lopptekst', 'seletuskiri', 'protokoll', 'interpellationsDocument', 'interpellationsAnswerDocument', 'opinionDocument', 'applicationDocument', 'excursionDocument', 'translationDocument', 'writtenQuestionDocument', 'writtenQuestionAnswerDocument', 'letterDocument', 'directiveDocument', 'pressReleaseDocument', 'decisionDocument', 'otherQuestionDocument', 'officialJourneyDocument', 'orderDocument', 'orderImplementationDocument', 'contractDocument', 'pursueDocument', 'elDocument', 'commissionOpinionDocument', 'vabariigiPresidendiOtsus', 'lisadokumendid', 'aruanne', 'taiskoguToonadalaProtokoll', 'riigikoguSeisukoht', 'uuring', 'meAllkirjastamine', 'jobDescriptionDocument', 'collectiveAddressDocument'
+     * @param functionGroupUuid Funktsioonigrupi UUID
      * @param functionUuid Funktsiooni UUID
      * @param letterAuthor [Kiri] Autor
      * @param membership Koosseisu number
@@ -789,9 +793,9 @@ public interface EMSAPIdokumentatsioon {
      * @param title Pealkiri
      * @param unpaged the Boolean value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PagedResourcesOfDocument object
+     * @return the observable to the PagedResourcesDokument object
      */
-    Observable<ServiceResponse<PagedResourcesOfDocument>> findDocumentsUsingGETWithServiceResponseAsync(String authorReference, LocalDate createdEnd, LocalDate createdStart, String directionCode, String documentType, String functionUuid, String letterAuthor, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, String reference, String seriesUuid, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, String subseriesUuid, String title, Boolean unpaged);
+    Observable<ServiceResponse<PagedResourcesDokument>> findDocumentsUsingGETWithServiceResponseAsync(String authorReference, LocalDate createdEnd, LocalDate createdStart, String directionCode, String documentType, String functionGroupUuid, String functionUuid, String letterAuthor, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, String reference, String seriesUuid, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, String subseriesUuid, String title, Boolean unpaged);
 
     /**
      * Kollektiivsed pöördumised.
@@ -799,9 +803,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;CollectiveAddress&gt; object if successful.
+     * @return the List&lt;KollektiivnePRdumineDokument&gt; object if successful.
      */
-    List<CollectiveAddress> findCollectiveAddressesUsingGET();
+    List<KollektiivnePRdumineDokument> findCollectiveAddressesUsingGET();
 
     /**
      * Kollektiivsed pöördumised.
@@ -810,23 +814,23 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<List<CollectiveAddress>> findCollectiveAddressesUsingGETAsync(final ServiceCallback<List<CollectiveAddress>> serviceCallback);
+    ServiceFuture<List<KollektiivnePRdumineDokument>> findCollectiveAddressesUsingGETAsync(final ServiceCallback<List<KollektiivnePRdumineDokument>> serviceCallback);
 
     /**
      * Kollektiivsed pöördumised.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;CollectiveAddress&gt; object
+     * @return the observable to the List&lt;KollektiivnePRdumineDokument&gt; object
      */
-    Observable<List<CollectiveAddress>> findCollectiveAddressesUsingGETAsync();
+    Observable<List<KollektiivnePRdumineDokument>> findCollectiveAddressesUsingGETAsync();
 
     /**
      * Kollektiivsed pöördumised.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;CollectiveAddress&gt; object
+     * @return the observable to the List&lt;KollektiivnePRdumineDokument&gt; object
      */
-    Observable<ServiceResponse<List<CollectiveAddress>>> findCollectiveAddressesUsingGETWithServiceResponseAsync();
+    Observable<ServiceResponse<List<KollektiivnePRdumineDokument>>> findCollectiveAddressesUsingGETWithServiceResponseAsync();
 
     /**
      * Kollektiivse pöördumise detailid.
@@ -835,9 +839,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the CollectiveAddress object if successful.
+     * @return the KollektiivnePRdumineDokument object if successful.
      */
-    CollectiveAddress findCollectiveAddressUsingGET(String uuidOrSenderRef);
+    KollektiivnePRdumineDokument findCollectiveAddressUsingGET(String uuidOrSenderRef);
 
     /**
      * Kollektiivse pöördumise detailid.
@@ -847,25 +851,25 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<CollectiveAddress> findCollectiveAddressUsingGETAsync(String uuidOrSenderRef, final ServiceCallback<CollectiveAddress> serviceCallback);
+    ServiceFuture<KollektiivnePRdumineDokument> findCollectiveAddressUsingGETAsync(String uuidOrSenderRef, final ServiceCallback<KollektiivnePRdumineDokument> serviceCallback);
 
     /**
      * Kollektiivse pöördumise detailid.
      *
      * @param uuidOrSenderRef Dokumendi UUID või saatja viit
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the CollectiveAddress object
+     * @return the observable to the KollektiivnePRdumineDokument object
      */
-    Observable<CollectiveAddress> findCollectiveAddressUsingGETAsync(String uuidOrSenderRef);
+    Observable<KollektiivnePRdumineDokument> findCollectiveAddressUsingGETAsync(String uuidOrSenderRef);
 
     /**
      * Kollektiivse pöördumise detailid.
      *
      * @param uuidOrSenderRef Dokumendi UUID või saatja viit
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the CollectiveAddress object
+     * @return the observable to the KollektiivnePRdumineDokument object
      */
-    Observable<ServiceResponse<CollectiveAddress>> findCollectiveAddressUsingGETWithServiceResponseAsync(String uuidOrSenderRef);
+    Observable<ServiceResponse<KollektiivnePRdumineDokument>> findCollectiveAddressUsingGETWithServiceResponseAsync(String uuidOrSenderRef);
 
     /**
      * Muud küsimused.
@@ -873,9 +877,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the PagedResourcesOfOtherQuestions object if successful.
+     * @return the PagedResourcesDokumentMuuKSimus object if successful.
      */
-    PagedResourcesOfOtherQuestions findOtherQuestionsUsingGET();
+    PagedResourcesDokumentMuuKSimus findOtherQuestionsUsingGET();
 
     /**
      * Muud küsimused.
@@ -884,23 +888,23 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<PagedResourcesOfOtherQuestions> findOtherQuestionsUsingGETAsync(final ServiceCallback<PagedResourcesOfOtherQuestions> serviceCallback);
+    ServiceFuture<PagedResourcesDokumentMuuKSimus> findOtherQuestionsUsingGETAsync(final ServiceCallback<PagedResourcesDokumentMuuKSimus> serviceCallback);
 
     /**
      * Muud küsimused.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PagedResourcesOfOtherQuestions object
+     * @return the observable to the PagedResourcesDokumentMuuKSimus object
      */
-    Observable<PagedResourcesOfOtherQuestions> findOtherQuestionsUsingGETAsync();
+    Observable<PagedResourcesDokumentMuuKSimus> findOtherQuestionsUsingGETAsync();
 
     /**
      * Muud küsimused.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PagedResourcesOfOtherQuestions object
+     * @return the observable to the PagedResourcesDokumentMuuKSimus object
      */
-    Observable<ServiceResponse<PagedResourcesOfOtherQuestions>> findOtherQuestionsUsingGETWithServiceResponseAsync();
+    Observable<ServiceResponse<PagedResourcesDokumentMuuKSimus>> findOtherQuestionsUsingGETWithServiceResponseAsync();
     /**
      * Muud küsimused.
      *
@@ -930,9 +934,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the PagedResourcesOfOtherQuestions object if successful.
+     * @return the PagedResourcesDokumentMuuKSimus object if successful.
      */
-    PagedResourcesOfOtherQuestions findOtherQuestionsUsingGET(String applicantUuid, LocalDate createdEnd, LocalDate createdStart, LocalDate dateEnd, LocalDate dateStart, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, Boolean querySteno, String reference, String reporterUuid, LocalDate sittingDateTimeEnd, LocalDate sittingDateTimeStart, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, List<String> subTypeCode, String title, Boolean unpaged);
+    PagedResourcesDokumentMuuKSimus findOtherQuestionsUsingGET(String applicantUuid, LocalDate createdEnd, LocalDate createdStart, LocalDate dateEnd, LocalDate dateStart, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, Boolean querySteno, String reference, String reporterUuid, LocalDate sittingDateTimeEnd, LocalDate sittingDateTimeStart, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, List<String> subTypeCode, String title, Boolean unpaged);
 
     /**
      * Muud küsimused.
@@ -964,7 +968,7 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<PagedResourcesOfOtherQuestions> findOtherQuestionsUsingGETAsync(String applicantUuid, LocalDate createdEnd, LocalDate createdStart, LocalDate dateEnd, LocalDate dateStart, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, Boolean querySteno, String reference, String reporterUuid, LocalDate sittingDateTimeEnd, LocalDate sittingDateTimeStart, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, List<String> subTypeCode, String title, Boolean unpaged, final ServiceCallback<PagedResourcesOfOtherQuestions> serviceCallback);
+    ServiceFuture<PagedResourcesDokumentMuuKSimus> findOtherQuestionsUsingGETAsync(String applicantUuid, LocalDate createdEnd, LocalDate createdStart, LocalDate dateEnd, LocalDate dateStart, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, Boolean querySteno, String reference, String reporterUuid, LocalDate sittingDateTimeEnd, LocalDate sittingDateTimeStart, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, List<String> subTypeCode, String title, Boolean unpaged, final ServiceCallback<PagedResourcesDokumentMuuKSimus> serviceCallback);
 
     /**
      * Muud küsimused.
@@ -993,9 +997,9 @@ public interface EMSAPIdokumentatsioon {
      * @param title Pealkiri
      * @param unpaged the Boolean value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PagedResourcesOfOtherQuestions object
+     * @return the observable to the PagedResourcesDokumentMuuKSimus object
      */
-    Observable<PagedResourcesOfOtherQuestions> findOtherQuestionsUsingGETAsync(String applicantUuid, LocalDate createdEnd, LocalDate createdStart, LocalDate dateEnd, LocalDate dateStart, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, Boolean querySteno, String reference, String reporterUuid, LocalDate sittingDateTimeEnd, LocalDate sittingDateTimeStart, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, List<String> subTypeCode, String title, Boolean unpaged);
+    Observable<PagedResourcesDokumentMuuKSimus> findOtherQuestionsUsingGETAsync(String applicantUuid, LocalDate createdEnd, LocalDate createdStart, LocalDate dateEnd, LocalDate dateStart, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, Boolean querySteno, String reference, String reporterUuid, LocalDate sittingDateTimeEnd, LocalDate sittingDateTimeStart, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, List<String> subTypeCode, String title, Boolean unpaged);
 
     /**
      * Muud küsimused.
@@ -1024,9 +1028,9 @@ public interface EMSAPIdokumentatsioon {
      * @param title Pealkiri
      * @param unpaged the Boolean value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PagedResourcesOfOtherQuestions object
+     * @return the observable to the PagedResourcesDokumentMuuKSimus object
      */
-    Observable<ServiceResponse<PagedResourcesOfOtherQuestions>> findOtherQuestionsUsingGETWithServiceResponseAsync(String applicantUuid, LocalDate createdEnd, LocalDate createdStart, LocalDate dateEnd, LocalDate dateStart, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, Boolean querySteno, String reference, String reporterUuid, LocalDate sittingDateTimeEnd, LocalDate sittingDateTimeStart, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, List<String> subTypeCode, String title, Boolean unpaged);
+    Observable<ServiceResponse<PagedResourcesDokumentMuuKSimus>> findOtherQuestionsUsingGETWithServiceResponseAsync(String applicantUuid, LocalDate createdEnd, LocalDate createdStart, LocalDate dateEnd, LocalDate dateStart, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, Boolean querySteno, String reference, String reporterUuid, LocalDate sittingDateTimeEnd, LocalDate sittingDateTimeStart, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, List<String> subTypeCode, String title, Boolean unpaged);
 
     /**
      * Dokumendi detailid.
@@ -1035,9 +1039,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Document object if successful.
+     * @return the Dokument object if successful.
      */
-    Document getDocumentUsingGET(String uuid);
+    Dokument getDocumentUsingGET(String uuid);
 
     /**
      * Dokumendi detailid.
@@ -1047,25 +1051,25 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<Document> getDocumentUsingGETAsync(String uuid, final ServiceCallback<Document> serviceCallback);
+    ServiceFuture<Dokument> getDocumentUsingGETAsync(String uuid, final ServiceCallback<Dokument> serviceCallback);
 
     /**
      * Dokumendi detailid.
      *
      * @param uuid Dokumendi UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the Document object
+     * @return the observable to the Dokument object
      */
-    Observable<Document> getDocumentUsingGETAsync(String uuid);
+    Observable<Dokument> getDocumentUsingGETAsync(String uuid);
 
     /**
      * Dokumendi detailid.
      *
      * @param uuid Dokumendi UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the Document object
+     * @return the observable to the Dokument object
      */
-    Observable<ServiceResponse<Document>> getDocumentUsingGETWithServiceResponseAsync(String uuid);
+    Observable<ServiceResponse<Dokument>> getDocumentUsingGETWithServiceResponseAsync(String uuid);
     /**
      * Dokumendi detailid.
      *
@@ -1074,9 +1078,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Document object if successful.
+     * @return the Dokument object if successful.
      */
-    Document getDocumentUsingGET(String uuid, String lang);
+    Dokument getDocumentUsingGET(String uuid, String lang);
 
     /**
      * Dokumendi detailid.
@@ -1087,7 +1091,7 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<Document> getDocumentUsingGETAsync(String uuid, String lang, final ServiceCallback<Document> serviceCallback);
+    ServiceFuture<Dokument> getDocumentUsingGETAsync(String uuid, String lang, final ServiceCallback<Dokument> serviceCallback);
 
     /**
      * Dokumendi detailid.
@@ -1095,9 +1099,9 @@ public interface EMSAPIdokumentatsioon {
      * @param uuid Dokumendi UUID
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the Document object
+     * @return the observable to the Dokument object
      */
-    Observable<Document> getDocumentUsingGETAsync(String uuid, String lang);
+    Observable<Dokument> getDocumentUsingGETAsync(String uuid, String lang);
 
     /**
      * Dokumendi detailid.
@@ -1105,9 +1109,9 @@ public interface EMSAPIdokumentatsioon {
      * @param uuid Dokumendi UUID
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the Document object
+     * @return the observable to the Dokument object
      */
-    Observable<ServiceResponse<Document>> getDocumentUsingGETWithServiceResponseAsync(String uuid, String lang);
+    Observable<ServiceResponse<Dokument>> getDocumentUsingGETWithServiceResponseAsync(String uuid, String lang);
 
     /**
      * Täiskogu ja komisjonide päevakorrad, Riigikogu liikmete lähetused ja visiidid.
@@ -1116,9 +1120,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;Events&gt; object if successful.
+     * @return the List&lt;PEvasNdmused&gt; object if successful.
      */
-    List<Events> getEventsUsingGET();
+    List<PEvasNdmused> getEventsUsingGET();
 
     /**
      * Täiskogu ja komisjonide päevakorrad, Riigikogu liikmete lähetused ja visiidid.
@@ -1128,25 +1132,25 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<List<Events>> getEventsUsingGETAsync(final ServiceCallback<List<Events>> serviceCallback);
+    ServiceFuture<List<PEvasNdmused>> getEventsUsingGETAsync(final ServiceCallback<List<PEvasNdmused>> serviceCallback);
 
     /**
      * Täiskogu ja komisjonide päevakorrad, Riigikogu liikmete lähetused ja visiidid.
      * Sündmusi saab pärida ühe nädala või suvalise ajavahemiku kohta, täites vastavalt 'date' või 'startDate/endDate' parameetrid.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;Events&gt; object
+     * @return the observable to the List&lt;PEvasNdmused&gt; object
      */
-    Observable<List<Events>> getEventsUsingGETAsync();
+    Observable<List<PEvasNdmused>> getEventsUsingGETAsync();
 
     /**
      * Täiskogu ja komisjonide päevakorrad, Riigikogu liikmete lähetused ja visiidid.
      * Sündmusi saab pärida ühe nädala või suvalise ajavahemiku kohta, täites vastavalt 'date' või 'startDate/endDate' parameetrid.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;Events&gt; object
+     * @return the observable to the List&lt;PEvasNdmused&gt; object
      */
-    Observable<ServiceResponse<List<Events>>> getEventsUsingGETWithServiceResponseAsync();
+    Observable<ServiceResponse<List<PEvasNdmused>>> getEventsUsingGETWithServiceResponseAsync();
     /**
      * Täiskogu ja komisjonide päevakorrad, Riigikogu liikmete lähetused ja visiidid.
      * Sündmusi saab pärida ühe nädala või suvalise ajavahemiku kohta, täites vastavalt 'date' või 'startDate/endDate' parameetrid.
@@ -1160,9 +1164,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;Events&gt; object if successful.
+     * @return the List&lt;PEvasNdmused&gt; object if successful.
      */
-    List<Events> getEventsUsingGET(LocalDate dateParameter, LocalDate endDate, String lang, Boolean querySteno, LocalDate startDate, String type);
+    List<PEvasNdmused> getEventsUsingGET(LocalDate dateParameter, LocalDate endDate, String lang, Boolean querySteno, LocalDate startDate, String type);
 
     /**
      * Täiskogu ja komisjonide päevakorrad, Riigikogu liikmete lähetused ja visiidid.
@@ -1178,22 +1182,7 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<List<Events>> getEventsUsingGETAsync(LocalDate dateParameter, LocalDate endDate, String lang, Boolean querySteno, LocalDate startDate, String type, final ServiceCallback<List<Events>> serviceCallback);
-
-    /**
-     * Täiskogu ja komisjonide päevakorrad, Riigikogu liikmete lähetused ja visiidid.
-     * Sündmusi saab pärida ühe nädala või suvalise ajavahemiku kohta, täites vastavalt 'date' või 'startDate/endDate' parameetrid.
-     *
-     * @param dateParameter Kuupäev nädalas, mille sündmusi soovitakse
-     * @param endDate Kuupäeva vahemiku lõpp (yyyy-MM-dd)
-     * @param lang Keel. Possible values include: 'et', 'ru', 'en'
-     * @param querySteno Küsi Stenoteksti teenusest päevakorra lingid?
-     * @param startDate Kuupäeva vahemiku algus (yyyy-MM-dd)
-     * @param type Sündmuse tüüp. Tühja korral kõik. Possible values include: 'PLENARY', 'COMMITTEE', 'SECONDMENTS', 'VISITS'
-     * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;Events&gt; object
-     */
-    Observable<List<Events>> getEventsUsingGETAsync(LocalDate dateParameter, LocalDate endDate, String lang, Boolean querySteno, LocalDate startDate, String type);
+    ServiceFuture<List<PEvasNdmused>> getEventsUsingGETAsync(LocalDate dateParameter, LocalDate endDate, String lang, Boolean querySteno, LocalDate startDate, String type, final ServiceCallback<List<PEvasNdmused>> serviceCallback);
 
     /**
      * Täiskogu ja komisjonide päevakorrad, Riigikogu liikmete lähetused ja visiidid.
@@ -1206,9 +1195,24 @@ public interface EMSAPIdokumentatsioon {
      * @param startDate Kuupäeva vahemiku algus (yyyy-MM-dd)
      * @param type Sündmuse tüüp. Tühja korral kõik. Possible values include: 'PLENARY', 'COMMITTEE', 'SECONDMENTS', 'VISITS'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;Events&gt; object
+     * @return the observable to the List&lt;PEvasNdmused&gt; object
      */
-    Observable<ServiceResponse<List<Events>>> getEventsUsingGETWithServiceResponseAsync(LocalDate dateParameter, LocalDate endDate, String lang, Boolean querySteno, LocalDate startDate, String type);
+    Observable<List<PEvasNdmused>> getEventsUsingGETAsync(LocalDate dateParameter, LocalDate endDate, String lang, Boolean querySteno, LocalDate startDate, String type);
+
+    /**
+     * Täiskogu ja komisjonide päevakorrad, Riigikogu liikmete lähetused ja visiidid.
+     * Sündmusi saab pärida ühe nädala või suvalise ajavahemiku kohta, täites vastavalt 'date' või 'startDate/endDate' parameetrid.
+     *
+     * @param dateParameter Kuupäev nädalas, mille sündmusi soovitakse
+     * @param endDate Kuupäeva vahemiku lõpp (yyyy-MM-dd)
+     * @param lang Keel. Possible values include: 'et', 'ru', 'en'
+     * @param querySteno Küsi Stenoteksti teenusest päevakorra lingid?
+     * @param startDate Kuupäeva vahemiku algus (yyyy-MM-dd)
+     * @param type Sündmuse tüüp. Tühja korral kõik. Possible values include: 'PLENARY', 'COMMITTEE', 'SECONDMENTS', 'VISITS'
+     * @throws IllegalArgumentException thrown if parameters fail the validation
+     * @return the observable to the List&lt;PEvasNdmused&gt; object
+     */
+    Observable<ServiceResponse<List<PEvasNdmused>>> getEventsUsingGETWithServiceResponseAsync(LocalDate dateParameter, LocalDate endDate, String lang, Boolean querySteno, LocalDate startDate, String type);
 
     /**
      * Kuupäevad, millal mõni sündmus on toimunud.
@@ -1218,9 +1222,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;EventCalendar&gt; object if successful.
+     * @return the List&lt;PEvSNdmused&gt; object if successful.
      */
-    List<EventCalendar> getEventCalendarUsingGET(LocalDate endDate, LocalDate startDate);
+    List<PEvSNdmused> getEventCalendarUsingGET(LocalDate endDate, LocalDate startDate);
 
     /**
      * Kuupäevad, millal mõni sündmus on toimunud.
@@ -1231,7 +1235,7 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<List<EventCalendar>> getEventCalendarUsingGETAsync(LocalDate endDate, LocalDate startDate, final ServiceCallback<List<EventCalendar>> serviceCallback);
+    ServiceFuture<List<PEvSNdmused>> getEventCalendarUsingGETAsync(LocalDate endDate, LocalDate startDate, final ServiceCallback<List<PEvSNdmused>> serviceCallback);
 
     /**
      * Kuupäevad, millal mõni sündmus on toimunud.
@@ -1239,9 +1243,9 @@ public interface EMSAPIdokumentatsioon {
      * @param endDate Lõppkuupäev (yyyy-MM-dd)
      * @param startDate Alguskuupäev (yyyy-MM-dd)
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;EventCalendar&gt; object
+     * @return the observable to the List&lt;PEvSNdmused&gt; object
      */
-    Observable<List<EventCalendar>> getEventCalendarUsingGETAsync(LocalDate endDate, LocalDate startDate);
+    Observable<List<PEvSNdmused>> getEventCalendarUsingGETAsync(LocalDate endDate, LocalDate startDate);
 
     /**
      * Kuupäevad, millal mõni sündmus on toimunud.
@@ -1249,9 +1253,9 @@ public interface EMSAPIdokumentatsioon {
      * @param endDate Lõppkuupäev (yyyy-MM-dd)
      * @param startDate Alguskuupäev (yyyy-MM-dd)
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;EventCalendar&gt; object
+     * @return the observable to the List&lt;PEvSNdmused&gt; object
      */
-    Observable<ServiceResponse<List<EventCalendar>>> getEventCalendarUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate);
+    Observable<ServiceResponse<List<PEvSNdmused>>> getEventCalendarUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate);
     /**
      * Kuupäevad, millal mõni sündmus on toimunud.
      *
@@ -1262,9 +1266,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;EventCalendar&gt; object if successful.
+     * @return the List&lt;PEvSNdmused&gt; object if successful.
      */
-    List<EventCalendar> getEventCalendarUsingGET(LocalDate endDate, LocalDate startDate, String committeeGroupUuid, String type);
+    List<PEvSNdmused> getEventCalendarUsingGET(LocalDate endDate, LocalDate startDate, String committeeGroupUuid, String type);
 
     /**
      * Kuupäevad, millal mõni sündmus on toimunud.
@@ -1277,7 +1281,7 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<List<EventCalendar>> getEventCalendarUsingGETAsync(LocalDate endDate, LocalDate startDate, String committeeGroupUuid, String type, final ServiceCallback<List<EventCalendar>> serviceCallback);
+    ServiceFuture<List<PEvSNdmused>> getEventCalendarUsingGETAsync(LocalDate endDate, LocalDate startDate, String committeeGroupUuid, String type, final ServiceCallback<List<PEvSNdmused>> serviceCallback);
 
     /**
      * Kuupäevad, millal mõni sündmus on toimunud.
@@ -1287,9 +1291,9 @@ public interface EMSAPIdokumentatsioon {
      * @param committeeGroupUuid Komisjoni UUID, mille päevakorra sündmusi soovitakse. Asjakohane kui "type=committee"
      * @param type Sündmuse tüüp. Tühja korral kõik. Possible values include: 'PLENARY', 'COMMITTEE', 'SECONDMENTS', 'VISITS'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;EventCalendar&gt; object
+     * @return the observable to the List&lt;PEvSNdmused&gt; object
      */
-    Observable<List<EventCalendar>> getEventCalendarUsingGETAsync(LocalDate endDate, LocalDate startDate, String committeeGroupUuid, String type);
+    Observable<List<PEvSNdmused>> getEventCalendarUsingGETAsync(LocalDate endDate, LocalDate startDate, String committeeGroupUuid, String type);
 
     /**
      * Kuupäevad, millal mõni sündmus on toimunud.
@@ -1299,9 +1303,9 @@ public interface EMSAPIdokumentatsioon {
      * @param committeeGroupUuid Komisjoni UUID, mille päevakorra sündmusi soovitakse. Asjakohane kui "type=committee"
      * @param type Sündmuse tüüp. Tühja korral kõik. Possible values include: 'PLENARY', 'COMMITTEE', 'SECONDMENTS', 'VISITS'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;EventCalendar&gt; object
+     * @return the observable to the List&lt;PEvSNdmused&gt; object
      */
-    Observable<ServiceResponse<List<EventCalendar>>> getEventCalendarUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String committeeGroupUuid, String type);
+    Observable<ServiceResponse<List<PEvSNdmused>>> getEventCalendarUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String committeeGroupUuid, String type);
 
     /**
      * Faili metaandmed.
@@ -1310,9 +1314,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the FileMetadata object if successful.
+     * @return the Fail object if successful.
      */
-    FileMetadata getFileMetadataUsingGET(String uuid);
+    Fail getFileMetadataUsingGET(String uuid);
 
     /**
      * Faili metaandmed.
@@ -1322,25 +1326,25 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<FileMetadata> getFileMetadataUsingGETAsync(String uuid, final ServiceCallback<FileMetadata> serviceCallback);
+    ServiceFuture<Fail> getFileMetadataUsingGETAsync(String uuid, final ServiceCallback<Fail> serviceCallback);
 
     /**
      * Faili metaandmed.
      *
      * @param uuid Faili UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the FileMetadata object
+     * @return the observable to the Fail object
      */
-    Observable<FileMetadata> getFileMetadataUsingGETAsync(String uuid);
+    Observable<Fail> getFileMetadataUsingGETAsync(String uuid);
 
     /**
      * Faili metaandmed.
      *
      * @param uuid Faili UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the FileMetadata object
+     * @return the observable to the Fail object
      */
-    Observable<ServiceResponse<FileMetadata>> getFileMetadataUsingGETWithServiceResponseAsync(String uuid);
+    Observable<ServiceResponse<Fail>> getFileMetadataUsingGETWithServiceResponseAsync(String uuid);
     /**
      * Faili metaandmed.
      *
@@ -1349,9 +1353,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the FileMetadata object if successful.
+     * @return the Fail object if successful.
      */
-    FileMetadata getFileMetadataUsingGET(String uuid, String lang);
+    Fail getFileMetadataUsingGET(String uuid, String lang);
 
     /**
      * Faili metaandmed.
@@ -1362,7 +1366,7 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<FileMetadata> getFileMetadataUsingGETAsync(String uuid, String lang, final ServiceCallback<FileMetadata> serviceCallback);
+    ServiceFuture<Fail> getFileMetadataUsingGETAsync(String uuid, String lang, final ServiceCallback<Fail> serviceCallback);
 
     /**
      * Faili metaandmed.
@@ -1370,9 +1374,9 @@ public interface EMSAPIdokumentatsioon {
      * @param uuid Faili UUID
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the FileMetadata object
+     * @return the observable to the Fail object
      */
-    Observable<FileMetadata> getFileMetadataUsingGETAsync(String uuid, String lang);
+    Observable<Fail> getFileMetadataUsingGETAsync(String uuid, String lang);
 
     /**
      * Faili metaandmed.
@@ -1380,9 +1384,9 @@ public interface EMSAPIdokumentatsioon {
      * @param uuid Faili UUID
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the FileMetadata object
+     * @return the observable to the Fail object
      */
-    Observable<ServiceResponse<FileMetadata>> getFileMetadataUsingGETWithServiceResponseAsync(String uuid, String lang);
+    Observable<ServiceResponse<Fail>> getFileMetadataUsingGETWithServiceResponseAsync(String uuid, String lang);
 
     /**
      * Faili allalaadimine.
@@ -1429,9 +1433,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;Hallplan&gt; object if successful.
+     * @return the List&lt;SaaliplaaniKoht&gt; object if successful.
      */
-    List<Hallplan> getLatestHallplanUsingGET();
+    List<SaaliplaaniKoht> getLatestHallplanUsingGET();
 
     /**
      * Saaliplaan.
@@ -1440,23 +1444,23 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<List<Hallplan>> getLatestHallplanUsingGETAsync(final ServiceCallback<List<Hallplan>> serviceCallback);
+    ServiceFuture<List<SaaliplaaniKoht>> getLatestHallplanUsingGETAsync(final ServiceCallback<List<SaaliplaaniKoht>> serviceCallback);
 
     /**
      * Saaliplaan.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;Hallplan&gt; object
+     * @return the observable to the List&lt;SaaliplaaniKoht&gt; object
      */
-    Observable<List<Hallplan>> getLatestHallplanUsingGETAsync();
+    Observable<List<SaaliplaaniKoht>> getLatestHallplanUsingGETAsync();
 
     /**
      * Saaliplaan.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;Hallplan&gt; object
+     * @return the observable to the List&lt;SaaliplaaniKoht&gt; object
      */
-    Observable<ServiceResponse<List<Hallplan>>> getLatestHallplanUsingGETWithServiceResponseAsync();
+    Observable<ServiceResponse<List<SaaliplaaniKoht>>> getLatestHallplanUsingGETWithServiceResponseAsync();
     /**
      * Saaliplaan.
      *
@@ -1464,9 +1468,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;Hallplan&gt; object if successful.
+     * @return the List&lt;SaaliplaaniKoht&gt; object if successful.
      */
-    List<Hallplan> getLatestHallplanUsingGET(String lang);
+    List<SaaliplaaniKoht> getLatestHallplanUsingGET(String lang);
 
     /**
      * Saaliplaan.
@@ -1476,25 +1480,25 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<List<Hallplan>> getLatestHallplanUsingGETAsync(String lang, final ServiceCallback<List<Hallplan>> serviceCallback);
+    ServiceFuture<List<SaaliplaaniKoht>> getLatestHallplanUsingGETAsync(String lang, final ServiceCallback<List<SaaliplaaniKoht>> serviceCallback);
 
     /**
      * Saaliplaan.
      *
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;Hallplan&gt; object
+     * @return the observable to the List&lt;SaaliplaaniKoht&gt; object
      */
-    Observable<List<Hallplan>> getLatestHallplanUsingGETAsync(String lang);
+    Observable<List<SaaliplaaniKoht>> getLatestHallplanUsingGETAsync(String lang);
 
     /**
      * Saaliplaan.
      *
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;Hallplan&gt; object
+     * @return the observable to the List&lt;SaaliplaaniKoht&gt; object
      */
-    Observable<ServiceResponse<List<Hallplan>>> getLatestHallplanUsingGETWithServiceResponseAsync(String lang);
+    Observable<ServiceResponse<List<SaaliplaaniKoht>>> getLatestHallplanUsingGETWithServiceResponseAsync(String lang);
 
     /**
      * Dokumendipuu (hierarhia).
@@ -1502,9 +1506,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;DocumentTree&gt; object if successful.
+     * @return the List&lt;FunktsiooniGrupp&gt; object if successful.
      */
-    List<DocumentTree> getDocumentTreeUsingGET();
+    List<FunktsiooniGrupp> getDocumentTreeUsingGET();
 
     /**
      * Dokumendipuu (hierarhia).
@@ -1513,23 +1517,23 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<List<DocumentTree>> getDocumentTreeUsingGETAsync(final ServiceCallback<List<DocumentTree>> serviceCallback);
+    ServiceFuture<List<FunktsiooniGrupp>> getDocumentTreeUsingGETAsync(final ServiceCallback<List<FunktsiooniGrupp>> serviceCallback);
 
     /**
      * Dokumendipuu (hierarhia).
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;DocumentTree&gt; object
+     * @return the observable to the List&lt;FunktsiooniGrupp&gt; object
      */
-    Observable<List<DocumentTree>> getDocumentTreeUsingGETAsync();
+    Observable<List<FunktsiooniGrupp>> getDocumentTreeUsingGETAsync();
 
     /**
      * Dokumendipuu (hierarhia).
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;DocumentTree&gt; object
+     * @return the observable to the List&lt;FunktsiooniGrupp&gt; object
      */
-    Observable<ServiceResponse<List<DocumentTree>>> getDocumentTreeUsingGETWithServiceResponseAsync();
+    Observable<ServiceResponse<List<FunktsiooniGrupp>>> getDocumentTreeUsingGETWithServiceResponseAsync();
 
     /**
      * Dokumendi liigid.
@@ -1537,9 +1541,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;DocumentTypes&gt; object if successful.
+     * @return the List&lt;DokumenditP&gt; object if successful.
      */
-    List<DocumentTypes> getDocumentTypesUsingGET();
+    List<DokumenditP> getDocumentTypesUsingGET();
 
     /**
      * Dokumendi liigid.
@@ -1548,23 +1552,23 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<List<DocumentTypes>> getDocumentTypesUsingGETAsync(final ServiceCallback<List<DocumentTypes>> serviceCallback);
+    ServiceFuture<List<DokumenditP>> getDocumentTypesUsingGETAsync(final ServiceCallback<List<DokumenditP>> serviceCallback);
 
     /**
      * Dokumendi liigid.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;DocumentTypes&gt; object
+     * @return the observable to the List&lt;DokumenditP&gt; object
      */
-    Observable<List<DocumentTypes>> getDocumentTypesUsingGETAsync();
+    Observable<List<DokumenditP>> getDocumentTypesUsingGETAsync();
 
     /**
      * Dokumendi liigid.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;DocumentTypes&gt; object
+     * @return the observable to the List&lt;DokumenditP&gt; object
      */
-    Observable<ServiceResponse<List<DocumentTypes>>> getDocumentTypesUsingGETWithServiceResponseAsync();
+    Observable<ServiceResponse<List<DokumenditP>>> getDocumentTypesUsingGETWithServiceResponseAsync();
 
     /**
      * Eelnõu algatajad.
@@ -1572,9 +1576,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;DraftInitiators&gt; object if successful.
+     * @return the List&lt;EelnUAlgataja&gt; object if successful.
      */
-    List<DraftInitiators> getDraftInitiatorsUsingGET();
+    List<EelnUAlgataja> getDraftInitiatorsUsingGET();
 
     /**
      * Eelnõu algatajad.
@@ -1583,23 +1587,23 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<List<DraftInitiators>> getDraftInitiatorsUsingGETAsync(final ServiceCallback<List<DraftInitiators>> serviceCallback);
+    ServiceFuture<List<EelnUAlgataja>> getDraftInitiatorsUsingGETAsync(final ServiceCallback<List<EelnUAlgataja>> serviceCallback);
 
     /**
      * Eelnõu algatajad.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;DraftInitiators&gt; object
+     * @return the observable to the List&lt;EelnUAlgataja&gt; object
      */
-    Observable<List<DraftInitiators>> getDraftInitiatorsUsingGETAsync();
+    Observable<List<EelnUAlgataja>> getDraftInitiatorsUsingGETAsync();
 
     /**
      * Eelnõu algatajad.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;DraftInitiators&gt; object
+     * @return the observable to the List&lt;EelnUAlgataja&gt; object
      */
-    Observable<ServiceResponse<List<DraftInitiators>>> getDraftInitiatorsUsingGETWithServiceResponseAsync();
+    Observable<ServiceResponse<List<EelnUAlgataja>>> getDraftInitiatorsUsingGETWithServiceResponseAsync();
 
     /**
      * Toimiku liigid.
@@ -1607,9 +1611,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;VolumeTypes&gt; object if successful.
+     * @return the List&lt;ToimikuTP&gt; object if successful.
      */
-    List<VolumeTypes> getVolumeTypesUsingGET();
+    List<ToimikuTP> getVolumeTypesUsingGET();
 
     /**
      * Toimiku liigid.
@@ -1618,23 +1622,23 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<List<VolumeTypes>> getVolumeTypesUsingGETAsync(final ServiceCallback<List<VolumeTypes>> serviceCallback);
+    ServiceFuture<List<ToimikuTP>> getVolumeTypesUsingGETAsync(final ServiceCallback<List<ToimikuTP>> serviceCallback);
 
     /**
      * Toimiku liigid.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;VolumeTypes&gt; object
+     * @return the observable to the List&lt;ToimikuTP&gt; object
      */
-    Observable<List<VolumeTypes>> getVolumeTypesUsingGETAsync();
+    Observable<List<ToimikuTP>> getVolumeTypesUsingGETAsync();
 
     /**
      * Toimiku liigid.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;VolumeTypes&gt; object
+     * @return the observable to the List&lt;ToimikuTP&gt; object
      */
-    Observable<ServiceResponse<List<VolumeTypes>>> getVolumeTypesUsingGETWithServiceResponseAsync();
+    Observable<ServiceResponse<List<ToimikuTP>>> getVolumeTypesUsingGETWithServiceResponseAsync();
 
     /**
      * Kõik koosseisud.
@@ -1642,9 +1646,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;Membership&gt; object if successful.
+     * @return the List&lt;Koosseis&gt; object if successful.
      */
-    List<Membership> getMembershipsUsingGET();
+    List<Koosseis> getMembershipsUsingGET();
 
     /**
      * Kõik koosseisud.
@@ -1653,23 +1657,23 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<List<Membership>> getMembershipsUsingGETAsync(final ServiceCallback<List<Membership>> serviceCallback);
+    ServiceFuture<List<Koosseis>> getMembershipsUsingGETAsync(final ServiceCallback<List<Koosseis>> serviceCallback);
 
     /**
      * Kõik koosseisud.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;Membership&gt; object
+     * @return the observable to the List&lt;Koosseis&gt; object
      */
-    Observable<List<Membership>> getMembershipsUsingGETAsync();
+    Observable<List<Koosseis>> getMembershipsUsingGETAsync();
 
     /**
      * Kõik koosseisud.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;Membership&gt; object
+     * @return the observable to the List&lt;Koosseis&gt; object
      */
-    Observable<ServiceResponse<List<Membership>>> getMembershipsUsingGETWithServiceResponseAsync();
+    Observable<ServiceResponse<List<Koosseis>>> getMembershipsUsingGETWithServiceResponseAsync();
 
     /**
      * Praegune koosseis.
@@ -1677,9 +1681,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Membership object if successful.
+     * @return the Koosseis object if successful.
      */
-    Membership getCurrentMembershipUsingGET();
+    Koosseis getCurrentMembershipUsingGET();
 
     /**
      * Praegune koosseis.
@@ -1688,23 +1692,23 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<Membership> getCurrentMembershipUsingGETAsync(final ServiceCallback<Membership> serviceCallback);
+    ServiceFuture<Koosseis> getCurrentMembershipUsingGETAsync(final ServiceCallback<Koosseis> serviceCallback);
 
     /**
      * Praegune koosseis.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the Membership object
+     * @return the observable to the Koosseis object
      */
-    Observable<Membership> getCurrentMembershipUsingGETAsync();
+    Observable<Koosseis> getCurrentMembershipUsingGETAsync();
 
     /**
      * Praegune koosseis.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the Membership object
+     * @return the observable to the Koosseis object
      */
-    Observable<ServiceResponse<Membership>> getCurrentMembershipUsingGETWithServiceResponseAsync();
+    Observable<ServiceResponse<Koosseis>> getCurrentMembershipUsingGETWithServiceResponseAsync();
 
     /**
      * Koosseis.
@@ -1713,9 +1717,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Membership object if successful.
+     * @return the Koosseis object if successful.
      */
-    Membership getMembershipUsingGET(int number);
+    Koosseis getMembershipUsingGET(int number);
 
     /**
      * Koosseis.
@@ -1725,25 +1729,25 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<Membership> getMembershipUsingGETAsync(int number, final ServiceCallback<Membership> serviceCallback);
+    ServiceFuture<Koosseis> getMembershipUsingGETAsync(int number, final ServiceCallback<Koosseis> serviceCallback);
 
     /**
      * Koosseis.
      *
      * @param number Koosseisu number
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the Membership object
+     * @return the observable to the Koosseis object
      */
-    Observable<Membership> getMembershipUsingGETAsync(int number);
+    Observable<Koosseis> getMembershipUsingGETAsync(int number);
 
     /**
      * Koosseis.
      *
      * @param number Koosseisu number
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the Membership object
+     * @return the observable to the Koosseis object
      */
-    Observable<ServiceResponse<Membership>> getMembershipUsingGETWithServiceResponseAsync(int number);
+    Observable<ServiceResponse<Koosseis>> getMembershipUsingGETWithServiceResponseAsync(int number);
 
     /**
      * Riigikogu liikmete nimekiri / otsing.
@@ -1751,9 +1755,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;PlenaryMember&gt; object if successful.
+     * @return the List&lt;RiigikoguLiige&gt; object if successful.
      */
-    List<PlenaryMember> getPlenaryMembersUsingGET();
+    List<RiigikoguLiige> getPlenaryMembersUsingGET();
 
     /**
      * Riigikogu liikmete nimekiri / otsing.
@@ -1762,23 +1766,23 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<List<PlenaryMember>> getPlenaryMembersUsingGETAsync(final ServiceCallback<List<PlenaryMember>> serviceCallback);
+    ServiceFuture<List<RiigikoguLiige>> getPlenaryMembersUsingGETAsync(final ServiceCallback<List<RiigikoguLiige>> serviceCallback);
 
     /**
      * Riigikogu liikmete nimekiri / otsing.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;PlenaryMember&gt; object
+     * @return the observable to the List&lt;RiigikoguLiige&gt; object
      */
-    Observable<List<PlenaryMember>> getPlenaryMembersUsingGETAsync();
+    Observable<List<RiigikoguLiige>> getPlenaryMembersUsingGETAsync();
 
     /**
      * Riigikogu liikmete nimekiri / otsing.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;PlenaryMember&gt; object
+     * @return the observable to the List&lt;RiigikoguLiige&gt; object
      */
-    Observable<ServiceResponse<List<PlenaryMember>>> getPlenaryMembersUsingGETWithServiceResponseAsync();
+    Observable<ServiceResponse<List<RiigikoguLiige>>> getPlenaryMembersUsingGETWithServiceResponseAsync();
     /**
      * Riigikogu liikmete nimekiri / otsing.
      *
@@ -1792,9 +1796,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;PlenaryMember&gt; object if successful.
+     * @return the List&lt;RiigikoguLiige&gt; object if successful.
      */
-    List<PlenaryMember> getPlenaryMembersUsingGET(List<String> committeeUuid, List<String> electoralDistrictCodes, List<String> factionUuid, Boolean includeInactive, String lang, Integer membership, String name);
+    List<RiigikoguLiige> getPlenaryMembersUsingGET(List<String> committeeUuid, List<String> electoralDistrictCodes, List<String> factionUuid, Boolean includeInactive, String lang, Integer membership, String name);
 
     /**
      * Riigikogu liikmete nimekiri / otsing.
@@ -1810,7 +1814,7 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<List<PlenaryMember>> getPlenaryMembersUsingGETAsync(List<String> committeeUuid, List<String> electoralDistrictCodes, List<String> factionUuid, Boolean includeInactive, String lang, Integer membership, String name, final ServiceCallback<List<PlenaryMember>> serviceCallback);
+    ServiceFuture<List<RiigikoguLiige>> getPlenaryMembersUsingGETAsync(List<String> committeeUuid, List<String> electoralDistrictCodes, List<String> factionUuid, Boolean includeInactive, String lang, Integer membership, String name, final ServiceCallback<List<RiigikoguLiige>> serviceCallback);
 
     /**
      * Riigikogu liikmete nimekiri / otsing.
@@ -1823,9 +1827,9 @@ public interface EMSAPIdokumentatsioon {
      * @param membership Koosseis
      * @param name Liikme nimi. Otsitakse otsisõna sisaldumist nii ees- kui perekonnanimes
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;PlenaryMember&gt; object
+     * @return the observable to the List&lt;RiigikoguLiige&gt; object
      */
-    Observable<List<PlenaryMember>> getPlenaryMembersUsingGETAsync(List<String> committeeUuid, List<String> electoralDistrictCodes, List<String> factionUuid, Boolean includeInactive, String lang, Integer membership, String name);
+    Observable<List<RiigikoguLiige>> getPlenaryMembersUsingGETAsync(List<String> committeeUuid, List<String> electoralDistrictCodes, List<String> factionUuid, Boolean includeInactive, String lang, Integer membership, String name);
 
     /**
      * Riigikogu liikmete nimekiri / otsing.
@@ -1838,9 +1842,9 @@ public interface EMSAPIdokumentatsioon {
      * @param membership Koosseis
      * @param name Liikme nimi. Otsitakse otsisõna sisaldumist nii ees- kui perekonnanimes
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;PlenaryMember&gt; object
+     * @return the observable to the List&lt;RiigikoguLiige&gt; object
      */
-    Observable<ServiceResponse<List<PlenaryMember>>> getPlenaryMembersUsingGETWithServiceResponseAsync(List<String> committeeUuid, List<String> electoralDistrictCodes, List<String> factionUuid, Boolean includeInactive, String lang, Integer membership, String name);
+    Observable<ServiceResponse<List<RiigikoguLiige>>> getPlenaryMembersUsingGETWithServiceResponseAsync(List<String> committeeUuid, List<String> electoralDistrictCodes, List<String> factionUuid, Boolean includeInactive, String lang, Integer membership, String name);
 
     /**
      * Riigikogu liikme detailid.
@@ -1849,9 +1853,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the PlenaryMemberDetails object if successful.
+     * @return the RiigikoguLiikmeDetailid object if successful.
      */
-    PlenaryMemberDetails getPlenaryMemberDetailsUsingGET(String uuid);
+    RiigikoguLiikmeDetailid getPlenaryMemberDetailsUsingGET(String uuid);
 
     /**
      * Riigikogu liikme detailid.
@@ -1861,25 +1865,25 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<PlenaryMemberDetails> getPlenaryMemberDetailsUsingGETAsync(String uuid, final ServiceCallback<PlenaryMemberDetails> serviceCallback);
+    ServiceFuture<RiigikoguLiikmeDetailid> getPlenaryMemberDetailsUsingGETAsync(String uuid, final ServiceCallback<RiigikoguLiikmeDetailid> serviceCallback);
 
     /**
      * Riigikogu liikme detailid.
      *
      * @param uuid Liikme UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PlenaryMemberDetails object
+     * @return the observable to the RiigikoguLiikmeDetailid object
      */
-    Observable<PlenaryMemberDetails> getPlenaryMemberDetailsUsingGETAsync(String uuid);
+    Observable<RiigikoguLiikmeDetailid> getPlenaryMemberDetailsUsingGETAsync(String uuid);
 
     /**
      * Riigikogu liikme detailid.
      *
      * @param uuid Liikme UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PlenaryMemberDetails object
+     * @return the observable to the RiigikoguLiikmeDetailid object
      */
-    Observable<ServiceResponse<PlenaryMemberDetails>> getPlenaryMemberDetailsUsingGETWithServiceResponseAsync(String uuid);
+    Observable<ServiceResponse<RiigikoguLiikmeDetailid>> getPlenaryMemberDetailsUsingGETWithServiceResponseAsync(String uuid);
     /**
      * Riigikogu liikme detailid.
      *
@@ -1889,9 +1893,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the PlenaryMemberDetails object if successful.
+     * @return the RiigikoguLiikmeDetailid object if successful.
      */
-    PlenaryMemberDetails getPlenaryMemberDetailsUsingGET(String uuid, String lang, Boolean querySteno);
+    RiigikoguLiikmeDetailid getPlenaryMemberDetailsUsingGET(String uuid, String lang, Boolean querySteno);
 
     /**
      * Riigikogu liikme detailid.
@@ -1903,7 +1907,7 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<PlenaryMemberDetails> getPlenaryMemberDetailsUsingGETAsync(String uuid, String lang, Boolean querySteno, final ServiceCallback<PlenaryMemberDetails> serviceCallback);
+    ServiceFuture<RiigikoguLiikmeDetailid> getPlenaryMemberDetailsUsingGETAsync(String uuid, String lang, Boolean querySteno, final ServiceCallback<RiigikoguLiikmeDetailid> serviceCallback);
 
     /**
      * Riigikogu liikme detailid.
@@ -1912,9 +1916,9 @@ public interface EMSAPIdokumentatsioon {
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @param querySteno Küsi Stenoteksti teenusest liikme viimane kõne? (true/false)
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PlenaryMemberDetails object
+     * @return the observable to the RiigikoguLiikmeDetailid object
      */
-    Observable<PlenaryMemberDetails> getPlenaryMemberDetailsUsingGETAsync(String uuid, String lang, Boolean querySteno);
+    Observable<RiigikoguLiikmeDetailid> getPlenaryMemberDetailsUsingGETAsync(String uuid, String lang, Boolean querySteno);
 
     /**
      * Riigikogu liikme detailid.
@@ -1923,9 +1927,9 @@ public interface EMSAPIdokumentatsioon {
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @param querySteno Küsi Stenoteksti teenusest liikme viimane kõne? (true/false)
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PlenaryMemberDetails object
+     * @return the observable to the RiigikoguLiikmeDetailid object
      */
-    Observable<ServiceResponse<PlenaryMemberDetails>> getPlenaryMemberDetailsUsingGETWithServiceResponseAsync(String uuid, String lang, Boolean querySteno);
+    Observable<ServiceResponse<RiigikoguLiikmeDetailid>> getPlenaryMemberDetailsUsingGETWithServiceResponseAsync(String uuid, String lang, Boolean querySteno);
 
     /**
      * Istungjärkude nimekiri.
@@ -1933,9 +1937,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;Session&gt; object if successful.
+     * @return the List&lt;IstungjRk&gt; object if successful.
      */
-    List<Session> getSessionsUsingGET();
+    List<IstungjRk> getSessionsUsingGET();
 
     /**
      * Istungjärkude nimekiri.
@@ -1944,23 +1948,23 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<List<Session>> getSessionsUsingGETAsync(final ServiceCallback<List<Session>> serviceCallback);
+    ServiceFuture<List<IstungjRk>> getSessionsUsingGETAsync(final ServiceCallback<List<IstungjRk>> serviceCallback);
 
     /**
      * Istungjärkude nimekiri.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;Session&gt; object
+     * @return the observable to the List&lt;IstungjRk&gt; object
      */
-    Observable<List<Session>> getSessionsUsingGETAsync();
+    Observable<List<IstungjRk>> getSessionsUsingGETAsync();
 
     /**
      * Istungjärkude nimekiri.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;Session&gt; object
+     * @return the observable to the List&lt;IstungjRk&gt; object
      */
-    Observable<ServiceResponse<List<Session>>> getSessionsUsingGETWithServiceResponseAsync();
+    Observable<ServiceResponse<List<IstungjRk>>> getSessionsUsingGETWithServiceResponseAsync();
     /**
      * Istungjärkude nimekiri.
      *
@@ -1968,9 +1972,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;Session&gt; object if successful.
+     * @return the List&lt;IstungjRk&gt; object if successful.
      */
-    List<Session> getSessionsUsingGET(String lang);
+    List<IstungjRk> getSessionsUsingGET(String lang);
 
     /**
      * Istungjärkude nimekiri.
@@ -1980,25 +1984,25 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<List<Session>> getSessionsUsingGETAsync(String lang, final ServiceCallback<List<Session>> serviceCallback);
+    ServiceFuture<List<IstungjRk>> getSessionsUsingGETAsync(String lang, final ServiceCallback<List<IstungjRk>> serviceCallback);
 
     /**
      * Istungjärkude nimekiri.
      *
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;Session&gt; object
+     * @return the observable to the List&lt;IstungjRk&gt; object
      */
-    Observable<List<Session>> getSessionsUsingGETAsync(String lang);
+    Observable<List<IstungjRk>> getSessionsUsingGETAsync(String lang);
 
     /**
      * Istungjärkude nimekiri.
      *
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;Session&gt; object
+     * @return the observable to the List&lt;IstungjRk&gt; object
      */
-    Observable<ServiceResponse<List<Session>>> getSessionsUsingGETWithServiceResponseAsync(String lang);
+    Observable<ServiceResponse<List<IstungjRk>>> getSessionsUsingGETWithServiceResponseAsync(String lang);
 
     /**
      * Praegune istungjärk.
@@ -2006,9 +2010,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Session object if successful.
+     * @return the IstungjRk object if successful.
      */
-    Session getCurrentSessionUsingGET();
+    IstungjRk getCurrentSessionUsingGET();
 
     /**
      * Praegune istungjärk.
@@ -2017,23 +2021,23 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<Session> getCurrentSessionUsingGETAsync(final ServiceCallback<Session> serviceCallback);
+    ServiceFuture<IstungjRk> getCurrentSessionUsingGETAsync(final ServiceCallback<IstungjRk> serviceCallback);
 
     /**
      * Praegune istungjärk.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the Session object
+     * @return the observable to the IstungjRk object
      */
-    Observable<Session> getCurrentSessionUsingGETAsync();
+    Observable<IstungjRk> getCurrentSessionUsingGETAsync();
 
     /**
      * Praegune istungjärk.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the Session object
+     * @return the observable to the IstungjRk object
      */
-    Observable<ServiceResponse<Session>> getCurrentSessionUsingGETWithServiceResponseAsync();
+    Observable<ServiceResponse<IstungjRk>> getCurrentSessionUsingGETWithServiceResponseAsync();
     /**
      * Praegune istungjärk.
      *
@@ -2041,9 +2045,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Session object if successful.
+     * @return the IstungjRk object if successful.
      */
-    Session getCurrentSessionUsingGET(String lang);
+    IstungjRk getCurrentSessionUsingGET(String lang);
 
     /**
      * Praegune istungjärk.
@@ -2053,25 +2057,25 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<Session> getCurrentSessionUsingGETAsync(String lang, final ServiceCallback<Session> serviceCallback);
+    ServiceFuture<IstungjRk> getCurrentSessionUsingGETAsync(String lang, final ServiceCallback<IstungjRk> serviceCallback);
 
     /**
      * Praegune istungjärk.
      *
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the Session object
+     * @return the observable to the IstungjRk object
      */
-    Observable<Session> getCurrentSessionUsingGETAsync(String lang);
+    Observable<IstungjRk> getCurrentSessionUsingGETAsync(String lang);
 
     /**
      * Praegune istungjärk.
      *
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the Session object
+     * @return the observable to the IstungjRk object
      */
-    Observable<ServiceResponse<Session>> getCurrentSessionUsingGETWithServiceResponseAsync(String lang);
+    Observable<ServiceResponse<IstungjRk>> getCurrentSessionUsingGETWithServiceResponseAsync(String lang);
 
     /**
      * Fraktsiooni istungitest osavõtu statistika.
@@ -2082,9 +2086,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;MemberParticipation&gt; object if successful.
+     * @return the List&lt;RiigikoguLiigeOsavTt&gt; object if successful.
      */
-    List<MemberParticipation> getFactionParticipationUsingGET(LocalDate endDate, LocalDate startDate, String uuid);
+    List<RiigikoguLiigeOsavTt> getFactionParticipationUsingGET(LocalDate endDate, LocalDate startDate, String uuid);
 
     /**
      * Fraktsiooni istungitest osavõtu statistika.
@@ -2096,7 +2100,7 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<List<MemberParticipation>> getFactionParticipationUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, final ServiceCallback<List<MemberParticipation>> serviceCallback);
+    ServiceFuture<List<RiigikoguLiigeOsavTt>> getFactionParticipationUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, final ServiceCallback<List<RiigikoguLiigeOsavTt>> serviceCallback);
 
     /**
      * Fraktsiooni istungitest osavõtu statistika.
@@ -2105,9 +2109,9 @@ public interface EMSAPIdokumentatsioon {
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @param uuid Fraktsiooni UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;MemberParticipation&gt; object
+     * @return the observable to the List&lt;RiigikoguLiigeOsavTt&gt; object
      */
-    Observable<List<MemberParticipation>> getFactionParticipationUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid);
+    Observable<List<RiigikoguLiigeOsavTt>> getFactionParticipationUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid);
 
     /**
      * Fraktsiooni istungitest osavõtu statistika.
@@ -2116,9 +2120,9 @@ public interface EMSAPIdokumentatsioon {
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @param uuid Fraktsiooni UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;MemberParticipation&gt; object
+     * @return the observable to the List&lt;RiigikoguLiigeOsavTt&gt; object
      */
-    Observable<ServiceResponse<List<MemberParticipation>>> getFactionParticipationUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String uuid);
+    Observable<ServiceResponse<List<RiigikoguLiigeOsavTt>>> getFactionParticipationUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String uuid);
     /**
      * Fraktsiooni istungitest osavõtu statistika.
      *
@@ -2129,9 +2133,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;MemberParticipation&gt; object if successful.
+     * @return the List&lt;RiigikoguLiigeOsavTt&gt; object if successful.
      */
-    List<MemberParticipation> getFactionParticipationUsingGET(LocalDate endDate, LocalDate startDate, String uuid, String lang);
+    List<RiigikoguLiigeOsavTt> getFactionParticipationUsingGET(LocalDate endDate, LocalDate startDate, String uuid, String lang);
 
     /**
      * Fraktsiooni istungitest osavõtu statistika.
@@ -2144,7 +2148,7 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<List<MemberParticipation>> getFactionParticipationUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, String lang, final ServiceCallback<List<MemberParticipation>> serviceCallback);
+    ServiceFuture<List<RiigikoguLiigeOsavTt>> getFactionParticipationUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, String lang, final ServiceCallback<List<RiigikoguLiigeOsavTt>> serviceCallback);
 
     /**
      * Fraktsiooni istungitest osavõtu statistika.
@@ -2154,9 +2158,9 @@ public interface EMSAPIdokumentatsioon {
      * @param uuid Fraktsiooni UUID
      * @param lang lang. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;MemberParticipation&gt; object
+     * @return the observable to the List&lt;RiigikoguLiigeOsavTt&gt; object
      */
-    Observable<List<MemberParticipation>> getFactionParticipationUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, String lang);
+    Observable<List<RiigikoguLiigeOsavTt>> getFactionParticipationUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, String lang);
 
     /**
      * Fraktsiooni istungitest osavõtu statistika.
@@ -2166,9 +2170,9 @@ public interface EMSAPIdokumentatsioon {
      * @param uuid Fraktsiooni UUID
      * @param lang lang. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;MemberParticipation&gt; object
+     * @return the observable to the List&lt;RiigikoguLiigeOsavTt&gt; object
      */
-    Observable<ServiceResponse<List<MemberParticipation>>> getFactionParticipationUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String uuid, String lang);
+    Observable<ServiceResponse<List<RiigikoguLiigeOsavTt>>> getFactionParticipationUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String uuid, String lang);
 
     /**
      * Riigikogu liikme istungitest osavõtu statistika.
@@ -2179,9 +2183,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the MemberParticipation object if successful.
+     * @return the RiigikoguLiigeOsavTt object if successful.
      */
-    MemberParticipation getMemberParticipationUsingGET(LocalDate endDate, LocalDate startDate, String uuid);
+    RiigikoguLiigeOsavTt getMemberParticipationUsingGET(LocalDate endDate, LocalDate startDate, String uuid);
 
     /**
      * Riigikogu liikme istungitest osavõtu statistika.
@@ -2193,7 +2197,7 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<MemberParticipation> getMemberParticipationUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, final ServiceCallback<MemberParticipation> serviceCallback);
+    ServiceFuture<RiigikoguLiigeOsavTt> getMemberParticipationUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, final ServiceCallback<RiigikoguLiigeOsavTt> serviceCallback);
 
     /**
      * Riigikogu liikme istungitest osavõtu statistika.
@@ -2202,9 +2206,9 @@ public interface EMSAPIdokumentatsioon {
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @param uuid Liikme UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the MemberParticipation object
+     * @return the observable to the RiigikoguLiigeOsavTt object
      */
-    Observable<MemberParticipation> getMemberParticipationUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid);
+    Observable<RiigikoguLiigeOsavTt> getMemberParticipationUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid);
 
     /**
      * Riigikogu liikme istungitest osavõtu statistika.
@@ -2213,9 +2217,9 @@ public interface EMSAPIdokumentatsioon {
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @param uuid Liikme UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the MemberParticipation object
+     * @return the observable to the RiigikoguLiigeOsavTt object
      */
-    Observable<ServiceResponse<MemberParticipation>> getMemberParticipationUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String uuid);
+    Observable<ServiceResponse<RiigikoguLiigeOsavTt>> getMemberParticipationUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String uuid);
     /**
      * Riigikogu liikme istungitest osavõtu statistika.
      *
@@ -2227,9 +2231,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the MemberParticipation object if successful.
+     * @return the RiigikoguLiigeOsavTt object if successful.
      */
-    MemberParticipation getMemberParticipationUsingGET(LocalDate endDate, LocalDate startDate, String uuid, Boolean details, String lang);
+    RiigikoguLiigeOsavTt getMemberParticipationUsingGET(LocalDate endDate, LocalDate startDate, String uuid, Boolean details, String lang);
 
     /**
      * Riigikogu liikme istungitest osavõtu statistika.
@@ -2243,7 +2247,7 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<MemberParticipation> getMemberParticipationUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, Boolean details, String lang, final ServiceCallback<MemberParticipation> serviceCallback);
+    ServiceFuture<RiigikoguLiigeOsavTt> getMemberParticipationUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, Boolean details, String lang, final ServiceCallback<RiigikoguLiigeOsavTt> serviceCallback);
 
     /**
      * Riigikogu liikme istungitest osavõtu statistika.
@@ -2254,9 +2258,9 @@ public interface EMSAPIdokumentatsioon {
      * @param details details
      * @param lang lang. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the MemberParticipation object
+     * @return the observable to the RiigikoguLiigeOsavTt object
      */
-    Observable<MemberParticipation> getMemberParticipationUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, Boolean details, String lang);
+    Observable<RiigikoguLiigeOsavTt> getMemberParticipationUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, Boolean details, String lang);
 
     /**
      * Riigikogu liikme istungitest osavõtu statistika.
@@ -2267,9 +2271,9 @@ public interface EMSAPIdokumentatsioon {
      * @param details details
      * @param lang lang. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the MemberParticipation object
+     * @return the observable to the RiigikoguLiigeOsavTt object
      */
-    Observable<ServiceResponse<MemberParticipation>> getMemberParticipationUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String uuid, Boolean details, String lang);
+    Observable<ServiceResponse<RiigikoguLiigeOsavTt>> getMemberParticipationUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String uuid, Boolean details, String lang);
 
     /**
      * Täiskogu istungitest osavõtu statistika.
@@ -2279,9 +2283,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;MemberParticipation&gt; object if successful.
+     * @return the List&lt;RiigikoguLiigeOsavTt&gt; object if successful.
      */
-    List<MemberParticipation> getPlenaryParticipationUsingGET(LocalDate endDate, LocalDate startDate);
+    List<RiigikoguLiigeOsavTt> getPlenaryParticipationUsingGET(LocalDate endDate, LocalDate startDate);
 
     /**
      * Täiskogu istungitest osavõtu statistika.
@@ -2292,7 +2296,7 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<List<MemberParticipation>> getPlenaryParticipationUsingGETAsync(LocalDate endDate, LocalDate startDate, final ServiceCallback<List<MemberParticipation>> serviceCallback);
+    ServiceFuture<List<RiigikoguLiigeOsavTt>> getPlenaryParticipationUsingGETAsync(LocalDate endDate, LocalDate startDate, final ServiceCallback<List<RiigikoguLiigeOsavTt>> serviceCallback);
 
     /**
      * Täiskogu istungitest osavõtu statistika.
@@ -2300,9 +2304,9 @@ public interface EMSAPIdokumentatsioon {
      * @param endDate Kuupäevavahemiku lõpp (yyyy-MM-dd)
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;MemberParticipation&gt; object
+     * @return the observable to the List&lt;RiigikoguLiigeOsavTt&gt; object
      */
-    Observable<List<MemberParticipation>> getPlenaryParticipationUsingGETAsync(LocalDate endDate, LocalDate startDate);
+    Observable<List<RiigikoguLiigeOsavTt>> getPlenaryParticipationUsingGETAsync(LocalDate endDate, LocalDate startDate);
 
     /**
      * Täiskogu istungitest osavõtu statistika.
@@ -2310,9 +2314,9 @@ public interface EMSAPIdokumentatsioon {
      * @param endDate Kuupäevavahemiku lõpp (yyyy-MM-dd)
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;MemberParticipation&gt; object
+     * @return the observable to the List&lt;RiigikoguLiigeOsavTt&gt; object
      */
-    Observable<ServiceResponse<List<MemberParticipation>>> getPlenaryParticipationUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate);
+    Observable<ServiceResponse<List<RiigikoguLiigeOsavTt>>> getPlenaryParticipationUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate);
     /**
      * Täiskogu istungitest osavõtu statistika.
      *
@@ -2322,9 +2326,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;MemberParticipation&gt; object if successful.
+     * @return the List&lt;RiigikoguLiigeOsavTt&gt; object if successful.
      */
-    List<MemberParticipation> getPlenaryParticipationUsingGET(LocalDate endDate, LocalDate startDate, String lang);
+    List<RiigikoguLiigeOsavTt> getPlenaryParticipationUsingGET(LocalDate endDate, LocalDate startDate, String lang);
 
     /**
      * Täiskogu istungitest osavõtu statistika.
@@ -2336,18 +2340,7 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<List<MemberParticipation>> getPlenaryParticipationUsingGETAsync(LocalDate endDate, LocalDate startDate, String lang, final ServiceCallback<List<MemberParticipation>> serviceCallback);
-
-    /**
-     * Täiskogu istungitest osavõtu statistika.
-     *
-     * @param endDate Kuupäevavahemiku lõpp (yyyy-MM-dd)
-     * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
-     * @param lang lang. Possible values include: 'et', 'ru', 'en'
-     * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;MemberParticipation&gt; object
-     */
-    Observable<List<MemberParticipation>> getPlenaryParticipationUsingGETAsync(LocalDate endDate, LocalDate startDate, String lang);
+    ServiceFuture<List<RiigikoguLiigeOsavTt>> getPlenaryParticipationUsingGETAsync(LocalDate endDate, LocalDate startDate, String lang, final ServiceCallback<List<RiigikoguLiigeOsavTt>> serviceCallback);
 
     /**
      * Täiskogu istungitest osavõtu statistika.
@@ -2356,9 +2349,20 @@ public interface EMSAPIdokumentatsioon {
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @param lang lang. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;MemberParticipation&gt; object
+     * @return the observable to the List&lt;RiigikoguLiigeOsavTt&gt; object
      */
-    Observable<ServiceResponse<List<MemberParticipation>>> getPlenaryParticipationUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String lang);
+    Observable<List<RiigikoguLiigeOsavTt>> getPlenaryParticipationUsingGETAsync(LocalDate endDate, LocalDate startDate, String lang);
+
+    /**
+     * Täiskogu istungitest osavõtu statistika.
+     *
+     * @param endDate Kuupäevavahemiku lõpp (yyyy-MM-dd)
+     * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
+     * @param lang lang. Possible values include: 'et', 'ru', 'en'
+     * @throws IllegalArgumentException thrown if parameters fail the validation
+     * @return the observable to the List&lt;RiigikoguLiigeOsavTt&gt; object
+     */
+    Observable<ServiceResponse<List<RiigikoguLiigeOsavTt>>> getPlenaryParticipationUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String lang);
 
     /**
      * Fraktsiooni sõnavõttude statistika.
@@ -2369,9 +2373,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;FactionSpeech&gt; object if successful.
+     * @return the List&lt;RiigikoguLiigeSNavTud&gt; object if successful.
      */
-    List<FactionSpeech> getFactionSpeechStatisticsUsingGET(LocalDate endDate, LocalDate startDate, String uuid);
+    List<RiigikoguLiigeSNavTud> getFactionSpeechStatisticsUsingGET(LocalDate endDate, LocalDate startDate, String uuid);
 
     /**
      * Fraktsiooni sõnavõttude statistika.
@@ -2383,7 +2387,7 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<List<FactionSpeech>> getFactionSpeechStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, final ServiceCallback<List<FactionSpeech>> serviceCallback);
+    ServiceFuture<List<RiigikoguLiigeSNavTud>> getFactionSpeechStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, final ServiceCallback<List<RiigikoguLiigeSNavTud>> serviceCallback);
 
     /**
      * Fraktsiooni sõnavõttude statistika.
@@ -2392,9 +2396,9 @@ public interface EMSAPIdokumentatsioon {
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @param uuid Fraktsiooni UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;FactionSpeech&gt; object
+     * @return the observable to the List&lt;RiigikoguLiigeSNavTud&gt; object
      */
-    Observable<List<FactionSpeech>> getFactionSpeechStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid);
+    Observable<List<RiigikoguLiigeSNavTud>> getFactionSpeechStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid);
 
     /**
      * Fraktsiooni sõnavõttude statistika.
@@ -2403,9 +2407,9 @@ public interface EMSAPIdokumentatsioon {
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @param uuid Fraktsiooni UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;FactionSpeech&gt; object
+     * @return the observable to the List&lt;RiigikoguLiigeSNavTud&gt; object
      */
-    Observable<ServiceResponse<List<FactionSpeech>>> getFactionSpeechStatisticsUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String uuid);
+    Observable<ServiceResponse<List<RiigikoguLiigeSNavTud>>> getFactionSpeechStatisticsUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String uuid);
     /**
      * Fraktsiooni sõnavõttude statistika.
      *
@@ -2416,9 +2420,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;FactionSpeech&gt; object if successful.
+     * @return the List&lt;RiigikoguLiigeSNavTud&gt; object if successful.
      */
-    List<FactionSpeech> getFactionSpeechStatisticsUsingGET(LocalDate endDate, LocalDate startDate, String uuid, String lang);
+    List<RiigikoguLiigeSNavTud> getFactionSpeechStatisticsUsingGET(LocalDate endDate, LocalDate startDate, String uuid, String lang);
 
     /**
      * Fraktsiooni sõnavõttude statistika.
@@ -2431,19 +2435,7 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<List<FactionSpeech>> getFactionSpeechStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, String lang, final ServiceCallback<List<FactionSpeech>> serviceCallback);
-
-    /**
-     * Fraktsiooni sõnavõttude statistika.
-     *
-     * @param endDate Kuupäevavahemiku lõpp (yyyy-MM-dd)
-     * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
-     * @param uuid Fraktsiooni UUID
-     * @param lang Keel. Possible values include: 'et', 'ru', 'en'
-     * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;FactionSpeech&gt; object
-     */
-    Observable<List<FactionSpeech>> getFactionSpeechStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, String lang);
+    ServiceFuture<List<RiigikoguLiigeSNavTud>> getFactionSpeechStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, String lang, final ServiceCallback<List<RiigikoguLiigeSNavTud>> serviceCallback);
 
     /**
      * Fraktsiooni sõnavõttude statistika.
@@ -2453,9 +2445,21 @@ public interface EMSAPIdokumentatsioon {
      * @param uuid Fraktsiooni UUID
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;FactionSpeech&gt; object
+     * @return the observable to the List&lt;RiigikoguLiigeSNavTud&gt; object
      */
-    Observable<ServiceResponse<List<FactionSpeech>>> getFactionSpeechStatisticsUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String uuid, String lang);
+    Observable<List<RiigikoguLiigeSNavTud>> getFactionSpeechStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, String lang);
+
+    /**
+     * Fraktsiooni sõnavõttude statistika.
+     *
+     * @param endDate Kuupäevavahemiku lõpp (yyyy-MM-dd)
+     * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
+     * @param uuid Fraktsiooni UUID
+     * @param lang Keel. Possible values include: 'et', 'ru', 'en'
+     * @throws IllegalArgumentException thrown if parameters fail the validation
+     * @return the observable to the List&lt;RiigikoguLiigeSNavTud&gt; object
+     */
+    Observable<ServiceResponse<List<RiigikoguLiigeSNavTud>>> getFactionSpeechStatisticsUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String uuid, String lang);
 
     /**
      * Riigikogu liikme sõnavõttude statistika.
@@ -2466,9 +2470,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the FactionSpeech object if successful.
+     * @return the RiigikoguLiigeSNavTud object if successful.
      */
-    FactionSpeech getMemberSpeechStatisticsUsingGET(LocalDate endDate, LocalDate startDate, String uuid);
+    RiigikoguLiigeSNavTud getMemberSpeechStatisticsUsingGET(LocalDate endDate, LocalDate startDate, String uuid);
 
     /**
      * Riigikogu liikme sõnavõttude statistika.
@@ -2480,7 +2484,7 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<FactionSpeech> getMemberSpeechStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, final ServiceCallback<FactionSpeech> serviceCallback);
+    ServiceFuture<RiigikoguLiigeSNavTud> getMemberSpeechStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, final ServiceCallback<RiigikoguLiigeSNavTud> serviceCallback);
 
     /**
      * Riigikogu liikme sõnavõttude statistika.
@@ -2489,9 +2493,9 @@ public interface EMSAPIdokumentatsioon {
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @param uuid Liikme UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the FactionSpeech object
+     * @return the observable to the RiigikoguLiigeSNavTud object
      */
-    Observable<FactionSpeech> getMemberSpeechStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid);
+    Observable<RiigikoguLiigeSNavTud> getMemberSpeechStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid);
 
     /**
      * Riigikogu liikme sõnavõttude statistika.
@@ -2500,9 +2504,9 @@ public interface EMSAPIdokumentatsioon {
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @param uuid Liikme UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the FactionSpeech object
+     * @return the observable to the RiigikoguLiigeSNavTud object
      */
-    Observable<ServiceResponse<FactionSpeech>> getMemberSpeechStatisticsUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String uuid);
+    Observable<ServiceResponse<RiigikoguLiigeSNavTud>> getMemberSpeechStatisticsUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String uuid);
     /**
      * Riigikogu liikme sõnavõttude statistika.
      *
@@ -2513,9 +2517,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the FactionSpeech object if successful.
+     * @return the RiigikoguLiigeSNavTud object if successful.
      */
-    FactionSpeech getMemberSpeechStatisticsUsingGET(LocalDate endDate, LocalDate startDate, String uuid, String lang);
+    RiigikoguLiigeSNavTud getMemberSpeechStatisticsUsingGET(LocalDate endDate, LocalDate startDate, String uuid, String lang);
 
     /**
      * Riigikogu liikme sõnavõttude statistika.
@@ -2528,19 +2532,7 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<FactionSpeech> getMemberSpeechStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, String lang, final ServiceCallback<FactionSpeech> serviceCallback);
-
-    /**
-     * Riigikogu liikme sõnavõttude statistika.
-     *
-     * @param endDate Kuupäevavahemiku lõpp (yyyy-MM-dd)
-     * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
-     * @param uuid Liikme UUID
-     * @param lang Keel. Possible values include: 'et', 'ru', 'en'
-     * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the FactionSpeech object
-     */
-    Observable<FactionSpeech> getMemberSpeechStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, String lang);
+    ServiceFuture<RiigikoguLiigeSNavTud> getMemberSpeechStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, String lang, final ServiceCallback<RiigikoguLiigeSNavTud> serviceCallback);
 
     /**
      * Riigikogu liikme sõnavõttude statistika.
@@ -2550,9 +2542,21 @@ public interface EMSAPIdokumentatsioon {
      * @param uuid Liikme UUID
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the FactionSpeech object
+     * @return the observable to the RiigikoguLiigeSNavTud object
      */
-    Observable<ServiceResponse<FactionSpeech>> getMemberSpeechStatisticsUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String uuid, String lang);
+    Observable<RiigikoguLiigeSNavTud> getMemberSpeechStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, String lang);
+
+    /**
+     * Riigikogu liikme sõnavõttude statistika.
+     *
+     * @param endDate Kuupäevavahemiku lõpp (yyyy-MM-dd)
+     * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
+     * @param uuid Liikme UUID
+     * @param lang Keel. Possible values include: 'et', 'ru', 'en'
+     * @throws IllegalArgumentException thrown if parameters fail the validation
+     * @return the observable to the RiigikoguLiigeSNavTud object
+     */
+    Observable<ServiceResponse<RiigikoguLiigeSNavTud>> getMemberSpeechStatisticsUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String uuid, String lang);
 
     /**
      * Täiskogu sõnavõttude statistika.
@@ -2562,9 +2566,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;FactionSpeech&gt; object if successful.
+     * @return the List&lt;RiigikoguLiigeSNavTud&gt; object if successful.
      */
-    List<FactionSpeech> getPlenarySpeechStatisticsUsingGET(LocalDate endDate, LocalDate startDate);
+    List<RiigikoguLiigeSNavTud> getPlenarySpeechStatisticsUsingGET(LocalDate endDate, LocalDate startDate);
 
     /**
      * Täiskogu sõnavõttude statistika.
@@ -2575,7 +2579,7 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<List<FactionSpeech>> getPlenarySpeechStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, final ServiceCallback<List<FactionSpeech>> serviceCallback);
+    ServiceFuture<List<RiigikoguLiigeSNavTud>> getPlenarySpeechStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, final ServiceCallback<List<RiigikoguLiigeSNavTud>> serviceCallback);
 
     /**
      * Täiskogu sõnavõttude statistika.
@@ -2583,9 +2587,9 @@ public interface EMSAPIdokumentatsioon {
      * @param endDate Kuupäevavahemiku lõpp (yyyy-MM-dd)
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;FactionSpeech&gt; object
+     * @return the observable to the List&lt;RiigikoguLiigeSNavTud&gt; object
      */
-    Observable<List<FactionSpeech>> getPlenarySpeechStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate);
+    Observable<List<RiigikoguLiigeSNavTud>> getPlenarySpeechStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate);
 
     /**
      * Täiskogu sõnavõttude statistika.
@@ -2593,9 +2597,9 @@ public interface EMSAPIdokumentatsioon {
      * @param endDate Kuupäevavahemiku lõpp (yyyy-MM-dd)
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;FactionSpeech&gt; object
+     * @return the observable to the List&lt;RiigikoguLiigeSNavTud&gt; object
      */
-    Observable<ServiceResponse<List<FactionSpeech>>> getPlenarySpeechStatisticsUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate);
+    Observable<ServiceResponse<List<RiigikoguLiigeSNavTud>>> getPlenarySpeechStatisticsUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate);
     /**
      * Täiskogu sõnavõttude statistika.
      *
@@ -2605,9 +2609,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;FactionSpeech&gt; object if successful.
+     * @return the List&lt;RiigikoguLiigeSNavTud&gt; object if successful.
      */
-    List<FactionSpeech> getPlenarySpeechStatisticsUsingGET(LocalDate endDate, LocalDate startDate, String lang);
+    List<RiigikoguLiigeSNavTud> getPlenarySpeechStatisticsUsingGET(LocalDate endDate, LocalDate startDate, String lang);
 
     /**
      * Täiskogu sõnavõttude statistika.
@@ -2619,18 +2623,7 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<List<FactionSpeech>> getPlenarySpeechStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String lang, final ServiceCallback<List<FactionSpeech>> serviceCallback);
-
-    /**
-     * Täiskogu sõnavõttude statistika.
-     *
-     * @param endDate Kuupäevavahemiku lõpp (yyyy-MM-dd)
-     * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
-     * @param lang Keel. Possible values include: 'et', 'ru', 'en'
-     * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;FactionSpeech&gt; object
-     */
-    Observable<List<FactionSpeech>> getPlenarySpeechStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String lang);
+    ServiceFuture<List<RiigikoguLiigeSNavTud>> getPlenarySpeechStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String lang, final ServiceCallback<List<RiigikoguLiigeSNavTud>> serviceCallback);
 
     /**
      * Täiskogu sõnavõttude statistika.
@@ -2639,9 +2632,20 @@ public interface EMSAPIdokumentatsioon {
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;FactionSpeech&gt; object
+     * @return the observable to the List&lt;RiigikoguLiigeSNavTud&gt; object
      */
-    Observable<ServiceResponse<List<FactionSpeech>>> getPlenarySpeechStatisticsUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String lang);
+    Observable<List<RiigikoguLiigeSNavTud>> getPlenarySpeechStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String lang);
+
+    /**
+     * Täiskogu sõnavõttude statistika.
+     *
+     * @param endDate Kuupäevavahemiku lõpp (yyyy-MM-dd)
+     * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
+     * @param lang Keel. Possible values include: 'et', 'ru', 'en'
+     * @throws IllegalArgumentException thrown if parameters fail the validation
+     * @return the observable to the List&lt;RiigikoguLiigeSNavTud&gt; object
+     */
+    Observable<ServiceResponse<List<RiigikoguLiigeSNavTud>>> getPlenarySpeechStatisticsUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String lang);
 
     /**
      * Fraktsiooni hääletuste statistika.
@@ -2652,9 +2656,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;PlenaryMemberVoting&gt; object if successful.
+     * @return the List&lt;RiigikoguLiigeHLetused&gt; object if successful.
      */
-    List<PlenaryMemberVoting> getFactionVotingStatisticsUsingGET(LocalDate endDate, LocalDate startDate, String uuid);
+    List<RiigikoguLiigeHLetused> getFactionVotingStatisticsUsingGET(LocalDate endDate, LocalDate startDate, String uuid);
 
     /**
      * Fraktsiooni hääletuste statistika.
@@ -2666,7 +2670,7 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<List<PlenaryMemberVoting>> getFactionVotingStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, final ServiceCallback<List<PlenaryMemberVoting>> serviceCallback);
+    ServiceFuture<List<RiigikoguLiigeHLetused>> getFactionVotingStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, final ServiceCallback<List<RiigikoguLiigeHLetused>> serviceCallback);
 
     /**
      * Fraktsiooni hääletuste statistika.
@@ -2675,9 +2679,9 @@ public interface EMSAPIdokumentatsioon {
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @param uuid Fraktsiooni UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;PlenaryMemberVoting&gt; object
+     * @return the observable to the List&lt;RiigikoguLiigeHLetused&gt; object
      */
-    Observable<List<PlenaryMemberVoting>> getFactionVotingStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid);
+    Observable<List<RiigikoguLiigeHLetused>> getFactionVotingStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid);
 
     /**
      * Fraktsiooni hääletuste statistika.
@@ -2686,9 +2690,9 @@ public interface EMSAPIdokumentatsioon {
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @param uuid Fraktsiooni UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;PlenaryMemberVoting&gt; object
+     * @return the observable to the List&lt;RiigikoguLiigeHLetused&gt; object
      */
-    Observable<ServiceResponse<List<PlenaryMemberVoting>>> getFactionVotingStatisticsUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String uuid);
+    Observable<ServiceResponse<List<RiigikoguLiigeHLetused>>> getFactionVotingStatisticsUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String uuid);
     /**
      * Fraktsiooni hääletuste statistika.
      *
@@ -2699,9 +2703,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;PlenaryMemberVoting&gt; object if successful.
+     * @return the List&lt;RiigikoguLiigeHLetused&gt; object if successful.
      */
-    List<PlenaryMemberVoting> getFactionVotingStatisticsUsingGET(LocalDate endDate, LocalDate startDate, String uuid, String lang);
+    List<RiigikoguLiigeHLetused> getFactionVotingStatisticsUsingGET(LocalDate endDate, LocalDate startDate, String uuid, String lang);
 
     /**
      * Fraktsiooni hääletuste statistika.
@@ -2714,7 +2718,7 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<List<PlenaryMemberVoting>> getFactionVotingStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, String lang, final ServiceCallback<List<PlenaryMemberVoting>> serviceCallback);
+    ServiceFuture<List<RiigikoguLiigeHLetused>> getFactionVotingStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, String lang, final ServiceCallback<List<RiigikoguLiigeHLetused>> serviceCallback);
 
     /**
      * Fraktsiooni hääletuste statistika.
@@ -2724,9 +2728,9 @@ public interface EMSAPIdokumentatsioon {
      * @param uuid Fraktsiooni UUID
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;PlenaryMemberVoting&gt; object
+     * @return the observable to the List&lt;RiigikoguLiigeHLetused&gt; object
      */
-    Observable<List<PlenaryMemberVoting>> getFactionVotingStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, String lang);
+    Observable<List<RiigikoguLiigeHLetused>> getFactionVotingStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, String lang);
 
     /**
      * Fraktsiooni hääletuste statistika.
@@ -2736,9 +2740,9 @@ public interface EMSAPIdokumentatsioon {
      * @param uuid Fraktsiooni UUID
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;PlenaryMemberVoting&gt; object
+     * @return the observable to the List&lt;RiigikoguLiigeHLetused&gt; object
      */
-    Observable<ServiceResponse<List<PlenaryMemberVoting>>> getFactionVotingStatisticsUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String uuid, String lang);
+    Observable<ServiceResponse<List<RiigikoguLiigeHLetused>>> getFactionVotingStatisticsUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String uuid, String lang);
 
     /**
      * Riigikogu liikme hääletuste statistika.
@@ -2749,9 +2753,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the PlenaryMemberVoting object if successful.
+     * @return the RiigikoguLiigeHLetused object if successful.
      */
-    PlenaryMemberVoting getMemberVotingStatisticsUsingGET(LocalDate endDate, LocalDate startDate, String uuid);
+    RiigikoguLiigeHLetused getMemberVotingStatisticsUsingGET(LocalDate endDate, LocalDate startDate, String uuid);
 
     /**
      * Riigikogu liikme hääletuste statistika.
@@ -2763,7 +2767,7 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<PlenaryMemberVoting> getMemberVotingStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, final ServiceCallback<PlenaryMemberVoting> serviceCallback);
+    ServiceFuture<RiigikoguLiigeHLetused> getMemberVotingStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, final ServiceCallback<RiigikoguLiigeHLetused> serviceCallback);
 
     /**
      * Riigikogu liikme hääletuste statistika.
@@ -2772,9 +2776,9 @@ public interface EMSAPIdokumentatsioon {
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @param uuid Liikme UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PlenaryMemberVoting object
+     * @return the observable to the RiigikoguLiigeHLetused object
      */
-    Observable<PlenaryMemberVoting> getMemberVotingStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid);
+    Observable<RiigikoguLiigeHLetused> getMemberVotingStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid);
 
     /**
      * Riigikogu liikme hääletuste statistika.
@@ -2783,9 +2787,9 @@ public interface EMSAPIdokumentatsioon {
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @param uuid Liikme UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PlenaryMemberVoting object
+     * @return the observable to the RiigikoguLiigeHLetused object
      */
-    Observable<ServiceResponse<PlenaryMemberVoting>> getMemberVotingStatisticsUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String uuid);
+    Observable<ServiceResponse<RiigikoguLiigeHLetused>> getMemberVotingStatisticsUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String uuid);
     /**
      * Riigikogu liikme hääletuste statistika.
      *
@@ -2796,9 +2800,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the PlenaryMemberVoting object if successful.
+     * @return the RiigikoguLiigeHLetused object if successful.
      */
-    PlenaryMemberVoting getMemberVotingStatisticsUsingGET(LocalDate endDate, LocalDate startDate, String uuid, String lang);
+    RiigikoguLiigeHLetused getMemberVotingStatisticsUsingGET(LocalDate endDate, LocalDate startDate, String uuid, String lang);
 
     /**
      * Riigikogu liikme hääletuste statistika.
@@ -2811,7 +2815,7 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<PlenaryMemberVoting> getMemberVotingStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, String lang, final ServiceCallback<PlenaryMemberVoting> serviceCallback);
+    ServiceFuture<RiigikoguLiigeHLetused> getMemberVotingStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, String lang, final ServiceCallback<RiigikoguLiigeHLetused> serviceCallback);
 
     /**
      * Riigikogu liikme hääletuste statistika.
@@ -2821,9 +2825,9 @@ public interface EMSAPIdokumentatsioon {
      * @param uuid Liikme UUID
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PlenaryMemberVoting object
+     * @return the observable to the RiigikoguLiigeHLetused object
      */
-    Observable<PlenaryMemberVoting> getMemberVotingStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, String lang);
+    Observable<RiigikoguLiigeHLetused> getMemberVotingStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String uuid, String lang);
 
     /**
      * Riigikogu liikme hääletuste statistika.
@@ -2833,9 +2837,9 @@ public interface EMSAPIdokumentatsioon {
      * @param uuid Liikme UUID
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PlenaryMemberVoting object
+     * @return the observable to the RiigikoguLiigeHLetused object
      */
-    Observable<ServiceResponse<PlenaryMemberVoting>> getMemberVotingStatisticsUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String uuid, String lang);
+    Observable<ServiceResponse<RiigikoguLiigeHLetused>> getMemberVotingStatisticsUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String uuid, String lang);
 
     /**
      * Täiskogu hääletuste statistika.
@@ -2845,9 +2849,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;PlenaryMemberVoting&gt; object if successful.
+     * @return the List&lt;RiigikoguLiigeHLetused&gt; object if successful.
      */
-    List<PlenaryMemberVoting> getPlenaryVotingStatisticsUsingGET(LocalDate endDate, LocalDate startDate);
+    List<RiigikoguLiigeHLetused> getPlenaryVotingStatisticsUsingGET(LocalDate endDate, LocalDate startDate);
 
     /**
      * Täiskogu hääletuste statistika.
@@ -2858,7 +2862,7 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<List<PlenaryMemberVoting>> getPlenaryVotingStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, final ServiceCallback<List<PlenaryMemberVoting>> serviceCallback);
+    ServiceFuture<List<RiigikoguLiigeHLetused>> getPlenaryVotingStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, final ServiceCallback<List<RiigikoguLiigeHLetused>> serviceCallback);
 
     /**
      * Täiskogu hääletuste statistika.
@@ -2866,9 +2870,9 @@ public interface EMSAPIdokumentatsioon {
      * @param endDate Kuupäevavahemiku lõpp (yyyy-MM-dd)
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;PlenaryMemberVoting&gt; object
+     * @return the observable to the List&lt;RiigikoguLiigeHLetused&gt; object
      */
-    Observable<List<PlenaryMemberVoting>> getPlenaryVotingStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate);
+    Observable<List<RiigikoguLiigeHLetused>> getPlenaryVotingStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate);
 
     /**
      * Täiskogu hääletuste statistika.
@@ -2876,9 +2880,9 @@ public interface EMSAPIdokumentatsioon {
      * @param endDate Kuupäevavahemiku lõpp (yyyy-MM-dd)
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;PlenaryMemberVoting&gt; object
+     * @return the observable to the List&lt;RiigikoguLiigeHLetused&gt; object
      */
-    Observable<ServiceResponse<List<PlenaryMemberVoting>>> getPlenaryVotingStatisticsUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate);
+    Observable<ServiceResponse<List<RiigikoguLiigeHLetused>>> getPlenaryVotingStatisticsUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate);
     /**
      * Täiskogu hääletuste statistika.
      *
@@ -2888,9 +2892,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;PlenaryMemberVoting&gt; object if successful.
+     * @return the List&lt;RiigikoguLiigeHLetused&gt; object if successful.
      */
-    List<PlenaryMemberVoting> getPlenaryVotingStatisticsUsingGET(LocalDate endDate, LocalDate startDate, String lang);
+    List<RiigikoguLiigeHLetused> getPlenaryVotingStatisticsUsingGET(LocalDate endDate, LocalDate startDate, String lang);
 
     /**
      * Täiskogu hääletuste statistika.
@@ -2902,7 +2906,7 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<List<PlenaryMemberVoting>> getPlenaryVotingStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String lang, final ServiceCallback<List<PlenaryMemberVoting>> serviceCallback);
+    ServiceFuture<List<RiigikoguLiigeHLetused>> getPlenaryVotingStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String lang, final ServiceCallback<List<RiigikoguLiigeHLetused>> serviceCallback);
 
     /**
      * Täiskogu hääletuste statistika.
@@ -2911,9 +2915,9 @@ public interface EMSAPIdokumentatsioon {
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;PlenaryMemberVoting&gt; object
+     * @return the observable to the List&lt;RiigikoguLiigeHLetused&gt; object
      */
-    Observable<List<PlenaryMemberVoting>> getPlenaryVotingStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String lang);
+    Observable<List<RiigikoguLiigeHLetused>> getPlenaryVotingStatisticsUsingGETAsync(LocalDate endDate, LocalDate startDate, String lang);
 
     /**
      * Täiskogu hääletuste statistika.
@@ -2922,9 +2926,9 @@ public interface EMSAPIdokumentatsioon {
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;PlenaryMemberVoting&gt; object
+     * @return the observable to the List&lt;RiigikoguLiigeHLetused&gt; object
      */
-    Observable<ServiceResponse<List<PlenaryMemberVoting>>> getPlenaryVotingStatisticsUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String lang);
+    Observable<ServiceResponse<List<RiigikoguLiigeHLetused>>> getPlenaryVotingStatisticsUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String lang);
 
     /**
      * Päevakorrapunktide steno lingid.
@@ -2934,9 +2938,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;AgendaStenoUrl&gt; object if successful.
+     * @return the List&lt;StenoPEvakorrapunkt&gt; object if successful.
      */
-    List<AgendaStenoUrl> getAgendaUrlsUsingGET(String uuids);
+    List<StenoPEvakorrapunkt> getAgendaUrlsUsingGET(String uuids);
 
     /**
      * Päevakorrapunktide steno lingid.
@@ -2947,7 +2951,7 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<List<AgendaStenoUrl>> getAgendaUrlsUsingGETAsync(String uuids, final ServiceCallback<List<AgendaStenoUrl>> serviceCallback);
+    ServiceFuture<List<StenoPEvakorrapunkt>> getAgendaUrlsUsingGETAsync(String uuids, final ServiceCallback<List<StenoPEvakorrapunkt>> serviceCallback);
 
     /**
      * Päevakorrapunktide steno lingid.
@@ -2955,9 +2959,9 @@ public interface EMSAPIdokumentatsioon {
      *
      * @param uuids Päevakorrapunktide UUID-d (komaga eraldatud)
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;AgendaStenoUrl&gt; object
+     * @return the observable to the List&lt;StenoPEvakorrapunkt&gt; object
      */
-    Observable<List<AgendaStenoUrl>> getAgendaUrlsUsingGETAsync(String uuids);
+    Observable<List<StenoPEvakorrapunkt>> getAgendaUrlsUsingGETAsync(String uuids);
 
     /**
      * Päevakorrapunktide steno lingid.
@@ -2965,9 +2969,9 @@ public interface EMSAPIdokumentatsioon {
      *
      * @param uuids Päevakorrapunktide UUID-d (komaga eraldatud)
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;AgendaStenoUrl&gt; object
+     * @return the observable to the List&lt;StenoPEvakorrapunkt&gt; object
      */
-    Observable<ServiceResponse<List<AgendaStenoUrl>>> getAgendaUrlsUsingGETWithServiceResponseAsync(String uuids);
+    Observable<ServiceResponse<List<StenoPEvakorrapunkt>>> getAgendaUrlsUsingGETWithServiceResponseAsync(String uuids);
 
     /**
      * Viimased stenogrammid.
@@ -3060,9 +3064,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;StenoSpeeches&gt; object if successful.
+     * @return the List&lt;StenoSNavTud&gt; object if successful.
      */
-    List<StenoSpeeches> getSpeechesUsingGET(LocalDate endDate, LocalDate startDate, String userUuids);
+    List<StenoSNavTud> getSpeechesUsingGET(LocalDate endDate, LocalDate startDate, String userUuids);
 
     /**
      * Isikute kõnede ja sõnavõttude arv.
@@ -3075,7 +3079,7 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<List<StenoSpeeches>> getSpeechesUsingGETAsync(LocalDate endDate, LocalDate startDate, String userUuids, final ServiceCallback<List<StenoSpeeches>> serviceCallback);
+    ServiceFuture<List<StenoSNavTud>> getSpeechesUsingGETAsync(LocalDate endDate, LocalDate startDate, String userUuids, final ServiceCallback<List<StenoSNavTud>> serviceCallback);
 
     /**
      * Isikute kõnede ja sõnavõttude arv.
@@ -3085,9 +3089,9 @@ public interface EMSAPIdokumentatsioon {
      * @param startDate Alguskuupäev (yyyy-MM-dd)
      * @param userUuids Isikute UUID-d (komaga eraldatud)
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;StenoSpeeches&gt; object
+     * @return the observable to the List&lt;StenoSNavTud&gt; object
      */
-    Observable<List<StenoSpeeches>> getSpeechesUsingGETAsync(LocalDate endDate, LocalDate startDate, String userUuids);
+    Observable<List<StenoSNavTud>> getSpeechesUsingGETAsync(LocalDate endDate, LocalDate startDate, String userUuids);
 
     /**
      * Isikute kõnede ja sõnavõttude arv.
@@ -3097,9 +3101,9 @@ public interface EMSAPIdokumentatsioon {
      * @param startDate Alguskuupäev (yyyy-MM-dd)
      * @param userUuids Isikute UUID-d (komaga eraldatud)
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;StenoSpeeches&gt; object
+     * @return the observable to the List&lt;StenoSNavTud&gt; object
      */
-    Observable<ServiceResponse<List<StenoSpeeches>>> getSpeechesUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String userUuids);
+    Observable<ServiceResponse<List<StenoSNavTud>>> getSpeechesUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String userUuids);
     /**
      * Isikute kõnede ja sõnavõttude arv.
      * Steno XML-RPC teenus: getStenoTekstIsikKoned.
@@ -3111,9 +3115,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;StenoSpeeches&gt; object if successful.
+     * @return the List&lt;StenoSNavTud&gt; object if successful.
      */
-    List<StenoSpeeches> getSpeechesUsingGET(LocalDate endDate, LocalDate startDate, String userUuids, Integer membership);
+    List<StenoSNavTud> getSpeechesUsingGET(LocalDate endDate, LocalDate startDate, String userUuids, Integer membership);
 
     /**
      * Isikute kõnede ja sõnavõttude arv.
@@ -3127,7 +3131,7 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<List<StenoSpeeches>> getSpeechesUsingGETAsync(LocalDate endDate, LocalDate startDate, String userUuids, Integer membership, final ServiceCallback<List<StenoSpeeches>> serviceCallback);
+    ServiceFuture<List<StenoSNavTud>> getSpeechesUsingGETAsync(LocalDate endDate, LocalDate startDate, String userUuids, Integer membership, final ServiceCallback<List<StenoSNavTud>> serviceCallback);
 
     /**
      * Isikute kõnede ja sõnavõttude arv.
@@ -3138,9 +3142,9 @@ public interface EMSAPIdokumentatsioon {
      * @param userUuids Isikute UUID-d (komaga eraldatud)
      * @param membership Koosseisu number
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;StenoSpeeches&gt; object
+     * @return the observable to the List&lt;StenoSNavTud&gt; object
      */
-    Observable<List<StenoSpeeches>> getSpeechesUsingGETAsync(LocalDate endDate, LocalDate startDate, String userUuids, Integer membership);
+    Observable<List<StenoSNavTud>> getSpeechesUsingGETAsync(LocalDate endDate, LocalDate startDate, String userUuids, Integer membership);
 
     /**
      * Isikute kõnede ja sõnavõttude arv.
@@ -3151,9 +3155,9 @@ public interface EMSAPIdokumentatsioon {
      * @param userUuids Isikute UUID-d (komaga eraldatud)
      * @param membership Koosseisu number
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;StenoSpeeches&gt; object
+     * @return the observable to the List&lt;StenoSNavTud&gt; object
      */
-    Observable<ServiceResponse<List<StenoSpeeches>>> getSpeechesUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String userUuids, Integer membership);
+    Observable<ServiceResponse<List<StenoSNavTud>>> getSpeechesUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String userUuids, Integer membership);
 
     /**
      * Isiku sõnavõttude arv.
@@ -3165,9 +3169,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the StenoSpeechesCount object if successful.
+     * @return the StenoSNavTtudeArv object if successful.
      */
-    StenoSpeechesCount getSpeechCountUsingGET(LocalDate endDate, LocalDate startDate, String userUuid);
+    StenoSNavTtudeArv getSpeechCountUsingGET(LocalDate endDate, LocalDate startDate, String userUuid);
 
     /**
      * Isiku sõnavõttude arv.
@@ -3180,7 +3184,7 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<StenoSpeechesCount> getSpeechCountUsingGETAsync(LocalDate endDate, LocalDate startDate, String userUuid, final ServiceCallback<StenoSpeechesCount> serviceCallback);
+    ServiceFuture<StenoSNavTtudeArv> getSpeechCountUsingGETAsync(LocalDate endDate, LocalDate startDate, String userUuid, final ServiceCallback<StenoSNavTtudeArv> serviceCallback);
 
     /**
      * Isiku sõnavõttude arv.
@@ -3190,9 +3194,9 @@ public interface EMSAPIdokumentatsioon {
      * @param startDate Alguskuupäev (yyyy-MM-dd)
      * @param userUuid Isiku UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the StenoSpeechesCount object
+     * @return the observable to the StenoSNavTtudeArv object
      */
-    Observable<StenoSpeechesCount> getSpeechCountUsingGETAsync(LocalDate endDate, LocalDate startDate, String userUuid);
+    Observable<StenoSNavTtudeArv> getSpeechCountUsingGETAsync(LocalDate endDate, LocalDate startDate, String userUuid);
 
     /**
      * Isiku sõnavõttude arv.
@@ -3202,9 +3206,9 @@ public interface EMSAPIdokumentatsioon {
      * @param startDate Alguskuupäev (yyyy-MM-dd)
      * @param userUuid Isiku UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the StenoSpeechesCount object
+     * @return the observable to the StenoSNavTtudeArv object
      */
-    Observable<ServiceResponse<StenoSpeechesCount>> getSpeechCountUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String userUuid);
+    Observable<ServiceResponse<StenoSNavTtudeArv>> getSpeechCountUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String userUuid);
     /**
      * Isiku sõnavõttude arv.
      * Steno XML-RPC teenus: getIsikSonavotudCount.
@@ -3217,9 +3221,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the StenoSpeechesCount object if successful.
+     * @return the StenoSNavTtudeArv object if successful.
      */
-    StenoSpeechesCount getSpeechCountUsingGET(LocalDate endDate, LocalDate startDate, String userUuid, Integer membership, String type);
+    StenoSNavTtudeArv getSpeechCountUsingGET(LocalDate endDate, LocalDate startDate, String userUuid, Integer membership, String type);
 
     /**
      * Isiku sõnavõttude arv.
@@ -3234,7 +3238,7 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<StenoSpeechesCount> getSpeechCountUsingGETAsync(LocalDate endDate, LocalDate startDate, String userUuid, Integer membership, String type, final ServiceCallback<StenoSpeechesCount> serviceCallback);
+    ServiceFuture<StenoSNavTtudeArv> getSpeechCountUsingGETAsync(LocalDate endDate, LocalDate startDate, String userUuid, Integer membership, String type, final ServiceCallback<StenoSNavTtudeArv> serviceCallback);
 
     /**
      * Isiku sõnavõttude arv.
@@ -3246,9 +3250,9 @@ public interface EMSAPIdokumentatsioon {
      * @param membership Koosseisu number
      * @param type Istungi tüüp. Possible values include: 'IS', 'IT'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the StenoSpeechesCount object
+     * @return the observable to the StenoSNavTtudeArv object
      */
-    Observable<StenoSpeechesCount> getSpeechCountUsingGETAsync(LocalDate endDate, LocalDate startDate, String userUuid, Integer membership, String type);
+    Observable<StenoSNavTtudeArv> getSpeechCountUsingGETAsync(LocalDate endDate, LocalDate startDate, String userUuid, Integer membership, String type);
 
     /**
      * Isiku sõnavõttude arv.
@@ -3260,9 +3264,9 @@ public interface EMSAPIdokumentatsioon {
      * @param membership Koosseisu number
      * @param type Istungi tüüp. Possible values include: 'IS', 'IT'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the StenoSpeechesCount object
+     * @return the observable to the StenoSNavTtudeArv object
      */
-    Observable<ServiceResponse<StenoSpeechesCount>> getSpeechCountUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String userUuid, Integer membership, String type);
+    Observable<ServiceResponse<StenoSNavTtudeArv>> getSpeechCountUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String userUuid, Integer membership, String type);
 
     /**
      * Isiku viimane sõnavõtt.
@@ -3272,9 +3276,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the LastStenoSpeech object if successful.
+     * @return the StenoViimaneSNavTt object if successful.
      */
-    LastStenoSpeech getLastSpeechUsingGET(String userUuid);
+    StenoViimaneSNavTt getLastSpeechUsingGET(String userUuid);
 
     /**
      * Isiku viimane sõnavõtt.
@@ -3285,7 +3289,7 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<LastStenoSpeech> getLastSpeechUsingGETAsync(String userUuid, final ServiceCallback<LastStenoSpeech> serviceCallback);
+    ServiceFuture<StenoViimaneSNavTt> getLastSpeechUsingGETAsync(String userUuid, final ServiceCallback<StenoViimaneSNavTt> serviceCallback);
 
     /**
      * Isiku viimane sõnavõtt.
@@ -3293,9 +3297,9 @@ public interface EMSAPIdokumentatsioon {
      *
      * @param userUuid Isiku UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the LastStenoSpeech object
+     * @return the observable to the StenoViimaneSNavTt object
      */
-    Observable<LastStenoSpeech> getLastSpeechUsingGETAsync(String userUuid);
+    Observable<StenoViimaneSNavTt> getLastSpeechUsingGETAsync(String userUuid);
 
     /**
      * Isiku viimane sõnavõtt.
@@ -3303,9 +3307,9 @@ public interface EMSAPIdokumentatsioon {
      *
      * @param userUuid Isiku UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the LastStenoSpeech object
+     * @return the observable to the StenoViimaneSNavTt object
      */
-    Observable<ServiceResponse<LastStenoSpeech>> getLastSpeechUsingGETWithServiceResponseAsync(String userUuid);
+    Observable<ServiceResponse<StenoViimaneSNavTt>> getLastSpeechUsingGETWithServiceResponseAsync(String userUuid);
     /**
      * Isiku viimane sõnavõtt.
      * Steno XML-RPC teenus: getViimaneSonavott.
@@ -3317,9 +3321,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the LastStenoSpeech object if successful.
+     * @return the StenoViimaneSNavTt object if successful.
      */
-    LastStenoSpeech getLastSpeechUsingGET(String userUuid, Integer charCount, Integer membership, String type);
+    StenoViimaneSNavTt getLastSpeechUsingGET(String userUuid, Integer charCount, Integer membership, String type);
 
     /**
      * Isiku viimane sõnavõtt.
@@ -3333,7 +3337,7 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<LastStenoSpeech> getLastSpeechUsingGETAsync(String userUuid, Integer charCount, Integer membership, String type, final ServiceCallback<LastStenoSpeech> serviceCallback);
+    ServiceFuture<StenoViimaneSNavTt> getLastSpeechUsingGETAsync(String userUuid, Integer charCount, Integer membership, String type, final ServiceCallback<StenoViimaneSNavTt> serviceCallback);
 
     /**
      * Isiku viimane sõnavõtt.
@@ -3344,9 +3348,9 @@ public interface EMSAPIdokumentatsioon {
      * @param membership Koosseisu number
      * @param type Istungi tüüp. Possible values include: 'IS', 'IT'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the LastStenoSpeech object
+     * @return the observable to the StenoViimaneSNavTt object
      */
-    Observable<LastStenoSpeech> getLastSpeechUsingGETAsync(String userUuid, Integer charCount, Integer membership, String type);
+    Observable<StenoViimaneSNavTt> getLastSpeechUsingGETAsync(String userUuid, Integer charCount, Integer membership, String type);
 
     /**
      * Isiku viimane sõnavõtt.
@@ -3357,9 +3361,9 @@ public interface EMSAPIdokumentatsioon {
      * @param membership Koosseisu number
      * @param type Istungi tüüp. Possible values include: 'IS', 'IT'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the LastStenoSpeech object
+     * @return the observable to the StenoViimaneSNavTt object
      */
-    Observable<ServiceResponse<LastStenoSpeech>> getLastSpeechUsingGETWithServiceResponseAsync(String userUuid, Integer charCount, Integer membership, String type);
+    Observable<ServiceResponse<StenoViimaneSNavTt>> getLastSpeechUsingGETWithServiceResponseAsync(String userUuid, Integer charCount, Integer membership, String type);
 
     /**
      * Kasutajagruppide nimekiri/otsing.
@@ -3367,9 +3371,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;UserGroup&gt; object if successful.
+     * @return the List&lt;Kasutajagrupp&gt; object if successful.
      */
-    List<UserGroup> findUserGroupsUsingGET();
+    List<Kasutajagrupp> findUserGroupsUsingGET();
 
     /**
      * Kasutajagruppide nimekiri/otsing.
@@ -3378,23 +3382,23 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<List<UserGroup>> findUserGroupsUsingGETAsync(final ServiceCallback<List<UserGroup>> serviceCallback);
+    ServiceFuture<List<Kasutajagrupp>> findUserGroupsUsingGETAsync(final ServiceCallback<List<Kasutajagrupp>> serviceCallback);
 
     /**
      * Kasutajagruppide nimekiri/otsing.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;UserGroup&gt; object
+     * @return the observable to the List&lt;Kasutajagrupp&gt; object
      */
-    Observable<List<UserGroup>> findUserGroupsUsingGETAsync();
+    Observable<List<Kasutajagrupp>> findUserGroupsUsingGETAsync();
 
     /**
      * Kasutajagruppide nimekiri/otsing.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;UserGroup&gt; object
+     * @return the observable to the List&lt;Kasutajagrupp&gt; object
      */
-    Observable<ServiceResponse<List<UserGroup>>> findUserGroupsUsingGETWithServiceResponseAsync();
+    Observable<ServiceResponse<List<Kasutajagrupp>>> findUserGroupsUsingGETWithServiceResponseAsync();
     /**
      * Kasutajagruppide nimekiri/otsing.
      *
@@ -3405,9 +3409,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;UserGroup&gt; object if successful.
+     * @return the List&lt;Kasutajagrupp&gt; object if successful.
      */
-    List<UserGroup> findUserGroupsUsingGET(Boolean hideInactive, String lang, String name, String typeCode);
+    List<Kasutajagrupp> findUserGroupsUsingGET(Boolean hideInactive, String lang, String name, String typeCode);
 
     /**
      * Kasutajagruppide nimekiri/otsing.
@@ -3420,7 +3424,7 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<List<UserGroup>> findUserGroupsUsingGETAsync(Boolean hideInactive, String lang, String name, String typeCode, final ServiceCallback<List<UserGroup>> serviceCallback);
+    ServiceFuture<List<Kasutajagrupp>> findUserGroupsUsingGETAsync(Boolean hideInactive, String lang, String name, String typeCode, final ServiceCallback<List<Kasutajagrupp>> serviceCallback);
 
     /**
      * Kasutajagruppide nimekiri/otsing.
@@ -3430,9 +3434,9 @@ public interface EMSAPIdokumentatsioon {
      * @param name Nimi
      * @param typeCode Tüübi kood (klassifikaator 'kasutajagrupiTuup'). Possible values include: 'UURIMISKOMISJON', 'VANA_FRAKTSIOON', 'VANA_ERIKOMISJON', 'VANA_ALALINE_KOMISJON', 'ALALINE_KOMISJON', 'ERIKOMISJON', 'RIIGIKOGU_JUHATUS', 'ESIMEHE_BÜROO', 'OSAKOND', 'VALIMISRINGKOND', 'TOETUSRYHM', 'ASUTUSE_YKSUS', 'PARLAMENDIRYHM', 'YHENDUS', 'FRAKTSIOON', 'DELEGATSIOON', 'RIIGIKOGU_TAISKOGU', 'ERAKOND', 'AMETNIK', 'TALITUS'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;UserGroup&gt; object
+     * @return the observable to the List&lt;Kasutajagrupp&gt; object
      */
-    Observable<List<UserGroup>> findUserGroupsUsingGETAsync(Boolean hideInactive, String lang, String name, String typeCode);
+    Observable<List<Kasutajagrupp>> findUserGroupsUsingGETAsync(Boolean hideInactive, String lang, String name, String typeCode);
 
     /**
      * Kasutajagruppide nimekiri/otsing.
@@ -3442,9 +3446,9 @@ public interface EMSAPIdokumentatsioon {
      * @param name Nimi
      * @param typeCode Tüübi kood (klassifikaator 'kasutajagrupiTuup'). Possible values include: 'UURIMISKOMISJON', 'VANA_FRAKTSIOON', 'VANA_ERIKOMISJON', 'VANA_ALALINE_KOMISJON', 'ALALINE_KOMISJON', 'ERIKOMISJON', 'RIIGIKOGU_JUHATUS', 'ESIMEHE_BÜROO', 'OSAKOND', 'VALIMISRINGKOND', 'TOETUSRYHM', 'ASUTUSE_YKSUS', 'PARLAMENDIRYHM', 'YHENDUS', 'FRAKTSIOON', 'DELEGATSIOON', 'RIIGIKOGU_TAISKOGU', 'ERAKOND', 'AMETNIK', 'TALITUS'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;UserGroup&gt; object
+     * @return the observable to the List&lt;Kasutajagrupp&gt; object
      */
-    Observable<ServiceResponse<List<UserGroup>>> findUserGroupsUsingGETWithServiceResponseAsync(Boolean hideInactive, String lang, String name, String typeCode);
+    Observable<ServiceResponse<List<Kasutajagrupp>>> findUserGroupsUsingGETWithServiceResponseAsync(Boolean hideInactive, String lang, String name, String typeCode);
 
     /**
      * getUserGroup.
@@ -3453,9 +3457,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the UserGroup object if successful.
+     * @return the Kasutajagrupp object if successful.
      */
-    UserGroup getUserGroupUsingGET(String uuid);
+    Kasutajagrupp getUserGroupUsingGET(String uuid);
 
     /**
      * getUserGroup.
@@ -3465,25 +3469,25 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<UserGroup> getUserGroupUsingGETAsync(String uuid, final ServiceCallback<UserGroup> serviceCallback);
+    ServiceFuture<Kasutajagrupp> getUserGroupUsingGETAsync(String uuid, final ServiceCallback<Kasutajagrupp> serviceCallback);
 
     /**
      * getUserGroup.
      *
      * @param uuid Kasutajagrupi UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the UserGroup object
+     * @return the observable to the Kasutajagrupp object
      */
-    Observable<UserGroup> getUserGroupUsingGETAsync(String uuid);
+    Observable<Kasutajagrupp> getUserGroupUsingGETAsync(String uuid);
 
     /**
      * getUserGroup.
      *
      * @param uuid Kasutajagrupi UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the UserGroup object
+     * @return the observable to the Kasutajagrupp object
      */
-    Observable<ServiceResponse<UserGroup>> getUserGroupUsingGETWithServiceResponseAsync(String uuid);
+    Observable<ServiceResponse<Kasutajagrupp>> getUserGroupUsingGETWithServiceResponseAsync(String uuid);
     /**
      * getUserGroup.
      *
@@ -3492,9 +3496,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the UserGroup object if successful.
+     * @return the Kasutajagrupp object if successful.
      */
-    UserGroup getUserGroupUsingGET(String uuid, String lang);
+    Kasutajagrupp getUserGroupUsingGET(String uuid, String lang);
 
     /**
      * getUserGroup.
@@ -3505,7 +3509,7 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<UserGroup> getUserGroupUsingGETAsync(String uuid, String lang, final ServiceCallback<UserGroup> serviceCallback);
+    ServiceFuture<Kasutajagrupp> getUserGroupUsingGETAsync(String uuid, String lang, final ServiceCallback<Kasutajagrupp> serviceCallback);
 
     /**
      * getUserGroup.
@@ -3513,9 +3517,9 @@ public interface EMSAPIdokumentatsioon {
      * @param uuid Kasutajagrupi UUID
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the UserGroup object
+     * @return the observable to the Kasutajagrupp object
      */
-    Observable<UserGroup> getUserGroupUsingGETAsync(String uuid, String lang);
+    Observable<Kasutajagrupp> getUserGroupUsingGETAsync(String uuid, String lang);
 
     /**
      * getUserGroup.
@@ -3523,9 +3527,9 @@ public interface EMSAPIdokumentatsioon {
      * @param uuid Kasutajagrupi UUID
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the UserGroup object
+     * @return the observable to the Kasutajagrupp object
      */
-    Observable<ServiceResponse<UserGroup>> getUserGroupUsingGETWithServiceResponseAsync(String uuid, String lang);
+    Observable<ServiceResponse<Kasutajagrupp>> getUserGroupUsingGETWithServiceResponseAsync(String uuid, String lang);
 
     /**
      * Toimikute otsing.
@@ -3533,9 +3537,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the PagedResourcesOfVolumes object if successful.
+     * @return the PagedResourcesToimikOtsing object if successful.
      */
-    PagedResourcesOfVolumes findVolumesUsingGET();
+    PagedResourcesToimikOtsing findVolumesUsingGET();
 
     /**
      * Toimikute otsing.
@@ -3544,23 +3548,23 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<PagedResourcesOfVolumes> findVolumesUsingGETAsync(final ServiceCallback<PagedResourcesOfVolumes> serviceCallback);
+    ServiceFuture<PagedResourcesToimikOtsing> findVolumesUsingGETAsync(final ServiceCallback<PagedResourcesToimikOtsing> serviceCallback);
 
     /**
      * Toimikute otsing.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PagedResourcesOfVolumes object
+     * @return the observable to the PagedResourcesToimikOtsing object
      */
-    Observable<PagedResourcesOfVolumes> findVolumesUsingGETAsync();
+    Observable<PagedResourcesToimikOtsing> findVolumesUsingGETAsync();
 
     /**
      * Toimikute otsing.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PagedResourcesOfVolumes object
+     * @return the observable to the PagedResourcesToimikOtsing object
      */
-    Observable<ServiceResponse<PagedResourcesOfVolumes>> findVolumesUsingGETWithServiceResponseAsync();
+    Observable<ServiceResponse<PagedResourcesToimikOtsing>> findVolumesUsingGETWithServiceResponseAsync();
     /**
      * Toimikute otsing.
      *
@@ -3587,9 +3591,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the PagedResourcesOfVolumes object if successful.
+     * @return the PagedResourcesToimikOtsing object if successful.
      */
-    PagedResourcesOfVolumes findVolumesUsingGET(LocalDate createdEndDate, LocalDate createdStartDate, String functionGroupUuid, String functionUuid, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, String reference, String seriesUuid, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, String subseriesUuid, String title, Boolean unpaged, String volumeType);
+    PagedResourcesToimikOtsing findVolumesUsingGET(LocalDate createdEndDate, LocalDate createdStartDate, String functionGroupUuid, String functionUuid, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, String reference, String seriesUuid, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, String subseriesUuid, String title, Boolean unpaged, String volumeType);
 
     /**
      * Toimikute otsing.
@@ -3618,7 +3622,7 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<PagedResourcesOfVolumes> findVolumesUsingGETAsync(LocalDate createdEndDate, LocalDate createdStartDate, String functionGroupUuid, String functionUuid, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, String reference, String seriesUuid, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, String subseriesUuid, String title, Boolean unpaged, String volumeType, final ServiceCallback<PagedResourcesOfVolumes> serviceCallback);
+    ServiceFuture<PagedResourcesToimikOtsing> findVolumesUsingGETAsync(LocalDate createdEndDate, LocalDate createdStartDate, String functionGroupUuid, String functionUuid, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, String reference, String seriesUuid, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, String subseriesUuid, String title, Boolean unpaged, String volumeType, final ServiceCallback<PagedResourcesToimikOtsing> serviceCallback);
 
     /**
      * Toimikute otsing.
@@ -3644,9 +3648,9 @@ public interface EMSAPIdokumentatsioon {
      * @param unpaged the Boolean value
      * @param volumeType Toimiku tüüp. Possible values include: 'letterVolume', 'elVolume', 'dokumenditoimik', 'unitSittingVolume', 'officialJourneyVolume', 'opinionVolume', 'plenarySittingVolume', 'infoSittingVolume', 'interpellationsVolume', 'eelnou', 'writtenQuestionVolume', 'researchVolume', 'procurementVolume', 'visitVolume'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PagedResourcesOfVolumes object
+     * @return the observable to the PagedResourcesToimikOtsing object
      */
-    Observable<PagedResourcesOfVolumes> findVolumesUsingGETAsync(LocalDate createdEndDate, LocalDate createdStartDate, String functionGroupUuid, String functionUuid, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, String reference, String seriesUuid, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, String subseriesUuid, String title, Boolean unpaged, String volumeType);
+    Observable<PagedResourcesToimikOtsing> findVolumesUsingGETAsync(LocalDate createdEndDate, LocalDate createdStartDate, String functionGroupUuid, String functionUuid, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, String reference, String seriesUuid, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, String subseriesUuid, String title, Boolean unpaged, String volumeType);
 
     /**
      * Toimikute otsing.
@@ -3672,9 +3676,9 @@ public interface EMSAPIdokumentatsioon {
      * @param unpaged the Boolean value
      * @param volumeType Toimiku tüüp. Possible values include: 'letterVolume', 'elVolume', 'dokumenditoimik', 'unitSittingVolume', 'officialJourneyVolume', 'opinionVolume', 'plenarySittingVolume', 'infoSittingVolume', 'interpellationsVolume', 'eelnou', 'writtenQuestionVolume', 'researchVolume', 'procurementVolume', 'visitVolume'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PagedResourcesOfVolumes object
+     * @return the observable to the PagedResourcesToimikOtsing object
      */
-    Observable<ServiceResponse<PagedResourcesOfVolumes>> findVolumesUsingGETWithServiceResponseAsync(LocalDate createdEndDate, LocalDate createdStartDate, String functionGroupUuid, String functionUuid, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, String reference, String seriesUuid, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, String subseriesUuid, String title, Boolean unpaged, String volumeType);
+    Observable<ServiceResponse<PagedResourcesToimikOtsing>> findVolumesUsingGETWithServiceResponseAsync(LocalDate createdEndDate, LocalDate createdStartDate, String functionGroupUuid, String functionUuid, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, String reference, String seriesUuid, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, String subseriesUuid, String title, Boolean unpaged, String volumeType);
 
     /**
      * Eelnõude otsing.
@@ -3682,9 +3686,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the PagedResourcesOfDraftVolumes object if successful.
+     * @return the PagedResourcesEelnUOtsing object if successful.
      */
-    PagedResourcesOfDraftVolumes findDraftVolumesUsingGET();
+    PagedResourcesEelnUOtsing findDraftVolumesUsingGET();
 
     /**
      * Eelnõude otsing.
@@ -3693,23 +3697,23 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<PagedResourcesOfDraftVolumes> findDraftVolumesUsingGETAsync(final ServiceCallback<PagedResourcesOfDraftVolumes> serviceCallback);
+    ServiceFuture<PagedResourcesEelnUOtsing> findDraftVolumesUsingGETAsync(final ServiceCallback<PagedResourcesEelnUOtsing> serviceCallback);
 
     /**
      * Eelnõude otsing.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PagedResourcesOfDraftVolumes object
+     * @return the observable to the PagedResourcesEelnUOtsing object
      */
-    Observable<PagedResourcesOfDraftVolumes> findDraftVolumesUsingGETAsync();
+    Observable<PagedResourcesEelnUOtsing> findDraftVolumesUsingGETAsync();
 
     /**
      * Eelnõude otsing.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PagedResourcesOfDraftVolumes object
+     * @return the observable to the PagedResourcesEelnUOtsing object
      */
-    Observable<ServiceResponse<PagedResourcesOfDraftVolumes>> findDraftVolumesUsingGETWithServiceResponseAsync();
+    Observable<ServiceResponse<PagedResourcesEelnUOtsing>> findDraftVolumesUsingGETWithServiceResponseAsync();
     /**
      * Eelnõude otsing.
      *
@@ -3742,9 +3746,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the PagedResourcesOfDraftVolumes object if successful.
+     * @return the PagedResourcesEelnUOtsing object if successful.
      */
-    PagedResourcesOfDraftVolumes findDraftVolumesUsingGET(String activeDraftStage, LocalDate amendmentsDeadlineEndDate, LocalDate amendmentsDeadlineStartDate, Integer descriptorId, String draftTypeCode, LocalDate initiatedEndDate, LocalDate initiatedStartDate, String initiatorUuid, String lang, String leadingCommitteeUuid, Integer mark, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, String proceedingStatus, String reference, String responsibleMemberUuid, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, String title, Boolean unpaged);
+    PagedResourcesEelnUOtsing findDraftVolumesUsingGET(String activeDraftStage, LocalDate amendmentsDeadlineEndDate, LocalDate amendmentsDeadlineStartDate, Integer descriptorId, String draftTypeCode, LocalDate initiatedEndDate, LocalDate initiatedStartDate, String initiatorUuid, String lang, String leadingCommitteeUuid, Integer mark, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, String proceedingStatus, String reference, String responsibleMemberUuid, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, String title, Boolean unpaged);
 
     /**
      * Eelnõude otsing.
@@ -3779,7 +3783,7 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<PagedResourcesOfDraftVolumes> findDraftVolumesUsingGETAsync(String activeDraftStage, LocalDate amendmentsDeadlineEndDate, LocalDate amendmentsDeadlineStartDate, Integer descriptorId, String draftTypeCode, LocalDate initiatedEndDate, LocalDate initiatedStartDate, String initiatorUuid, String lang, String leadingCommitteeUuid, Integer mark, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, String proceedingStatus, String reference, String responsibleMemberUuid, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, String title, Boolean unpaged, final ServiceCallback<PagedResourcesOfDraftVolumes> serviceCallback);
+    ServiceFuture<PagedResourcesEelnUOtsing> findDraftVolumesUsingGETAsync(String activeDraftStage, LocalDate amendmentsDeadlineEndDate, LocalDate amendmentsDeadlineStartDate, Integer descriptorId, String draftTypeCode, LocalDate initiatedEndDate, LocalDate initiatedStartDate, String initiatorUuid, String lang, String leadingCommitteeUuid, Integer mark, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, String proceedingStatus, String reference, String responsibleMemberUuid, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, String title, Boolean unpaged, final ServiceCallback<PagedResourcesEelnUOtsing> serviceCallback);
 
     /**
      * Eelnõude otsing.
@@ -3811,9 +3815,9 @@ public interface EMSAPIdokumentatsioon {
      * @param title Pealkiri
      * @param unpaged the Boolean value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PagedResourcesOfDraftVolumes object
+     * @return the observable to the PagedResourcesEelnUOtsing object
      */
-    Observable<PagedResourcesOfDraftVolumes> findDraftVolumesUsingGETAsync(String activeDraftStage, LocalDate amendmentsDeadlineEndDate, LocalDate amendmentsDeadlineStartDate, Integer descriptorId, String draftTypeCode, LocalDate initiatedEndDate, LocalDate initiatedStartDate, String initiatorUuid, String lang, String leadingCommitteeUuid, Integer mark, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, String proceedingStatus, String reference, String responsibleMemberUuid, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, String title, Boolean unpaged);
+    Observable<PagedResourcesEelnUOtsing> findDraftVolumesUsingGETAsync(String activeDraftStage, LocalDate amendmentsDeadlineEndDate, LocalDate amendmentsDeadlineStartDate, Integer descriptorId, String draftTypeCode, LocalDate initiatedEndDate, LocalDate initiatedStartDate, String initiatorUuid, String lang, String leadingCommitteeUuid, Integer mark, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, String proceedingStatus, String reference, String responsibleMemberUuid, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, String title, Boolean unpaged);
 
     /**
      * Eelnõude otsing.
@@ -3845,9 +3849,9 @@ public interface EMSAPIdokumentatsioon {
      * @param title Pealkiri
      * @param unpaged the Boolean value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PagedResourcesOfDraftVolumes object
+     * @return the observable to the PagedResourcesEelnUOtsing object
      */
-    Observable<ServiceResponse<PagedResourcesOfDraftVolumes>> findDraftVolumesUsingGETWithServiceResponseAsync(String activeDraftStage, LocalDate amendmentsDeadlineEndDate, LocalDate amendmentsDeadlineStartDate, Integer descriptorId, String draftTypeCode, LocalDate initiatedEndDate, LocalDate initiatedStartDate, String initiatorUuid, String lang, String leadingCommitteeUuid, Integer mark, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, String proceedingStatus, String reference, String responsibleMemberUuid, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, String title, Boolean unpaged);
+    Observable<ServiceResponse<PagedResourcesEelnUOtsing>> findDraftVolumesUsingGETWithServiceResponseAsync(String activeDraftStage, LocalDate amendmentsDeadlineEndDate, LocalDate amendmentsDeadlineStartDate, Integer descriptorId, String draftTypeCode, LocalDate initiatedEndDate, LocalDate initiatedStartDate, String initiatorUuid, String lang, String leadingCommitteeUuid, Integer mark, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, String proceedingStatus, String reference, String responsibleMemberUuid, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, String title, Boolean unpaged);
 
     /**
      * test.
@@ -3951,9 +3955,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the DraftVolume object if successful.
+     * @return the EelnUToimikBaas object if successful.
      */
-    DraftVolume getDraftVolumeUsingGET(String uuid);
+    EelnUToimikBaas getDraftVolumeUsingGET(String uuid);
 
     /**
      * Eelnõu detailid.
@@ -3963,25 +3967,25 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<DraftVolume> getDraftVolumeUsingGETAsync(String uuid, final ServiceCallback<DraftVolume> serviceCallback);
+    ServiceFuture<EelnUToimikBaas> getDraftVolumeUsingGETAsync(String uuid, final ServiceCallback<EelnUToimikBaas> serviceCallback);
 
     /**
      * Eelnõu detailid.
      *
      * @param uuid Eelnõu toimiku UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the DraftVolume object
+     * @return the observable to the EelnUToimikBaas object
      */
-    Observable<DraftVolume> getDraftVolumeUsingGETAsync(String uuid);
+    Observable<EelnUToimikBaas> getDraftVolumeUsingGETAsync(String uuid);
 
     /**
      * Eelnõu detailid.
      *
      * @param uuid Eelnõu toimiku UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the DraftVolume object
+     * @return the observable to the EelnUToimikBaas object
      */
-    Observable<ServiceResponse<DraftVolume>> getDraftVolumeUsingGETWithServiceResponseAsync(String uuid);
+    Observable<ServiceResponse<EelnUToimikBaas>> getDraftVolumeUsingGETWithServiceResponseAsync(String uuid);
     /**
      * Eelnõu detailid.
      *
@@ -3991,9 +3995,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the DraftVolume object if successful.
+     * @return the EelnUToimikBaas object if successful.
      */
-    DraftVolume getDraftVolumeUsingGET(String uuid, String lang, Boolean querySteno);
+    EelnUToimikBaas getDraftVolumeUsingGET(String uuid, String lang, Boolean querySteno);
 
     /**
      * Eelnõu detailid.
@@ -4005,7 +4009,7 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<DraftVolume> getDraftVolumeUsingGETAsync(String uuid, String lang, Boolean querySteno, final ServiceCallback<DraftVolume> serviceCallback);
+    ServiceFuture<EelnUToimikBaas> getDraftVolumeUsingGETAsync(String uuid, String lang, Boolean querySteno, final ServiceCallback<EelnUToimikBaas> serviceCallback);
 
     /**
      * Eelnõu detailid.
@@ -4014,9 +4018,9 @@ public interface EMSAPIdokumentatsioon {
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @param querySteno Küsi Stenoteksti teenusest päevakorra lingid? (true/false)
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the DraftVolume object
+     * @return the observable to the EelnUToimikBaas object
      */
-    Observable<DraftVolume> getDraftVolumeUsingGETAsync(String uuid, String lang, Boolean querySteno);
+    Observable<EelnUToimikBaas> getDraftVolumeUsingGETAsync(String uuid, String lang, Boolean querySteno);
 
     /**
      * Eelnõu detailid.
@@ -4025,9 +4029,9 @@ public interface EMSAPIdokumentatsioon {
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @param querySteno Küsi Stenoteksti teenusest päevakorra lingid? (true/false)
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the DraftVolume object
+     * @return the observable to the EelnUToimikBaas object
      */
-    Observable<ServiceResponse<DraftVolume>> getDraftVolumeUsingGETWithServiceResponseAsync(String uuid, String lang, Boolean querySteno);
+    Observable<ServiceResponse<EelnUToimikBaas>> getDraftVolumeUsingGETWithServiceResponseAsync(String uuid, String lang, Boolean querySteno);
 
     /**
      * ERJK protokollide nimekiri.
@@ -4035,9 +4039,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;ErjkProtocol&gt; object if successful.
+     * @return the List&lt;ToimikERJK&gt; object if successful.
      */
-    List<ErjkProtocol> findErjkProtocolsUsingGET();
+    List<ToimikERJK> findErjkProtocolsUsingGET();
 
     /**
      * ERJK protokollide nimekiri.
@@ -4046,23 +4050,23 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<List<ErjkProtocol>> findErjkProtocolsUsingGETAsync(final ServiceCallback<List<ErjkProtocol>> serviceCallback);
+    ServiceFuture<List<ToimikERJK>> findErjkProtocolsUsingGETAsync(final ServiceCallback<List<ToimikERJK>> serviceCallback);
 
     /**
      * ERJK protokollide nimekiri.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;ErjkProtocol&gt; object
+     * @return the observable to the List&lt;ToimikERJK&gt; object
      */
-    Observable<List<ErjkProtocol>> findErjkProtocolsUsingGETAsync();
+    Observable<List<ToimikERJK>> findErjkProtocolsUsingGETAsync();
 
     /**
      * ERJK protokollide nimekiri.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;ErjkProtocol&gt; object
+     * @return the observable to the List&lt;ToimikERJK&gt; object
      */
-    Observable<ServiceResponse<List<ErjkProtocol>>> findErjkProtocolsUsingGETWithServiceResponseAsync();
+    Observable<ServiceResponse<List<ToimikERJK>>> findErjkProtocolsUsingGETWithServiceResponseAsync();
     /**
      * ERJK protokollide nimekiri.
      *
@@ -4072,9 +4076,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;ErjkProtocol&gt; object if successful.
+     * @return the List&lt;ToimikERJK&gt; object if successful.
      */
-    List<ErjkProtocol> findErjkProtocolsUsingGET(List<String> sort, Boolean sorted, Boolean unsorted);
+    List<ToimikERJK> findErjkProtocolsUsingGET(List<String> sort, Boolean sorted, Boolean unsorted);
 
     /**
      * ERJK protokollide nimekiri.
@@ -4086,7 +4090,7 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<List<ErjkProtocol>> findErjkProtocolsUsingGETAsync(List<String> sort, Boolean sorted, Boolean unsorted, final ServiceCallback<List<ErjkProtocol>> serviceCallback);
+    ServiceFuture<List<ToimikERJK>> findErjkProtocolsUsingGETAsync(List<String> sort, Boolean sorted, Boolean unsorted, final ServiceCallback<List<ToimikERJK>> serviceCallback);
 
     /**
      * ERJK protokollide nimekiri.
@@ -4095,9 +4099,9 @@ public interface EMSAPIdokumentatsioon {
      * @param sorted the Boolean value
      * @param unsorted the Boolean value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;ErjkProtocol&gt; object
+     * @return the observable to the List&lt;ToimikERJK&gt; object
      */
-    Observable<List<ErjkProtocol>> findErjkProtocolsUsingGETAsync(List<String> sort, Boolean sorted, Boolean unsorted);
+    Observable<List<ToimikERJK>> findErjkProtocolsUsingGETAsync(List<String> sort, Boolean sorted, Boolean unsorted);
 
     /**
      * ERJK protokollide nimekiri.
@@ -4106,9 +4110,9 @@ public interface EMSAPIdokumentatsioon {
      * @param sorted the Boolean value
      * @param unsorted the Boolean value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;ErjkProtocol&gt; object
+     * @return the observable to the List&lt;ToimikERJK&gt; object
      */
-    Observable<ServiceResponse<List<ErjkProtocol>>> findErjkProtocolsUsingGETWithServiceResponseAsync(List<String> sort, Boolean sorted, Boolean unsorted);
+    Observable<ServiceResponse<List<ToimikERJK>>> findErjkProtocolsUsingGETWithServiceResponseAsync(List<String> sort, Boolean sorted, Boolean unsorted);
 
     /**
      * ERJK protokoll.
@@ -4117,9 +4121,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the ErjkProtocol object if successful.
+     * @return the ToimikERJK object if successful.
      */
-    ErjkProtocol findErjkProtocolUsingGET(String uuid);
+    ToimikERJK findErjkProtocolUsingGET(String uuid);
 
     /**
      * ERJK protokoll.
@@ -4129,25 +4133,25 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<ErjkProtocol> findErjkProtocolUsingGETAsync(String uuid, final ServiceCallback<ErjkProtocol> serviceCallback);
+    ServiceFuture<ToimikERJK> findErjkProtocolUsingGETAsync(String uuid, final ServiceCallback<ToimikERJK> serviceCallback);
 
     /**
      * ERJK protokoll.
      *
      * @param uuid Toimiku UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the ErjkProtocol object
+     * @return the observable to the ToimikERJK object
      */
-    Observable<ErjkProtocol> findErjkProtocolUsingGETAsync(String uuid);
+    Observable<ToimikERJK> findErjkProtocolUsingGETAsync(String uuid);
 
     /**
      * ERJK protokoll.
      *
      * @param uuid Toimiku UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the ErjkProtocol object
+     * @return the observable to the ToimikERJK object
      */
-    Observable<ServiceResponse<ErjkProtocol>> findErjkProtocolUsingGETWithServiceResponseAsync(String uuid);
+    Observable<ServiceResponse<ToimikERJK>> findErjkProtocolUsingGETWithServiceResponseAsync(String uuid);
 
     /**
      * Euroopa Liidu toimikute otsing.
@@ -4155,9 +4159,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the PagedResourcesOfEuropeanUnionDocument object if successful.
+     * @return the PagedResourcesELToimikOtsing object if successful.
      */
-    PagedResourcesOfEuropeanUnionDocument findEuropeanUnionDocumentsUsingGET();
+    PagedResourcesELToimikOtsing findEuropeanUnionDocumentsUsingGET();
 
     /**
      * Euroopa Liidu toimikute otsing.
@@ -4166,23 +4170,23 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<PagedResourcesOfEuropeanUnionDocument> findEuropeanUnionDocumentsUsingGETAsync(final ServiceCallback<PagedResourcesOfEuropeanUnionDocument> serviceCallback);
+    ServiceFuture<PagedResourcesELToimikOtsing> findEuropeanUnionDocumentsUsingGETAsync(final ServiceCallback<PagedResourcesELToimikOtsing> serviceCallback);
 
     /**
      * Euroopa Liidu toimikute otsing.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PagedResourcesOfEuropeanUnionDocument object
+     * @return the observable to the PagedResourcesELToimikOtsing object
      */
-    Observable<PagedResourcesOfEuropeanUnionDocument> findEuropeanUnionDocumentsUsingGETAsync();
+    Observable<PagedResourcesELToimikOtsing> findEuropeanUnionDocumentsUsingGETAsync();
 
     /**
      * Euroopa Liidu toimikute otsing.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PagedResourcesOfEuropeanUnionDocument object
+     * @return the observable to the PagedResourcesELToimikOtsing object
      */
-    Observable<ServiceResponse<PagedResourcesOfEuropeanUnionDocument>> findEuropeanUnionDocumentsUsingGETWithServiceResponseAsync();
+    Observable<ServiceResponse<PagedResourcesELToimikOtsing>> findEuropeanUnionDocumentsUsingGETWithServiceResponseAsync();
     /**
      * Euroopa Liidu toimikute otsing.
      *
@@ -4215,9 +4219,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the PagedResourcesOfEuropeanUnionDocument object if successful.
+     * @return the PagedResourcesELToimikOtsing object if successful.
      */
-    PagedResourcesOfEuropeanUnionDocument findEuropeanUnionDocumentsUsingGET(LocalDate createdEndDate, LocalDate createdStartDate, String documentType, String elMark, String elTypeCode, String lang, Integer membership, Long offset, String opinionCommitteeUuid, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, LocalDate receiveDateEnd, LocalDate receiveDateStart, String reference, String responsibleCommitteeUuid, String sectorCode, String sectorCommitteeUuid, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, String title, String titleEn, Boolean unpaged);
+    PagedResourcesELToimikOtsing findEuropeanUnionDocumentsUsingGET(LocalDate createdEndDate, LocalDate createdStartDate, String documentType, String elMark, String elTypeCode, String lang, Integer membership, Long offset, String opinionCommitteeUuid, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, LocalDate receiveDateEnd, LocalDate receiveDateStart, String reference, String responsibleCommitteeUuid, String sectorCode, String sectorCommitteeUuid, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, String title, String titleEn, Boolean unpaged);
 
     /**
      * Euroopa Liidu toimikute otsing.
@@ -4252,7 +4256,7 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<PagedResourcesOfEuropeanUnionDocument> findEuropeanUnionDocumentsUsingGETAsync(LocalDate createdEndDate, LocalDate createdStartDate, String documentType, String elMark, String elTypeCode, String lang, Integer membership, Long offset, String opinionCommitteeUuid, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, LocalDate receiveDateEnd, LocalDate receiveDateStart, String reference, String responsibleCommitteeUuid, String sectorCode, String sectorCommitteeUuid, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, String title, String titleEn, Boolean unpaged, final ServiceCallback<PagedResourcesOfEuropeanUnionDocument> serviceCallback);
+    ServiceFuture<PagedResourcesELToimikOtsing> findEuropeanUnionDocumentsUsingGETAsync(LocalDate createdEndDate, LocalDate createdStartDate, String documentType, String elMark, String elTypeCode, String lang, Integer membership, Long offset, String opinionCommitteeUuid, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, LocalDate receiveDateEnd, LocalDate receiveDateStart, String reference, String responsibleCommitteeUuid, String sectorCode, String sectorCommitteeUuid, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, String title, String titleEn, Boolean unpaged, final ServiceCallback<PagedResourcesELToimikOtsing> serviceCallback);
 
     /**
      * Euroopa Liidu toimikute otsing.
@@ -4284,9 +4288,9 @@ public interface EMSAPIdokumentatsioon {
      * @param titleEn Pealkiri inglise keeles
      * @param unpaged the Boolean value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PagedResourcesOfEuropeanUnionDocument object
+     * @return the observable to the PagedResourcesELToimikOtsing object
      */
-    Observable<PagedResourcesOfEuropeanUnionDocument> findEuropeanUnionDocumentsUsingGETAsync(LocalDate createdEndDate, LocalDate createdStartDate, String documentType, String elMark, String elTypeCode, String lang, Integer membership, Long offset, String opinionCommitteeUuid, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, LocalDate receiveDateEnd, LocalDate receiveDateStart, String reference, String responsibleCommitteeUuid, String sectorCode, String sectorCommitteeUuid, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, String title, String titleEn, Boolean unpaged);
+    Observable<PagedResourcesELToimikOtsing> findEuropeanUnionDocumentsUsingGETAsync(LocalDate createdEndDate, LocalDate createdStartDate, String documentType, String elMark, String elTypeCode, String lang, Integer membership, Long offset, String opinionCommitteeUuid, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, LocalDate receiveDateEnd, LocalDate receiveDateStart, String reference, String responsibleCommitteeUuid, String sectorCode, String sectorCommitteeUuid, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, String title, String titleEn, Boolean unpaged);
 
     /**
      * Euroopa Liidu toimikute otsing.
@@ -4318,9 +4322,9 @@ public interface EMSAPIdokumentatsioon {
      * @param titleEn Pealkiri inglise keeles
      * @param unpaged the Boolean value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PagedResourcesOfEuropeanUnionDocument object
+     * @return the observable to the PagedResourcesELToimikOtsing object
      */
-    Observable<ServiceResponse<PagedResourcesOfEuropeanUnionDocument>> findEuropeanUnionDocumentsUsingGETWithServiceResponseAsync(LocalDate createdEndDate, LocalDate createdStartDate, String documentType, String elMark, String elTypeCode, String lang, Integer membership, Long offset, String opinionCommitteeUuid, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, LocalDate receiveDateEnd, LocalDate receiveDateStart, String reference, String responsibleCommitteeUuid, String sectorCode, String sectorCommitteeUuid, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, String title, String titleEn, Boolean unpaged);
+    Observable<ServiceResponse<PagedResourcesELToimikOtsing>> findEuropeanUnionDocumentsUsingGETWithServiceResponseAsync(LocalDate createdEndDate, LocalDate createdStartDate, String documentType, String elMark, String elTypeCode, String lang, Integer membership, Long offset, String opinionCommitteeUuid, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, LocalDate receiveDateEnd, LocalDate receiveDateStart, String reference, String responsibleCommitteeUuid, String sectorCode, String sectorCommitteeUuid, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, String title, String titleEn, Boolean unpaged);
 
     /**
      * Arupärimised.
@@ -4328,9 +4332,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the PagedResourcesOfInterpellations object if successful.
+     * @return the PagedResourcesToimikArupRimine object if successful.
      */
-    PagedResourcesOfInterpellations findInterpellationsUsingGET();
+    PagedResourcesToimikArupRimine findInterpellationsUsingGET();
 
     /**
      * Arupärimised.
@@ -4339,23 +4343,23 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<PagedResourcesOfInterpellations> findInterpellationsUsingGETAsync(final ServiceCallback<PagedResourcesOfInterpellations> serviceCallback);
+    ServiceFuture<PagedResourcesToimikArupRimine> findInterpellationsUsingGETAsync(final ServiceCallback<PagedResourcesToimikArupRimine> serviceCallback);
 
     /**
      * Arupärimised.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PagedResourcesOfInterpellations object
+     * @return the observable to the PagedResourcesToimikArupRimine object
      */
-    Observable<PagedResourcesOfInterpellations> findInterpellationsUsingGETAsync();
+    Observable<PagedResourcesToimikArupRimine> findInterpellationsUsingGETAsync();
 
     /**
      * Arupärimised.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PagedResourcesOfInterpellations object
+     * @return the observable to the PagedResourcesToimikArupRimine object
      */
-    Observable<ServiceResponse<PagedResourcesOfInterpellations>> findInterpellationsUsingGETWithServiceResponseAsync();
+    Observable<ServiceResponse<PagedResourcesToimikArupRimine>> findInterpellationsUsingGETWithServiceResponseAsync();
     /**
      * Arupärimised.
      *
@@ -4375,133 +4379,12 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the PagedResourcesOfInterpellations object if successful.
+     * @return the PagedResourcesToimikArupRimine object if successful.
      */
-    PagedResourcesOfInterpellations findInterpellationsUsingGET(String enquirerUuid, String lang, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, Boolean unpaged);
+    PagedResourcesToimikArupRimine findInterpellationsUsingGET(String enquirerUuid, String lang, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, Boolean unpaged);
 
     /**
      * Arupärimised.
-     *
-     * @param enquirerUuid Küsija UUID
-     * @param lang Keel. Possible values include: 'et', 'ru', 'en'
-     * @param membership Koosseisu number
-     * @param offset the Long value
-     * @param page Lehekülje number
-     * @param pageNumber the Integer value
-     * @param pageSize the Integer value
-     * @param paged the Boolean value
-     * @param size Tulemuste arv leheküljel (vaikimisi 20)
-     * @param sort Sorteerimine (formaat: väli[,asc|desc])
-     * @param sortsorted the Boolean value
-     * @param sortunsorted the Boolean value
-     * @param unpaged the Boolean value
-     * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
-     * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the {@link ServiceFuture} object
-     */
-    ServiceFuture<PagedResourcesOfInterpellations> findInterpellationsUsingGETAsync(String enquirerUuid, String lang, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, Boolean unpaged, final ServiceCallback<PagedResourcesOfInterpellations> serviceCallback);
-
-    /**
-     * Arupärimised.
-     *
-     * @param enquirerUuid Küsija UUID
-     * @param lang Keel. Possible values include: 'et', 'ru', 'en'
-     * @param membership Koosseisu number
-     * @param offset the Long value
-     * @param page Lehekülje number
-     * @param pageNumber the Integer value
-     * @param pageSize the Integer value
-     * @param paged the Boolean value
-     * @param size Tulemuste arv leheküljel (vaikimisi 20)
-     * @param sort Sorteerimine (formaat: väli[,asc|desc])
-     * @param sortsorted the Boolean value
-     * @param sortunsorted the Boolean value
-     * @param unpaged the Boolean value
-     * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PagedResourcesOfInterpellations object
-     */
-    Observable<PagedResourcesOfInterpellations> findInterpellationsUsingGETAsync(String enquirerUuid, String lang, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, Boolean unpaged);
-
-    /**
-     * Arupärimised.
-     *
-     * @param enquirerUuid Küsija UUID
-     * @param lang Keel. Possible values include: 'et', 'ru', 'en'
-     * @param membership Koosseisu number
-     * @param offset the Long value
-     * @param page Lehekülje number
-     * @param pageNumber the Integer value
-     * @param pageSize the Integer value
-     * @param paged the Boolean value
-     * @param size Tulemuste arv leheküljel (vaikimisi 20)
-     * @param sort Sorteerimine (formaat: väli[,asc|desc])
-     * @param sortsorted the Boolean value
-     * @param sortunsorted the Boolean value
-     * @param unpaged the Boolean value
-     * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PagedResourcesOfInterpellations object
-     */
-    Observable<ServiceResponse<PagedResourcesOfInterpellations>> findInterpellationsUsingGETWithServiceResponseAsync(String enquirerUuid, String lang, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, Boolean unpaged);
-
-    /**
-     * Kirjalikud küsimused.
-     *
-     * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @throws RestException thrown if the request is rejected by server
-     * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the PagedResourcesOfWrittenQuestions object if successful.
-     */
-    PagedResourcesOfWrittenQuestions findWrittenQuestionsUsingGET();
-
-    /**
-     * Kirjalikud küsimused.
-     *
-     * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
-     * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the {@link ServiceFuture} object
-     */
-    ServiceFuture<PagedResourcesOfWrittenQuestions> findWrittenQuestionsUsingGETAsync(final ServiceCallback<PagedResourcesOfWrittenQuestions> serviceCallback);
-
-    /**
-     * Kirjalikud küsimused.
-     *
-     * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PagedResourcesOfWrittenQuestions object
-     */
-    Observable<PagedResourcesOfWrittenQuestions> findWrittenQuestionsUsingGETAsync();
-
-    /**
-     * Kirjalikud küsimused.
-     *
-     * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PagedResourcesOfWrittenQuestions object
-     */
-    Observable<ServiceResponse<PagedResourcesOfWrittenQuestions>> findWrittenQuestionsUsingGETWithServiceResponseAsync();
-    /**
-     * Kirjalikud küsimused.
-     *
-     * @param enquirerUuid Küsija UUID
-     * @param lang Keel. Possible values include: 'et', 'ru', 'en'
-     * @param membership Koosseisu number
-     * @param offset the Long value
-     * @param page Lehekülje number
-     * @param pageNumber the Integer value
-     * @param pageSize the Integer value
-     * @param paged the Boolean value
-     * @param size Tulemuste arv leheküljel (vaikimisi 20)
-     * @param sort Sorteerimine (formaat: väli[,asc|desc])
-     * @param sortsorted the Boolean value
-     * @param sortunsorted the Boolean value
-     * @param unpaged the Boolean value
-     * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @throws RestException thrown if the request is rejected by server
-     * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the PagedResourcesOfWrittenQuestions object if successful.
-     */
-    PagedResourcesOfWrittenQuestions findWrittenQuestionsUsingGET(String enquirerUuid, String lang, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, Boolean unpaged);
-
-    /**
-     * Kirjalikud küsimused.
      *
      * @param enquirerUuid Küsija UUID
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
@@ -4520,7 +4403,128 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<PagedResourcesOfWrittenQuestions> findWrittenQuestionsUsingGETAsync(String enquirerUuid, String lang, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, Boolean unpaged, final ServiceCallback<PagedResourcesOfWrittenQuestions> serviceCallback);
+    ServiceFuture<PagedResourcesToimikArupRimine> findInterpellationsUsingGETAsync(String enquirerUuid, String lang, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, Boolean unpaged, final ServiceCallback<PagedResourcesToimikArupRimine> serviceCallback);
+
+    /**
+     * Arupärimised.
+     *
+     * @param enquirerUuid Küsija UUID
+     * @param lang Keel. Possible values include: 'et', 'ru', 'en'
+     * @param membership Koosseisu number
+     * @param offset the Long value
+     * @param page Lehekülje number
+     * @param pageNumber the Integer value
+     * @param pageSize the Integer value
+     * @param paged the Boolean value
+     * @param size Tulemuste arv leheküljel (vaikimisi 20)
+     * @param sort Sorteerimine (formaat: väli[,asc|desc])
+     * @param sortsorted the Boolean value
+     * @param sortunsorted the Boolean value
+     * @param unpaged the Boolean value
+     * @throws IllegalArgumentException thrown if parameters fail the validation
+     * @return the observable to the PagedResourcesToimikArupRimine object
+     */
+    Observable<PagedResourcesToimikArupRimine> findInterpellationsUsingGETAsync(String enquirerUuid, String lang, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, Boolean unpaged);
+
+    /**
+     * Arupärimised.
+     *
+     * @param enquirerUuid Küsija UUID
+     * @param lang Keel. Possible values include: 'et', 'ru', 'en'
+     * @param membership Koosseisu number
+     * @param offset the Long value
+     * @param page Lehekülje number
+     * @param pageNumber the Integer value
+     * @param pageSize the Integer value
+     * @param paged the Boolean value
+     * @param size Tulemuste arv leheküljel (vaikimisi 20)
+     * @param sort Sorteerimine (formaat: väli[,asc|desc])
+     * @param sortsorted the Boolean value
+     * @param sortunsorted the Boolean value
+     * @param unpaged the Boolean value
+     * @throws IllegalArgumentException thrown if parameters fail the validation
+     * @return the observable to the PagedResourcesToimikArupRimine object
+     */
+    Observable<ServiceResponse<PagedResourcesToimikArupRimine>> findInterpellationsUsingGETWithServiceResponseAsync(String enquirerUuid, String lang, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, Boolean unpaged);
+
+    /**
+     * Kirjalikud küsimused.
+     *
+     * @throws IllegalArgumentException thrown if parameters fail the validation
+     * @throws RestException thrown if the request is rejected by server
+     * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
+     * @return the PagedResourcesToimikKirjalikKSimus object if successful.
+     */
+    PagedResourcesToimikKirjalikKSimus findWrittenQuestionsUsingGET();
+
+    /**
+     * Kirjalikud küsimused.
+     *
+     * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
+     * @throws IllegalArgumentException thrown if parameters fail the validation
+     * @return the {@link ServiceFuture} object
+     */
+    ServiceFuture<PagedResourcesToimikKirjalikKSimus> findWrittenQuestionsUsingGETAsync(final ServiceCallback<PagedResourcesToimikKirjalikKSimus> serviceCallback);
+
+    /**
+     * Kirjalikud küsimused.
+     *
+     * @throws IllegalArgumentException thrown if parameters fail the validation
+     * @return the observable to the PagedResourcesToimikKirjalikKSimus object
+     */
+    Observable<PagedResourcesToimikKirjalikKSimus> findWrittenQuestionsUsingGETAsync();
+
+    /**
+     * Kirjalikud küsimused.
+     *
+     * @throws IllegalArgumentException thrown if parameters fail the validation
+     * @return the observable to the PagedResourcesToimikKirjalikKSimus object
+     */
+    Observable<ServiceResponse<PagedResourcesToimikKirjalikKSimus>> findWrittenQuestionsUsingGETWithServiceResponseAsync();
+    /**
+     * Kirjalikud küsimused.
+     *
+     * @param enquirerUuid Küsija UUID
+     * @param lang Keel. Possible values include: 'et', 'ru', 'en'
+     * @param membership Koosseisu number
+     * @param offset the Long value
+     * @param page Lehekülje number
+     * @param pageNumber the Integer value
+     * @param pageSize the Integer value
+     * @param paged the Boolean value
+     * @param size Tulemuste arv leheküljel (vaikimisi 20)
+     * @param sort Sorteerimine (formaat: väli[,asc|desc])
+     * @param sortsorted the Boolean value
+     * @param sortunsorted the Boolean value
+     * @param unpaged the Boolean value
+     * @throws IllegalArgumentException thrown if parameters fail the validation
+     * @throws RestException thrown if the request is rejected by server
+     * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
+     * @return the PagedResourcesToimikKirjalikKSimus object if successful.
+     */
+    PagedResourcesToimikKirjalikKSimus findWrittenQuestionsUsingGET(String enquirerUuid, String lang, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, Boolean unpaged);
+
+    /**
+     * Kirjalikud küsimused.
+     *
+     * @param enquirerUuid Küsija UUID
+     * @param lang Keel. Possible values include: 'et', 'ru', 'en'
+     * @param membership Koosseisu number
+     * @param offset the Long value
+     * @param page Lehekülje number
+     * @param pageNumber the Integer value
+     * @param pageSize the Integer value
+     * @param paged the Boolean value
+     * @param size Tulemuste arv leheküljel (vaikimisi 20)
+     * @param sort Sorteerimine (formaat: väli[,asc|desc])
+     * @param sortsorted the Boolean value
+     * @param sortunsorted the Boolean value
+     * @param unpaged the Boolean value
+     * @param serviceCallback the async ServiceCallback to handle successful and failed responses.
+     * @throws IllegalArgumentException thrown if parameters fail the validation
+     * @return the {@link ServiceFuture} object
+     */
+    ServiceFuture<PagedResourcesToimikKirjalikKSimus> findWrittenQuestionsUsingGETAsync(String enquirerUuid, String lang, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, Boolean unpaged, final ServiceCallback<PagedResourcesToimikKirjalikKSimus> serviceCallback);
 
     /**
      * Kirjalikud küsimused.
@@ -4539,9 +4543,9 @@ public interface EMSAPIdokumentatsioon {
      * @param sortunsorted the Boolean value
      * @param unpaged the Boolean value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PagedResourcesOfWrittenQuestions object
+     * @return the observable to the PagedResourcesToimikKirjalikKSimus object
      */
-    Observable<PagedResourcesOfWrittenQuestions> findWrittenQuestionsUsingGETAsync(String enquirerUuid, String lang, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, Boolean unpaged);
+    Observable<PagedResourcesToimikKirjalikKSimus> findWrittenQuestionsUsingGETAsync(String enquirerUuid, String lang, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, Boolean unpaged);
 
     /**
      * Kirjalikud küsimused.
@@ -4560,9 +4564,9 @@ public interface EMSAPIdokumentatsioon {
      * @param sortunsorted the Boolean value
      * @param unpaged the Boolean value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PagedResourcesOfWrittenQuestions object
+     * @return the observable to the PagedResourcesToimikKirjalikKSimus object
      */
-    Observable<ServiceResponse<PagedResourcesOfWrittenQuestions>> findWrittenQuestionsUsingGETWithServiceResponseAsync(String enquirerUuid, String lang, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, Boolean unpaged);
+    Observable<ServiceResponse<PagedResourcesToimikKirjalikKSimus>> findWrittenQuestionsUsingGETWithServiceResponseAsync(String enquirerUuid, String lang, Integer membership, Long offset, Integer page, Integer pageNumber, Integer pageSize, Boolean paged, Integer size, List<String> sort, Boolean sortsorted, Boolean sortunsorted, Boolean unpaged);
 
     /**
      * Toimiku detailid.
@@ -4571,9 +4575,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Volume object if successful.
+     * @return the Toimik object if successful.
      */
-    Volume getVolumeUsingGET(String uuid);
+    Toimik getVolumeUsingGET(String uuid);
 
     /**
      * Toimiku detailid.
@@ -4583,25 +4587,25 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<Volume> getVolumeUsingGETAsync(String uuid, final ServiceCallback<Volume> serviceCallback);
+    ServiceFuture<Toimik> getVolumeUsingGETAsync(String uuid, final ServiceCallback<Toimik> serviceCallback);
 
     /**
      * Toimiku detailid.
      *
      * @param uuid Toimiku UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the Volume object
+     * @return the observable to the Toimik object
      */
-    Observable<Volume> getVolumeUsingGETAsync(String uuid);
+    Observable<Toimik> getVolumeUsingGETAsync(String uuid);
 
     /**
      * Toimiku detailid.
      *
      * @param uuid Toimiku UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the Volume object
+     * @return the observable to the Toimik object
      */
-    Observable<ServiceResponse<Volume>> getVolumeUsingGETWithServiceResponseAsync(String uuid);
+    Observable<ServiceResponse<Toimik>> getVolumeUsingGETWithServiceResponseAsync(String uuid);
     /**
      * Toimiku detailid.
      *
@@ -4610,9 +4614,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the Volume object if successful.
+     * @return the Toimik object if successful.
      */
-    Volume getVolumeUsingGET(String uuid, String lang);
+    Toimik getVolumeUsingGET(String uuid, String lang);
 
     /**
      * Toimiku detailid.
@@ -4623,7 +4627,7 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<Volume> getVolumeUsingGETAsync(String uuid, String lang, final ServiceCallback<Volume> serviceCallback);
+    ServiceFuture<Toimik> getVolumeUsingGETAsync(String uuid, String lang, final ServiceCallback<Toimik> serviceCallback);
 
     /**
      * Toimiku detailid.
@@ -4631,9 +4635,9 @@ public interface EMSAPIdokumentatsioon {
      * @param uuid Toimiku UUID
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the Volume object
+     * @return the observable to the Toimik object
      */
-    Observable<Volume> getVolumeUsingGETAsync(String uuid, String lang);
+    Observable<Toimik> getVolumeUsingGETAsync(String uuid, String lang);
 
     /**
      * Toimiku detailid.
@@ -4641,9 +4645,9 @@ public interface EMSAPIdokumentatsioon {
      * @param uuid Toimiku UUID
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the Volume object
+     * @return the observable to the Toimik object
      */
-    Observable<ServiceResponse<Volume>> getVolumeUsingGETWithServiceResponseAsync(String uuid, String lang);
+    Observable<ServiceResponse<Toimik>> getVolumeUsingGETWithServiceResponseAsync(String uuid, String lang);
 
     /**
      * Hääletused.
@@ -4653,9 +4657,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;PlenarySittingVoting&gt; object if successful.
+     * @return the List&lt;TIskoguIstungHLetus&gt; object if successful.
      */
-    List<PlenarySittingVoting> getVotingsUsingGET(LocalDate endDate, LocalDate startDate);
+    List<TIskoguIstungHLetus> getVotingsUsingGET(LocalDate endDate, LocalDate startDate);
 
     /**
      * Hääletused.
@@ -4666,7 +4670,7 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<List<PlenarySittingVoting>> getVotingsUsingGETAsync(LocalDate endDate, LocalDate startDate, final ServiceCallback<List<PlenarySittingVoting>> serviceCallback);
+    ServiceFuture<List<TIskoguIstungHLetus>> getVotingsUsingGETAsync(LocalDate endDate, LocalDate startDate, final ServiceCallback<List<TIskoguIstungHLetus>> serviceCallback);
 
     /**
      * Hääletused.
@@ -4674,9 +4678,9 @@ public interface EMSAPIdokumentatsioon {
      * @param endDate Kuupäevavahemiku lõpp (yyyy-MM-dd)
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;PlenarySittingVoting&gt; object
+     * @return the observable to the List&lt;TIskoguIstungHLetus&gt; object
      */
-    Observable<List<PlenarySittingVoting>> getVotingsUsingGETAsync(LocalDate endDate, LocalDate startDate);
+    Observable<List<TIskoguIstungHLetus>> getVotingsUsingGETAsync(LocalDate endDate, LocalDate startDate);
 
     /**
      * Hääletused.
@@ -4684,9 +4688,9 @@ public interface EMSAPIdokumentatsioon {
      * @param endDate Kuupäevavahemiku lõpp (yyyy-MM-dd)
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;PlenarySittingVoting&gt; object
+     * @return the observable to the List&lt;TIskoguIstungHLetus&gt; object
      */
-    Observable<ServiceResponse<List<PlenarySittingVoting>>> getVotingsUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate);
+    Observable<ServiceResponse<List<TIskoguIstungHLetus>>> getVotingsUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate);
     /**
      * Hääletused.
      *
@@ -4696,9 +4700,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;PlenarySittingVoting&gt; object if successful.
+     * @return the List&lt;TIskoguIstungHLetus&gt; object if successful.
      */
-    List<PlenarySittingVoting> getVotingsUsingGET(LocalDate endDate, LocalDate startDate, String lang);
+    List<TIskoguIstungHLetus> getVotingsUsingGET(LocalDate endDate, LocalDate startDate, String lang);
 
     /**
      * Hääletused.
@@ -4710,7 +4714,7 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<List<PlenarySittingVoting>> getVotingsUsingGETAsync(LocalDate endDate, LocalDate startDate, String lang, final ServiceCallback<List<PlenarySittingVoting>> serviceCallback);
+    ServiceFuture<List<TIskoguIstungHLetus>> getVotingsUsingGETAsync(LocalDate endDate, LocalDate startDate, String lang, final ServiceCallback<List<TIskoguIstungHLetus>> serviceCallback);
 
     /**
      * Hääletused.
@@ -4719,9 +4723,9 @@ public interface EMSAPIdokumentatsioon {
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;PlenarySittingVoting&gt; object
+     * @return the observable to the List&lt;TIskoguIstungHLetus&gt; object
      */
-    Observable<List<PlenarySittingVoting>> getVotingsUsingGETAsync(LocalDate endDate, LocalDate startDate, String lang);
+    Observable<List<TIskoguIstungHLetus>> getVotingsUsingGETAsync(LocalDate endDate, LocalDate startDate, String lang);
 
     /**
      * Hääletused.
@@ -4730,9 +4734,9 @@ public interface EMSAPIdokumentatsioon {
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;PlenarySittingVoting&gt; object
+     * @return the observable to the List&lt;TIskoguIstungHLetus&gt; object
      */
-    Observable<ServiceResponse<List<PlenarySittingVoting>>> getVotingsUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String lang);
+    Observable<ServiceResponse<List<TIskoguIstungHLetus>>> getVotingsUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate, String lang);
 
     /**
      * Hääletuste kalender.
@@ -4743,9 +4747,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;VotingCalendar&gt; object if successful.
+     * @return the List&lt;HLetuspEv&gt; object if successful.
      */
-    List<VotingCalendar> getVotingCalendarUsingGET(LocalDate endDate, LocalDate startDate);
+    List<HLetuspEv> getVotingCalendarUsingGET(LocalDate endDate, LocalDate startDate);
 
     /**
      * Hääletuste kalender.
@@ -4757,7 +4761,7 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<List<VotingCalendar>> getVotingCalendarUsingGETAsync(LocalDate endDate, LocalDate startDate, final ServiceCallback<List<VotingCalendar>> serviceCallback);
+    ServiceFuture<List<HLetuspEv>> getVotingCalendarUsingGETAsync(LocalDate endDate, LocalDate startDate, final ServiceCallback<List<HLetuspEv>> serviceCallback);
 
     /**
      * Hääletuste kalender.
@@ -4766,9 +4770,9 @@ public interface EMSAPIdokumentatsioon {
      * @param endDate Kuupäevavahemiku lõpp (yyyy-MM-dd)
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;VotingCalendar&gt; object
+     * @return the observable to the List&lt;HLetuspEv&gt; object
      */
-    Observable<List<VotingCalendar>> getVotingCalendarUsingGETAsync(LocalDate endDate, LocalDate startDate);
+    Observable<List<HLetuspEv>> getVotingCalendarUsingGETAsync(LocalDate endDate, LocalDate startDate);
 
     /**
      * Hääletuste kalender.
@@ -4777,9 +4781,9 @@ public interface EMSAPIdokumentatsioon {
      * @param endDate Kuupäevavahemiku lõpp (yyyy-MM-dd)
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;VotingCalendar&gt; object
+     * @return the observable to the List&lt;HLetuspEv&gt; object
      */
-    Observable<ServiceResponse<List<VotingCalendar>>> getVotingCalendarUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate);
+    Observable<ServiceResponse<List<HLetuspEv>>> getVotingCalendarUsingGETWithServiceResponseAsync(LocalDate endDate, LocalDate startDate);
 
     /**
      * Riigikogu liikme hääletused komisjonides.
@@ -4788,9 +4792,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;UserGroup&gt; object if successful.
+     * @return the List&lt;Kasutajagrupp&gt; object if successful.
      */
-    List<UserGroup> findCommitteeMemberVotingsUsingGET(String userUuid);
+    List<Kasutajagrupp> findCommitteeMemberVotingsUsingGET(String userUuid);
 
     /**
      * Riigikogu liikme hääletused komisjonides.
@@ -4800,25 +4804,25 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<List<UserGroup>> findCommitteeMemberVotingsUsingGETAsync(String userUuid, final ServiceCallback<List<UserGroup>> serviceCallback);
+    ServiceFuture<List<Kasutajagrupp>> findCommitteeMemberVotingsUsingGETAsync(String userUuid, final ServiceCallback<List<Kasutajagrupp>> serviceCallback);
 
     /**
      * Riigikogu liikme hääletused komisjonides.
      *
      * @param userUuid userUuid
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;UserGroup&gt; object
+     * @return the observable to the List&lt;Kasutajagrupp&gt; object
      */
-    Observable<List<UserGroup>> findCommitteeMemberVotingsUsingGETAsync(String userUuid);
+    Observable<List<Kasutajagrupp>> findCommitteeMemberVotingsUsingGETAsync(String userUuid);
 
     /**
      * Riigikogu liikme hääletused komisjonides.
      *
      * @param userUuid userUuid
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;UserGroup&gt; object
+     * @return the observable to the List&lt;Kasutajagrupp&gt; object
      */
-    Observable<ServiceResponse<List<UserGroup>>> findCommitteeMemberVotingsUsingGETWithServiceResponseAsync(String userUuid);
+    Observable<ServiceResponse<List<Kasutajagrupp>>> findCommitteeMemberVotingsUsingGETWithServiceResponseAsync(String userUuid);
     /**
      * Riigikogu liikme hääletused komisjonides.
      *
@@ -4829,9 +4833,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;UserGroup&gt; object if successful.
+     * @return the List&lt;Kasutajagrupp&gt; object if successful.
      */
-    List<UserGroup> findCommitteeMemberVotingsUsingGET(String userUuid, LocalDate endDate, String lang, LocalDate startDate);
+    List<Kasutajagrupp> findCommitteeMemberVotingsUsingGET(String userUuid, LocalDate endDate, String lang, LocalDate startDate);
 
     /**
      * Riigikogu liikme hääletused komisjonides.
@@ -4844,7 +4848,7 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<List<UserGroup>> findCommitteeMemberVotingsUsingGETAsync(String userUuid, LocalDate endDate, String lang, LocalDate startDate, final ServiceCallback<List<UserGroup>> serviceCallback);
+    ServiceFuture<List<Kasutajagrupp>> findCommitteeMemberVotingsUsingGETAsync(String userUuid, LocalDate endDate, String lang, LocalDate startDate, final ServiceCallback<List<Kasutajagrupp>> serviceCallback);
 
     /**
      * Riigikogu liikme hääletused komisjonides.
@@ -4854,9 +4858,9 @@ public interface EMSAPIdokumentatsioon {
      * @param lang lang. Possible values include: 'et', 'ru', 'en'
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;UserGroup&gt; object
+     * @return the observable to the List&lt;Kasutajagrupp&gt; object
      */
-    Observable<List<UserGroup>> findCommitteeMemberVotingsUsingGETAsync(String userUuid, LocalDate endDate, String lang, LocalDate startDate);
+    Observable<List<Kasutajagrupp>> findCommitteeMemberVotingsUsingGETAsync(String userUuid, LocalDate endDate, String lang, LocalDate startDate);
 
     /**
      * Riigikogu liikme hääletused komisjonides.
@@ -4866,9 +4870,9 @@ public interface EMSAPIdokumentatsioon {
      * @param lang lang. Possible values include: 'et', 'ru', 'en'
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;UserGroup&gt; object
+     * @return the observable to the List&lt;Kasutajagrupp&gt; object
      */
-    Observable<ServiceResponse<List<UserGroup>>> findCommitteeMemberVotingsUsingGETWithServiceResponseAsync(String userUuid, LocalDate endDate, String lang, LocalDate startDate);
+    Observable<ServiceResponse<List<Kasutajagrupp>>> findCommitteeMemberVotingsUsingGETWithServiceResponseAsync(String userUuid, LocalDate endDate, String lang, LocalDate startDate);
 
     /**
      * Komisjoni hääletused.
@@ -4877,9 +4881,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;CommitteeSitting&gt; object if successful.
+     * @return the List&lt;KomisjoniIstung&gt; object if successful.
      */
-    List<CommitteeSitting> findCommitteeVotingsUsingGET(String uuid);
+    List<KomisjoniIstung> findCommitteeVotingsUsingGET(String uuid);
 
     /**
      * Komisjoni hääletused.
@@ -4889,25 +4893,25 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<List<CommitteeSitting>> findCommitteeVotingsUsingGETAsync(String uuid, final ServiceCallback<List<CommitteeSitting>> serviceCallback);
+    ServiceFuture<List<KomisjoniIstung>> findCommitteeVotingsUsingGETAsync(String uuid, final ServiceCallback<List<KomisjoniIstung>> serviceCallback);
 
     /**
      * Komisjoni hääletused.
      *
      * @param uuid uuid
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;CommitteeSitting&gt; object
+     * @return the observable to the List&lt;KomisjoniIstung&gt; object
      */
-    Observable<List<CommitteeSitting>> findCommitteeVotingsUsingGETAsync(String uuid);
+    Observable<List<KomisjoniIstung>> findCommitteeVotingsUsingGETAsync(String uuid);
 
     /**
      * Komisjoni hääletused.
      *
      * @param uuid uuid
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;CommitteeSitting&gt; object
+     * @return the observable to the List&lt;KomisjoniIstung&gt; object
      */
-    Observable<ServiceResponse<List<CommitteeSitting>>> findCommitteeVotingsUsingGETWithServiceResponseAsync(String uuid);
+    Observable<ServiceResponse<List<KomisjoniIstung>>> findCommitteeVotingsUsingGETWithServiceResponseAsync(String uuid);
     /**
      * Komisjoni hääletused.
      *
@@ -4918,9 +4922,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the List&lt;CommitteeSitting&gt; object if successful.
+     * @return the List&lt;KomisjoniIstung&gt; object if successful.
      */
-    List<CommitteeSitting> findCommitteeVotingsUsingGET(String uuid, LocalDate endDate, String lang, LocalDate startDate);
+    List<KomisjoniIstung> findCommitteeVotingsUsingGET(String uuid, LocalDate endDate, String lang, LocalDate startDate);
 
     /**
      * Komisjoni hääletused.
@@ -4933,7 +4937,7 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<List<CommitteeSitting>> findCommitteeVotingsUsingGETAsync(String uuid, LocalDate endDate, String lang, LocalDate startDate, final ServiceCallback<List<CommitteeSitting>> serviceCallback);
+    ServiceFuture<List<KomisjoniIstung>> findCommitteeVotingsUsingGETAsync(String uuid, LocalDate endDate, String lang, LocalDate startDate, final ServiceCallback<List<KomisjoniIstung>> serviceCallback);
 
     /**
      * Komisjoni hääletused.
@@ -4943,9 +4947,9 @@ public interface EMSAPIdokumentatsioon {
      * @param lang lang. Possible values include: 'et', 'ru', 'en'
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;CommitteeSitting&gt; object
+     * @return the observable to the List&lt;KomisjoniIstung&gt; object
      */
-    Observable<List<CommitteeSitting>> findCommitteeVotingsUsingGETAsync(String uuid, LocalDate endDate, String lang, LocalDate startDate);
+    Observable<List<KomisjoniIstung>> findCommitteeVotingsUsingGETAsync(String uuid, LocalDate endDate, String lang, LocalDate startDate);
 
     /**
      * Komisjoni hääletused.
@@ -4955,9 +4959,9 @@ public interface EMSAPIdokumentatsioon {
      * @param lang lang. Possible values include: 'et', 'ru', 'en'
      * @param startDate Kuupäevavahemiku algus (yyyy-MM-dd)
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the List&lt;CommitteeSitting&gt; object
+     * @return the observable to the List&lt;KomisjoniIstung&gt; object
      */
-    Observable<ServiceResponse<List<CommitteeSitting>>> findCommitteeVotingsUsingGETWithServiceResponseAsync(String uuid, LocalDate endDate, String lang, LocalDate startDate);
+    Observable<ServiceResponse<List<KomisjoniIstung>>> findCommitteeVotingsUsingGETWithServiceResponseAsync(String uuid, LocalDate endDate, String lang, LocalDate startDate);
 
     /**
      * Viimane hääletus.
@@ -4965,9 +4969,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the PlenaryVotingDetails object if successful.
+     * @return the TIskoguHLetusDetailid object if successful.
      */
-    PlenaryVotingDetails getLastVotingUsingGET();
+    TIskoguHLetusDetailid getLastVotingUsingGET();
 
     /**
      * Viimane hääletus.
@@ -4976,23 +4980,23 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<PlenaryVotingDetails> getLastVotingUsingGETAsync(final ServiceCallback<PlenaryVotingDetails> serviceCallback);
+    ServiceFuture<TIskoguHLetusDetailid> getLastVotingUsingGETAsync(final ServiceCallback<TIskoguHLetusDetailid> serviceCallback);
 
     /**
      * Viimane hääletus.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PlenaryVotingDetails object
+     * @return the observable to the TIskoguHLetusDetailid object
      */
-    Observable<PlenaryVotingDetails> getLastVotingUsingGETAsync();
+    Observable<TIskoguHLetusDetailid> getLastVotingUsingGETAsync();
 
     /**
      * Viimane hääletus.
      *
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PlenaryVotingDetails object
+     * @return the observable to the TIskoguHLetusDetailid object
      */
-    Observable<ServiceResponse<PlenaryVotingDetails>> getLastVotingUsingGETWithServiceResponseAsync();
+    Observable<ServiceResponse<TIskoguHLetusDetailid>> getLastVotingUsingGETWithServiceResponseAsync();
     /**
      * Viimane hääletus.
      *
@@ -5000,9 +5004,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the PlenaryVotingDetails object if successful.
+     * @return the TIskoguHLetusDetailid object if successful.
      */
-    PlenaryVotingDetails getLastVotingUsingGET(String lang);
+    TIskoguHLetusDetailid getLastVotingUsingGET(String lang);
 
     /**
      * Viimane hääletus.
@@ -5012,25 +5016,25 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<PlenaryVotingDetails> getLastVotingUsingGETAsync(String lang, final ServiceCallback<PlenaryVotingDetails> serviceCallback);
+    ServiceFuture<TIskoguHLetusDetailid> getLastVotingUsingGETAsync(String lang, final ServiceCallback<TIskoguHLetusDetailid> serviceCallback);
 
     /**
      * Viimane hääletus.
      *
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PlenaryVotingDetails object
+     * @return the observable to the TIskoguHLetusDetailid object
      */
-    Observable<PlenaryVotingDetails> getLastVotingUsingGETAsync(String lang);
+    Observable<TIskoguHLetusDetailid> getLastVotingUsingGETAsync(String lang);
 
     /**
      * Viimane hääletus.
      *
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PlenaryVotingDetails object
+     * @return the observable to the TIskoguHLetusDetailid object
      */
-    Observable<ServiceResponse<PlenaryVotingDetails>> getLastVotingUsingGETWithServiceResponseAsync(String lang);
+    Observable<ServiceResponse<TIskoguHLetusDetailid>> getLastVotingUsingGETWithServiceResponseAsync(String lang);
 
     /**
      * Riigikogu liikme hääletused.
@@ -5039,9 +5043,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the PagedResourcesOfPlenaryMemberSitting object if successful.
+     * @return the PagedResourcesRiigikoguLiikmeHLetus object if successful.
      */
-    PagedResourcesOfPlenaryMemberSitting getPlenaryMemberVotingsUsingGET(String uuid);
+    PagedResourcesRiigikoguLiikmeHLetus getPlenaryMemberVotingsUsingGET(String uuid);
 
     /**
      * Riigikogu liikme hääletused.
@@ -5051,25 +5055,25 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<PagedResourcesOfPlenaryMemberSitting> getPlenaryMemberVotingsUsingGETAsync(String uuid, final ServiceCallback<PagedResourcesOfPlenaryMemberSitting> serviceCallback);
+    ServiceFuture<PagedResourcesRiigikoguLiikmeHLetus> getPlenaryMemberVotingsUsingGETAsync(String uuid, final ServiceCallback<PagedResourcesRiigikoguLiikmeHLetus> serviceCallback);
 
     /**
      * Riigikogu liikme hääletused.
      *
      * @param uuid Liikme UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PagedResourcesOfPlenaryMemberSitting object
+     * @return the observable to the PagedResourcesRiigikoguLiikmeHLetus object
      */
-    Observable<PagedResourcesOfPlenaryMemberSitting> getPlenaryMemberVotingsUsingGETAsync(String uuid);
+    Observable<PagedResourcesRiigikoguLiikmeHLetus> getPlenaryMemberVotingsUsingGETAsync(String uuid);
 
     /**
      * Riigikogu liikme hääletused.
      *
      * @param uuid Liikme UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PagedResourcesOfPlenaryMemberSitting object
+     * @return the observable to the PagedResourcesRiigikoguLiikmeHLetus object
      */
-    Observable<ServiceResponse<PagedResourcesOfPlenaryMemberSitting>> getPlenaryMemberVotingsUsingGETWithServiceResponseAsync(String uuid);
+    Observable<ServiceResponse<PagedResourcesRiigikoguLiikmeHLetus>> getPlenaryMemberVotingsUsingGETWithServiceResponseAsync(String uuid);
     /**
      * Riigikogu liikme hääletused.
      *
@@ -5087,9 +5091,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the PagedResourcesOfPlenaryMemberSitting object if successful.
+     * @return the PagedResourcesRiigikoguLiikmeHLetus object if successful.
      */
-    PagedResourcesOfPlenaryMemberSitting getPlenaryMemberVotingsUsingGET(String uuid, LocalDate endDate, String lang, Long offset, Integer pageNumber, Integer pageSize, Boolean paged, Boolean sortsorted, Boolean sortunsorted, LocalDate startDate, Boolean unpaged);
+    PagedResourcesRiigikoguLiikmeHLetus getPlenaryMemberVotingsUsingGET(String uuid, LocalDate endDate, String lang, Long offset, Integer pageNumber, Integer pageSize, Boolean paged, Boolean sortsorted, Boolean sortunsorted, LocalDate startDate, Boolean unpaged);
 
     /**
      * Riigikogu liikme hääletused.
@@ -5109,7 +5113,7 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<PagedResourcesOfPlenaryMemberSitting> getPlenaryMemberVotingsUsingGETAsync(String uuid, LocalDate endDate, String lang, Long offset, Integer pageNumber, Integer pageSize, Boolean paged, Boolean sortsorted, Boolean sortunsorted, LocalDate startDate, Boolean unpaged, final ServiceCallback<PagedResourcesOfPlenaryMemberSitting> serviceCallback);
+    ServiceFuture<PagedResourcesRiigikoguLiikmeHLetus> getPlenaryMemberVotingsUsingGETAsync(String uuid, LocalDate endDate, String lang, Long offset, Integer pageNumber, Integer pageSize, Boolean paged, Boolean sortsorted, Boolean sortunsorted, LocalDate startDate, Boolean unpaged, final ServiceCallback<PagedResourcesRiigikoguLiikmeHLetus> serviceCallback);
 
     /**
      * Riigikogu liikme hääletused.
@@ -5126,9 +5130,9 @@ public interface EMSAPIdokumentatsioon {
      * @param startDate Kuupäevavahemiku lõpp (yyyy-MM-dd)
      * @param unpaged the Boolean value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PagedResourcesOfPlenaryMemberSitting object
+     * @return the observable to the PagedResourcesRiigikoguLiikmeHLetus object
      */
-    Observable<PagedResourcesOfPlenaryMemberSitting> getPlenaryMemberVotingsUsingGETAsync(String uuid, LocalDate endDate, String lang, Long offset, Integer pageNumber, Integer pageSize, Boolean paged, Boolean sortsorted, Boolean sortunsorted, LocalDate startDate, Boolean unpaged);
+    Observable<PagedResourcesRiigikoguLiikmeHLetus> getPlenaryMemberVotingsUsingGETAsync(String uuid, LocalDate endDate, String lang, Long offset, Integer pageNumber, Integer pageSize, Boolean paged, Boolean sortsorted, Boolean sortunsorted, LocalDate startDate, Boolean unpaged);
 
     /**
      * Riigikogu liikme hääletused.
@@ -5145,9 +5149,9 @@ public interface EMSAPIdokumentatsioon {
      * @param startDate Kuupäevavahemiku lõpp (yyyy-MM-dd)
      * @param unpaged the Boolean value
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PagedResourcesOfPlenaryMemberSitting object
+     * @return the observable to the PagedResourcesRiigikoguLiikmeHLetus object
      */
-    Observable<ServiceResponse<PagedResourcesOfPlenaryMemberSitting>> getPlenaryMemberVotingsUsingGETWithServiceResponseAsync(String uuid, LocalDate endDate, String lang, Long offset, Integer pageNumber, Integer pageSize, Boolean paged, Boolean sortsorted, Boolean sortunsorted, LocalDate startDate, Boolean unpaged);
+    Observable<ServiceResponse<PagedResourcesRiigikoguLiikmeHLetus>> getPlenaryMemberVotingsUsingGETWithServiceResponseAsync(String uuid, LocalDate endDate, String lang, Long offset, Integer pageNumber, Integer pageSize, Boolean paged, Boolean sortsorted, Boolean sortunsorted, LocalDate startDate, Boolean unpaged);
 
     /**
      * Hääletuse detailid.
@@ -5156,9 +5160,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the PlenaryVotingDetails object if successful.
+     * @return the TIskoguHLetusDetailid object if successful.
      */
-    PlenaryVotingDetails getVotingUsingGET(String uuid);
+    TIskoguHLetusDetailid getVotingUsingGET(String uuid);
 
     /**
      * Hääletuse detailid.
@@ -5168,25 +5172,25 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<PlenaryVotingDetails> getVotingUsingGETAsync(String uuid, final ServiceCallback<PlenaryVotingDetails> serviceCallback);
+    ServiceFuture<TIskoguHLetusDetailid> getVotingUsingGETAsync(String uuid, final ServiceCallback<TIskoguHLetusDetailid> serviceCallback);
 
     /**
      * Hääletuse detailid.
      *
      * @param uuid Hääletuse UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PlenaryVotingDetails object
+     * @return the observable to the TIskoguHLetusDetailid object
      */
-    Observable<PlenaryVotingDetails> getVotingUsingGETAsync(String uuid);
+    Observable<TIskoguHLetusDetailid> getVotingUsingGETAsync(String uuid);
 
     /**
      * Hääletuse detailid.
      *
      * @param uuid Hääletuse UUID
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PlenaryVotingDetails object
+     * @return the observable to the TIskoguHLetusDetailid object
      */
-    Observable<ServiceResponse<PlenaryVotingDetails>> getVotingUsingGETWithServiceResponseAsync(String uuid);
+    Observable<ServiceResponse<TIskoguHLetusDetailid>> getVotingUsingGETWithServiceResponseAsync(String uuid);
     /**
      * Hääletuse detailid.
      *
@@ -5195,9 +5199,9 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @throws RestException thrown if the request is rejected by server
      * @throws RuntimeException all other wrapped checked exceptions if the request fails to be sent
-     * @return the PlenaryVotingDetails object if successful.
+     * @return the TIskoguHLetusDetailid object if successful.
      */
-    PlenaryVotingDetails getVotingUsingGET(String uuid, String lang);
+    TIskoguHLetusDetailid getVotingUsingGET(String uuid, String lang);
 
     /**
      * Hääletuse detailid.
@@ -5208,7 +5212,7 @@ public interface EMSAPIdokumentatsioon {
      * @throws IllegalArgumentException thrown if parameters fail the validation
      * @return the {@link ServiceFuture} object
      */
-    ServiceFuture<PlenaryVotingDetails> getVotingUsingGETAsync(String uuid, String lang, final ServiceCallback<PlenaryVotingDetails> serviceCallback);
+    ServiceFuture<TIskoguHLetusDetailid> getVotingUsingGETAsync(String uuid, String lang, final ServiceCallback<TIskoguHLetusDetailid> serviceCallback);
 
     /**
      * Hääletuse detailid.
@@ -5216,9 +5220,9 @@ public interface EMSAPIdokumentatsioon {
      * @param uuid Hääletuse UUID
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PlenaryVotingDetails object
+     * @return the observable to the TIskoguHLetusDetailid object
      */
-    Observable<PlenaryVotingDetails> getVotingUsingGETAsync(String uuid, String lang);
+    Observable<TIskoguHLetusDetailid> getVotingUsingGETAsync(String uuid, String lang);
 
     /**
      * Hääletuse detailid.
@@ -5226,8 +5230,8 @@ public interface EMSAPIdokumentatsioon {
      * @param uuid Hääletuse UUID
      * @param lang Keel. Possible values include: 'et', 'ru', 'en'
      * @throws IllegalArgumentException thrown if parameters fail the validation
-     * @return the observable to the PlenaryVotingDetails object
+     * @return the observable to the TIskoguHLetusDetailid object
      */
-    Observable<ServiceResponse<PlenaryVotingDetails>> getVotingUsingGETWithServiceResponseAsync(String uuid, String lang);
+    Observable<ServiceResponse<TIskoguHLetusDetailid>> getVotingUsingGETWithServiceResponseAsync(String uuid, String lang);
 
 }
